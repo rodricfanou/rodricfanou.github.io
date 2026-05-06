@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const FadeIn = ({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) => {
   const [mounted, setMounted] = useState(false);
@@ -110,12 +111,12 @@ export default function Blog() {
                   </div>
                   <h2 className="text-xl font-bold text-gray-900 mb-2">{post.title}</h2>
                   <p className="text-gray-600 text-sm leading-relaxed flex-1">{post.excerpt}</p>
-                  <a
+                  <Link
                     href={`/blog/${post.id}`}
                     className="mt-4 inline-block text-blue-600 hover:text-blue-800 font-medium text-sm"
                   >
                     Read more &rarr;
-                  </a>
+                  </Link>
                 </div>
               </article>
             </FadeIn>
