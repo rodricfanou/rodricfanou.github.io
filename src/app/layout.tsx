@@ -17,6 +17,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Roderick Fanou",
   description: "Internet scientist and senior systems engineer specializing in network measurements, AI, and systems design.",
+  icons: {
+    icon: "/profilepics/profilepic1.png",
+  },
 };
 
 const rightLinks = [
