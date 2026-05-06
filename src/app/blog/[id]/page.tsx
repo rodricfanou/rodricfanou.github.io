@@ -194,7 +194,7 @@ Respond as JSON only.
       <section
         className="relative w-full max-w-5xl rounded-2xl shadow-2xl overflow-hidden md:rounded-3xl"
         style={{
-          backgroundImage: "url('/headerimages/1.jpeg')",
+          backgroundImage: "url('/website/headerimages/1.jpeg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

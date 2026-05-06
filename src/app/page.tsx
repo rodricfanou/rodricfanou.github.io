@@ -24,7 +24,7 @@ export default function Home() {
       <section
         className="relative w-full max-w-5xl rounded-2xl shadow-2xl overflow-hidden md:rounded-3xl"
         style={{
-          backgroundImage: "url('/headerimages/1.jpeg ')",
+          backgroundImage: "url('/website/headerimages/1.jpeg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -38,7 +38,7 @@ export default function Home() {
           {/* Profile picture */}
           <div className="flex-shrink-0 z-10">
             <img
-              src="/profilepics/profilepic1.png"
+              src="/website/profilepics/profilepic1.png"
               alt="Roderick Fanou"
               className="w-28 h-28 rounded-full border-4 border-white shadow-2xl object-cover transition-transform duration-300 hover:scale-105 md:w-40 md:h-40"
             />
