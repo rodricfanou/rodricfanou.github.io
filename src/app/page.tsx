@@ -130,7 +130,7 @@ export default function Home() {
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Networking & Infrastructure</h3>
                 <div className="flex flex-wrap gap-2">
-                  {["BGP", "DNS", "IXP", "Internet Measurement", "RIPE Atlas", "CAIDA Ark", "Network Monitoring"].map((skill) => (
+                  {["BGP", "DNS", "IXP", "Internet Measurement", "Content Delivery", "Distributed Systems", "RIPE Atlas", "CAIDA Ark", "Network Monitoring"].map((skill) => (
                     <span key={skill} className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
                       {skill}
                     </span>
