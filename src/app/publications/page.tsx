@@ -237,6 +237,14 @@ export default function Publications() {
             >
               Cloudflare Blog Post &rarr;
             </a>
+            <a
+              href="https://scholar.google.com/citations?user=CpdupCIAAAAJ&hl=en"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg text-base font-medium hover:bg-blue-700 transition-colors shadow-sm"
+            >
+              Google Scholar &rarr;
+            </a>
           </div>
         </FadeIn>
       </section>
