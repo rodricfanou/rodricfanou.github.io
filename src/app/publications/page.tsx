@@ -245,6 +245,14 @@ export default function Publications() {
             >
               Google Scholar &rarr;
             </a>
+            <a
+              href="https://www.afpif.org/speakers/mr-roderick-fanou/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg text-base font-medium hover:bg-blue-700 transition-colors shadow-sm"
+            >
+              AFPIF Speaker Profile &rarr;
+            </a>
           </div>
         </FadeIn>
       </section>
