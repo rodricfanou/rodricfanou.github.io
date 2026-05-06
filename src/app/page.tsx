@@ -120,7 +120,7 @@ export default function Home() {
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Programming Languages</h3>
                 <div className="flex flex-wrap gap-2">
-                  {["Python", "Go", "C/C++", "LateX", "Matlab", "R", "Rust (Ongoing)"].map((skill) => (
+                  {["Python", "Go", "C/C++", "LateX", "Matlab", "R"].map((skill) => (
                     <span key={skill} className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
                       {skill}
                     </span>
