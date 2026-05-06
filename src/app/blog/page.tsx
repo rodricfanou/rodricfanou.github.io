@@ -55,7 +55,7 @@ export default function Blog() {
       <section
         className="relative w-full max-w-5xl rounded-2xl shadow-2xl overflow-hidden md:rounded-3xl"
         style={{
-          backgroundImage: "url('/headerimages/1.jpeg')",
+          backgroundImage: "url('/website/headerimages/1.jpeg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -111,7 +111,7 @@ export default function Blog() {
                   <h2 className="text-xl font-bold text-gray-900 mb-2">{post.title}</h2>
                   <p className="text-gray-600 text-sm leading-relaxed flex-1">{post.excerpt}</p>
                   <a
-                    href={`/blog/${post.id}`}
+                    href={`/website/blog/${post.id}`}
                     className="mt-4 inline-block text-blue-600 hover:text-blue-800 font-medium text-sm"
                   >
                     Read more &rarr;

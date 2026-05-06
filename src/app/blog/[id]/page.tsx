@@ -180,7 +180,7 @@ Respond as JSON only.
       <main className="bg-gray-100 min-h-screen py-12 px-4 md:px-8 flex flex-col items-center">
         <div className="max-w-5xl w-full text-center">
           <h1 className="text-3xl font-bold text-gray-900">Post not found</h1>
-          <a href="/blog" className="text-blue-600 hover:underline mt-4 inline-block">
+          <a href="/website/blog" className="text-blue-600 hover:underline mt-4 inline-block">
             &larr; Back to blog
           </a>
         </div>
@@ -224,7 +224,7 @@ Respond as JSON only.
         </FadeIn>
 
         <div className="mt-12 pt-8 border-t border-gray-200">
-          <a href="/blog" className="text-blue-600 hover:underline font-medium">
+          <a href="/website/blog" className="text-blue-600 hover:underline font-medium">
             &larr; Back to all posts
           </a>
         </div>
