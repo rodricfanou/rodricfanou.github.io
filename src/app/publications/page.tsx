@@ -206,12 +206,28 @@ export default function Publications() {
         <FadeIn>
           <div className="flex flex-wrap gap-4">
             <a
+              href="https://blog.cloudflare.com/why-i-joined-cloudflare-and-why-im-excited-about-project-pangea/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg text-base font-medium hover:bg-blue-700 transition-colors shadow-sm"
+            >
+              Cloudflare Blog Post &rarr;
+            </a>
+            <a
               href="https://users.caida.org/~roderick/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg text-base font-medium hover:bg-blue-700 transition-colors shadow-sm"
             >
               CAIDA Profile &rarr;
+            </a>
+            <a
+              href="https://scholar.google.com/citations?user=CpdupCIAAAAJ&hl=en"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg text-base font-medium hover:bg-blue-700 transition-colors shadow-sm"
+            >
+              Google Scholar &rarr;
             </a>
             <a
               href="https://networks.imdea.org/team/imdea-networks-team/people/roderick-fanou/"
@@ -228,22 +244,6 @@ export default function Publications() {
               className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg text-base font-medium hover:bg-blue-700 transition-colors shadow-sm"
             >
               Internet Society Profile &rarr;
-            </a>
-            <a
-              href="https://blog.cloudflare.com/why-i-joined-cloudflare-and-why-im-excited-about-project-pangea/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg text-base font-medium hover:bg-blue-700 transition-colors shadow-sm"
-            >
-              Cloudflare Blog Post &rarr;
-            </a>
-            <a
-              href="https://scholar.google.com/citations?user=CpdupCIAAAAJ&hl=en"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg text-base font-medium hover:bg-blue-700 transition-colors shadow-sm"
-            >
-              Google Scholar &rarr;
             </a>
             <a
               href="https://www.afpif.org/speakers/mr-roderick-fanou/"
