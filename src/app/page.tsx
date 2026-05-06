@@ -150,7 +150,7 @@ export default function Home() {
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Cloud & DevOps</h3>
                 <div className="flex flex-wrap gap-2">
-                  {["AWS", "Docker", "Kubernetes", "Terraform", "CI/CD", "Linux"].map((skill) => (
+                  {["GCP", "AWS", "Docker", "Kubernetes", "Terraform", "CI/CD", "Linux"].map((skill) => (
                     <span key={skill} className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
                       {skill}
                     </span>
