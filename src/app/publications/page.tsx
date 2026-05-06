@@ -261,6 +261,14 @@ export default function Publications() {
             >
               AFRINIC Blog Post &rarr;
             </a>
+            <a
+              href="https://blog.apnic.net/2021/02/22/unintended-consequences-of-submarine-cable-deployment-on-internet-routing/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg text-base font-medium hover:bg-blue-700 transition-colors shadow-sm"
+            >
+              APNIC Blog Post &rarr;
+            </a>
           </div>
         </FadeIn>
       </section>
