@@ -149,8 +149,8 @@ const PublicationCard = ({ pub, expandedId, setExpandedId, index }: { pub: Publi
 
 export default function Publications() {
   const [expandedId, setExpandedId] = useState<number | null>(null);
-  const journals = publications.filter((p) => p.type === "journal");
-  const conferences = publications.filter((p) => p.type === "conference");
+  const journals = publications.filter((p) => p.type === "journal").sort((a, b) => b.year - a.year);
+  const conferences = publications.filter((p) => p.type === "conference").sort((a, b) => b.year - a.year);
 
   return (
     <main className="bg-gray-100 min-h-screen py-8 px-4 flex flex-col items-center relative md:py-12 md:px-8">
