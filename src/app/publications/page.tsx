@@ -99,7 +99,9 @@ const publications: Publication[] = [
   },
 ];
 
-const PublicationCard = ({ pub, expandedId, setExpandedId, index }: { pub: Publication; expandedId: number | null; setExpandedId: (id: number | null) => void; index: number }) => (
+const PublicationCard = ({ pub, expandedId, setExpandedId, index }: { pub: Publication; expandedId: number | null; setExpandedId: (id: number | null) => void; index: number }) => {
+  const isBestPaper = pub.id === 1;
+  return (
   <FadeIn key={pub.id} delay={index * 100}>
     <article className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 p-5 md:rounded-2xl md:p-6">
       <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between md:gap-4">
@@ -110,6 +112,12 @@ const PublicationCard = ({ pub, expandedId, setExpandedId, index }: { pub: Publi
             <span className="text-blue-600 font-medium">{pub.journal}</span>
             <span className="text-gray-400">&bull;</span>
             <span className="text-gray-500">{pub.year}</span>
+            {isBestPaper && (
+              <>
+                <span className="text-gray-400">&bull;</span>
+                <span className="text-red-600 font-bold">Best Paper</span>
+              </>
+            )}
           </div>
         </div>
         <a
@@ -136,7 +144,8 @@ const PublicationCard = ({ pub, expandedId, setExpandedId, index }: { pub: Publi
       )}
     </article>
   </FadeIn>
-);
+  );
+};
 
 export default function Publications() {
   const [expandedId, setExpandedId] = useState<number | null>(null);
@@ -171,21 +180,21 @@ export default function Publications() {
         </div>
       </section>
 
-      {/* Journals */}
-      <section className="relative w-full max-w-5xl mt-8 rounded-2xl shadow-lg px-6 py-12 md:mt-10 md:rounded-3xl md:px-16 md:py-16 bg-gray-200 transition-shadow duration-300 hover:shadow-xl">
-        <h2 className="text-xl font-bold mb-6 text-gray-900 md:text-2xl md:text-3xl">Journals</h2>
-        <div className="space-y-4 md:space-y-6">
-          {journals.map((pub, i) => (
-            <PublicationCard key={pub.id} pub={pub} expandedId={expandedId} setExpandedId={setExpandedId} index={i} />
-          ))}
-        </div>
-      </section>
-
       {/* Conferences */}
       <section className="relative w-full max-w-5xl mt-8 rounded-2xl shadow-lg px-6 py-12 md:mt-10 md:rounded-3xl md:px-16 md:py-16 bg-gray-200 transition-shadow duration-300 hover:shadow-xl">
         <h2 className="text-xl font-bold mb-6 text-gray-900 md:text-2xl md:text-3xl">Conferences</h2>
         <div className="space-y-4 md:space-y-6">
           {conferences.map((pub, i) => (
+            <PublicationCard key={pub.id} pub={pub} expandedId={expandedId} setExpandedId={setExpandedId} index={i} />
+          ))}
+        </div>
+      </section>
+
+      {/* Journals */}
+      <section className="relative w-full max-w-5xl mt-8 rounded-2xl shadow-lg px-6 py-12 md:mt-10 md:rounded-3xl md:px-16 md:py-16 bg-gray-200 transition-shadow duration-300 hover:shadow-xl">
+        <h2 className="text-xl font-bold mb-6 text-gray-900 md:text-2xl md:text-3xl">Journals</h2>
+        <div className="space-y-4 md:space-y-6">
+          {journals.map((pub, i) => (
             <PublicationCard key={pub.id} pub={pub} expandedId={expandedId} setExpandedId={setExpandedId} index={i} />
           ))}
         </div>
