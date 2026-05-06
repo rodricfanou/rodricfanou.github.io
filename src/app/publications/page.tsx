@@ -200,6 +200,21 @@ export default function Publications() {
         </div>
       </section>
 
+      {/* References */}
+      <section className="relative w-full max-w-5xl mt-8 rounded-2xl shadow-lg px-6 py-12 md:mt-10 md:rounded-3xl md:px-16 md:py-16 bg-gray-200 transition-shadow duration-300 hover:shadow-xl">
+        <h2 className="text-xl font-bold mb-6 text-gray-900 md:text-2xl md:text-3xl">References</h2>
+        <FadeIn>
+          <a
+            href="https://users.caida.org/~roderick/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg text-base font-medium hover:bg-blue-700 transition-colors shadow-sm"
+          >
+            CAIDA Profile &rarr;
+          </a>
+        </FadeIn>
+      </section>
+
     </main>
   );
 }
