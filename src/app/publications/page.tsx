@@ -229,6 +229,14 @@ export default function Publications() {
             >
               Internet Society Profile &rarr;
             </a>
+            <a
+              href="https://blog.cloudflare.com/why-i-joined-cloudflare-and-why-im-excited-about-project-pangea/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg text-base font-medium hover:bg-blue-700 transition-colors shadow-sm"
+            >
+              Cloudflare Blog Post &rarr;
+            </a>
           </div>
         </FadeIn>
       </section>
