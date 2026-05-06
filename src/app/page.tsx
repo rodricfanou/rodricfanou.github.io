@@ -105,7 +105,7 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900">Lead Instructor</h3>
-                <p className="text-blue-600 font-medium">Internet Society</p>
+                <p className="text-blue-600 font-medium">Internet Society (ISOC)</p>
                 <p className="text-gray-500 text-sm">2013 - 2016</p>
                 <p className="text-gray-700 mt-2">Led week-long ISOC IXP workshops across Africa. Trained 40+ renowned engineers, network operators, and policy makers on how to set up an Internet Exchange Points in each country.</p>
               </div>
