@@ -253,6 +253,14 @@ export default function Publications() {
             >
               AFPIF Speaker Profile &rarr;
             </a>
+            <a
+              href="https://blog.afrinic.net/20210330-unintended-consequences-of-submarine-cable-deployment-on-internet-routing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg text-base font-medium hover:bg-blue-700 transition-colors shadow-sm"
+            >
+              AFRINIC Blog Post &rarr;
+            </a>
           </div>
         </FadeIn>
       </section>
