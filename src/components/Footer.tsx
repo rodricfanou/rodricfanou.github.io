@@ -24,8 +24,8 @@ export default function Footer() {
           <h3 className="text-base font-semibold mb-3 text-gray-200 md:text-lg md:mb-4">Contact</h3>
           <p className="text-gray-400 mb-2">
             Email:{" "}
-            <a href="mailto:roderick@fanou.net" className="text-blue-400 hover:underline">
-              roderick@fanou.net
+            <a href="mailto:contact@roderickfanou.com" className="text-blue-400 hover:underline">
+              contact@roderickfanou.com
             </a>
           </p>
           <p className="text-gray-400 mb-2">
