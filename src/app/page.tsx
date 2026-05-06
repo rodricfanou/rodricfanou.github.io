@@ -89,7 +89,7 @@ export default function Home() {
                 <h3 className="text-xl font-bold text-gray-900">Systems Engineer</h3>
                 <p className="text-blue-600 font-medium">Cloudflare, Inc</p>
                 <p className="text-gray-500 text-sm">2021 - 2026</p>
-                <p className="text-gray-700 mt-2">Designed and built scalable systems for Internet traffic management, network monitoring, and real-time data processing.</p>
+                <p className="text-gray-700 mt-2">Designed and built scalable systems for Internet traffic management worldwide, network monitoring, and real-time data processing.</p>
               </div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900">Postdoctoral Researcher</h3>
