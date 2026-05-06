@@ -111,7 +111,7 @@ export default function Blog() {
                   <h2 className="text-xl font-bold text-gray-900 mb-2">{post.title}</h2>
                   <p className="text-gray-600 text-sm leading-relaxed flex-1">{post.excerpt}</p>
                   <a
-                    href={`/website/blog/${post.id}`}
+                    href={`/blog/${post.id}`}
                     className="mt-4 inline-block text-blue-600 hover:text-blue-800 font-medium text-sm"
                   >
                     Read more &rarr;
