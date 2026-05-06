@@ -101,7 +101,7 @@ export default function Home() {
                 <h3 className="text-xl font-bold text-gray-900">Assistant Researcher & PhD Student</h3>
                 <p className="text-blue-600 font-medium">IMDEA Networks Institute</p>
                 <p className="text-gray-500 text-sm">2013 - 2017</p>
-                <p className="text-gray-700 mt-2">Led projects on African Internet infrastructure measurements, IXPs mapping, and interdomain routing analysis. Deployed 148+ RIPE Atlas probes across 31 African countries.</p>
+                <p className="text-gray-700 mt-2">Led projects on Internet infrastructure measurements with a focus on developing regions like Afrinic, IXP mapping, interdomain routing analysis, and Content Delivery Networks.</p>
               </div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900">Lead Instructor</h3>
