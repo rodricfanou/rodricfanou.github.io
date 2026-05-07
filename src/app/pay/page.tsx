@@ -41,7 +41,7 @@ export default function Pay() {
             </p>
             
             <a
-              href="#"
+              href="https://venmo.com/@roderickfun"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-blue-600 text-white rounded-xl text-lg font-bold hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1"
