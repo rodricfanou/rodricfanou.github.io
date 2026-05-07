@@ -1,6 +1,13 @@
+"use client";
+
 import Link from "next/link";
+import { useLanguage } from "@/components/LanguageProvider";
+import { translations } from "@/lib/translations";
 
 export default function Footer() {
+  const { lang } = useLanguage();
+  const t = translations[lang];
+
   return (
     <footer className="bg-gray-900 text-white py-12 px-4 md:py-16 md:px-8">
       <div className="max-w-5xl mx-auto grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-12">
@@ -12,7 +19,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h3 className="text-base font-semibold mb-3 text-gray-200 md:text-lg md:mb-4">Quick Links</h3>
+          <h3 className="text-base font-semibold mb-3 text-gray-200 md:text-lg md:mb-4">{t.footer.quickLinks}</h3>
           <div className="space-y-2">
             <Link href="/" className="block text-gray-400 hover:text-blue-400 transition-colors">Home</Link>
             <Link href="/publications" className="block text-gray-400 hover:text-blue-400 transition-colors">Publications</Link>
@@ -21,7 +28,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h3 className="text-base font-semibold mb-3 text-gray-200 md:text-lg md:mb-4">Contact</h3>
+          <h3 className="text-base font-semibold mb-3 text-gray-200 md:text-lg md:mb-4">{t.footer.contact}</h3>
           <p className="text-gray-400 mb-2">
             Email:{" "}
             <a href="mailto:roderick@roderickfanou.com" className="text-blue-400 hover:underline">
@@ -38,7 +45,7 @@ export default function Footer() {
             <a href="https://github.com/rodricfanou" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">GitHub</a>
           </p>
           <p className="text-gray-400">
-            <Link href="/pay" className="text-blue-400 hover:underline">Pay Bill</Link>
+            <Link href="/pay" className="text-blue-400 hover:underline">{t.footer.payBill}</Link>
           </p>
         </div>
       </div>
