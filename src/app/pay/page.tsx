@@ -41,12 +41,12 @@ export default function Pay() {
             </p>
             
             <a
-              href="https://venmo.com/@roderickfun"
+              href="https://account.venmo.com/u/roderickfun"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-blue-600 text-white rounded-xl text-lg font-bold hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
-              Pay Now
+              Pay Now via Venmo
             </a>
 
             <p className="text-gray-500 text-sm mt-4">
