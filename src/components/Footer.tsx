@@ -44,9 +44,9 @@ export default function Footer() {
           <p className="text-gray-400 mb-2">
             <a href="https://github.com/rodricfanou" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">GitHub</a>
           </p>
-          <p className="text-gray-400">
+          {/* <p className="text-gray-400">
             <Link href="/pay" className="text-blue-400 hover:underline">{t.footer.payBill}</Link>
-          </p>
+          </p> */}
         </div>
       </div>
 
