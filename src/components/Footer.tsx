@@ -37,6 +37,9 @@ export default function Footer() {
           <p className="text-gray-400">
             <a href="https://github.com/rodricfanou" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">GitHub</a>
           </p>
+          <p className="text-gray-400 mt-2">
+            <Link href="/pay" className="text-blue-400 hover:underline">Pay Bill</Link>
+          </p>
         </div>
       </div>
 

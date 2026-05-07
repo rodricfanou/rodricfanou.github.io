@@ -25,7 +25,6 @@ export const metadata: Metadata = {
 const rightLinks = [
   { href: "/publications", label: "Publications" },
   { href: "/blog", label: "Blog" },
-  { href: "/pay", label: "Pay" },
 ];
 
 export default function RootLayout({
