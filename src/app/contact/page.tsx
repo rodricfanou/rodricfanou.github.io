@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useForm, ValidationError } from "@formspree/react";
 import FadeIn from "@/components/FadeIn";
 import { useLanguage } from "@/components/LanguageProvider";
 
@@ -70,53 +70,135 @@ const interests = {
   ],
 };
 
+function ContactForm({ isFr, tInterests }: { isFr: boolean; tInterests: string[] }) {
+  const [state, handleSubmit] = useForm("mkoyqdla");
+
+  if (state.succeeded) {
+    return (
+      <div className="text-center py-12">
+        <div className="text-5xl mb-4">✅</div>
+        <h3 className="text-2xl font-bold text-gray-800 mb-2">
+          {isFr ? "Message envoyé !" : "Message Sent!"}
+        </h3>
+        <p className="text-gray-500 text-sm">
+          {isFr
+            ? "Merci. Je vous répondrai sous 24–48h."
+            : "Thank you. I'll reply within 24–48 hours."}
+        </p>
+      </div>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-4" noValidate>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label htmlFor="name" className="block text-xs font-semibold text-gray-500 uppercase mb-1">
+            {isFr ? "Nom complet" : "Full Name"}
+          </label>
+          <input
+            id="name"
+            type="text"
+            name="name"
+            required
+            placeholder={isFr ? "Votre nom" : "Your name"}
+            className="w-full px-4 py-3 rounded-lg border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-gray-800 focus:border-transparent transition"
+          />
+          <ValidationError prefix="Name" field="name" errors={state.errors} />
+        </div>
+        <div>
+          <label htmlFor="email" className="block text-xs font-semibold text-gray-500 uppercase mb-1">
+            Email
+          </label>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            required
+            placeholder={isFr ? "votre@email.com" : "your@email.com"}
+            className="w-full px-4 py-3 rounded-lg border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-gray-800 focus:border-transparent transition"
+          />
+          <ValidationError prefix="Email" field="email" errors={state.errors} />
+        </div>
+      </div>
+
+      <div>
+        <label htmlFor="company" className="block text-xs font-semibold text-gray-500 uppercase mb-1">
+          {isFr ? "Entreprise (optionnel)" : "Company (optional)"}
+        </label>
+        <input
+          id="company"
+          type="text"
+          name="company"
+          placeholder={isFr ? "Votre entreprise" : "Your company"}
+          className="w-full px-4 py-3 rounded-lg border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-gray-800 focus:border-transparent transition"
+        />
+      </div>
+
+      <div>
+        <label htmlFor="interest" className="block text-xs font-semibold text-gray-500 uppercase mb-1">
+          {isFr ? "Sujet" : "Topic"}
+        </label>
+        <select
+          id="interest"
+          name="interest"
+          required
+          className="w-full px-4 py-3 rounded-lg border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-gray-800 focus:border-transparent transition bg-white"
+        >
+          <option value="">
+            {isFr ? "Sélectionnez un sujet" : "Select a topic"}
+          </option>
+          {tInterests.map((opt) => (
+            <option key={opt} value={opt}>
+              {opt}
+            </option>
+          ))}
+        </select>
+        <ValidationError prefix="Interest" field="interest" errors={state.errors} />
+      </div>
+
+      <div>
+        <label htmlFor="message" className="block text-xs font-semibold text-gray-500 uppercase mb-1">
+          {isFr ? "Message" : "Message"}
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          required
+          rows={5}
+          placeholder={
+            isFr
+              ? "Décrivez votre projet, vos besoins, votre calendrier..."
+              : "Describe your project, your needs, and your timeline..."
+          }
+          className="w-full px-4 py-3 rounded-lg border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-gray-800 focus:border-transparent transition resize-none"
+        />
+        <ValidationError prefix="Message" field="message" errors={state.errors} />
+      </div>
+
+      <button
+        type="submit"
+        disabled={state.submitting}
+        className="w-full py-3 bg-gray-800 hover:bg-gray-900 disabled:bg-gray-400 text-white font-semibold rounded-lg text-sm transition-colors duration-200 flex items-center justify-center gap-2"
+      >
+        {state.submitting ? (
+          <>
+            <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+            {isFr ? "Envoi en cours..." : "Sending..."}
+          </>
+        ) : (
+          isFr ? "Envoyer le message" : "Send Message"
+        )}
+      </button>
+    </form>
+  );
+}
+
 export default function Contact() {
   const { lang } = useLanguage();
   const isFr = lang === "fr";
   const tServices = services[isFr];
   const tInterests = interests[isFr];
-
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    company: "",
-    interest: "",
-    message: "",
-  });
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
-  const [errorMsg, setErrorMsg] = useState("");
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus("loading");
-    setErrorMsg("");
-
-    try {
-      const res = await fetch("https://formspree.io/f/mkoyqdla", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      if (res.ok) {
-        setStatus("success");
-        setFormData({ name: "", email: "", company: "", interest: "", message: "" });
-      } else {
-        const data = await res.json();
-        setErrorMsg(data?.error || "Something went wrong. Please try again.");
-        setStatus("error");
-      }
-    } catch {
-      setStatus("error");
-      setErrorMsg("Network error. Please check your connection and try again.");
-    }
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-  ) => {
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
 
   return (
     <main className="bg-gray-100 min-h-screen py-8 px-4 flex flex-col items-center md:py-12 md:px-8">
@@ -211,7 +293,6 @@ export default function Contact() {
                     </div>
                   </div>
                 </div>
-                
               </div>
             </FadeIn>
           </div>
@@ -219,136 +300,15 @@ export default function Contact() {
           {/* Right — Form */}
           <div className="md:col-span-3 p-8 md:p-12 bg-white">
             <FadeIn>
-              {status === "success" ? (
-                <div className="text-center py-12">
-                  <div className="text-5xl mb-4">✅</div>
-                  <h3 className="text-2xl font-bold text-gray-800 mb-2">
-                    {isFr ? "Message envoyé !" : "Message Sent!"}
-                  </h3>
-                  <p className="text-gray-500 text-sm">
-                    {isFr
-                      ? "Merci. Je vous répondrai sous 24–48h."
-                      : "Thank you. I'll reply within 24–48 hours."}
-                  </p>
-                </div>
-              ) : (
-                <>
-                  <h2 className="text-xl font-bold text-gray-800 mb-6">
-                    {isFr ? "Envoyez-moi un message" : "Send me a message"}
-                  </h2>
-                  <form onSubmit={handleSubmit} className="space-y-4" noValidate>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      <div>
-                        <label htmlFor="name" className="block text-xs font-semibold text-gray-500 uppercase mb-1">
-                          {isFr ? "Nom complet" : "Full Name"}
-                        </label>
-                        <input
-                          type="text"
-                          id="name"
-                          name="name"
-                          value={formData.name}
-                          onChange={handleChange}
-                          required
-                          placeholder={isFr ? "Votre nom" : "Your name"}
-                          className="w-full px-4 py-3 rounded-lg border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-gray-800 focus:border-transparent transition"
-                        />
-                      </div>
-                      <div>
-                        <label htmlFor="email" className="block text-xs font-semibold text-gray-500 uppercase mb-1">
-                          Email
-                        </label>
-                        <input
-                          type="email"
-                          id="email"
-                          name="email"
-                          value={formData.email}
-                          onChange={handleChange}
-                          required
-                          placeholder={isFr ? "votre@email.com" : "your@email.com"}
-                          className="w-full px-4 py-3 rounded-lg border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-gray-800 focus:border-transparent transition"
-                        />
-                      </div>
-                    </div>
-                    <div>
-                      <label htmlFor="company" className="block text-xs font-semibold text-gray-500 uppercase mb-1">
-                        {isFr ? "Entreprise (optionnel)" : "Company (optional)"}
-                      </label>
-                      <input
-                        type="text"
-                        id="company"
-                        name="company"
-                        value={formData.company}
-                        onChange={handleChange}
-                        placeholder={isFr ? "Votre entreprise" : "Your company"}
-                        className="w-full px-4 py-3 rounded-lg border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-gray-800 focus:border-transparent transition"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="interest" className="block text-xs font-semibold text-gray-500 uppercase mb-1">
-                        {isFr ? "Sujet" : "Topic"}
-                      </label>
-                      <select
-                        id="interest"
-                        name="interest"
-                        value={formData.interest}
-                        onChange={handleChange}
-                        required
-                        className="w-full px-4 py-3 rounded-lg border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-gray-800 focus:border-transparent transition bg-white"
-                      >
-                        <option value="">
-                          {isFr ? "Sélectionnez un sujet" : "Select a topic"}
-                        </option>
-                        {tInterests.map((opt) => (
-                          <option key={opt} value={opt}>
-                            {opt}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-                    <div>
-                      <label htmlFor="message" className="block text-xs font-semibold text-gray-500 uppercase mb-1">
-                        {isFr ? "Message" : "Message"}
-                      </label>
-                      <textarea
-                        id="message"
-                        name="message"
-                        value={formData.message}
-                        onChange={handleChange}
-                        required
-                        rows={5}
-                        placeholder={
-                          isFr
-                            ? "Décrivez votre projet, vos besoins, votre calendrier..."
-                            : "Describe your project, your needs, and your timeline..."
-                        }
-                        className="w-full px-4 py-3 rounded-lg border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-gray-800 focus:border-transparent transition resize-none"
-                      />
-                    </div>
-                    {status === "error" && (
-                      <p className="text-red-500 text-sm">{errorMsg}</p>
-                    )}
-                    <button
-                      type="submit"
-                      disabled={status === "loading"}
-                      className="w-full py-3 bg-gray-800 hover:bg-gray-900 disabled:bg-gray-400 text-white font-semibold rounded-lg text-sm transition-colors duration-200 flex items-center justify-center gap-2"
-                    >
-                      {status === "loading" ? (
-                        <>
-                          <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                          {isFr ? "Envoi en cours..." : "Sending..."}
-                        </>
-                      ) : (
-                        isFr ? "Envoyer le message" : "Send Message"
-                      )}
-                    </button>
-                  </form>
-                  <p className="text-xs text-gray-400 mt-4 text-center">
-                    {isFr
-                      ? "Propulsé par Formspree — votre email reste privée."
-                      : "Powered by Formspree — your email stays private."}
-                  </p>
-                </>
-              )}
+              <h2 className="text-xl font-bold text-gray-800 mb-6">
+                {isFr ? "Envoyez-moi un message" : "Send me a message"}
+              </h2>
+              <ContactForm isFr={isFr} tInterests={tInterests} />
+              <p className="text-xs text-gray-400 mt-4 text-center">
+                {isFr
+                  ? "Propulsé par Formspree — votre email reste privée."
+                  : "Powered by Formspree — your email stays private."}
+              </p>
             </FadeIn>
           </div>
         </div>
