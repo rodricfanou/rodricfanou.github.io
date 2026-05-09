@@ -2,7 +2,7 @@ import FadeIn from "@/components/FadeIn";
 import Link from "next/link";
 
 export async function generateStaticParams() {
-  return [{ id: "1" }, { id: "2" }];
+  return [{ id: "1" }, { id: "2" }, { id: "3" }];
 }
 
 export default async function BlogPost({ params }: { params: Promise<{ id: string }> }) {
@@ -168,6 +168,145 @@ Respond as JSON only.
 
           <p>
             The lesson: AI agents don&apos;t need to be complex. The best ones solve a specific, recurring pain point with a simple pipeline. Start small, measure value, and iterate.
+          </p>
+        </div>
+      ),
+    },
+    "3": {
+      title: "From Prompts to Agents: A Practical Framework for Autonomous AI",
+      date: "2026-05-09",
+      readTime: "5 min",
+      content: (
+        <div className="space-y-8 text-gray-700 text-base leading-relaxed md:text-lg">
+          <p>
+            Most AI tutorials stop at prompts. But the real shift happens when you build systems that can perceive, decide, and act — with or without human input. Here is the framework I use to take an idea from single-prompt to production-ready agent.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">The Agent Maturity Model</h2>
+          <p>
+            Not all agents are equal. I think about AI autonomy across four levels:
+          </p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li><strong>Level 0 — Prompt:</strong> Single request, single response. No state. ChatGPT at its most basic.</li>
+            <li><strong>Level 1 — Chain:</strong> Sequential prompts where output from one becomes input to the next. Memory is minimal.</li>
+            <li><strong>Level 2 — Tool Use:</strong> The agent calls external functions — web search, code execution, APIs. This is where autonomy begins.</li>
+            <li><strong>Level 3 — Memory:</strong> The agent maintains state across sessions, learns from past interactions, and builds a knowledge base.</li>
+            <li><strong>Level 4 — Multi-Agent:</strong> Multiple specialized agents coordinate, delegate, and debate. Emergent behavior begins.</li>
+          </ul>
+          <p>
+            Most production agents today operate at Level 2 or 3. Level 4 is experimental but increasingly practical.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">Step 1: Define the Loop</h2>
+          <p>
+            Every agent is fundamentally a loop: <strong>Perceive → Think → Act → Reflect</strong>. Before writing any code, I map this loop for the task:
+          </p>
+          <div className="bg-gray-900 text-gray-100 rounded-xl p-6 overflow-x-auto">
+            <pre className="text-sm leading-relaxed">{`AGENT LOOP TEMPLATE:
+1. PERCEIVE: What triggers the agent? (input, schedule, event)
+2. THINK: What model and prompt interpret the input?
+3. ACT: What tool(s) does it call?
+4. REFLECT: Did the output achieve the goal? Retry or exit?
+
+Edge cases:
+- What if the tool fails?
+- What if confidence is below threshold?
+- When does a human need to be looped in?`}</pre>
+          </div>
+
+          <h2 className="text-2xl font-bold text-gray-900">Step 2: Tool Use is Everything</h2>
+          <p>
+            The difference between a chatbot and an agent is tool access. Without tools, the model is just a prediction engine. With tools, it becomes an actor in the world.
+          </p>
+          <p>
+            My starter toolkit for any agent:
+          </p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li><strong>Web search:</strong> Brave Search, Serper, or Tavily for real-time information retrieval.</li>
+            <li><strong>Code execution:</strong> Python sandbox or Bash for calculations, file ops, and data processing.</li>
+            <li><strong>URL fetch:</strong> Read web pages, scrape data, pull documentation.</li>
+            <li><strong>Database:</strong> Query, store, and retrieve structured data — Postgres, Redis, or SQLite.</li>
+            <li><strong>Slack/Email:</strong> Deliver results to humans who need them.</li>
+          </ul>
+
+          <h2 className="text-2xl font-bold text-gray-900">Step 3: Guardrails and Fallbacks</h2>
+          <p>
+            Without guardrails, agents can spiral. I always implement:
+          </p>
+          <div className="bg-gray-900 text-gray-100 rounded-xl p-6 overflow-x-auto">
+            <pre className="text-sm leading-relaxed">{`MAX_STEPS = 10       # Prevent infinite loops
+CONFIDENCE_THRESHOLD = 0.7  # Below this, escalate to human
+RETRY_LIMIT = 3             # Per tool, before failing gracefully
+COST_BUDGET = 0.50          # Per run, hard stop
+HUMAN_IN_THE_LOOP = True   # For high-stakes decisions`}</pre>
+          </div>
+
+          <p>
+            These parameters are tuned per task. A news aggregator can run 50 steps cheaply. A financial trade agent needs strict limits.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">Step 4: Memory and Context</h2>
+          <p>
+            Stateless agents forget everything after each run. For tasks that span days or weeks, I implement a simple memory layer:
+          </p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li><strong>Short-term:</strong> Conversation context within a session. Handled by the model's context window.</li>
+            <li><strong>Medium-term:</strong> Session summaries stored in Redis or a file. Retrieved on next run.</li>
+            <li><strong>Long-term:</strong> Vector embeddings in a Pinecone or Weaviate index. Semantic search across all past interactions.</li>
+          </ul>
+
+          <h2 className="text-2xl font-bold text-gray-900">Step 5: Orchestration Patterns</h2>
+          <p>
+            For complex tasks, one agent is not enough. Here are the patterns I use:
+          </p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li><strong>Router:</strong> A lightweight model classifies the input and routes to the right specialist agent.</li>
+            <li><strong>Parallel:</strong> Multiple agents work simultaneously on independent sub-tasks, results merged at the end.</li>
+            <li><strong>Sequential:</strong> Output of Agent A feeds into Agent B. Used for refine-and-expand workflows.</li>
+            <li><strong>Debate:</strong> Two agents argue opposing sides of a decision, third agent resolves.</li>
+          </ul>
+
+          <h2 className="text-2xl font-bold text-gray-900">A Minimal Working Agent</h2>
+          <p>
+            Here is the simplest production-ready agent I run — a research assistant that searches the web, summarizes findings, and sends a Slack message:
+          </p>
+
+          <div className="bg-gray-900 text-gray-100 rounded-xl p-6 overflow-x-auto">
+            <pre className="text-sm leading-relaxed">{`from anthropic import Anthropic
+from brave import BraveSearch
+import json, re
+
+claude = Anthropic()
+search = BraveSearch()
+
+def research_agent(query: str) -> str:
+    # Step 1: Search
+    results = search.text(query=query, count=5)
+
+    # Step 2: Summarize
+    context = "\\n".join([f"{r['title']}: {r['description']}" for r in results["web"]["results"]])
+    prompt = f"Summarize these search results in 3 bullet points:\\n\\n{context}"
+
+    summary = claude.messages.create(
+        model="claude-sonnet-4-20250514",
+        max_tokens=512,
+        messages=[{"role": "user", "content": prompt}]
+    )
+
+    # Step 3: Deliver
+    return summary.content
+
+# Run
+result = research_agent("latest on AI agent frameworks 2026")
+print(result)`}</pre>
+          </div>
+
+          <h2 className="text-2xl font-bold text-gray-900">What&apos;s Next</h2>
+          <p>
+            I am currently building Level 4 multi-agent systems for portfolio research and automated content pipelines. The key insight: agents fail silently when they are poorly scoped. Start with a single, well-defined task. Measure output quality. Only then expand scope.
+          </p>
+          <p>
+            The future is not one agent that does everything. It is many agents that do one thing — and coordinate.
           </p>
         </div>
       ),

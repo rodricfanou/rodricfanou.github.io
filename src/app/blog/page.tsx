@@ -42,6 +42,14 @@ const posts: BlogPost[] = [
     category: "AI",
     readTime: "5 min",
   },
+  {
+    id: 3,
+    title: "From Prompts to Agents: A Practical Framework for Autonomous AI",
+    date: "2026-05-09",
+    excerpt: "A step-by-step guide to building production-ready AI agents — from simple prompt chaining to tool use, memory, and multi-agent orchestration with guardrails.",
+    category: "AI",
+    readTime: "5 min",
+  },
 ];
 
 export default function Blog() {
