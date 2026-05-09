@@ -95,7 +95,7 @@ export default function Contact() {
                 <p>
                   {isFr
                     ? "Vous souhaitez discuter d'IA, d'arbitrage locatif ou de collaboration professionnelle ? Remplissez le formulaire ou envoyez-moi un email."
-                    : "Interested in AI, short-term rental arbitrage, or professional collaboration? Use the form or reach me directly."}
+                    : "Interested in AI, computer networks, or professional collaboration? Use the form or reach me directly."}
                 </p>
                 <div className="space-y-3 pt-2">
                   <div className="flex items-start gap-3">
