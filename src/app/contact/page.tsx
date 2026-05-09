@@ -18,8 +18,8 @@ export default function Contact() {
   const [errorMsg, setErrorMsg] = useState("");
 
   const interests = isFr
-    ? ["Collaboration en IA", "Investissement locatif", "Consulting", "Autre"]
-    : ["AI Collaboration", "STR Investment", "Consulting", "Other"];
+    ? ["Collaboration en IA", "Consulting", "Autre"]
+    : ["AI Collaboration", "Consulting", "Other"];
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -73,8 +73,8 @@ export default function Contact() {
               </h1>
               <p className="text-base text-white/90 drop-shadow-sm md:text-lg md:text-xl">
                 {isFr
-                  ? "Parlons d'IA, d'investissement ou de collaboration."
-                  : "Let's talk AI, investment, or collaboration."}
+                  ? "Parlons d'IA ou de collaboration professionnelle."
+                  : "Let's talk AI, computer networks, or collaboration."}
               </p>
             </div>
           </FadeIn>
@@ -136,8 +136,8 @@ export default function Contact() {
                       </p>
                       <ul className="text-white/80 space-y-0.5 text-xs">
                         <li>&#x2022; {isFr ? "Agents IA & Orchestration" : "AI Agents & Orchestration"}</li>
+                        <li>&#x2022; {isFr ? "Réseaux Informatiques & Architecture" : "Computer Networks & Architecture"}</li>
                         <li>&#x2022; {isFr ? "CDN & Edge Computing" : "CDN & Edge Computing"}</li>
-                        <li>&#x2022; {isFr ? "Arbitrage STR" : "STR Arbitrage"}</li>
                         <li>&#x2022; {isFr ? "Systèmes Distribués" : "Distributed Systems"}</li>
                       </ul>
                     </div>
