@@ -171,7 +171,7 @@ export default function Contact() {
         <div className="grid md:grid-cols-5 gap-0">
 
           {/* Left — Info */}
-          <div className="md:col-span-2 bg-gradient-to-br from-blue-700 to-blue-900 p-8 md:p-10 text-white flex flex-col justify-center">
+          <div className="md:col-span-2 bg-gradient-to-br from-gray-800 to-gray-900 p-8 md:p-10 text-white flex flex-col justify-center">
             <FadeIn>
               <h2 className="text-xl font-bold mb-5">
                 {isFr ? "Me contacter" : "Get in Touch"}
@@ -184,27 +184,27 @@ export default function Contact() {
                 </p>
                 <div className="space-y-3 pt-1">
                   <div className="flex items-start gap-3">
-                    <span className="text-blue-300 mt-0.5">✉️</span>
+                    <span className="text-gray-400 mt-0.5">✉️</span>
                     <div>
-                      <p className="font-semibold text-xs uppercase tracking-wide text-blue-200 mb-0.5">Email</p>
+                      <p className="font-semibold text-xs uppercase tracking-wide text-gray-400 mb-0.5">Email</p>
                       <a href="mailto:roderick@roderickfanou.com" className="hover:underline text-white/90 text-sm">
                         roderick@roderickfanou.com
                       </a>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <span className="text-blue-300 mt-0.5">💻</span>
+                    <span className="text-gray-400 mt-0.5">💻</span>
                     <div>
-                      <p className="font-semibold text-xs uppercase tracking-wide text-blue-200 mb-0.5">GitHub</p>
+                      <p className="font-semibold text-xs uppercase tracking-wide text-gray-400 mb-0.5">GitHub</p>
                       <a href="https://github.com/rodricfanou" target="_blank" rel="noopener noreferrer" className="hover:underline text-white/90 text-sm">
                         github.com/rodricfanou
                       </a>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <span className="text-blue-300 mt-0.5">💼</span>
+                    <span className="text-gray-400 mt-0.5">💼</span>
                     <div>
-                      <p className="font-semibold text-xs uppercase tracking-wide text-blue-200 mb-0.5">LinkedIn</p>
+                      <p className="font-semibold text-xs uppercase tracking-wide text-gray-400 mb-0.5">LinkedIn</p>
                       <a href="https://linkedin.com/in/roderickfanou" target="_blank" rel="noopener noreferrer" className="hover:underline text-white/90 text-sm">
                         linkedin.com/in/roderickfanou
                       </a>
@@ -250,7 +250,7 @@ export default function Contact() {
                           onChange={handleChange}
                           required
                           placeholder={isFr ? "Votre nom" : "Your name"}
-                          className="w-full px-4 py-3 rounded-lg border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                          className="w-full px-4 py-3 rounded-lg border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-gray-800 focus:border-transparent transition"
                         />
                       </div>
                       <div>
@@ -265,7 +265,7 @@ export default function Contact() {
                           onChange={handleChange}
                           required
                           placeholder={isFr ? "votre@email.com" : "your@email.com"}
-                          className="w-full px-4 py-3 rounded-lg border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                          className="w-full px-4 py-3 rounded-lg border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-gray-800 focus:border-transparent transition"
                         />
                       </div>
                     </div>
@@ -280,7 +280,7 @@ export default function Contact() {
                         value={formData.company}
                         onChange={handleChange}
                         placeholder={isFr ? "Votre entreprise" : "Your company"}
-                        className="w-full px-4 py-3 rounded-lg border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                        className="w-full px-4 py-3 rounded-lg border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-gray-800 focus:border-transparent transition"
                       />
                     </div>
                     <div>
@@ -293,7 +293,7 @@ export default function Contact() {
                         value={formData.interest}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 rounded-lg border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition bg-white"
+                        className="w-full px-4 py-3 rounded-lg border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-gray-800 focus:border-transparent transition bg-white"
                       >
                         <option value="">
                           {isFr ? "Sélectionnez un sujet" : "Select a topic"}
@@ -321,7 +321,7 @@ export default function Contact() {
                             ? "Décrivez votre projet, vos besoins, votre calendrier..."
                             : "Describe your project, your needs, and your timeline..."
                         }
-                        className="w-full px-4 py-3 rounded-lg border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition resize-none"
+                        className="w-full px-4 py-3 rounded-lg border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-gray-800 focus:border-transparent transition resize-none"
                       />
                     </div>
                     {status === "error" && (
@@ -330,7 +330,7 @@ export default function Contact() {
                     <button
                       type="submit"
                       disabled={status === "loading"}
-                      className="w-full py-3 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-semibold rounded-lg text-sm transition-colors duration-200 flex items-center justify-center gap-2"
+                      className="w-full py-3 bg-gray-800 hover:bg-gray-900 disabled:bg-gray-400 text-white font-semibold rounded-lg text-sm transition-colors duration-200 flex items-center justify-center gap-2"
                     >
                       {status === "loading" ? (
                         <>
