@@ -6,6 +6,7 @@ export const translations = {
       home: "Home",
       publications: "Publications",
       blog: "Blog",
+      contact: "Contact",
     },
     footer: {
       quickLinks: "Quick Links",
@@ -18,6 +19,7 @@ export const translations = {
       home: "Accueil",
       publications: "Publications",
       blog: "Blog",
+      contact: "Contact",
     },
     footer: {
       quickLinks: "Liens Rapides",

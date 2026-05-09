@@ -363,7 +363,17 @@ print(result)`}</pre>
           {post.content}
         </FadeIn>
 
-        <div className="mt-12 pt-8 border-t border-gray-200">
+        {/* CTA */}
+        <div className="mt-10 p-6 rounded-xl bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-100">
+          <p className="text-gray-700 text-sm leading-relaxed">
+            Interested in applying AI agents to your business? I help companies build custom autonomous pipelines — from research to production deployment.{" "}
+            <Link href="/contact" className="text-blue-600 font-semibold hover:underline">
+              Reach out to discuss your project &rarr;
+            </Link>
+          </p>
+        </div>
+
+        <div className="mt-8 pt-8 border-t border-gray-200">
           <Link href="/blog" className="text-blue-600 hover:underline font-medium">
             &larr; Back to all posts
           </Link>

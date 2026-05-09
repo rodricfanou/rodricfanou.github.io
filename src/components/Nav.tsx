@@ -7,6 +7,7 @@ import { translations } from "@/lib/translations";
 const rightLinks = [
   { href: "/publications", labelKey: "publications" as const },
   { href: "/blog", labelKey: "blog" as const },
+  { href: "/contact", labelKey: "contact" as const },
 ];
 
 export default function Nav() {
