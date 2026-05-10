@@ -1,19 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
-
-const FadeIn = ({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) => {
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
-  return (
-    <div
-      className="transition-opacity duration-1000"
-      style={{ opacity: mounted ? 1 : 0, transitionDelay: `${delay}ms` }}
-    >
-      {children}
-    </div>
-  );
-};
+import { useState } from "react";
+import FadeIn from "@/components/FadeIn";
 
 interface Publication {
   id: number;
@@ -124,7 +112,7 @@ const PublicationCard = ({ pub, expandedId, setExpandedId, index }: { pub: Publi
           href={`https://doi.org/${pub.doi}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="self-start shrink-0 px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
+          className="self-start shrink-0 px-4 py-2 bg-gray-800 text-white rounded-lg text-sm font-medium hover:bg-gray-900 transition-colors"
         >
           DOI
         </a>

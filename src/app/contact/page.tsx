@@ -96,6 +96,7 @@ function ContactForm({ isFr, tInterests }: { isFr: boolean; tInterests: string[]
             type="text"
             name="name"
             required
+            maxLength={100}
             placeholder={isFr ? "Votre nom" : "Your name"}
             className="w-full px-4 py-3 rounded-lg border border-gray-300 text-black text-sm focus:outline-none focus:ring-2 focus:ring-gray-800 focus:border-transparent transition placeholder:text-gray-400"
           />
@@ -110,6 +111,7 @@ function ContactForm({ isFr, tInterests }: { isFr: boolean; tInterests: string[]
             type="email"
             name="email"
             required
+            maxLength={150}
             placeholder={isFr ? "votre@email.com" : "your@email.com"}
             className="w-full px-4 py-3 rounded-lg border border-gray-300 text-black text-sm focus:outline-none focus:ring-2 focus:ring-gray-800 focus:border-transparent transition placeholder:text-gray-400"
           />
@@ -125,6 +127,7 @@ function ContactForm({ isFr, tInterests }: { isFr: boolean; tInterests: string[]
           id="company"
           type="text"
           name="company"
+          maxLength={100}
           placeholder={isFr ? "Votre entreprise" : "Your company"}
           className="w-full px-4 py-3 rounded-lg border border-gray-300 text-black text-sm focus:outline-none focus:ring-2 focus:ring-gray-800 focus:border-transparent transition placeholder:text-gray-400"
         />
@@ -161,6 +164,7 @@ function ContactForm({ isFr, tInterests }: { isFr: boolean; tInterests: string[]
           name="message"
           required
           rows={5}
+          maxLength={2000}
           placeholder={
             isFr
               ? "Décrivez votre projet, vos besoins, votre calendrier..."

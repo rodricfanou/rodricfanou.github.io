@@ -1,20 +1,6 @@
 "use client";
 
-import { useEffect, useState, ReactNode } from "react";
-
-// Fade-in reusable component
-const FadeIn = ({ children, delay = 0 }: { children: ReactNode; delay?: number }) => {
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
-  return (
-    <div
-      className="transition-opacity duration-1000"
-      style={{ opacity: mounted ? 1 : 0, transitionDelay: `${delay}ms` }}
-    >
-      {children}
-    </div>
-  );
-};
+import FadeIn from "@/components/FadeIn";
 
 export default function Home() {
   return (

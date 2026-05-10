@@ -1,20 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
-
-const FadeIn = ({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) => {
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
-  return (
-    <div
-      className="transition-opacity duration-1000"
-      style={{ opacity: mounted ? 1 : 0, transitionDelay: `${delay}ms` }}
-    >
-      {children}
-    </div>
-  );
-};
+import FadeIn from "@/components/FadeIn";
 
 interface BlogPost {
   id: number;
@@ -93,9 +81,10 @@ export default function Blog() {
               <button
                 key={cat}
                 onClick={() => setFilter(cat)}
+                aria-pressed={filter === cat}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                   filter === cat
-                    ? "bg-blue-600 text-white shadow-md"
+                    ? "bg-gray-800 text-white shadow-md"
                     : "bg-white text-gray-700 hover:bg-gray-200"
                 }`}
               >
@@ -121,7 +110,7 @@ export default function Blog() {
                   <p className="text-gray-600 text-sm leading-relaxed flex-1">{post.excerpt}</p>
                   <Link
                     href={`/blog/${post.id}`}
-                    className="mt-4 inline-block text-blue-600 hover:text-blue-800 font-medium text-sm"
+                    className="mt-4 inline-block text-gray-700 hover:text-gray-900 font-medium text-sm"
                   >
                     Read more &rarr;
                   </Link>

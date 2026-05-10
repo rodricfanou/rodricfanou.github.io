@@ -34,7 +34,8 @@ export default function Nav() {
           ))}
           <button
             onClick={() => setLang(lang === "en" ? "fr" : "en")}
-            className="px-3 py-1 text-sm font-medium text-gray-600 bg-gray-100 rounded-full hover:bg-blue-100 hover:text-blue-600 transition-colors"
+            aria-label={lang === "en" ? "Switch to French" : "Switch to English"}
+            className="px-3 py-1 text-sm font-medium text-gray-600 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
           >
             {lang === "en" ? "FR" : "EN"}
           </button>
@@ -51,7 +52,8 @@ export default function Nav() {
           ))}
           <button
             onClick={() => setLang(lang === "en" ? "fr" : "en")}
-            className="px-2 py-1 text-xs font-medium text-gray-600 bg-gray-100 rounded-full hover:bg-blue-100 hover:text-blue-600 transition-colors"
+            aria-label={lang === "en" ? "Switch to French" : "Switch to English"}
+            className="px-2 py-1 text-xs font-medium text-gray-600 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
           >
             {lang === "en" ? "FR" : "EN"}
           </button>
