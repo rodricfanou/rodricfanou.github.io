@@ -81,10 +81,6 @@ function ContactForm({ isFr, tInterests }: { isFr: boolean; tInterests: string[]
           {isFr ? "Message envoyé !" : "Message Sent!"}
         </h3>
         <p className="text-gray-500 text-sm">
-          {isFr
-            ? "Merci. Je vous répondrai sous 24–48h."
-            : "Thank you. I'll reply within 24–48 hours."}
-        </p>
       </div>
     );
   }
@@ -102,7 +98,7 @@ function ContactForm({ isFr, tInterests }: { isFr: boolean; tInterests: string[]
             name="name"
             required
             placeholder={isFr ? "Votre nom" : "Your name"}
-            className="w-full px-4 py-3 rounded-lg border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-gray-800 focus:border-transparent transition"
+            className="w-full px-4 py-3 rounded-lg border border-gray-300 text-black text-sm focus:outline-none focus:ring-2 focus:ring-gray-800 focus:border-transparent transition placeholder:text-gray-400"
           />
           <ValidationError prefix="Name" field="name" errors={state.errors} />
         </div>
@@ -116,7 +112,7 @@ function ContactForm({ isFr, tInterests }: { isFr: boolean; tInterests: string[]
             name="email"
             required
             placeholder={isFr ? "votre@email.com" : "your@email.com"}
-            className="w-full px-4 py-3 rounded-lg border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-gray-800 focus:border-transparent transition"
+            className="w-full px-4 py-3 rounded-lg border border-gray-300 text-black text-sm focus:outline-none focus:ring-2 focus:ring-gray-800 focus:border-transparent transition placeholder:text-gray-400"
           />
           <ValidationError prefix="Email" field="email" errors={state.errors} />
         </div>
@@ -131,7 +127,7 @@ function ContactForm({ isFr, tInterests }: { isFr: boolean; tInterests: string[]
           type="text"
           name="company"
           placeholder={isFr ? "Votre entreprise" : "Your company"}
-          className="w-full px-4 py-3 rounded-lg border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-gray-800 focus:border-transparent transition"
+          className="w-full px-4 py-3 rounded-lg border border-gray-300 text-black text-sm focus:outline-none focus:ring-2 focus:ring-gray-800 focus:border-transparent transition placeholder:text-gray-400"
         />
       </div>
 
@@ -253,7 +249,7 @@ export default function Contact() {
         <div className="grid md:grid-cols-5 gap-0">
 
           {/* Left — Info */}
-          <div className="md:col-span-2 bg-gradient-to-br from-gray-800 to-gray-900 p-8 md:p-10 text-white flex flex-col justify-center">
+          <div className="md:col-span-2 bg-gray-800 p-8 md:p-10 text-white flex flex-col justify-center">
             <FadeIn>
               <h2 className="text-xl font-bold mb-5">
                 {isFr ? "Me contacter" : "Get in Touch"}
