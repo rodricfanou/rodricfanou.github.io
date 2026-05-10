@@ -79,7 +79,7 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900">Postdoctoral Researcher</h3>
-                <p className="text-blue-600 font-medium">CAIDA / UC San Diego</p>
+                <p className="text-blue-600 font-medium">CAIDA/UC San Diego at the San Diego Supercomputer Center</p>
                 <p className="text-gray-500 text-sm">2018 - 2021</p>
                 <p className="text-gray-700 mt-2">Conducted large-scale Internet measurements, BGP routing analysis, and submarine cable impact studies. Best Paper Award at PAM 2020.</p>
               </div>
