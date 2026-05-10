@@ -80,7 +80,6 @@ function ContactForm({ isFr, tInterests }: { isFr: boolean; tInterests: string[]
         <h3 className="text-2xl font-bold text-gray-800 mb-2">
           {isFr ? "Message envoyé !" : "Message Sent!"}
         </h3>
-        <p className="text-gray-500 text-sm">
       </div>
     );
   }
@@ -139,7 +138,7 @@ function ContactForm({ isFr, tInterests }: { isFr: boolean; tInterests: string[]
           id="interest"
           name="interest"
           required
-          className="w-full px-4 py-3 rounded-lg border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-gray-800 focus:border-transparent transition bg-white"
+          className="w-full px-4 py-3 rounded-lg border border-gray-300 text-black text-sm focus:outline-none focus:ring-2 focus:ring-gray-800 focus:border-transparent transition bg-white placeholder:text-gray-400"
         >
           <option value="">
             {isFr ? "Sélectionnez un sujet" : "Select a topic"}
@@ -167,7 +166,7 @@ function ContactForm({ isFr, tInterests }: { isFr: boolean; tInterests: string[]
               ? "Décrivez votre projet, vos besoins, votre calendrier..."
               : "Describe your project, your needs, and your timeline..."
           }
-          className="w-full px-4 py-3 rounded-lg border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-gray-800 focus:border-transparent transition resize-none"
+          className="w-full px-4 py-3 rounded-lg border border-gray-300 text-black text-sm focus:outline-none focus:ring-2 focus:ring-gray-800 focus:border-transparent transition resize-none placeholder:text-gray-400"
         />
         <ValidationError prefix="Message" field="message" errors={state.errors} />
       </div>
@@ -193,8 +192,9 @@ function ContactForm({ isFr, tInterests }: { isFr: boolean; tInterests: string[]
 export default function Contact() {
   const { lang } = useLanguage();
   const isFr = lang === "fr";
-  const tServices = services[isFr];
-  const tInterests = interests[isFr];
+  const langKey = lang as "en" | "fr";
+  const tServices = services[langKey];
+  const tInterests = interests[langKey];
 
   return (
     <main className="bg-gray-100 min-h-screen py-8 px-4 flex flex-col items-center md:py-12 md:px-8">
