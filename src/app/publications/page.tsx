@@ -97,7 +97,7 @@ const PublicationCard = ({ pub, expandedId, setExpandedId, index }: { pub: Publi
           <h2 className="text-lg font-bold text-gray-900 mb-1 md:text-xl">{pub.title}</h2>
           <p className="text-gray-600 text-sm mb-2">{pub.authors}</p>
           <div className="flex flex-wrap items-center gap-3 text-sm">
-            <span className="text-blue-600 font-medium">{pub.journal}</span>
+            <span className="text-gray-700 font-medium">{pub.journal}</span>
             <span className="text-gray-400">&bull;</span>
             <span className="text-gray-500">{pub.year}</span>
             {isBestPaper && (
@@ -120,7 +120,7 @@ const PublicationCard = ({ pub, expandedId, setExpandedId, index }: { pub: Publi
 
       <button
         onClick={() => setExpandedId(expandedId === pub.id ? null : pub.id)}
-        className="mt-3 text-blue-600 hover:text-blue-800 text-sm font-medium"
+        className="mt-3 text-gray-700 hover:text-gray-900 text-sm font-medium"
       >
         {expandedId === pub.id ? "Hide abstract" : "Show abstract"}
       </button>
@@ -194,18 +194,10 @@ export default function Publications() {
         <FadeIn>
           <div className="flex flex-wrap gap-4">
             <a
-              href="https://blog.cloudflare.com/why-i-joined-cloudflare-and-why-im-excited-about-project-pangea/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg text-base font-medium hover:bg-blue-700 transition-colors shadow-sm"
-            >
-              Cloudflare Blog Post &rarr;
-            </a>
-            <a
               href="https://users.caida.org/~roderick/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg text-base font-medium hover:bg-blue-700 transition-colors shadow-sm"
+              className="inline-block px-6 py-3 bg-gray-800 text-white rounded-lg text-base font-medium hover:bg-gray-900 transition-colors shadow-sm"
             >
               CAIDA Profile &rarr;
             </a>
@@ -213,7 +205,7 @@ export default function Publications() {
               href="https://scholar.google.com/citations?user=CpdupCIAAAAJ&hl=en"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg text-base font-medium hover:bg-blue-700 transition-colors shadow-sm"
+              className="inline-block px-6 py-3 bg-gray-800 text-white rounded-lg text-base font-medium hover:bg-gray-900 transition-colors shadow-sm"
             >
               Google Scholar &rarr;
             </a>
@@ -221,7 +213,7 @@ export default function Publications() {
               href="https://networks.imdea.org/team/imdea-networks-team/people/roderick-fanou/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg text-base font-medium hover:bg-blue-700 transition-colors shadow-sm"
+              className="inline-block px-6 py-3 bg-gray-800 text-white rounded-lg text-base font-medium hover:bg-gray-900 transition-colors shadow-sm"
             >
               IMDEA Networks Profile &rarr;
             </a>
@@ -229,7 +221,7 @@ export default function Publications() {
               href="https://www.internetsociety.org/es/author/fanou/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg text-base font-medium hover:bg-blue-700 transition-colors shadow-sm"
+              className="inline-block px-6 py-3 bg-gray-800 text-white rounded-lg text-base font-medium hover:bg-gray-900 transition-colors shadow-sm"
             >
               Internet Society Profile &rarr;
             </a>
@@ -237,7 +229,7 @@ export default function Publications() {
               href="https://www.afpif.org/speakers/mr-roderick-fanou/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg text-base font-medium hover:bg-blue-700 transition-colors shadow-sm"
+              className="inline-block px-6 py-3 bg-gray-800 text-white rounded-lg text-base font-medium hover:bg-gray-900 transition-colors shadow-sm"
             >
               AFPIF Speaker Profile &rarr;
             </a>
@@ -245,7 +237,7 @@ export default function Publications() {
               href="https://blog.afrinic.net/20210330-unintended-consequences-of-submarine-cable-deployment-on-internet-routing"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg text-base font-medium hover:bg-blue-700 transition-colors shadow-sm"
+              className="inline-block px-6 py-3 bg-gray-800 text-white rounded-lg text-base font-medium hover:bg-gray-900 transition-colors shadow-sm"
             >
               AFRINIC Blog Post &rarr;
             </a>
@@ -253,7 +245,7 @@ export default function Publications() {
               href="https://blog.apnic.net/2021/02/22/unintended-consequences-of-submarine-cable-deployment-on-internet-routing/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg text-base font-medium hover:bg-blue-700 transition-colors shadow-sm"
+              className="inline-block px-6 py-3 bg-gray-800 text-white rounded-lg text-base font-medium hover:bg-gray-900 transition-colors shadow-sm"
             >
               APNIC Blog Post &rarr;
             </a>
