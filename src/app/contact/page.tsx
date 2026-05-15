@@ -44,7 +44,7 @@ const services = {
     {
       icon: "🌍",
       title: "Translation",
-      desc: "Professional English-French translation for technical, academic, and business content.",
+      desc: "Professional translation between English, French, and Spanish — technical, academic, business, or any content.",
     },
     {
       icon: "✍️",
@@ -96,7 +96,7 @@ const services = {
     {
       icon: "🌍",
       title: "Traduction",
-      desc: "Traduction professionnelle anglais-français pour du contenu technique, académique et commercial.",
+      desc: "Traduction professionnelle entre anglais, français et espagnol — technique, académique, commercial ou tout autre contenu.",
     },
     {
       icon: "✍️",

@@ -50,7 +50,7 @@ export default function Home() {
         <FadeIn>
           <div>
             <h2 className="text-2xl font-bold mb-4 text-gray-900 md:text-3xl md:text-4xl">About Me</h2>
-            <p className="text-gray-700 text-base md:text-lg leading-relaxed">
+            <p data-justify className="text-gray-700 text-base md:text-lg leading-relaxed">
               I am passionate about the Internet architecture, computer networks, and AI. With a background as an Internet Scientist specialized in Network Measurements, monitoring, big data analysis, and real-time storage, I transitioned to the tech industry as a Systems engineer a few years back. 
 
               I have developed extensive experience and a robust technical foundation in designing and implementing systems focused on network monitoring and Internet traffic management. 

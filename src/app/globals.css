@@ -3,3 +3,8 @@
 body {
   font-family: var(--font-geist-sans), system-ui, sans-serif;
 }
+
+p[data-justify] {
+  text-align: justify;
+  text-justify: inter-word;
+}
