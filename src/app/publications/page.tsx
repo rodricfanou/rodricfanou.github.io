@@ -12,6 +12,7 @@ interface Publication {
   doi: string;
   abstract: string;
   type: "journal" | "conference";
+  city?: string;
 }
 
 const publications: Publication[] = [
@@ -24,6 +25,7 @@ const publications: Publication[] = [
     doi: "10.1007/978-3-030-44081-7_13",
     abstract: "This paper analyzes how submarine cable deployments impact Internet routing, revealing unintended consequences on traffic patterns, latency, and path diversity. Awarded Best Paper at PAM 2020.",
     type: "conference",
+    city: "Eugene, OR, USA",
   },
   {
     id: 2,
@@ -34,6 +36,7 @@ const publications: Publication[] = [
     doi: "10.1007/978-3-319-15509-8_4",
     abstract: "This paper presents the first comprehensive study of the diversity of interdomain routing in Africa, analyzing BGP data to reveal the unique characteristics of African Internet routing infrastructure.",
     type: "conference",
+    city: "New York City, NY, USA",
   },
   {
     id: 3,
@@ -44,6 +47,7 @@ const publications: Publication[] = [
     doi: "10.1145/2872427.2882997",
     abstract: "A large-scale measurement study of the African web ecosystem, revealing the structure, hosting patterns, and content delivery characteristics of websites across the continent.",
     type: "conference",
+    city: "Montreal, QC, Canada",
   },
   {
     id: 4,
@@ -54,6 +58,7 @@ const publications: Publication[] = [
     doi: "10.1145/3131365.3131394",
     abstract: "This work investigates the causes and characteristics of congestion at African Internet Exchange Points (IXPs), providing insights into traffic patterns and peering dynamics.",
     type: "conference",
+    city: "London, UK",
   },
   {
     id: 5,
@@ -100,6 +105,12 @@ const PublicationCard = ({ pub, expandedId, setExpandedId, index }: { pub: Publi
             <span className="text-gray-700 font-medium">{pub.journal}</span>
             <span className="text-gray-400">&bull;</span>
             <span className="text-gray-500">{pub.year}</span>
+            {pub.city && (
+              <>
+                <span className="text-gray-400">&bull;</span>
+                <span className="text-gray-500">{pub.city}</span>
+              </>
+            )}
             {isBestPaper && (
               <>
                 <span className="text-gray-400">&bull;</span>

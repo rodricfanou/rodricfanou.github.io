@@ -55,7 +55,7 @@ export default function Home() {
 
               I have developed extensive experience and a robust technical foundation in designing and implementing systems focused on network monitoring and Internet traffic management. 
               
-              I enjoy contributing to innovative projects, exploring new technologies, measuring the Internet, and sharing knowledge through code, blog posts, and tutorials.
+              I enjoy contributing to innovative projects, exploring new technologies, measuring the Internet, and sharing knowledge through code, blog posts, tutorials, and scientific papers.
 
             </p>
           </div>
@@ -73,19 +73,19 @@ export default function Home() {
               </div> */}
               <div>
                 <h3 className="text-xl font-bold text-gray-900">Systems Engineer</h3>
-                <p className="text-blue-600 font-medium">Cloudflare, Inc</p>
+                <p className="text-blue-600 font-medium">Cloudflare, Inc - US</p>
                 <p className="text-gray-500 text-sm">2021 - 2026</p>
                 <p className="text-gray-700 mt-2">Designed and built scalable systems for Internet traffic management worldwide, network monitoring, and real-time data processing.</p>
               </div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900">Postdoctoral Researcher</h3>
-                <p className="text-blue-600 font-medium">CAIDA/UC San Diego at the San Diego Supercomputer Center</p>
+                <p className="text-blue-600 font-medium">CAIDA/UC San Diego at the San Diego Supercomputer Center - US</p>
                 <p className="text-gray-500 text-sm">2018 - 2021</p>
                 <p className="text-gray-700 mt-2">Conducted large-scale Internet measurements, BGP routing analysis, and submarine cable impact studies. Best Paper Award at PAM 2020.</p>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-gray-900">Assistant Researcher & PhD Student</h3>
-                <p className="text-blue-600 font-medium">IMDEA Networks Institute</p>
+                <h3 className="text-xl font-bold text-gray-900">Assistant Researcher</h3>
+                <p className="text-blue-600 font-medium">IMDEA Networks Institute - Spain</p>
                 <p className="text-gray-500 text-sm">2013 - 2017</p>
                 <p className="text-gray-700 mt-2">Led projects on Internet infrastructure measurements with a focus on developing regions like Afrinic, IXP mapping, interdomain routing analysis, and Content Delivery Networks.</p>
               </div>

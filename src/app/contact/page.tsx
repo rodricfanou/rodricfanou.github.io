@@ -58,6 +58,7 @@ const interests = {
     "Infrastructure Consulting",
     "Research Collaboration",
     "Speaking / Talk",
+    "Website Design",
     "Other",
   ],
   fr: [
@@ -66,6 +67,7 @@ const interests = {
     "Conseil en Infrastructure",
     "Collaboration Recherche",
     "Conférence / Parole",
+    "Conception de Site Web",
     "Autre",
   ],
 };
