@@ -8,39 +8,69 @@ const services = {
   en: [
     {
       icon: "🤖",
-      title: "AI Agents & Automation",
+      title: "AI & Agents Automation",
       desc: "Build custom autonomous pipelines, multi-agent orchestrations, and LLM-powered workflows for your business.",
     },
     {
       icon: "🌐",
-      title: "Network Architecture",
-      desc: "Design and optimize CDN, edge computing, and distributed systems at scale.",
+      title: "Computer Networks",
+      desc: "Design, optimize, and troubleshoot network infrastructure including routing, switching, and traffic management at scale.",
     },
     {
       icon: "⚡",
-      title: "Infrastructure Consulting",
-      desc: "Technical advisory on cloud architecture, performance optimization, and system design.",
+      title: "IT & Infrastructure Consulting",
+      desc: "Technical advisory on cloud architecture, performance optimization, system design, and IT operations.",
     },
     {
       icon: "🔬",
       title: "Research Collaboration",
       desc: "Co-author papers, contribute to open-source, or collaborate on applied research.",
     },
+    {
+      icon: "🎙️",
+      title: "Public Speaking",
+      desc: "Deliver talks, keynotes, or panel discussions on Internet measurement, networking, AI, and technology.",
+    },
+    {
+      icon: "🎨",
+      title: "Web Design",
+      desc: "Design and build modern, responsive websites with a focus on performance, accessibility, and bilingual support.",
+    },
+    {
+      icon: "📊",
+      title: "Bookkeeping",
+      desc: "Financial record-keeping, invoicing, expense tracking, and reconciliation for small businesses and freelancers.",
+    },
+    {
+      icon: "🌍",
+      title: "Translation",
+      desc: "Professional English-French translation for technical, academic, and business content.",
+    },
+    {
+      icon: "✍️",
+      title: "Copywriting",
+      desc: "Craft compelling copy for websites, marketing materials, and technical documentation.",
+    },
+    {
+      icon: "💻",
+      title: "Custom Software Development",
+      desc: "Build tailored software solutions, from automation scripts to full-stack web applications.",
+    },
   ],
   fr: [
     {
       icon: "🤖",
-      title: "Agents IA & Automatisation",
+      title: "IA & Automatisation d'Agents",
       desc: "Construisez des pipelines autonomes, des orchestrations multi-agents et des workflows alimentés par LLM.",
     },
     {
       icon: "🌐",
-      title: "Architecture Réseau",
-      desc: "Concevez et optimisez les CDN, l'edge computing et les systèmes distribués à grande échelle.",
+      title: "Réseaux Informatiques",
+      desc: "Concevez, optimisez et dépannez l'infrastructure réseau : routage, commutation et gestion du trafic à grande échelle.",
     },
     {
       icon: "⚡",
-      title: "Conseil en Infrastructure",
+      title: "Conseil IT & Infrastructure",
       desc: "Accompagnement technique sur l'architecture cloud, l'optimisation des performances et la conception de systèmes.",
     },
     {
@@ -48,26 +78,64 @@ const services = {
       title: "Collaboration Recherche",
       desc: "Co-rédigez des articles, contribuez à l'open-source ou collaborez sur de la recherche appliquée.",
     },
+    {
+      icon: "🎙️",
+      title: "Interventions Publiques",
+      desc: "Donnez des conférences, keynotes ou panels sur la mesure Internet, le réseau, l'IA et la technologie.",
+    },
+    {
+      icon: "🎨",
+      title: "Conception de Sites Web",
+      desc: "Concevez et développez des sites web modernes et réactifs axés sur la performance, l'accessibilité et le support bilingue.",
+    },
+    {
+      icon: "📊",
+      title: "Comptabilité",
+      desc: "Tenue de registres financiers, facturation, suivi des dépenses et rapprochement pour PME et freelances.",
+    },
+    {
+      icon: "🌍",
+      title: "Traduction",
+      desc: "Traduction professionnelle anglais-français pour du contenu technique, académique et commercial.",
+    },
+    {
+      icon: "✍️",
+      title: "Rédaction",
+      desc: "Rédigez du contenu persuasif pour sites web, supports marketing et documentation technique.",
+    },
+    {
+      icon: "💻",
+      title: "Développement Logiciel Sur Mesure",
+      desc: "Développez des solutions logicielles sur mesure, des scripts d'automatisation aux applications web full-stack.",
+    },
   ],
 };
 
 const interests = {
   en: [
-    "AI Agents & Automation",
-    "Network Architecture",
-    "Infrastructure Consulting",
+    "AI & Agents Automation",
+    "Computer Networks",
+    "IT & Infrastructure Consulting",
     "Research Collaboration",
-    "Speaking / Talk",
-    "Website Design",
+    "Public Speaking",
+    "Web Design",
+    "Bookkeeping",
+    "Translation",
+    "Copywriting",
+    "Custom Software Development",
     "Other",
   ],
   fr: [
-    "Agents IA & Automatisation",
-    "Architecture Réseau",
-    "Conseil en Infrastructure",
+    "IA & Automatisation d'Agents",
+    "Réseaux Informatiques",
+    "Conseil IT & Infrastructure",
     "Collaboration Recherche",
-    "Conférence / Parole",
-    "Conception de Site Web",
+    "Interventions Publiques",
+    "Conception de Sites Web",
+    "Comptabilité",
+    "Traduction",
+    "Rédaction",
+    "Développement Logiciel Sur Mesure",
     "Autre",
   ],
 };
@@ -222,8 +290,8 @@ export default function Contact() {
               </h1>
               <p className="text-base text-white/90 drop-shadow-sm md:text-lg md:text-xl max-w-2xl mx-auto">
                 {isFr
-                  ? "Vous avez un projet technique ? Je propose du consulting en IA, réseaux informatiques, conception de sites web et architecture de systèmes."
-                  : "Have a technical project? I offer consulting in AI agents, computer networks, website design, and systems architecture."}
+                  ? "Vous avez un projet technique ou créatif ? Je propose du consulting en IA, réseaux informatiques, IT, conception de sites web, développement logiciel et plus."
+                  : "Have a technical or creative project? I offer consulting in AI, computer networks, IT, web design, software development, and more."}
               </p>
             </div>
           </FadeIn>
