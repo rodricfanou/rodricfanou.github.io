@@ -222,8 +222,8 @@ export default function Contact() {
               </h1>
               <p className="text-base text-white/90 drop-shadow-sm md:text-lg md:text-xl max-w-2xl mx-auto">
                 {isFr
-                  ? "Vous avez un projet technique ? Je propose du consulting en IA, réseaux informatiques et architecture de systèmes."
-                  : "Have a technical project? I offer consulting in AI agents, computer networks, and systems architecture."}
+                  ? "Vous avez un projet technique ? Je propose du consulting en IA, réseaux informatiques, conception de sites web et architecture de systèmes."
+                  : "Have a technical project? I offer consulting in AI agents, computer networks, website design, and systems architecture."}
               </p>
             </div>
           </FadeIn>
