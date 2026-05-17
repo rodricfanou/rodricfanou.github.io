@@ -6,7 +6,7 @@ export const translations = {
       home: "Home",
       publications: "Publications",
       blog: "Blog",
-      contact: "Contact",
+      contact: "Services",
     },
     footer: {
       quickLinks: "Quick Links",
