@@ -38,6 +38,14 @@ const posts: BlogPost[] = [
     category: "AI",
     readTime: "5 min",
   },
+  {
+    id: 4,
+    title: "Manus AI: The General Purpose Agent That Actually Works",
+    date: "2026-05-19",
+    excerpt: "Hands-on breakdown of Manus AI — what it is, how it works, and why it represents a real shift from chatbots to autonomous work agents.",
+    category: "AI",
+    readTime: "6 min",
+  },
 ];
 
 export default function Blog() {
