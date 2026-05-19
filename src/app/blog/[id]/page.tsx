@@ -323,13 +323,15 @@ print(result)`}</pre>
 
           <h2 className="text-2xl font-bold text-gray-900">What Is Manus AI?</h2>
 
-          <div className="rounded-xl overflow-hidden shadow-md">
-            <img
-              src="https://manus.im/og.png"
-              alt="Manus AI Platform"
-              className="w-full h-auto"
-              loading="lazy"
-            />
+          <div className="rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 p-10 text-center shadow-md">
+            <div className="text-6xl mb-4">🤖</div>
+            <p className="text-gray-300 text-base leading-relaxed max-w-xl mx-auto">
+              The general-purpose autonomous agent that delivers complete work products from a single goal.
+            </p>
+            <div className="mt-6 inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-2">
+              <span className="text-green-400 text-sm font-medium">●</span>
+              <span className="text-white text-sm font-medium">Now part of Meta</span>
+            </div>
           </div>
 
           <p>
@@ -342,13 +344,26 @@ print(result)`}</pre>
 
           <h2 className="text-2xl font-bold text-gray-900">How Manus Works: Architecture at a Glance</h2>
 
-          <div className="rounded-xl overflow-hidden shadow-md">
-            <img
-              src="https://manus.im/about.png"
-              alt="Manus AI Agent Architecture"
-              className="w-full h-auto"
-              loading="lazy"
-            />
+          <div className="rounded-xl bg-gray-50 p-8 shadow-md border border-gray-200">
+            <div className="flex flex-col items-center gap-6">
+              <div className="flex items-center gap-4 flex-wrap justify-center">
+                <div className="flex flex-col items-center gap-1">
+                  <div className="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center text-2xl">🎯</div>
+                  <span className="text-xs font-semibold text-gray-700">Goal Processing</span>
+                </div>
+                <div className="text-gray-400 text-2xl font-light">→</div>
+                <div className="flex flex-col items-center gap-1">
+                  <div className="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center text-2xl">⚙️</div>
+                  <span className="text-xs font-semibold text-gray-700">Autonomous Execution</span>
+                </div>
+                <div className="text-gray-400 text-2xl font-light">→</div>
+                <div className="flex flex-col items-center gap-1">
+                  <div className="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center text-2xl">📦</div>
+                  <span className="text-xs font-semibold text-gray-700">Delivery</span>
+                </div>
+              </div>
+              <p className="text-sm text-gray-500">Manus AI operational model: Goal → Execution → Delivered Work Product</p>
+            </div>
           </div>
 
           <p>
@@ -362,19 +377,25 @@ print(result)`}</pre>
 
           <h2 className="text-2xl font-bold text-gray-900">What Can Manus Actually Do?</h2>
 
-          <h3 className="text-xl font-semibold text-gray-800">Deep Research</h3>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
+            {[
+              { emoji: "🔍", label: "Deep Research" },
+              { emoji: "🌐", label: "Web Apps" },
+              { emoji: "📊", label: "Data Analysis" },
+              { emoji: "🌐", label: "Automation" },
+              { emoji: "📁", label: "File Creation" },
+            ].map(({ emoji, label }) => (
+              <div key={label} className="bg-gray-800 text-white rounded-xl p-4 text-center shadow-md">
+                <div className="text-3xl mb-2">{emoji}</div>
+                <div className="text-xs font-semibold">{label}</div>
+              </div>
+            ))}
+          </div>
+
+          <h3 className="text-xl font-semibold text-gray-800 mt-6">Deep Research</h3>
           <p>
             Manus can navigate JavaScript-heavy websites, interact with pagination and filters, and synthesize information from dozens of sources in parallel. For comparative research — vendor analysis, market research, competitive intelligence — this is meaningfully more powerful than Perplexity or ChatGPT web search, which surface a list of links rather than synthesized content.
           </p>
-
-          <div className="rounded-xl overflow-hidden shadow-md">
-            <img
-              src="https://manus.im/tools.png"
-              alt="Manus AI Tools"
-              className="w-full h-auto"
-              loading="lazy"
-            />
-          </div>
 
           <h3 className="text-xl font-semibold text-gray-800">Build Full-Stack Web Applications</h3>
           <p>
