@@ -576,7 +576,7 @@ print(result)`}</pre>
         {/* CTA */}
         <div className="mt-10 p-6 rounded-xl bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-100">
           <p className="text-gray-700 text-sm leading-relaxed">
-            Interested in applying AI agents to your business? I help companies build custom autonomous pipelines — from research to production deployment.{" "}
+            Interested in AI agents, custom software, web design, or any of my other services? I offer consulting across AI & automation, computer networks, IT infrastructure, research collaboration, and more. Reach out to discuss your project →
             <Link href="/contact" className="text-blue-600 font-semibold hover:underline">
               Reach out to discuss your project &rarr;
             </Link>
