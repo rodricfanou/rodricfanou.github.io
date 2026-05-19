@@ -516,7 +516,7 @@ print(result)`}</pre>
           </ul>
 
           <div className="mt-8 p-6 rounded-xl bg-gray-100 border border-gray-300 text-sm text-gray-600">
-            <strong>Disclaimer:</strong> This post reflects my personal analysis and research. I am not affiliated with Manus AI or Meta. Information is based on publicly available documentation and community reports as of May 2026.
+            <strong>Disclaimer:</strong> This post reflects my personal analysis and research. I am not affiliated with Manus AI or Meta. Information is solely based on publicly available documentation and community reports as of May 2026.
           </div>
         </div>
       ),
