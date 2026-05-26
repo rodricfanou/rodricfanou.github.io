@@ -14,7 +14,7 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
       date: "2026-05-26",
       readTime: "5 min",
       content: (
-        <div className="space-y-8 text-gray-700 text-base leading-relaxed md:text-lg">
+        <div className="space-y-8 text-gray-700 text-base leading-relaxed md:text-lg text-justify">
           <p>
             The AI industry this week offered a data point that seemed impossible six months ago: a general-purpose language model cracked an unsolved conjecture in pure mathematics. The Erdős unit distance problem, posed in 1946 and untouched for eight decades, fell to an OpenAI reasoning model with no mathematics-specific training. Meanwhile, Google turned its developer conference into an agentic product announcement, OpenAI quietly built out a self-serve advertising platform, and Anthropic disclosed a model so capable of cyberattacks it declined to release it publicly. The field is accelerating. The restraint is selective.
           </p>
@@ -39,9 +39,9 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
             Anthropic&apos;s Claude Mythos Preview identified more than 23,000 potential vulnerabilities in open-source projects, with 1,726 confirmed by external security firms, including over 1,000 rated high or critical severity.<sup><a href="https://www.securityweek.com/anthropic-mythos-detected-23000-potential-vulnerabilities-across-1000-oss-projects/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[7]</a></sup> In controlled tests, Mythos developed 181 working exploits against Firefox&apos;s JavaScript engine; Claude Opus 4.6 produced two.<sup><a href="https://red.anthropic.com/2026/mythos-preview/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[8]</a></sup> Anthropic declined to release Mythos commercially. Instead, the company launched Project Glasswing, deploying Mythos to proactively patch the vulnerabilities it finds.<sup><a href="https://www.anthropic.com/glasswing" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[9]</a></sup> The UK AI Safety Institute published an independent evaluation of Mythos&apos;s cyber capabilities, the first of its kind for a frontier model.<sup><a href="https://www.aisi.gov.uk/blog/our-evaluation-of-claude-mythos-previews-cyber-capabilities" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[10]</a></sup> Anthropic is simultaneously in talks to raise $30 billion at a reported $900 billion valuation,<sup><a href="https://www.bloomberg.com/news/articles/2026-05-12/anthropic-in-talks-to-raise-30-billion-at-900-billion-valuation" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[11]</a></sup> which would surpass OpenAI&apos;s $852 billion post-money figure from earlier this year. The combination of the most capable offensive-security model and the industry&apos;s highest valuation is not a coincidence.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900">Claude Goes to Work: Coding, Dreaming, and Enterprise Deals</h2>
+          <h2 className="text-2xl font-bold text-gray-900">Claude Goes to Work: Enterprise Deals, Coding Events, and New Features</h2>
           <p>
-            Anthropic held Code with Claude in East London this week, its first developer-focused event in Europe.<sup><a href="https://fortune.com/2026/05/21/claude-code-london-anthropic-ai-software-engineering/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[15]</a></sup> The company&apos;s stated position: Claude now performs at roughly the level of a midlevel software engineer for writing code, though senior engineers remain necessary for system design and harder debugging.<sup><a href="https://www.technologyreview.com/2026/05/21/1137735/anthropics-code-with-claude-showed-off-codings-future-whether-you-like-it-or-not/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[16]</a></sup> New features announced alongside the event include a &quot;dreaming&quot; capability in which Claude Code agents write notes to themselves during tasks, with a consolidation system that synthesizes those notes across tasks to build persistent knowledge of a codebase. Anthropic also shipped sandboxes, letting companies run Claude agents on their own infrastructure, and MCP tunnels, which allow agents to reach internal systems without touching the public internet. On the enterprise side, KPMG announced a global alliance to embed Claude inside Digital Gateway, its core business software, starting with tools for tax and legal clients.<sup><a href="https://www.anthropic.com/news/anthropic-kpmg" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[17]</a></sup> SAP announced plans to make Claude a primary reasoning capability across its AI-enabled solution portfolio and the newly launched SAP Business AI Platform.<sup><a href="https://news.sap.com/2026/05/sap-anthropic-to-bring-claude-sap-business-ai-platform/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[18]</a></sup>
+            Anthropic held Code with Claude in East London this week, its first developer-focused event in Europe, drawing mainstream coverage from Fortune, MIT Technology Review, and Time.<sup><a href="https://fortune.com/2026/05/21/claude-code-london-anthropic-ai-software-engineering/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[15]</a></sup> The event was oversubscribed and the company&apos;s stated position was direct: Claude now performs at roughly the level of a midlevel software engineer for writing code, though senior engineers remain necessary for system design and harder debugging.<sup><a href="https://www.technologyreview.com/2026/05/21/1137735/anthropics-code-with-claude-showed-off-codings-future-whether-you-like-it-or-not/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[16]</a></sup> On the partnership side, KPMG announced a global alliance to embed Claude inside Digital Gateway, its core business software platform used by 276,000 employees, starting with tools for tax and legal clients.<sup><a href="https://www.anthropic.com/news/anthropic-kpmg" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[17]</a></sup> SAP followed by announcing plans to make Claude a primary reasoning capability across its AI-enabled solution portfolio and the newly launched SAP Business AI Platform, extending Claude&apos;s reach into enterprise resource planning at global scale.<sup><a href="https://news.sap.com/2026/05/sap-anthropic-to-bring-claude-sap-business-ai-platform/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[18]</a></sup> On the product side, Anthropic announced a &quot;dreaming&quot; capability in which Claude Code agents write notes to themselves during tasks, with a consolidation system that synthesizes those notes across tasks to build persistent knowledge of a codebase. The company also shipped sandboxes, letting companies run Claude agents on their own infrastructure, and MCP tunnels, which allow agents to reach internal systems without touching the public internet.
           </p>
 
           <h2 className="text-2xl font-bold text-gray-900">Coding Agents and What AI Actually Costs</h2>
@@ -86,7 +86,7 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
       date: "2026-05-04",
       readTime: "5 min",
       content: (
-        <div className="space-y-8 text-gray-700 text-base leading-relaxed md:text-lg">
+        <div className="space-y-8 text-gray-700 text-base leading-relaxed md:text-lg text-justify">
           <p>
             I&apos;ve been experimenting with AI agents — autonomous systems that can plan, reason, and execute multi-step tasks. The most effective approach I&apos;ve found involves combining ChatGPT and Claude, leveraging their complementary strengths.
           </p>
@@ -150,7 +150,7 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
       date: "2026-05-04",
       readTime: "5 min",
       content: (
-        <div className="space-y-8 text-gray-700 text-base leading-relaxed md:text-lg">
+        <div className="space-y-8 text-gray-700 text-base leading-relaxed md:text-lg text-justify">
           <p>
             The AI field moves too fast for any human to track comprehensively. I used to spend 30-45 minutes each morning scanning Hacker News, ArXiv, and various newsletters — and still missed things. So I built an agent that does it for me in under a minute.
           </p>
@@ -249,7 +249,7 @@ Respond as JSON only.
       date: "2026-05-09",
       readTime: "5 min",
       content: (
-        <div className="space-y-8 text-gray-700 text-base leading-relaxed md:text-lg">
+        <div className="space-y-8 text-gray-700 text-base leading-relaxed md:text-lg text-justify">
           <p>
             Most AI tutorials stop at prompts. But the real shift happens when you build systems that can perceive, decide, and act — with or without human input. Here is the framework I use to take an idea from single-prompt to production-ready agent.
           </p>
@@ -388,7 +388,7 @@ print(result)`}</pre>
       date: "2026-05-19",
       readTime: "6 min",
       content: (
-        <div className="space-y-8 text-gray-700 text-base leading-relaxed md:text-lg">
+        <div className="space-y-8 text-gray-700 text-base leading-relaxed md:text-lg text-justify">
           <p>
             In early 2025, a new kind of AI tool arrived — one that didn&apos;t just answer questions. Manus AI, now part of Meta, is an autonomous general AI agent that accepts a goal and independently plans, executes, and delivers a finished work product. No step-by-step guidance or copying and pasting results is needed. Upon the submission of a task, a complete deliverable is returned.
           </p>
