@@ -2,13 +2,72 @@ import FadeIn from "@/components/FadeIn";
 import Link from "next/link";
 
 export async function generateStaticParams() {
-  return [{ id: "1" }, { id: "2" }, { id: "3" }, { id: "4" }];
+  return [{ id: "1" }, { id: "2" }, { id: "3" }, { id: "4" }, { id: "5" }];
 }
 
 export default async function BlogPost({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
 
   const posts: Record<string, { title: string; date: string; readTime: string; content: React.ReactNode }> = {
+    "5": {
+      title: "This Week in AI: Google Goes Agentic, OpenAI Proves a Theorem, and ChatGPT Gets Ads",
+      date: "2026-05-26",
+      readTime: "5 min",
+      content: (
+        <div className="space-y-8 text-gray-700 text-base leading-relaxed md:text-lg">
+          <p>
+            The AI industry this week offered a data point that seemed impossible six months ago: a general-purpose language model cracked an unsolved conjecture in pure mathematics. The Erdős unit distance problem — posed in 1946, untouched for eight decades — fell to an OpenAI reasoning model with no mathematics-specific training. Meanwhile, Google turned its developer conference into an agentic product announcement, OpenAI quietly built out a self-serve advertising platform, and Anthropic disclosed a model so capable of cyberattacks it declined to release it publicly. The field is accelerating. The restraint is selective.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">A Theorem 80 Years in the Making</h2>
+          <p>
+            On May 20, OpenAI announced that a general-purpose reasoning model had disproved a central conjecture in discrete geometry: the unit distance problem Paul Erdős first posed in 1946.<sup><a href="https://openai.com/index/model-disproves-discrete-geometry-conjecture/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[1]</a></sup> Mathematicians had long believed square grid constructions were optimal for maximizing unit-distance pairs among <em>n</em> points in a plane. The model found an infinite family of counterexamples — and did so by drawing from algebraic number theory, specifically infinite class field towers and a 1960s theorem called Golod-Shafarevich. The connection between that theorem and this geometry problem had never been made before. Three external mathematicians independently verified the proof.<sup><a href="https://aitoolly.com/ai-news/article/2026-05-21-openai-reasoning-model-disproves-longstanding-erds-conjecture-in-discrete-geometry" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[2]</a></sup> The result came from a general reasoner, not a system tuned for mathematics or targeted at this specific problem. That is the point.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">Google&apos;s Agentic Pivot at I/O</h2>
+          <p>
+            At Google I/O 2026, the company released Gemini 3.5 Flash as the global default model for the Gemini app and AI Mode in Search.<sup><a href="https://www.cnbc.com/2026/05/19/google-ai-ultra-gemini-spark-omni.html" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[3]</a></sup> Flash gains improved safety characteristics — fewer harmful outputs, fewer false refusals. Google also announced Gemini Spark, a general-purpose agent that reasons across connected apps and takes actions on behalf of users.<sup><a href="https://cloud.google.com/blog/products/ai-machine-learning/innovations-from-google-io-26-on-google-cloud" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[4]</a></sup> Spark is in beta, available first to trusted testers and Google AI Ultra subscribers. Google added Omni, a world model that predicts physical environments from user actions. Gemini can now generate Docs, Sheets, Slides, PDFs, and spreadsheets directly from prompts — a direct challenge to the productivity software layer Microsoft has long owned. The breadth of the product surface suggests Google is betting on the assistant layer, not just the model.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">ChatGPT Becomes an Ad Platform</h2>
+          <p>
+            In May, OpenAI eliminated the $50,000 minimum spend requirement for its self-serve advertising platform and expanded the ads pilot to the UK, Mexico, Brazil, Japan, and South Korea.<sup><a href="https://openai.com/index/testing-ads-in-chatgpt/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[5]</a></sup><sup><a href="https://www.axios.com/2026/05/05/openai-self-serve-ad-platform" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[6]</a></sup> Ads appear in labeled, tinted boxes below AI responses; OpenAI says they cannot influence the model&apos;s answers. The company targets $2.5 billion in ad revenue this year and $100 billion by 2030. ChatGPT launched ads for U.S. free users in February — less than four months ago. The timeline from &quot;no ads, ever&quot; to an international self-serve platform took approximately 18 months of public pressure and a need for revenue diversification. Whether answers remain uninfluenced as advertiser revenue scales is a structural question, not a policy one.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">The Model Anthropic Won&apos;t Ship</h2>
+          <p>
+            Anthropic&apos;s Claude Mythos Preview identified more than 23,000 potential vulnerabilities in open-source projects, with 1,726 confirmed by external security firms — over 1,000 rated high or critical severity.<sup><a href="https://www.securityweek.com/anthropic-mythos-detected-23000-potential-vulnerabilities-across-1000-oss-projects/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[7]</a></sup> In controlled tests, Mythos developed 181 working exploits against Firefox&apos;s JavaScript engine; Claude Opus 4.6 produced two.<sup><a href="https://red.anthropic.com/2026/mythos-preview/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[8]</a></sup> Anthropic declined to release Mythos commercially. Instead, the company launched Project Glasswing, deploying Mythos to proactively patch the vulnerabilities it finds.<sup><a href="https://www.anthropic.com/glasswing" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[9]</a></sup> The UK AI Safety Institute published an independent evaluation of Mythos&apos;s cyber capabilities — a first for a frontier model of this kind.<sup><a href="https://www.aisi.gov.uk/blog/our-evaluation-of-claude-mythos-previews-cyber-capabilities" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[10]</a></sup> Anthropic is simultaneously in talks to raise $30 billion at a reported $900 billion valuation,<sup><a href="https://www.bloomberg.com/news/articles/2026-05-12/anthropic-in-talks-to-raise-30-billion-at-900-billion-valuation" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[11]</a></sup> which would surpass OpenAI&apos;s $852 billion post-money figure from earlier this year. The combination of the most capable offensive-security model and the industry&apos;s highest valuation is not a coincidence.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">Coding Agents and What AI Actually Costs</h2>
+          <p>
+            xAI launched Grok Build, a coding agent positioned against Anthropic&apos;s Claude Code and GitHub Copilot CLI.<sup><a href="https://www.engadget.com/2173482/xai-coding-agent-grok-build/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[12]</a></sup> The beta is limited to SuperGrok Heavy subscribers at $300 per month. Grok 4.3, released May 4, added native video input and a 1-million-token context window at $1.25 per million input tokens.<sup><a href="https://medium.com/nlplanet/xai-releases-grok-4-3-weekly-ai-newsletter-may-4th-2026-4b7e8fea0f10" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[13]</a></sup> Simultaneously, Microsoft reportedly began canceling Claude Code licenses for engineers — six months after first enabling access — redirecting them toward Copilot CLI.<sup><a href="https://fortune.com/2026/05/22/microsoft-ai-cost-problem-tokens-agents/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[14]</a></sup> A Fortune investigation found that deploying AI agents can cost more than paying human employees to do equivalent work. The industry does not yet have a public answer to this problem. Scaling laws work in both directions.
+          </p>
+
+          <p>
+            The Erdős proof and the Mythos evaluation represent opposite ends of the same trend: AI systems that produce outputs their builders did not fully anticipate. One resolved a problem mathematicians had given up on; the other found vulnerabilities faster than any human security team. Both results exceeded expectation, and neither company had a fully worked-out plan for what to do next. The industry needs better answers to that question than a classified distribution program and a fundraising round.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">References</h2>
+          <ol className="list-decimal pl-6 space-y-1 text-sm text-gray-500">
+            <li><a href="https://openai.com/index/model-disproves-discrete-geometry-conjecture/" target="_blank" rel="noopener noreferrer" className="hover:underline">OpenAI, &quot;An OpenAI model has disproved a central conjecture in discrete geometry,&quot; May 20, 2026.</a></li>
+            <li><a href="https://aitoolly.com/ai-news/article/2026-05-21-openai-reasoning-model-disproves-longstanding-erds-conjecture-in-discrete-geometry" target="_blank" rel="noopener noreferrer" className="hover:underline">AIToolly, &quot;OpenAI Reasoning Model Disproves Longstanding Erdős Conjecture in Discrete Geometry,&quot; May 21, 2026.</a></li>
+            <li><a href="https://www.cnbc.com/2026/05/19/google-ai-ultra-gemini-spark-omni.html" target="_blank" rel="noopener noreferrer" className="hover:underline">CNBC, &quot;Google unveils AI model Gemini 3.5 and AI agent Gemini Spark,&quot; May 19, 2026.</a></li>
+            <li><a href="https://cloud.google.com/blog/products/ai-machine-learning/innovations-from-google-io-26-on-google-cloud" target="_blank" rel="noopener noreferrer" className="hover:underline">Google Cloud Blog, &quot;Innovations from Google I/O 26 on Google Cloud,&quot; 2026.</a></li>
+            <li><a href="https://openai.com/index/testing-ads-in-chatgpt/" target="_blank" rel="noopener noreferrer" className="hover:underline">OpenAI, &quot;Testing ads in ChatGPT,&quot; 2026.</a></li>
+            <li><a href="https://www.axios.com/2026/05/05/openai-self-serve-ad-platform" target="_blank" rel="noopener noreferrer" className="hover:underline">Axios, &quot;OpenAI launches self-serve ad platform,&quot; May 5, 2026.</a></li>
+            <li><a href="https://www.securityweek.com/anthropic-mythos-detected-23000-potential-vulnerabilities-across-1000-oss-projects/" target="_blank" rel="noopener noreferrer" className="hover:underline">SecurityWeek, &quot;Anthropic: Mythos Detected 23,000 Potential Vulnerabilities Across 1,000 OSS Projects,&quot; 2026.</a></li>
+            <li><a href="https://red.anthropic.com/2026/mythos-preview/" target="_blank" rel="noopener noreferrer" className="hover:underline">Anthropic, &quot;Claude Mythos Preview,&quot; red.anthropic.com, 2026.</a></li>
+            <li><a href="https://www.anthropic.com/glasswing" target="_blank" rel="noopener noreferrer" className="hover:underline">Anthropic, &quot;Project Glasswing,&quot; anthropic.com, 2026.</a></li>
+            <li><a href="https://www.aisi.gov.uk/blog/our-evaluation-of-claude-mythos-previews-cyber-capabilities" target="_blank" rel="noopener noreferrer" className="hover:underline">UK AI Safety Institute, &quot;Our evaluation of Claude Mythos Preview&apos;s cyber capabilities,&quot; 2026.</a></li>
+            <li><a href="https://www.bloomberg.com/news/articles/2026-05-12/anthropic-in-talks-to-raise-30-billion-at-900-billion-valuation" target="_blank" rel="noopener noreferrer" className="hover:underline">Bloomberg, &quot;Anthropic In Talks to Raise $30 Billion at $900 Billion Valuation,&quot; May 12, 2026.</a></li>
+            <li><a href="https://www.engadget.com/2173482/xai-coding-agent-grok-build/" target="_blank" rel="noopener noreferrer" className="hover:underline">Engadget, &quot;xAI introduces its coding agent called Grok Build,&quot; 2026.</a></li>
+            <li><a href="https://medium.com/nlplanet/xai-releases-grok-4-3-weekly-ai-newsletter-may-4th-2026-4b7e8fea0f10" target="_blank" rel="noopener noreferrer" className="hover:underline">Fabio Chiusano, &quot;xAI Releases Grok 4.3 — Weekly AI Newsletter,&quot; Medium, May 4, 2026.</a></li>
+            <li><a href="https://fortune.com/2026/05/22/microsoft-ai-cost-problem-tokens-agents/" target="_blank" rel="noopener noreferrer" className="hover:underline">Fortune, &quot;Microsoft reports are exposing AI&apos;s real cost problem,&quot; May 22, 2026.</a></li>
+          </ol>
+        </div>
+      ),
+    },
     "1": {
       title: "Generating AI Agents Using ChatGPT and Claude",
       date: "2026-05-04",

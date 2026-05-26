@@ -15,6 +15,14 @@ interface BlogPost {
 
 const posts: BlogPost[] = [
   {
+    id: 5,
+    title: "This Week in AI: Google Goes Agentic, OpenAI Proves a Theorem, and ChatGPT Gets Ads",
+    date: "2026-05-26",
+    excerpt: "An OpenAI reasoning model disproved an 80-year-old conjecture in discrete geometry. Google turned I/O into an agentic product launch with Gemini Spark and Gemini 3.5 Flash. OpenAI expanded its ad platform globally while Anthropic disclosed a model too dangerous to release — and targeted a $900 billion valuation.",
+    category: "AI",
+    readTime: "5 min",
+  },
+  {
     id: 1,
     title: "Generating AI Agents Using ChatGPT and Claude",
     date: "2026-05-04",
