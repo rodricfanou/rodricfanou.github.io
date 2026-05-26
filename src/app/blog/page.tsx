@@ -23,6 +23,22 @@ const posts: BlogPost[] = [
     readTime: "5 min",
   },
   {
+    id: 4,
+    title: "Manus AI: The General Purpose Agent That Actually Works",
+    date: "2026-05-19",
+    excerpt: "Hands-on breakdown of Manus AI — what it is, how it works, and why it represents a real shift from chatbots to autonomous work agents.",
+    category: "AI",
+    readTime: "6 min",
+  },
+  {
+    id: 3,
+    title: "From Prompts to Agents: A Practical Framework for Autonomous AI",
+    date: "2026-05-09",
+    excerpt: "A step-by-step guide to building production-ready AI agents — from simple prompt chaining to tool use, memory, and multi-agent orchestration with guardrails.",
+    category: "AI",
+    readTime: "5 min",
+  },
+  {
     id: 1,
     title: "Generating AI Agents Using ChatGPT and Claude",
     date: "2026-05-04",
@@ -37,22 +53,6 @@ const posts: BlogPost[] = [
     excerpt: "A deep dive into my three-stage pipeline for automated AI news curation: scraping, filtering with GPT-4o-mini, and deep analysis with Claude Sonnet 4.",
     category: "AI",
     readTime: "5 min",
-  },
-  {
-    id: 3,
-    title: "From Prompts to Agents: A Practical Framework for Autonomous AI",
-    date: "2026-05-09",
-    excerpt: "A step-by-step guide to building production-ready AI agents — from simple prompt chaining to tool use, memory, and multi-agent orchestration with guardrails.",
-    category: "AI",
-    readTime: "5 min",
-  },
-  {
-    id: 4,
-    title: "Manus AI: The General Purpose Agent That Actually Works",
-    date: "2026-05-19",
-    excerpt: "Hands-on breakdown of Manus AI — what it is, how it works, and why it represents a real shift from chatbots to autonomous work agents.",
-    category: "AI",
-    readTime: "6 min",
   },
 ];
 
