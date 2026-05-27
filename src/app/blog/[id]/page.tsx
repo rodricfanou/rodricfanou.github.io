@@ -10,21 +10,18 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
 
   const posts: Record<string, { title: string; date: string; readTime: string; content: React.ReactNode }> = {
     "6": {
-      title: "Tokyo: Twenty Essential Encounters with the World's Greatest City",
+      title: "Tokyo: Twenty Essential Encounters in one of the World's Greatest Cities",
       date: "2026-05-27",
-      readTime: "7 min",
+      readTime: "5 min",
       content: (
-        <div className="space-y-8 text-gray-700 text-base leading-relaxed md:text-lg text-justify">
+        <div className="space-y-6 text-gray-700 text-base leading-relaxed md:text-lg text-justify">
 
           {/* Intro */}
           <p>
-            There is a quality to Tokyo&apos;s light at three in the morning — neon reflected off wet pavement, the smell of ramen broth drifting from a door left open — that is unlike the light of any other city I have known. Tokyo has been described, by people who should know better, as overwhelming: too big, too strange, too far from anywhere familiar. What it actually is, upon arrival, is <em>clarifying</em>. The trains run. The signs explain themselves. A stranger asked for directions will draw a map on the back of a receipt. I visited on a wet morning in March and could not bring myself to leave in June.
-          </p>
-          <p>
-            What follows is an account of twenty things that will reward you honestly — specific, counter-argued where necessary, with the details the glossy guides tend to omit.
+            Tokyo is not overwhelming; it is <em>clarifying</em>. The trains run on time. The signs explain themselves. A stranger asked for directions will draw a map on the back of a receipt. What follows is an honest account of twenty things that will reward you, with the specific details the glossy guides tend to omit.
           </p>
 
-          {/* Hero image — Shibuya crossing */}
+          {/* Hero image: Shibuya crossing */}
           <figure className="my-6">
             <img
               src="https://images.unsplash.com/photo-1741920852881-5284c70305bd?fm=jpg&q=80&w=1200&auto=format&fit=crop"
@@ -33,18 +30,18 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
               style={{ maxHeight: "480px" }}
             />
             <figcaption className="text-xs text-gray-400 mt-2 text-center">
-              Shibuya Scramble Crossing at night — Photo by <strong className="text-gray-500">mos design</strong> on <a href="https://unsplash.com/photos/JMD0K-kCJ5I" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash</a> &mdash; <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash License</a> (free for all uses, including commercial)
+              Shibuya Scramble Crossing at night. Photo by <strong className="text-gray-500">mos design</strong> on <a href="https://unsplash.com/photos/JMD0K-kCJ5I" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash</a>. <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash License</a> (free for all uses, including commercial)
             </figcaption>
           </figure>
 
           {/* ---- 1 ---- */}
-          <h2 className="text-2xl font-bold text-gray-900">1. Stand at Shibuya Scramble Crossing</h2>
+          <h2 className="text-2xl font-bold text-gray-900">1. Shibuya Scramble Crossing</h2>
           <p>
-            The crossing handles up to 2,500 pedestrians per signal cycle at peak hours, with traffic halted simultaneously in every direction. It is worth experiencing first as a participant — caught in the current, swept to the far kerb — before retreating to observe. The second-floor window of the Mag&apos;s Park Starbucks provides a direct angle over the intersection; arrive before 10 AM to find a seat. At night the volume of neon, reflected off ten thousand umbrellas during a rainstorm, becomes something that functions like a natural phenomenon.
+            Up to 2,500 pedestrians cross simultaneously per signal cycle, traffic halted in every direction at once. Walk it first as a participant; then watch from the Mag&apos;s Park Starbucks second-floor window; arrive before 10 AM for a seat. At night, neon reflected off rain-slicked pavement turns it into something closer to a natural phenomenon than an intersection.
           </p>
 
           {/* ---- 2 ---- */}
-          <h2 className="text-2xl font-bold text-gray-900">2. Senso-ji Temple, Asakusa — Before 8 AM</h2>
+          <h2 className="text-2xl font-bold text-gray-900">2. Senso-ji Temple, Asakusa (Before 8 AM)</h2>
 
           <figure className="my-6">
             <img
@@ -54,40 +51,40 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
               style={{ maxHeight: "420px" }}
             />
             <figcaption className="text-xs text-gray-400 mt-2 text-center">
-              Senso-ji Temple, Asakusa — Photo by <strong className="text-gray-500">Rémi Bertogliati</strong> on <a href="https://unsplash.com/photos/L3Fi8pMqXZg" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash</a> &mdash; <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash License</a> (free for all uses, including commercial)
+              Senso-ji Temple, Asakusa. Photo by <strong className="text-gray-500">Rémi Bertogliati</strong> on <a href="https://unsplash.com/photos/L3Fi8pMqXZg" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash</a>. <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash License</a> (free for all uses, including commercial)
             </figcaption>
           </figure>
 
           <p>
-            Tokyo&apos;s oldest temple was founded in 628 AD according to temple records and draws approximately 30 million visitors each year.<sup><a href="https://www.senso-ji.jp/english/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[1]</a></sup> The honest advice is to go early. The Nakamise shopping arcade — 250 meters of souvenir stalls leading to the main hall — becomes genuinely oppressive by midday. At dawn the stone lanterns are lit, the incense smoke moves in vertical lines through cool air, and you will have stretches of the courtyard almost to yourself. Admission is free. The grounds are open 24 hours.
+            Tokyo&apos;s oldest temple, founded in 628 AD, draws 30 million visitors a year.<sup><a href="https://www.senso-ji.jp/english/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[1]</a></sup> Go before 8 AM: the 250-meter Nakamise arcade becomes oppressive by midday, but at dawn the lanterns are lit, incense smoke moves in straight lines, and the courtyard is nearly empty. Admission free; grounds open 24 hours.
           </p>
 
           {/* ---- 3 ---- */}
-          <h2 className="text-2xl font-bold text-gray-900">3. TeamLab Planets, Toyosu — Book Two Weeks Ahead</h2>
+          <h2 className="text-2xl font-bold text-gray-900">3. TeamLab Planets, Toyosu</h2>
           <p>
-            This is, by reasonable measures, the most-visited art installation on earth: 2.51 million visitors in 2025, recipient of the World Travel Awards for &quot;Asia&apos;s Leading Tourist Attraction&quot; in both 2023 and 2025.<sup><a href="https://questfordurian.com/teamlab-borderless-vs-planets/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[2]</a></sup> You walk barefoot through shallow water, into mirrored rooms where projections of flowers bloom and dissolve, into a field of floating lights that respond to your movement. Adult admission is ¥3,800 on weekdays (~$25) and ¥4,200 on weekends as of 2026. Buy tickets at least two weeks ahead — popular evening slots disappear within hours of release. The installation is open until the end of 2027.
+            The most-visited art installation on earth: 2.51 million visitors in 2025, winner of the World Travel Awards &quot;Asia&apos;s Leading Tourist Attraction&quot; two years running.<sup><a href="https://questfordurian.com/teamlab-borderless-vs-planets/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[2]</a></sup> You walk barefoot through water and mirrored rooms of blooming projections. Adults ¥3,800 weekday / ¥4,200 weekend (2026); book at least two weeks ahead, as evening slots sell out within hours of release.
           </p>
 
           {/* ---- 4 ---- */}
           <h2 className="text-2xl font-bold text-gray-900">4. Pre-Dawn Sushi at Tsukiji Outer Market</h2>
           <p>
-            The wholesale inner market relocated to Toyosu in 2018, but the Tsukiji Outer Market remains Tokyo&apos;s finest morning food experience. The best stalls open between 6 and 7 AM. The market is closed Wednesdays, Sundays, and public holidays — a detail travel guides tend to bury in footnotes, and which has stranded many an early riser.<sup><a href="https://tripmate.news/posts/tsukiji-market-restaurant-guide/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[3]</a></sup> Sushizanmai and Sushi Sei are well-established counters. Breakfast costs less than a café pastry in Paris and tastes significantly better.
+            The wholesale inner market moved to Toyosu in 2018, but the Tsukiji Outer Market remains Tokyo&apos;s best morning food stop. Best stalls open 6–7 AM; closed Wednesdays, Sundays, and public holidays; a critical detail that has ambushed many early risers.<sup><a href="https://tripmate.news/posts/tsukiji-market-restaurant-guide/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[3]</a></sup> Sushizanmai and Sushi Sei are well-established counters. Breakfast costs less than a café pastry in Paris.
           </p>
 
           {/* ---- 5 ---- */}
           <h2 className="text-2xl font-bold text-gray-900">5. Meiji Shrine and Yoyogi Park</h2>
           <p>
-            The shrine stands within a forest of 70,000 trees planted in 1920 to honor Emperor Meiji and Empress Shoken.<sup><a href="https://www.japan-guide.com/e/e3002.html" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[4]</a></sup> The walk from Harajuku Station along the gravel path, under trees that block the noise and much of the light, produces one of Tokyo&apos;s reliable small shocks: you understand, unmistakably, that you are inside a city of 14 million people, and yet you cannot hear a single car. Admission is free; the inner shrine charges ¥1,000 to enter the garden.
+            A forest of 70,000 trees planted in 1920, dedicated to Emperor Meiji and Empress Shoken.<sup><a href="https://www.japan-guide.com/e/e3002.html" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[4]</a></sup> The walk in from Harajuku Station produces one of Tokyo&apos;s reliable small shocks: you are inside a city of 14 million people and cannot hear a single car. Shrine admission free; inner garden ¥1,000.
           </p>
 
           {/* ---- 6 ---- */}
-          <h2 className="text-2xl font-bold text-gray-900">6. Shibuya Sky: The City at 230 Meters</h2>
+          <h2 className="text-2xl font-bold text-gray-900">6. Shibuya Sky: 230 Meters, Open Air</h2>
           <p>
-            Located on the 47th floor of Shibuya Scramble Square, Shibuya Sky is Japan&apos;s highest open-air rooftop observation deck at approximately 230 meters.<sup><a href="https://www.gotokyo.org/en/spot/1749/index.html" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[5]</a></sup> The view encompasses Tokyo Tower, Tokyo Skytree, the National Stadium, and Yoyogi Park — essentially the city&apos;s entire geometry displayed at once. Advance tickets are essential: slots are released four weeks ahead and the 30 minutes before sunset sells out within hours. Adults pay ¥2,200 on weekdays and ¥2,500 on weekends. The free alternative — the observation deck of the Tokyo Metropolitan Government Building in Shinjuku, at 202 meters — is genuinely comparable, and costs nothing.
+            Japan&apos;s highest open-air rooftop observation deck, on the 47th floor of Shibuya Scramble Square.<sup><a href="https://www.gotokyo.org/en/spot/1749/index.html" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[5]</a></sup> Book the 30 minutes before sunset; tickets are released four weeks ahead and that slot sells out quickly. Adults ¥2,200–¥2,500. The free alternative: Tokyo Metropolitan Government Building observation deck in Shinjuku, at 202 meters, genuinely comparable.
           </p>
 
           {/* ---- 7 ---- */}
-          <h2 className="text-2xl font-bold text-gray-900">7. Tokyo Skytree — 634 Meters</h2>
+          <h2 className="text-2xl font-bold text-gray-900">7. Tokyo Skytree: 634 Meters</h2>
 
           <figure className="my-6">
             <img
@@ -97,127 +94,127 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
               style={{ maxHeight: "420px" }}
             />
             <figcaption className="text-xs text-gray-400 mt-2 text-center">
-              Tokyo Skytree at night — Photo by <strong className="text-gray-500">Tsuyoshi Kozu</strong> on <a href="https://unsplash.com/photos/ZXKFniLzUNQ" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash</a> &mdash; <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash License</a> (free for all uses, including commercial)
+              Tokyo Skytree at night. Photo by <strong className="text-gray-500">Tsuyoshi Kozu</strong> on <a href="https://unsplash.com/photos/ZXKFniLzUNQ" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash</a>. <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash License</a> (free for all uses, including commercial)
             </figcaption>
           </figure>
 
           <p>
-            Japan&apos;s tallest tower at 634 meters offers two observation levels: the Tembo Deck at 350 meters and the glass-floored Tembo Galleria at 450 meters. On clear winter mornings — January and February especially — Mount Fuji is visible 100 kilometers to the southwest. The Skytree is best seen from a distance at night, when it is illuminated in seasonal colors that reflect in the Sumida River below.
+            Japan&apos;s tallest structure: Tembo Deck at 350 m, glass-floored Tembo Galleria at 450 m. On clear winter mornings Mount Fuji is visible 100 km southwest. Best appreciated from a distance at night, reflected in the Sumida River.
           </p>
 
           {/* ---- 8 ---- */}
-          <h2 className="text-2xl font-bold text-gray-900">8. Shinjuku Golden Gai — Weeknights Only</h2>
+          <h2 className="text-2xl font-bold text-gray-900">8. Shinjuku Golden Gai (Weeknights Only)</h2>
           <p>
-            Approximately 200 bars distributed across six narrow alleyways, each seating between four and ten people. Most charge a cover of ¥500–1,000 and specialize: one in jazz vinyl, one in film posters, one in manga, one in whisky served by a former sumo wrestler. The honest note: some establishments operate informal &quot;regulars only&quot; policies enforced selectively. Bars that genuinely welcome visitors post English menus outside. Go on a weeknight; on weekends the alleyways become performance rather than place.<sup><a href="https://tokyocheapo.com/locations/central-tokyo/shibuya-2/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[6]</a></sup>
+            Around 200 bars across six alleyways, each seating 4–10 people, cover ¥500–1,000, each specializing in something: jazz vinyl, film posters, manga, whisky.<sup><a href="https://tokyocheapo.com/locations/central-tokyo/shibuya-2/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[6]</a></sup> Bars welcoming visitors post English menus outside. Weekends feel like a theme park; weeknights feel like Tokyo.
           </p>
 
           {/* ---- 9 ---- */}
           <h2 className="text-2xl font-bold text-gray-900">9. Harajuku: Two Streets, Two Centuries</h2>
           <p>
-            Takeshita-dori — 350 meters of street fashion, crêpe vendors, and deliberate excess — sits five minutes&apos; walk from Omotesando, one of the most architecturally distinguished shopping streets in the world: a long boulevard lined with buildings by Tadao Ando, Kengo Kuma, Toyo Ito, and Herzog &amp; de Meuron. Fashion chaos and architectural precision, separated by a short walk. Both deserve your time.
+            Takeshita-dori (350 m of street fashion and crêpe vendors) is a five-minute walk from Omotesando, a boulevard of landmark buildings by Tadao Ando, Kengo Kuma, Toyo Ito, and Herzog &amp; de Meuron. Fashion chaos and architectural precision, separated by a short walk.
           </p>
 
           {/* ---- 10 ---- */}
-          <h2 className="text-2xl font-bold text-gray-900">10. Akihabara — Electronics, Anime, and the Full Spectrum</h2>
+          <h2 className="text-2xl font-bold text-gray-900">10. Akihabara</h2>
           <p>
-            Akihabara&apos;s electronics district has been partially displaced by anime and gaming culture, but the combination remains unreplicable anywhere else on earth. Multi-floor arcades, maid cafes (costumed servers performing a specific brand of theatrical hospitality), vintage game hardware shops, and the world&apos;s most concentrated retail selection of manga. Allow two hours minimum; budget considerably more.
+            Multi-floor arcades, maid cafes, vintage game hardware, and the world&apos;s densest retail selection of manga and anime, a combination unreplicable anywhere else. Allow two hours minimum.
           </p>
 
           {/* ---- 11 ---- */}
           <h2 className="text-2xl font-bold text-gray-900">11. Hike Mount Takao</h2>
           <p>
-            A 599-meter mountain in western Tokyo, accessible in under one hour from Shinjuku Station via the Keio Line (approximately ¥430 each way).<sup><a href="https://everwas.com/2025/03/day-hikes-near-tokyo-mt-takao/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[7]</a></sup> Mount Takao receives roughly 3 million visitors annually — making it one of the most-visited mountains on earth — but Trail 1, the main paved route, takes 90 minutes to the summit with views across the Kanto Plain. On clear winter days the summit offers an unobstructed line to Mount Fuji. A ropeway and cable car provide alternatives. Takao-san Yakuo-in Temple, passed en route, dates from 744 AD.
+            A 599 m mountain less than one hour from Shinjuku via the Keio Line (~¥430 each way).<sup><a href="https://everwas.com/2025/03/day-hikes-near-tokyo-mt-takao/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[7]</a></sup> Trail 1 reaches the summit in 90 minutes; a ropeway provides an alternative. On clear winter days the summit gives an unobstructed view of Mount Fuji. Takao-san Yakuo-in Temple, en route, dates from 744 AD.
           </p>
 
           {/* ---- 12 ---- */}
-          <h2 className="text-2xl font-bold text-gray-900">12. Yanaka — Old Tokyo, Intact</h2>
+          <h2 className="text-2xl font-bold text-gray-900">12. Yanaka: Old Tokyo, Intact</h2>
           <p>
-            One of the few Tokyo neighborhoods to survive both the 1923 Great Kanto Earthquake and the 1945 firebombing, Yanaka retains wooden shopfronts, small temples on every corner, and narrow lanes without a chain store in sight. The Yanaka Ginza shopping street sells pickles, ceramics, fresh tofu, and the materials of daily life rather than souvenirs of it. The cemetery has become a neighborhood park. If you want to understand what Tokyo felt like before the economy remade it, this is where to look.
+            One of few Tokyo neighborhoods to survive both the 1923 earthquake and 1945 firebombing. Wooden shopfronts, small temples, no chain stores. The Yanaka Ginza sells pickles, tofu, and ceramics: daily life rather than souvenirs. The cemetery is now a neighborhood park.
           </p>
 
           {/* ---- 13 ---- */}
           <h2 className="text-2xl font-bold text-gray-900">13. Grand Sumo at Ryogoku Kokugikan</h2>
           <p>
-            Grand Sumo tournaments are held three times a year in Tokyo — in January, May, and September — each running for 15 days at Ryogoku Kokugikan.<sup><a href="https://tokyocheapo.com/entertainment/sport/tokyo-sumo-cheap/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[8]</a></sup> The arena holds 11,098 spectators; box seats sell out months in advance. Upper-tier seats cost ¥3,000–¥8,000 and offer a full view of the ring. If your visit falls outside tournament months, morning practice (keiko) tours at sumo stables offer an alternative with considerably more access.
+            Tournaments run in January, May, and September; 15 days each, 11,098 seats.<sup><a href="https://tokyocheapo.com/entertainment/sport/tokyo-sumo-cheap/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[8]</a></sup> Upper-tier seats (¥3,000–¥8,000) offer a full view of the ring and are available closer to tournament dates. Outside tournament season, morning practice (keiko) tours at sumo stables provide closer access.
           </p>
 
           {/* ---- 14 ---- */}
           <h2 className="text-2xl font-bold text-gray-900">14. Live Jazz: Pit Inn and Blue Note Tokyo</h2>
           <p>
-            Pit Inn in Shinjuku has operated since 1965 and remains the reference venue for contemporary and avant-garde jazz in Japan, booking musicians of genuine international significance for full-set performances in a room that seats around 200.<sup><a href="https://roadbook.com/tokyo/city-guide/best-listening-bars-live-music-venues-clubs-nightlife-tokyo/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[9]</a></sup> Blue Note Tokyo, in Minami-Aoyama, is the Tokyo outpost of the New York club and programs recognized acts across jazz and adjacent genres. Both charge a cover; both justify it. Tokyo&apos;s listening bar culture — cover charge, small snacks, concentrated sound — is itself worth experiencing as a form.
+            Pit Inn (Shinjuku, open since 1965) is Japan&apos;s premier jazz venue for contemporary and avant-garde acts.<sup><a href="https://roadbook.com/tokyo/city-guide/best-listening-bars-live-music-venues-clubs-nightlife-tokyo/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[9]</a></sup> Blue Note Tokyo (Minami-Aoyama) is the Tokyo outpost of the New York club, booking recognized international acts. Both charge a cover; both justify it.
           </p>
 
           {/* ---- 15 ---- */}
           <h2 className="text-2xl font-bold text-gray-900">15. TeamLab Borderless, Azabudai Hills</h2>
           <p>
-            The permanent counterpart to Planets, reopened at its current Azabudai Hills location in 2024. Where Planets is intimate and sequential, Borderless is an open building where installations bleed into one another: there are no rooms with defined endings. The experience rewards wandering over planning. Selected by TIME as one of the &quot;World&apos;s Greatest Places 2024.&quot; 1.69 million visitors in 2025.<sup><a href="https://www.teamlab.art/e/tokyo/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[10]</a></sup>
+            The permanent counterpart to Planets, reopened at Azabudai Hills in 2024. Where Planets is sequential, Borderless is open: installations bleed into one another with no defined endings. TIME &quot;World&apos;s Greatest Places 2024;&quot; 1.69 million visitors in 2025.<sup><a href="https://www.teamlab.art/e/tokyo/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[10]</a></sup>
           </p>
 
           {/* ---- 16 ---- */}
           <h2 className="text-2xl font-bold text-gray-900">16. Ueno Park and the Tokyo National Museum</h2>
           <p>
-            The Tokyo National Museum holds approximately 120,000 objects including the world&apos;s largest collection of Japanese art — 13th-century scroll paintings, Meiji-era lacquerwork, Buddhist sculpture, samurai armor.<sup><a href="https://www.tnm.jp/?lang=en" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[11]</a></sup> The surrounding Ueno Park contains temples, a zoo, Shinobazu Pond with its lotus field, and in late March and early April, the most-attended cherry blossom viewing in Tokyo. Admission to the museum is ¥1,000 for adults.
+            Japan&apos;s largest art museum (~120,000 objects, world&apos;s largest collection of Japanese art).<sup><a href="https://www.tnm.jp/?lang=en" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[11]</a></sup> Ueno Park surrounding it hosts cherry blossoms (late March–April), temples, a zoo, and Shinobazu Pond. Adults ¥1,000.
           </p>
 
           {/* ---- 17 ---- */}
-          <h2 className="text-2xl font-bold text-gray-900">17. Shimokitazawa — Music, Vintage, No Agenda</h2>
+          <h2 className="text-2xl font-bold text-gray-900">17. Shimokitazawa: Music, Vintage, No Agenda</h2>
           <p>
-            Tokyo&apos;s answer to the question of what happens when musicians, artists, and thrift-store devotees accumulate in one neighborhood and cannot be priced out. Small live music venues — Club Que, Shelter, Tiny Tiny — showcase indie and underground acts nightly. Vintage clothing at prices that embarrass every other city. Coffee shops without queues. The bars here assume you came because you wanted to be here, not because an itinerary sent you. It is the neighborhood most likely to make you miss a flight home.
+            Small live venues (Club Que, Shelter, Tiny Tiny), vintage clothing at reasonable prices, coffee shops without queues. The bars assume you came because you wanted to, not because an itinerary sent you. It is the neighborhood most likely to make you miss a flight home.
           </p>
 
           {/* ---- 18 ---- */}
-          <h2 className="text-2xl font-bold text-gray-900">18. Imperial Palace East Gardens — Free</h2>
+          <h2 className="text-2xl font-bold text-gray-900">18. Imperial Palace East Gardens (Free)</h2>
           <p>
-            Free admission to the former site of Edo Castle, seat of the Tokugawa shogunate from 1603 to 1868.<sup><a href="https://sankan.kunaicho.go.jp/english/guide/koukyo_higashi.html" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[12]</a></sup> The gardens are closed Mondays and Fridays, and on national holidays. They contain the ruins of the original castle keep, a large traditional garden, and a 1,000-seat amphitheater. The contrast — immense quiet in the absolute center of the most populous metropolitan area on earth — is its own kind of argument.
+            The former site of Edo Castle (1603–1868), free to enter, closed Mondays and Fridays.<sup><a href="https://sankan.kunaicho.go.jp/english/guide/koukyo_higashi.html" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[12]</a></sup> Castle ruins, a traditional garden, and immense quiet at the absolute center of the world&apos;s most populous metropolitan area.
           </p>
 
           {/* ---- 19 ---- */}
           <h2 className="text-2xl font-bold text-gray-900">19. Eat Tokyo: Ramen, Izakaya, and the Michelin Context</h2>
           <p>
-            Tokyo has held the record for most Michelin-starred restaurants of any city for 18 consecutive years. The 2025 guide lists 504 starred establishments, including 12 with three stars.<sup><a href="https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurants" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[13]</a></sup> The three-star restaurants require reservations months in advance and some are accessible only through hotel concierge networks. The honest alternative: Tokyo&apos;s greatest meals are frequently served at counter-only ramen shops with eight seats and no stars, at yakitori stalls beneath the train lines in Yurakucho, and at izakayas in Shinjuku that close at 5 AM.
+            Tokyo has led all cities in Michelin stars for 18 consecutive years: 504 starred restaurants in 2025, including 12 three-star establishments.<sup><a href="https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurants" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[13]</a></sup> Three-star reservations require months of lead time. The honest alternative: counter ramen shops with eight seats and no stars, yakitori stalls under the Yurakucho train lines, izakayas in Shinjuku that close at 5 AM.
           </p>
 
           {/* ---- 20 ---- */}
           <h2 className="text-2xl font-bold text-gray-900">20. Odaiba and Tokyo Bay at Dusk</h2>
           <p>
-            Odaiba is an artificial island in Tokyo Bay, accessible via the Yurikamome driverless monorail from Shimbashi Station. Odaiba Seaside Park is an artificial urban beach — do not expect Mediterranean conditions; swimming is not recommended — but it offers something the city rarely provides: distance. From the water&apos;s edge at dusk, with Rainbow Bridge to the left and the full Tokyo skyline reflected in the bay, you get the city&apos;s scale all at once. It is, unexpectedly, the right place to decide whether you are ready to leave.
+            An artificial island in Tokyo Bay, reached by the Yurikamome driverless monorail from Shimbashi. Odaiba Seaside Park is an urban beach (swimming not recommended), but from the water&apos;s edge at dusk, Rainbow Bridge to the left and the full Tokyo skyline reflected in the bay, you get the city&apos;s scale all at once. The right place to decide whether you are ready to leave.
           </p>
 
           {/* Counter-argument */}
           <div className="mt-10 p-6 rounded-xl bg-amber-50 border border-amber-200">
             <h2 className="text-xl font-bold text-gray-800 mb-3">The Honest Counterargument</h2>
             <p className="text-gray-700 text-sm leading-relaxed">
-              Tokyo is, in the ways that matter, a machine for overwhelming the earnest visitor. The list above represents a fraction of what the city contains, and pursuing it systematically produces a particular kind of exhaustion — a tourist&apos;s fatigue, which is not the tiredness of engagement but of acquisition. The finest hours I spent in Tokyo were not at any listed attraction but on a Wednesday morning walking the Meguro River with no plan, in an izakaya in Yurakucho that I found because I followed a smell, in a used-bookshop in Jimbocho that I entered because it was raining. The city is so large and so organized that the temptation to consume it efficiently is almost irresistible. Resist it. The itinerary is a starting point, not a contract.
+              Pursuing this list systematically produces a tourist&apos;s fatigue, not the tiredness of engagement but of acquisition. The finest hours I spent in Tokyo were walking the Meguro River on a Wednesday with no plan, finding an izakaya in Yurakucho because I followed a smell, entering a Jimbocho bookshop because it was raining. The city is so organized that consuming it efficiently feels almost irresistible. Resist it. The itinerary is a starting point, not a contract.
             </p>
           </div>
 
           {/* Disclaimer */}
           <div className="rounded-xl border border-gray-200 bg-gray-50 px-6 py-4 text-sm text-gray-500 leading-relaxed mt-8">
-            <strong className="text-gray-700">Disclaimer:</strong> This post shares findings from independent research using publicly available sources. All information reflects conditions as of May 2026. Prices, hours, and availability change — verify directly with venues before visiting. The author has no commercial relationship with any venue listed.
+            <strong className="text-gray-700">Disclaimer:</strong> This post shares findings from independent research using publicly available sources. All information reflects conditions as of May 2026. Prices, hours, and availability change; verify directly with venues before visiting. The author has no commercial relationship with any venue listed.
           </div>
 
           {/* Photo Credits */}
           <h2 className="text-2xl font-bold text-gray-900">Photo Credits</h2>
           <p className="text-sm text-gray-500 leading-relaxed">
-            All photographs sourced from <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Unsplash</a> and used under the <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Unsplash License</a>, which grants free use for all purposes — commercial and non-commercial — worldwide, with no attribution legally required. We credit photographers voluntarily as a matter of practice.
+            All photographs sourced from <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Unsplash</a> and used under the <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Unsplash License</a>, which grants free use for all purposes, commercial and non-commercial, worldwide, with no attribution legally required. We credit photographers voluntarily as a matter of practice.
           </p>
           <ul className="list-disc pl-6 space-y-1 text-sm text-gray-500">
             <li>
-              <strong>Shibuya Scramble Crossing at night</strong> — Photo by{" "}
+              <strong>Shibuya Scramble Crossing at night.</strong> Photo by{" "}
               <a href="https://unsplash.com/@mosdesign" target="_blank" rel="noopener noreferrer" className="hover:underline">mos design</a>{" "}
-              on Unsplash &mdash;{" "}
+              on Unsplash.{" "}
               <a href="https://unsplash.com/photos/JMD0K-kCJ5I" target="_blank" rel="noopener noreferrer" className="hover:underline">unsplash.com/photos/JMD0K-kCJ5I</a>
             </li>
             <li>
-              <strong>Senso-ji Temple, Asakusa</strong> — Photo by{" "}
+              <strong>Senso-ji Temple, Asakusa.</strong> Photo by{" "}
               <a href="https://unsplash.com/@remi_b" target="_blank" rel="noopener noreferrer" className="hover:underline">Rémi Bertogliati</a>{" "}
-              on Unsplash &mdash;{" "}
+              on Unsplash,{" "}
               <a href="https://unsplash.com/photos/L3Fi8pMqXZg" target="_blank" rel="noopener noreferrer" className="hover:underline">unsplash.com/photos/L3Fi8pMqXZg</a>
             </li>
             <li>
-              <strong>Tokyo Skytree at night</strong> — Photo by{" "}
+              <strong>Tokyo Skytree at night.</strong> Photo by{" "}
               <a href="https://unsplash.com/@tsuyoshikozu" target="_blank" rel="noopener noreferrer" className="hover:underline">Tsuyoshi Kozu</a>{" "}
-              on Unsplash &mdash;{" "}
+              on Unsplash,{" "}
               <a href="https://unsplash.com/photos/ZXKFniLzUNQ" target="_blank" rel="noopener noreferrer" className="hover:underline">unsplash.com/photos/ZXKFniLzUNQ</a>
             </li>
           </ul>

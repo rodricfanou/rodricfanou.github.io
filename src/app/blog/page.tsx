@@ -16,11 +16,11 @@ interface BlogPost {
 const posts: BlogPost[] = [
   {
     id: 6,
-    title: "Tokyo: Twenty Essential Encounters with the World's Greatest City",
+    title: "Tokyo: Twenty Essential Encounters in one of the World's Greatest Cities",
     date: "2026-05-27",
     excerpt: "From the organized bedlam of Shibuya Crossing at midnight to pre-dawn sushi at Tsukiji and jazz until 5 AM in Golden Gai — an honest account of twenty experiences that explain why Tokyo ruins you for every other city.",
     category: "Tourism",
-    readTime: "7 min",
+    readTime: "5 min",
   },
   {
     id: 5,
