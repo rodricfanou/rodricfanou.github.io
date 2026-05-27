@@ -15,6 +15,14 @@ interface BlogPost {
 
 const posts: BlogPost[] = [
   {
+    id: 7,
+    title: "Rio de Janeiro: Twenty Essential Encounters in the Cidade Maravilhosa",
+    date: "2026-05-27",
+    excerpt: "From the hike through Tijuca rainforest to Christ the Redeemer at dawn, Arpoador's applauding crowds at sunset, live samba in Lapa until 4 AM, and Michelin-starred counters in Botafogo: an honest account of twenty encounters that explain why Rio de Janeiro is one of the most dramatically beautiful cities on earth.",
+    category: "Tourism",
+    readTime: "5 min",
+  },
+  {
     id: 6,
     title: "Tokyo: Twenty Essential Encounters in one of the World's Greatest Cities",
     date: "2026-05-27",

@@ -2,13 +2,317 @@ import FadeIn from "@/components/FadeIn";
 import Link from "next/link";
 
 export async function generateStaticParams() {
-  return [{ id: "1" }, { id: "2" }, { id: "3" }, { id: "4" }, { id: "5" }, { id: "6" }];
+  return [{ id: "1" }, { id: "2" }, { id: "3" }, { id: "4" }, { id: "5" }, { id: "6" }, { id: "7" }];
 }
 
 export default async function BlogPost({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
 
   const posts: Record<string, { title: string; date: string; readTime: string; content: React.ReactNode }> = {
+    "7": {
+      title: "Rio de Janeiro: Twenty Essential Encounters in the Cidade Maravilhosa",
+      date: "2026-05-27",
+      readTime: "5 min",
+      content: (
+        <div className="space-y-6 text-gray-700 text-base leading-relaxed md:text-lg text-justify">
+
+          {/* Intro */}
+          <p>
+            Rio de Janeiro does not ease you in. The city arrives all at once: mountains erupting from the Atlantic, a statue arms-wide above a green canopy, beaches so broad they function as public squares, and a sound that is neither music nor noise but a third thing Cariocas call alegria. What follows is an honest account of twenty encounters, arranged as four days, written by someone who has walked these hills, missed a bus because of a sunset, and left convinced that no other city resolves the conflict between the beautiful and the difficult quite so dramatically.
+          </p>
+
+          {/* Hero image */}
+          <figure className="my-6">
+            <img
+              src="https://images.unsplash.com/photo-1516306580123-e6e52b1b7b5f?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+              alt="Aerial view of Rio de Janeiro with Christ the Redeemer overlooking the city and coast"
+              className="w-full rounded-2xl shadow-lg object-cover"
+              style={{ maxHeight: "480px" }}
+            />
+            <figcaption className="text-xs text-gray-400 mt-2 text-center">
+              Rio de Janeiro, &quot;Cidade Maravilhosa.&quot; Photo by <strong className="text-gray-500">Raphael Nogueira</strong> on{" "}
+              <a href="https://unsplash.com/photos/christ-the-redeemer-brazil-OkiDIla7K8Q" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash</a>.{" "}
+              <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash License</a> (free for all uses, including commercial)
+            </figcaption>
+          </figure>
+
+          {/* DAY 1 */}
+          <h2 className="text-3xl font-bold text-gray-900 mt-10">Day 1: The Icons Rio Refuses to Underplay</h2>
+
+          {/* ---- 1 ---- */}
+          <h2 className="text-2xl font-bold text-gray-900">1. Christ the Redeemer via the Parque Lage Trail</h2>
+          <p>
+            The statue is 30 meters tall on an 8-meter pedestal, completed in 1931 after nine years of construction, standing on the 710-meter summit of Corcovado.<sup><a href="https://christ-the-redeemer.com/entrance-fee/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[1]</a></sup> None of these figures prepare you for it. The trail from Parque Lage through the Tijuca Atlantic Forest takes two to three hours each way; the park entrance is free and the forest is dense enough to make you forget the city below until, abruptly, it reappears 710 meters beneath your feet. If hiking, entrance to the monument itself is not included in the van or train ticket and must be paid at the summit; current adult rate is approximately R$134 for the combined cog-train access.<sup><a href="https://christ-the-redeemer.com/tickets/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[2]</a></sup> Important safety note: there have been multiple reports of robberies on the Corcovado Trail in recent years; hiking with a certified guide is strongly recommended.
+          </p>
+
+          {/* Christ Redeemer image */}
+          <figure className="my-6">
+            <img
+              src="https://images.unsplash.com/photo-1516834611397-8d633eaec5d0?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+              alt="Christ the Redeemer statue at sunset above the Atlantic Forest, Rio de Janeiro"
+              className="w-full rounded-2xl shadow-lg object-cover"
+              style={{ maxHeight: "420px" }}
+            />
+            <figcaption className="text-xs text-gray-400 mt-2 text-center">
+              Christ the Redeemer at sunset. Photo by <strong className="text-gray-500">Agustin Diaz Gargiulo</strong> on{" "}
+              <a href="https://unsplash.com/photos/christ-the-redeemer-GTLJklnjn-E" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash</a>.{" "}
+              <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash License</a>
+            </figcaption>
+          </figure>
+
+          {/* ---- 2 ---- */}
+          <h2 className="text-2xl font-bold text-gray-900">2. Sugarloaf Mountain (Pão de Açúcar) at Dusk</h2>
+          <p>
+            The 396-meter granite monolith rising directly from the sea is reached by two sequential cable-car stages: first to Morro da Urca (215 m), then to the summit. Adult tickets cost R$180 (approximately US$35); the official park operates daily and the last cable car departs before closing, so arrive at least 45 minutes before dusk if you want the transition from daylight to city lights.<sup><a href="https://www.bondinho.com.br/en/ingresso-bondinho" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[3]</a></sup> From the summit, Christ the Redeemer is visible across the bay on Corcovado. The view at dusk, with Guanabara Bay below and the city turning gold and then electric, is one of the more persuasive arguments for the existence of beauty as a category.
+          </p>
+
+          {/* Sugarloaf aerial */}
+          <figure className="my-6">
+            <img
+              src="https://images.unsplash.com/photo-1731159623214-888a439ea7ea?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+              alt="Aerial view of Rio de Janeiro with Sugarloaf Mountain rising from Guanabara Bay"
+              className="w-full rounded-2xl shadow-lg object-cover"
+              style={{ maxHeight: "420px" }}
+            />
+            <figcaption className="text-xs text-gray-400 mt-2 text-center">
+              Aerial view of Rio with Sugarloaf Mountain. Photo by <strong className="text-gray-500">UC Berkeley, Dept. of Geography</strong> on{" "}
+              <a href="https://unsplash.com/photos/aerial-view-of-rio-de-janeiro-with-sugarloaf-mountain-4Ju1JNREksM" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash</a>.{" "}
+              <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash License</a>
+            </figcaption>
+          </figure>
+
+          {/* ---- 3 ---- */}
+          <h2 className="text-2xl font-bold text-gray-900">3. Ipanema Beach, Posto 9</h2>
+          <p>
+            Ipanema is 2.5 kilometers of white sand flanked by the Dois Irmãos peaks to the west and the Arpoador rocks to the east. Posto 9, the ninth lifeguard station, is the beach&apos;s social center: bohemian, LGBTQ-inclusive, and as close to a democratic public space as Rio gets. Arrive before 9 AM for a chair and umbrella at a manageable price; later in the day vendors circulate selling agua de coco, açaí, and mate. Do not bring valuables beyond what you intend to use. The beach is not safe after dark.
+          </p>
+
+          {/* Ipanema beach */}
+          <figure className="my-6">
+            <img
+              src="https://images.unsplash.com/photo-1587646534144-abd34fe0455f?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+              alt="Ipanema beach with city skyline and mountains in the background, Rio de Janeiro"
+              className="w-full rounded-2xl shadow-lg object-cover"
+              style={{ maxHeight: "420px" }}
+            />
+            <figcaption className="text-xs text-gray-400 mt-2 text-center">
+              Ipanema beach, Rio de Janeiro. Photo by <strong className="text-gray-500">Raphael Nogueira</strong> on{" "}
+              <a href="https://unsplash.com/photos/body-of-water-near-city-buildings-under-blue-sky-during-daytime-0_OeBU9kUNk" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash</a>.{" "}
+              <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash License</a>
+            </figcaption>
+          </figure>
+
+          {/* ---- 4 ---- */}
+          <h2 className="text-2xl font-bold text-gray-900">4. Arpoador Rock at Sunset: The Applause</h2>
+          <p>
+            At the point where Ipanema gives way to Copacabana, a granite outcrop called Pedra do Arpoador juts into the Atlantic. Every evening, crowds gather to watch the sun descend behind Morro Dois Irmãos. When it drops below the horizon, they applaud. The tradition is attributed to journalist Carlos Leonam, who began it in the 1960s.<sup><a href="https://blog.hotelarpoador.com/en/arpoador-rock-in-rio-de-janeiro/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[4]</a></sup> It is the only tourist activity in Rio that costs nothing and is impossible to photograph adequately: you have to be there for the light, the crowd, and the strange sincerity of several hundred people applauding the sun.
+          </p>
+
+          {/* ---- 5 ---- */}
+          <h2 className="text-2xl font-bold text-gray-900">5. Copacabana: the Democratic Promenade</h2>
+          <p>
+            Four kilometers of beach open to everyone, lined by the wave-pattern mosaic boardwalk (calçadão) designed by Roberto Burle Marx. The beach runs from Posto 2 to Posto 6, each with its own social character; Posto 4 and 5 draw a working-class Carioca crowd that serves as a useful corrective to Ipanema&apos;s reputation for exclusivity. The Copacabana Palace hotel, open since 1923, is worth entering even if you are not a guest: the pool bar is the correct vantage point for the argument that the 20th century had some admirable ideas.
+          </p>
+
+          {/* DAY 2 */}
+          <h2 className="text-3xl font-bold text-gray-900 mt-10">Day 2: Lapa, Samba, and the Bohemian Hill</h2>
+
+          {/* ---- 6 ---- */}
+          <h2 className="text-2xl font-bold text-gray-900">6. Escadaria Selarón Before 9 AM</h2>
+          <p>
+            Chilean-born artist Jorge Selarón began covering the 215-step staircase linking Lapa to Santa Teresa in 1990, ultimately using more than 2,000 tiles from 60 countries, many sent by visitors after he publicized his project internationally.<sup><a href="https://carolinerosetravel.com/the-ultimate-list-of-things-to-do-in-rio-de-janeiro/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[5]</a></sup> He died on the steps in 2013 and is buried nearby; the steps are now maintained by the city. Come before 9 AM: the morning light catches the blue, green, and yellow tiles directly, the tour groups have not arrived, and the neighborhood is quiet enough that you can actually see what Selarón made rather than photographing it through other people&apos;s phones.
+          </p>
+
+          {/* ---- 7 ---- */}
+          <h2 className="text-2xl font-bold text-gray-900">7. Lapa Arches at Night</h2>
+          <p>
+            The Arcos da Lapa are an 18th-century aqueduct, 270 meters long and 64 meters at its highest point, repurposed in 1896 as the viaduct for the Santa Teresa tram.<sup><a href="https://www.rioculturalsecrets.com/attractions-in-rio-de-janeiro/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[6]</a></sup> At night the arches are lit and the neighborhood around them fills with samba from open doorways, street food, and the ambient energy of a city that takes its nightlife seriously. Arrive after 10 PM on a Friday or Saturday for the full effect. Use Uber to get there and back; street taxis in Lapa at night carry more risk than they are worth.
+          </p>
+
+          {/* ---- 8 ---- */}
+          <h2 className="text-2xl font-bold text-gray-900">8. Rio Scenarium: Live Samba in a Former Antiques Shop</h2>
+          <p>
+            A multilevel bar occupying a 19th-century building in Lapa, furnished with antiques, carnival masks, and vintage furniture, with a live samba stage that runs until the early hours.<sup><a href="https://www.mustseespots.com/brazil/articles/nightlife-in-rio-de-janeiro-best-bars-clubs-samba-experiences/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[7]</a></sup> On Saturdays from noon, Rio Scenarium serves a traditional feijoada with live music, which is the correct way to spend a Saturday afternoon in Brazil if you have no other obligations. Reserve a table online; walk-in capacity is limited on weekend evenings.
+          </p>
+
+          {/* ---- 9 ---- */}
+          <h2 className="text-2xl font-bold text-gray-900">9. Bar Carioca da Gema: Choro and Cachaça</h2>
+          <p>
+            A smaller, more intimate venue than Rio Scenarium, in a colonial mansion two blocks away. Carioca da Gema is considered one of Rio&apos;s most musically serious samba rooms: the performers are regulars rather than hired acts, the sound mix favors the acoustic instruments, and a table on the balcony overlooking the street is among the better seats in Lapa.<sup><a href="https://eatrio.net/samba-in-rio" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[8]</a></sup> Cover charge applies most nights.
+          </p>
+
+          {/* ---- 10 ---- */}
+          <h2 className="text-2xl font-bold text-gray-900">10. Santa Teresa: the Hillside Enclave</h2>
+          <p>
+            A neighborhood of steep cobbled streets, colonial mansions, and artists&apos; studios built on a hill above Lapa, reached by the Santa Teresa tram (bonde) that crosses the Arcos da Lapa. The neighborhood survived the 20th century&apos;s urbanization with more of its original character intact than almost anywhere else in Rio. Aprazível restaurant, set in a garden on the hillside with views of Guanabara Bay, serves artisanal Brazilian cuisine under a canopy of toucans and tropical plants; it is one of the better arguments for eating slowly.<sup><a href="https://brasilatm.com/best-restaurants-in-rio-de-janeiro/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[9]</a></sup>
+          </p>
+
+          {/* DAY 3 */}
+          <h2 className="text-3xl font-bold text-gray-900 mt-10">Day 3: The Green City</h2>
+
+          {/* ---- 11 ---- */}
+          <h2 className="text-2xl font-bold text-gray-900">11. Parque Lage: the Hidden Courtyard</h2>
+          <p>
+            A 52-hectare park at the base of Corcovado, free to enter, containing a neo-Renaissance mansion whose courtyard has been converted into an open-air café. The park is where the Corcovado hike begins, but it is worth arriving an hour early to sit in the courtyard with a coffee before the trail. The mansion houses the Visual Arts School of Rio de Janeiro (Escola de Artes Visuais); galleries are usually accessible during park hours. Capuchin monkeys occasionally descend from the Atlantic Forest behind. No entry fee.
+          </p>
+
+          {/* ---- 12 ---- */}
+          <h2 className="text-2xl font-bold text-gray-900">12. Jardim Botânico: 7,000 Species and Two Hours of Quiet</h2>
+          <p>
+            The Rio de Janeiro Botanical Garden, founded by Prince Regent João VI in 1808, is a UNESCO-listed biosphere reserve covering 137 hectares, home to more than 7,000 tropical plant species including giant Amazonian water lilies (Victoria amazonica), 900 species of orchid, and an avenue of imperial palms 750 meters long.<sup><a href="https://www.viator.com/Rio-de-Janeiro-attractions/Rio-de-Janeiro-Botanical-Garden-Jardim-Botanico/d712-a1321" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[10]</a></sup> Toucans, marmosets, and agoutis move through the understory without apparent concern for the human visitors. Adult entrance approximately R$30; open daily except Mondays.
+          </p>
+
+          {/* ---- 13 ---- */}
+          <h2 className="text-2xl font-bold text-gray-900">13. Tijuca National Park: Taunay Waterfall</h2>
+          <p>
+            Tijuca is the world&apos;s largest urban forest: 32 square kilometers of Atlantic rainforest within the city limits, home to ocelots, howler monkeys, more than 300 bird species, and a network of trails to waterfalls and viewpoints.<sup><a href="https://www.viator.com/Rio-de-Janeiro-attractions/Tijuca-National-Park/d712-a1333" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[11]</a></sup> The Taunay Waterfall circuit is the most accessible introduction: a 2-hour round trip through dense forest, ending at a cascade you can swim under. The 19th-century Mayrink Chapel is en route. Park entry fees apply; guided tours from the Botanical Garden area are available and recommended for first-time visitors.
+          </p>
+
+          {/* ---- 14 ---- */}
+          <h2 className="text-2xl font-bold text-gray-900">14. Morro Dois Irmãos via Vidigal</h2>
+          <p>
+            The Two Brothers peaks (533 meters at the highest) rise directly from the sea at the western end of Leblon, and the summit offers what is likely the finest 360-degree view in Rio: Ipanema and Copacabana spreading east, Lagoa Rodrigo de Freitas behind, Sugarloaf and Guanabara Bay to the north, and the open Atlantic south.<sup><a href="https://nowinrio.com/hiking-the-dois-irmaos/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[12]</a></sup> The trail begins inside the Vidigal community (favela); the hike takes 45 minutes to an hour and is rated moderate. A moto-taxi from Leblon to the trailhead costs approximately R$5-10. Go in a group; inform your hotel of your plan.
+          </p>
+
+          {/* Rio panoramic image */}
+          <figure className="my-6">
+            <img
+              src="https://images.unsplash.com/photo-1548963670-aaaa8f73a5e3?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+              alt="Panoramic view of Rio de Janeiro city with mountains and coastline"
+              className="w-full rounded-2xl shadow-lg object-cover"
+              style={{ maxHeight: "420px" }}
+            />
+            <figcaption className="text-xs text-gray-400 mt-2 text-center">
+              Rio de Janeiro from above. Photo by <strong className="text-gray-500">Krys Amon</strong> on{" "}
+              <a href="https://unsplash.com/photos/rio-de-janero-brazil-under-blue-skies-8tTh9isJoos" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash</a>.{" "}
+              <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash License</a>
+            </figcaption>
+          </figure>
+
+          {/* ---- 15 ---- */}
+          <h2 className="text-2xl font-bold text-gray-900">15. Beco das Garrafas: Where Bossa Nova Began</h2>
+          <p>
+            In the late 1950s, a narrow alley in Copacabana called Beco das Garrafas (Bottles Alley) hosted the earliest bossa nova sessions: João Gilberto, Tom Jobim, and Vinicius de Moraes among them. Two venues on the alley, Bottles Bar and Little Club, continue the tradition with live bossa nova and samba-jazz performances.<sup><a href="https://goingtorio.com/blog/where-to-see-live-samba-in-rio" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[13]</a></sup> It is one of those rare places where the historical claim and the current quality are both genuine.
+          </p>
+
+          {/* DAY 4 */}
+          <h2 className="text-3xl font-bold text-gray-900 mt-10">Day 4: Architecture, Taste, and the Difficult Exit</h2>
+
+          {/* ---- 16 ---- */}
+          <h2 className="text-2xl font-bold text-gray-900">16. Confeitaria Colombo: Breakfast in 1894</h2>
+          <p>
+            A Belle Époque café in the Centro district, opened in 1894, with Belgian stained glass, Portuguese azulejo tiles, carved jacaranda-wood counters, and mirrored walls that make the room seem to extend indefinitely.<sup><a href="https://carolinerosetravel.com/the-ultimate-list-of-things-to-do-in-rio-de-janeiro/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[14]</a></sup> The pão de queijo (cheese bread) is made on the premises. Go for breakfast before the lunch crowd arrives; the building alone justifies the trip to Centro.
+          </p>
+
+          {/* ---- 17 ---- */}
+          <h2 className="text-2xl font-bold text-gray-900">17. Teatro Municipal: the City&apos;s Architectural Centerpiece</h2>
+          <p>
+            The Municipal Theatre, inaugurated in 1909, was designed by Francisco de Oliveira Passos after the Paris Opera as its explicit model. The facade, the grand staircase, the painted ceiling of the main hall, and the Assyrian Room used for pre-show receptions constitute one of the finest examples of Belle Époque public architecture in South America. Guided tours run on weekday mornings; check the current performance schedule at teatromunicipal.rio.br, as a performance seen here from the upper gallery is a different experience than the tour.
+          </p>
+
+          {/* ---- 18 ---- */}
+          <h2 className="text-2xl font-bold text-gray-900">18. A Bloco, Any Bloco</h2>
+          <p>
+            Rio&apos;s official Carnaval runs over five days in February (in 2026, February 13 to 17, with the Champions Parade on February 21); 462 blocos (street parties) were authorized across the city for 2026.<sup><a href="https://www.carnivality.com/rio-de-janeiro-carnival/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[15]</a></sup> Pre-Carnaval blocos begin in mid-January. Outside of Carnaval season, informal street parties and neighborhood bandas continue year-round in Lapa, Santa Teresa, and the Zona Sul. Cordão da Bola Preta, founded in 1918 and the oldest bloco in Rio, parades on the Saturday before Ash Wednesday and draws crowds exceeding one million. Entry to street blocos is free; protect your belongings.
+          </p>
+
+          {/* ---- 19 ---- */}
+          <h2 className="text-2xl font-bold text-gray-900">19. Fine Dining: Lasai or Oro</h2>
+          <p>
+            Lasai, led by chef Rafael Costa e Silva, holds two Michelin stars and operates as a 10-seat counter facing the kitchen in Botafogo; the tasting menu is built around the restaurant&apos;s own garden and seasonal Brazilian ingredients.<sup><a href="https://guide.michelin.com/en/article/dining-out/restaurants-in-rio-de-janeiro-that-are-reimagining-brazilian-cuisine" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[16]</a></sup> Oro, led by chef Felipe Bronze in Leblon, also holds two Michelin stars and takes a more theatrical approach to modern Brazilian cuisine. Both require reservations at least two weeks in advance during high season (December through February). Both justify the effort. A third option for the budget-conscious: Aprazível in Santa Teresa, no Michelin stars, but a terrace meal there at sunset is among the most pleasant hours a city can offer.
+          </p>
+
+          {/* ---- 20 ---- */}
+          <h2 className="text-2xl font-bold text-gray-900">20. Pedra da Gávea: For the Committed</h2>
+          <p>
+            The world&apos;s tallest coastal monolith, at 842 meters, with a summit reached by a trail that includes the Carrasqueira: a 30-meter exposed rock face requiring basic climbing technique (graded 5.2 in the Yosemite Decimal System) and presenting serious injury risk without a rope and harness.<sup><a href="https://www.riomountainsports.com/gavea-hike" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[17]</a></sup> This trail is not a casual hike. Go with a certified guide, in a small group, in good weather, with proper footwear. The summit view is, by all accounts, worth the difficulty: the full southern coastline from Barra to Niterói, with the city spread below like a map that has been crumpled and set among mountains. If the Dois Irmãos hike on Day 3 felt too easy, this is the next conversation.
+          </p>
+
+          {/* Counter-argument */}
+          <div className="mt-10 p-6 rounded-xl bg-amber-50 border border-amber-200">
+            <h2 className="text-xl font-bold text-gray-800 mb-3">The Honest Counterargument</h2>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              The strongest case against this itinerary is the one Rio itself makes: the city is acutely unequal, and the twenty experiences above are almost exclusively available to visitors with money, mobility, and the security of a foreign passport. The favelas that ring the Zona Sul and climb the hillsides above Ipanema are not incidental to Rio; they are structural. The carioca who applauds the sunset at Arpoador may take a bus to a neighborhood you will not visit and live under conditions the guidebooks omit. Engaging honestly with Rio means knowing this and not pretending that four days of beaches and Michelin stars constitute a complete picture of the city. It does not make the beaches less beautiful. It makes them more complicated.
+            </p>
+          </div>
+
+          {/* Safety */}
+          <div className="mt-6 p-6 rounded-xl bg-blue-50 border border-blue-200">
+            <h2 className="text-xl font-bold text-gray-800 mb-3">A Note on Safety</h2>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Rio de Janeiro is a city of genuine contrasts in safety. Tourist-dense neighborhoods (Ipanema, Leblon, Copacabana, Botafogo, Santa Teresa, Lapa) are well-policed and heavily visited; they carry the ordinary urban risks of any large city. Favela complexes carry significantly higher risk, including during police operations; the Canadian and U.S. governments recommend avoiding them entirely.<sup><a href="https://travel.gc.ca/destinations/brazil" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[18]</a></sup><sup><a href="https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/brazil-travel-advisory.html" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[19]</a></sup> Primary risks for tourists are phone theft (motorbike snatch), beach robberies (arrastão), and PIX express kidnapping. Use Uber rather than street taxis; do not carry valuables on beaches; do not walk on the beach at night; do not accept drinks from strangers. The ISP (Instituto de Segurança Pública) reported a 12% decrease in violent lethality in Q1 2026 versus Q1 2025, which is a meaningful trend but not a guarantee. Research current conditions before travel, and register with your country&apos;s embassy upon arrival.
+            </p>
+          </div>
+
+          {/* Disclaimer */}
+          <div className="rounded-xl border border-gray-200 bg-gray-50 px-6 py-4 text-sm text-gray-500 leading-relaxed mt-8">
+            <strong className="text-gray-700">Disclaimer:</strong> This post shares findings from independent research using publicly available sources. All information reflects conditions as of May 2026. Prices, hours, and availability change; verify directly with venues before visiting. The author has no commercial relationship with any venue listed. Security conditions in Rio de Janeiro can change rapidly; consult your government&apos;s official travel advisory and current local sources before traveling.
+          </div>
+
+          {/* Photo Credits */}
+          <h2 className="text-2xl font-bold text-gray-900">Photo Credits</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">
+            All photographs sourced from <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Unsplash</a> and used under the <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Unsplash License</a>, which grants free use for all purposes, commercial and non-commercial, worldwide, with no attribution legally required. We credit photographers voluntarily as a matter of practice.
+          </p>
+          <ul className="list-disc pl-6 space-y-1 text-sm text-gray-500">
+            <li>
+              <strong>Rio de Janeiro, Cidade Maravilhosa (aerial).</strong> Photo by{" "}
+              <a href="https://unsplash.com/@phaelnogueira" target="_blank" rel="noopener noreferrer" className="hover:underline">Raphael Nogueira</a>{" "}
+              on Unsplash.{" "}
+              <a href="https://unsplash.com/photos/christ-the-redeemer-brazil-OkiDIla7K8Q" target="_blank" rel="noopener noreferrer" className="hover:underline">unsplash.com/photos/OkiDIla7K8Q</a>
+            </li>
+            <li>
+              <strong>Christ the Redeemer at sunset.</strong> Photo by{" "}
+              <a href="https://unsplash.com/@agustindiazg" target="_blank" rel="noopener noreferrer" className="hover:underline">Agustin Diaz Gargiulo</a>{" "}
+              on Unsplash.{" "}
+              <a href="https://unsplash.com/photos/christ-the-redeemer-GTLJklnjn-E" target="_blank" rel="noopener noreferrer" className="hover:underline">unsplash.com/photos/GTLJklnjn-E</a>
+            </li>
+            <li>
+              <strong>Aerial view with Sugarloaf Mountain.</strong> Photo by{" "}
+              <a href="https://unsplash.com/@ucberkeley" target="_blank" rel="noopener noreferrer" className="hover:underline">UC Berkeley, Dept. of Geography</a>{" "}
+              on Unsplash.{" "}
+              <a href="https://unsplash.com/photos/aerial-view-of-rio-de-janeiro-with-sugarloaf-mountain-4Ju1JNREksM" target="_blank" rel="noopener noreferrer" className="hover:underline">unsplash.com/photos/4Ju1JNREksM</a>
+            </li>
+            <li>
+              <strong>Ipanema beach with city skyline.</strong> Photo by{" "}
+              <a href="https://unsplash.com/@phaelnogueira" target="_blank" rel="noopener noreferrer" className="hover:underline">Raphael Nogueira</a>{" "}
+              on Unsplash.{" "}
+              <a href="https://unsplash.com/photos/body-of-water-near-city-buildings-under-blue-sky-during-daytime-0_OeBU9kUNk" target="_blank" rel="noopener noreferrer" className="hover:underline">unsplash.com/photos/0_OeBU9kUNk</a>
+            </li>
+            <li>
+              <strong>Rio de Janeiro panoramic.</strong> Photo by{" "}
+              <a href="https://unsplash.com/@krysamon" target="_blank" rel="noopener noreferrer" className="hover:underline">Krys Amon</a>{" "}
+              on Unsplash.{" "}
+              <a href="https://unsplash.com/photos/rio-de-janero-brazil-under-blue-skies-8tTh9isJoos" target="_blank" rel="noopener noreferrer" className="hover:underline">unsplash.com/photos/8tTh9isJoos</a>
+            </li>
+          </ul>
+
+          {/* Sources */}
+          <h2 className="text-2xl font-bold text-gray-900">Sources</h2>
+          <ol className="list-decimal pl-6 space-y-1 text-sm text-gray-500">
+            <li><a href="https://christ-the-redeemer.com/entrance-fee/" target="_blank" rel="noopener noreferrer" className="hover:underline">Christ the Redeemer Website, &quot;Christ the Redeemer Entrance Fee,&quot; christ-the-redeemer.com.</a></li>
+            <li><a href="https://christ-the-redeemer.com/tickets/" target="_blank" rel="noopener noreferrer" className="hover:underline">Christ the Redeemer Website, &quot;Christ the Redeemer Tickets,&quot; christ-the-redeemer.com.</a></li>
+            <li><a href="https://www.bondinho.com.br/en/ingresso-bondinho" target="_blank" rel="noopener noreferrer" className="hover:underline">Sugarloaf Mountain Park Official Website, &quot;Cable Car Ticket,&quot; bondinho.com.br.</a></li>
+            <li><a href="https://blog.hotelarpoador.com/en/arpoador-rock-in-rio-de-janeiro/" target="_blank" rel="noopener noreferrer" className="hover:underline">Hotel Arpoador Blog, &quot;Arpoador Rock in Rio de Janeiro.&quot;</a></li>
+            <li><a href="https://carolinerosetravel.com/the-ultimate-list-of-things-to-do-in-rio-de-janeiro/" target="_blank" rel="noopener noreferrer" className="hover:underline">Caroline Rose Travel, &quot;The Ultimate List of Things to Do in Rio de Janeiro.&quot;</a></li>
+            <li><a href="https://www.rioculturalsecrets.com/attractions-in-rio-de-janeiro/" target="_blank" rel="noopener noreferrer" className="hover:underline">Rio Cultural Secrets, &quot;Top 50 Attractions in Rio de Janeiro 2025.&quot;</a></li>
+            <li><a href="https://www.mustseespots.com/brazil/articles/nightlife-in-rio-de-janeiro-best-bars-clubs-samba-experiences/" target="_blank" rel="noopener noreferrer" className="hover:underline">Mustseespots.com, &quot;Nightlife in Rio de Janeiro: Best Bars, Clubs &amp; Samba Experiences.&quot;</a></li>
+            <li><a href="https://eatrio.net/samba-in-rio" target="_blank" rel="noopener noreferrer" className="hover:underline">Eat Rio, &quot;Samba in Rio,&quot; eatrio.net.</a></li>
+            <li><a href="https://brasilatm.com/best-restaurants-in-rio-de-janeiro/" target="_blank" rel="noopener noreferrer" className="hover:underline">Brasil ATM, &quot;Best Restaurants in Rio de Janeiro You Can&apos;t Miss.&quot;</a></li>
+            <li><a href="https://www.viator.com/Rio-de-Janeiro-attractions/Rio-de-Janeiro-Botanical-Garden-Jardim-Botanico/d712-a1321" target="_blank" rel="noopener noreferrer" className="hover:underline">Viator, &quot;Rio de Janeiro Botanical Garden (Jardim Botânico).&quot;</a></li>
+            <li><a href="https://www.viator.com/Rio-de-Janeiro-attractions/Tijuca-National-Park/d712-a1333" target="_blank" rel="noopener noreferrer" className="hover:underline">Viator, &quot;Tijuca National Park, Rio de Janeiro.&quot;</a></li>
+            <li><a href="https://nowinrio.com/hiking-the-dois-irmaos/" target="_blank" rel="noopener noreferrer" className="hover:underline">Now In Rio, &quot;Hiking Morro Dois Irmãos: The Complete Guide.&quot;</a></li>
+            <li><a href="https://goingtorio.com/blog/where-to-see-live-samba-in-rio" target="_blank" rel="noopener noreferrer" className="hover:underline">Going to Rio, &quot;Where to See Live Samba in Rio de Janeiro: Best Shows &amp; Weekly Guide.&quot;</a></li>
+            <li><a href="https://carolinerosetravel.com/the-ultimate-list-of-things-to-do-in-rio-de-janeiro/" target="_blank" rel="noopener noreferrer" className="hover:underline">Caroline Rose Travel, &quot;Confeitaria Colombo,&quot; in &quot;The Ultimate List of Things to Do in Rio de Janeiro.&quot;</a></li>
+            <li><a href="https://www.carnivality.com/rio-de-janeiro-carnival/" target="_blank" rel="noopener noreferrer" className="hover:underline">Carnivality, &quot;Rio de Janeiro Carnival 2026.&quot;</a></li>
+            <li><a href="https://guide.michelin.com/en/article/dining-out/restaurants-in-rio-de-janeiro-that-are-reimagining-brazilian-cuisine" target="_blank" rel="noopener noreferrer" className="hover:underline">MICHELIN Guide, &quot;The Rio de Janeiro Restaurants Reimagining Brazilian Cuisine.&quot;</a></li>
+            <li><a href="https://www.riomountainsports.com/gavea-hike" target="_blank" rel="noopener noreferrer" className="hover:underline">Rio Mountain Sports, &quot;Pedra da Gávea Hike.&quot;</a></li>
+            <li><a href="https://travel.gc.ca/destinations/brazil" target="_blank" rel="noopener noreferrer" className="hover:underline">Government of Canada, &quot;Travel Advice and Advisories for Brazil,&quot; travel.gc.ca.</a></li>
+            <li><a href="https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/brazil-travel-advisory.html" target="_blank" rel="noopener noreferrer" className="hover:underline">U.S. Department of State, &quot;Brazil Travel Advisory,&quot; travel.state.gov.</a></li>
+          </ol>
+        </div>
+      ),
+    },
     "6": {
       title: "Tokyo: Twenty Essential Encounters in one of the World's Greatest Cities",
       date: "2026-05-27",
