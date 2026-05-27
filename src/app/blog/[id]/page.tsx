@@ -33,7 +33,7 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
               style={{ maxHeight: "480px" }}
             />
             <figcaption className="text-xs text-gray-400 mt-2 text-center">
-              Shibuya Scramble Crossing at night — Photo by mos design on <a href="https://unsplash.com/photos/JMD0K-kCJ5I" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash</a> (Unsplash License, free to use)
+              Shibuya Scramble Crossing at night — Photo by <strong className="text-gray-500">mos design</strong> on <a href="https://unsplash.com/photos/JMD0K-kCJ5I" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash</a> &mdash; <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash License</a> (free for all uses, including commercial)
             </figcaption>
           </figure>
 
@@ -54,7 +54,7 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
               style={{ maxHeight: "420px" }}
             />
             <figcaption className="text-xs text-gray-400 mt-2 text-center">
-              Senso-ji Temple, Asakusa — Photo by Rémi Bertogliati on <a href="https://unsplash.com/photos/L3Fi8pMqXZg" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash</a> (Unsplash License, free to use)
+              Senso-ji Temple, Asakusa — Photo by <strong className="text-gray-500">Rémi Bertogliati</strong> on <a href="https://unsplash.com/photos/L3Fi8pMqXZg" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash</a> &mdash; <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash License</a> (free for all uses, including commercial)
             </figcaption>
           </figure>
 
@@ -97,7 +97,7 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
               style={{ maxHeight: "420px" }}
             />
             <figcaption className="text-xs text-gray-400 mt-2 text-center">
-              Tokyo Skytree at night — Photo by Tsuyoshi Kozu on <a href="https://unsplash.com/photos/ZXKFniLzUNQ" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash</a> (Unsplash License, free to use)
+              Tokyo Skytree at night — Photo by <strong className="text-gray-500">Tsuyoshi Kozu</strong> on <a href="https://unsplash.com/photos/ZXKFniLzUNQ" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash</a> &mdash; <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash License</a> (free for all uses, including commercial)
             </figcaption>
           </figure>
 
@@ -193,8 +193,34 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
 
           {/* Disclaimer */}
           <div className="rounded-xl border border-gray-200 bg-gray-50 px-6 py-4 text-sm text-gray-500 leading-relaxed mt-8">
-            <strong className="text-gray-700">Disclaimer:</strong> This post shares findings from independent research using publicly available sources. All information reflects conditions as of May 2026. Prices, hours, and availability change — verify directly with venues before visiting. All images are used under the <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Unsplash License</a> (free for commercial and non-commercial use, no attribution required). The author has no commercial relationship with any venue listed.
+            <strong className="text-gray-700">Disclaimer:</strong> This post shares findings from independent research using publicly available sources. All information reflects conditions as of May 2026. Prices, hours, and availability change — verify directly with venues before visiting. The author has no commercial relationship with any venue listed.
           </div>
+
+          {/* Photo Credits */}
+          <h2 className="text-2xl font-bold text-gray-900">Photo Credits</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">
+            All photographs sourced from <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Unsplash</a> and used under the <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Unsplash License</a>, which grants free use for all purposes — commercial and non-commercial — worldwide, with no attribution legally required. We credit photographers voluntarily as a matter of practice.
+          </p>
+          <ul className="list-disc pl-6 space-y-1 text-sm text-gray-500">
+            <li>
+              <strong>Shibuya Scramble Crossing at night</strong> — Photo by{" "}
+              <a href="https://unsplash.com/@mosdesign" target="_blank" rel="noopener noreferrer" className="hover:underline">mos design</a>{" "}
+              on Unsplash &mdash;{" "}
+              <a href="https://unsplash.com/photos/JMD0K-kCJ5I" target="_blank" rel="noopener noreferrer" className="hover:underline">unsplash.com/photos/JMD0K-kCJ5I</a>
+            </li>
+            <li>
+              <strong>Senso-ji Temple, Asakusa</strong> — Photo by{" "}
+              <a href="https://unsplash.com/@remi_b" target="_blank" rel="noopener noreferrer" className="hover:underline">Rémi Bertogliati</a>{" "}
+              on Unsplash &mdash;{" "}
+              <a href="https://unsplash.com/photos/L3Fi8pMqXZg" target="_blank" rel="noopener noreferrer" className="hover:underline">unsplash.com/photos/L3Fi8pMqXZg</a>
+            </li>
+            <li>
+              <strong>Tokyo Skytree at night</strong> — Photo by{" "}
+              <a href="https://unsplash.com/@tsuyoshikozu" target="_blank" rel="noopener noreferrer" className="hover:underline">Tsuyoshi Kozu</a>{" "}
+              on Unsplash &mdash;{" "}
+              <a href="https://unsplash.com/photos/ZXKFniLzUNQ" target="_blank" rel="noopener noreferrer" className="hover:underline">unsplash.com/photos/ZXKFniLzUNQ</a>
+            </li>
+          </ul>
 
           {/* Sources */}
           <h2 className="text-2xl font-bold text-gray-900">Sources</h2>
