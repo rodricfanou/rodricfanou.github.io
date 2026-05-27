@@ -15,6 +15,14 @@ interface BlogPost {
 
 const posts: BlogPost[] = [
   {
+    id: 6,
+    title: "Tokyo: Twenty Essential Encounters with the World's Greatest City",
+    date: "2026-05-27",
+    excerpt: "From the organized bedlam of Shibuya Crossing at midnight to pre-dawn sushi at Tsukiji and jazz until 5 AM in Golden Gai — an honest account of twenty experiences that explain why Tokyo ruins you for every other city.",
+    category: "Tourism",
+    readTime: "7 min",
+  },
+  {
     id: 5,
     title: "This Week in AI: Google Goes Agentic, OpenAI Proves a Theorem, and ChatGPT Gets Ads",
     date: "2026-05-26",
