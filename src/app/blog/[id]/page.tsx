@@ -10,7 +10,7 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
 
   const posts: Record<string, { title: string; date: string; readTime: string; content: React.ReactNode }> = {
     "7": {
-      title: "Rio de Janeiro: Twenty Essential Encounters in the Cidade Maravilhosa",
+      title: "Rio de Janeiro: Essential Encounters in the Cidade Maravilhosa",
       date: "2026-05-27",
       readTime: "5 min",
       content: (
@@ -18,7 +18,7 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
 
           {/* Intro */}
           <p>
-            Rio de Janeiro does not ease you in. The city arrives all at once: mountains erupting from the Atlantic, a statue arms-wide above a green canopy, beaches so broad they function as public squares, and a sound that is neither music nor noise but a third thing Cariocas call alegria. What follows is an honest account of twenty encounters, arranged as four days, written by someone who has walked these hills, missed a bus because of a sunset, and left convinced that no other city resolves the conflict between the beautiful and the difficult quite so dramatically.
+            Rio de Janeiro does not ease you in. The city arrives all at once: mountains erupting from the Atlantic, a statue arms-wide above a green canopy, beaches so broad they function as public squares, and a sound that is neither music nor noise but a third thing Cariocas call "alegria". What follows is an honest account of twenty encounters, arranged for a four days visit.
           </p>
 
           {/* Hero image */}
@@ -45,21 +45,6 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
             The statue is 30 meters tall on an 8-meter pedestal, completed in 1931 after nine years of construction, standing on the 710-meter summit of Corcovado.<sup><a href="https://christ-the-redeemer.com/entrance-fee/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[1]</a></sup> None of these figures prepare you for it. The trail from Parque Lage through the Tijuca Atlantic Forest takes two to three hours each way; the park entrance is free and the forest is dense enough to make you forget the city below until, abruptly, it reappears 710 meters beneath your feet. If hiking, entrance to the monument itself is not included in the van or train ticket and must be paid at the summit; current adult rate is approximately R$134 for the combined cog-train access.<sup><a href="https://christ-the-redeemer.com/tickets/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[2]</a></sup> Important safety note: there have been multiple reports of robberies on the Corcovado Trail in recent years; hiking with a certified guide is strongly recommended.
           </p>
 
-          {/* Christ Redeemer image */}
-          <figure className="my-6">
-            <img
-              src="https://images.unsplash.com/photo-1516834611397-8d633eaec5d0?fm=jpg&q=80&w=1200&auto=format&fit=crop"
-              alt="Christ the Redeemer statue at sunset above the Atlantic Forest, Rio de Janeiro"
-              className="w-full rounded-2xl shadow-lg object-cover"
-              style={{ maxHeight: "420px" }}
-            />
-            <figcaption className="text-xs text-gray-400 mt-2 text-center">
-              Christ the Redeemer at sunset. Photo by <strong className="text-gray-500">Agustin Diaz Gargiulo</strong> on{" "}
-              <a href="https://unsplash.com/photos/christ-the-redeemer-GTLJklnjn-E" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash</a>.{" "}
-              <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash License</a>
-            </figcaption>
-          </figure>
-
           {/* ---- 2 ---- */}
           <h2 className="text-2xl font-bold text-gray-900">2. Sugarloaf Mountain (Pão de Açúcar) at Dusk</h2>
           <p>
@@ -84,7 +69,7 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
           {/* ---- 3 ---- */}
           <h2 className="text-2xl font-bold text-gray-900">3. Ipanema Beach, Posto 9</h2>
           <p>
-            Ipanema is 2.5 kilometers of white sand flanked by the Dois Irmãos peaks to the west and the Arpoador rocks to the east. Posto 9, the ninth lifeguard station, is the beach&apos;s social center: bohemian, LGBTQ-inclusive, and as close to a democratic public space as Rio gets. Arrive before 9 AM for a chair and umbrella at a manageable price; later in the day vendors circulate selling agua de coco, açaí, and mate. Do not bring valuables beyond what you intend to use. The beach is not safe after dark.
+            Ipanema is 2.5 kilometers of white sand flanked by the Dois Irmãos peaks to the west and the Arpoador rocks to the east. Posto 9, the ninth lifeguard station, is the beach&apos;s social center: bohemian. Arrive before 9 AM for a chair and umbrella at a manageable price; later in the day vendors circulate selling agua de coco, açaí, and mate. Do not bring valuables beyond what you intend to use. The beach is not safe after dark.
           </p>
 
           {/* Ipanema beach */}
@@ -232,7 +217,7 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
           <div className="mt-10 p-6 rounded-xl bg-amber-50 border border-amber-200">
             <h2 className="text-xl font-bold text-gray-800 mb-3">The Honest Counterargument</h2>
             <p className="text-gray-700 text-sm leading-relaxed">
-              The strongest case against this itinerary is the one Rio itself makes: the city is acutely unequal, and the twenty experiences above are almost exclusively available to visitors with money, mobility, and the security of a foreign passport. The favelas that ring the Zona Sul and climb the hillsides above Ipanema are not incidental to Rio; they are structural. The carioca who applauds the sunset at Arpoador may take a bus to a neighborhood you will not visit and live under conditions the guidebooks omit. Engaging honestly with Rio means knowing this and not pretending that four days of beaches and Michelin stars constitute a complete picture of the city. It does not make the beaches less beautiful. It makes them more complicated.
+              The strongest case against this itinerary is the one Rio itself makes: the city is acutely unequal, and the twenty experiences above are almost exclusively available to visitors with mobility and the security of a foreign passport. The favelas that ring the Zona Sul and climb the hillsides above Ipanema are not incidental to Rio; they are structural. The carioca who applauds the sunset at Arpoador may take a bus to a neighborhood you will not visit and live under conditions the guidebooks omit. Engaging honestly with Rio means knowing this and not pretending that four days of beaches and Michelin stars constitute a complete picture of the city. It does not make the beaches less beautiful. It makes them more complicated.
             </p>
           </div>
 
@@ -240,7 +225,7 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
           <div className="mt-6 p-6 rounded-xl bg-blue-50 border border-blue-200">
             <h2 className="text-xl font-bold text-gray-800 mb-3">A Note on Safety</h2>
             <p className="text-gray-700 text-sm leading-relaxed">
-              Rio de Janeiro is a city of genuine contrasts in safety. Tourist-dense neighborhoods (Ipanema, Leblon, Copacabana, Botafogo, Santa Teresa, Lapa) are well-policed and heavily visited; they carry the ordinary urban risks of any large city. Favela complexes carry significantly higher risk, including during police operations; the Canadian and U.S. governments recommend avoiding them entirely.<sup><a href="https://travel.gc.ca/destinations/brazil" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[18]</a></sup><sup><a href="https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/brazil-travel-advisory.html" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[19]</a></sup> Primary risks for tourists are phone theft (motorbike snatch), beach robberies (arrastão), and PIX express kidnapping. Use Uber rather than street taxis; do not carry valuables on beaches; do not walk on the beach at night; do not accept drinks from strangers. The ISP (Instituto de Segurança Pública) reported a 12% decrease in violent lethality in Q1 2026 versus Q1 2025, which is a meaningful trend but not a guarantee. Research current conditions before travel, and register with your country&apos;s embassy upon arrival.
+              Rio de Janeiro is a city of genuine contrasts in safety. Tourist-dense neighborhoods (Ipanema, Leblon, Copacabana, Botafogo, Santa Teresa, Lapa) are well-policed and heavily visited; they carry the ordinary urban risks of any large city. Favela complexes carry significantly higher risk, including during police operations; Some publications recommend avoiding them entirely.<sup><a href="https://travel.gc.ca/destinations/brazil" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[18]</a></sup><sup><a href="https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/brazil-travel-advisory.html" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[19]</a></sup> Primary risks for tourists are phone theft (motorbike snatch), beach robberies (arrastão), and PIX express kidnapping. Use Uber rather than street taxis; do not carry valuables on beaches; do not walk on the beach at night; do not accept drinks from strangers. Research current conditions before travel, and register with your country&apos;s embassy upon arrival.
             </p>
           </div>
 
