@@ -37,7 +37,7 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
           </figure>
 
           {/* DAY 1 */}
-          <h2 className="text-3xl font-bold text-gray-900 mt-10">Day 1: The Icons Rio Refuses to Underplay</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mt-10">Day 1: The Icons Rio Refuses to Underplay </h2>
 
           {/* ---- 1 ---- */}
           <h2 className="text-2xl font-bold text-gray-900">1. Christ the Redeemer via the Parque Lage Trail</h2>
