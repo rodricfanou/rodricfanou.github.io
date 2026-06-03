@@ -2,13 +2,94 @@ import FadeIn from "@/components/FadeIn";
 import Link from "next/link";
 
 export async function generateStaticParams() {
-  return [{ id: "1" }, { id: "2" }, { id: "3" }, { id: "4" }, { id: "5" }, { id: "6" }, { id: "7" }];
+  return [{ id: "1" }, { id: "2" }, { id: "3" }, { id: "4" }, { id: "5" }, { id: "6" }, { id: "7" }, { id: "8" }];
 }
 
 export default async function BlogPost({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
 
   const posts: Record<string, { title: string; date: string; readTime: string; content: React.ReactNode }> = {
+    "8": {
+      title: "This Week in AI: Silicon Valley Heads to Wall Street and the Search Bar Disappears",
+      date: "2026-06-03",
+      readTime: "5 min",
+      content: (
+        <div className="space-y-8 text-gray-700 text-base leading-relaxed md:text-lg text-justify">
+
+          {/* Opening */}
+          <p>
+            The past seven days produced the kind of news that tends to look, in retrospect, like an inflection point. Two of the most consequential AI companies in the world filed for public offerings. Google declared the single biggest change to its search product in 25 years. Nvidia entered the PC chip market with a move that sent competitors&apos; shares sliding. And Anthropic quietly disclosed a model that discovered more software vulnerabilities in one month than most security firms find in a decade. The pace is not slowing.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">Anthropic and OpenAI Head to Wall Street</h2>
+          <p>
+            Anthropic filed a confidential S-1 with the SEC on June 1, targeting what would be among the largest initial public offerings in history.<sup><a href="https://www.cnbc.com/2026/06/01/anthropic-ipo-s1-prospectus.html" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[1]</a></sup> The company disclosed an annualized revenue run rate of $47 billion, up from $10 billion in annual revenue last year, and is seeking a valuation between $1.75 and $1.8 trillion with a potential raise of up to $75 billion.<sup><a href="https://finance.yahoo.com/markets/stocks/articles/anthropic-files-confidential-1-joins-161008569.html" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[2]</a></sup> OpenAI filed its own confidential registration around May 22 and targets a September debut at a valuation exceeding $1 trillion.<sup><a href="https://www.bloomberg.com/news/articles/2026-06-01/can-openai-and-anthropic-ipos-live-up-to-expectations" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[3]</a></sup> Together, the two companies represent the core of a new wave of AI infrastructure providers seeking public capital to fund the compute demands of the next generation of models.
+          </p>
+          <p>
+            The skeptic&apos;s read: both companies burn cash at scale, have disclosed no GAAP profitability figures, and operate in an environment where today&apos;s leading model can be overtaken within months. Revenue growth is real. Durable margins remain unproven.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">Google Declares the Biggest Search Shift in 25 Years</h2>
+          <p>
+            Google described its new AI-first search experience as the most significant change to its core product since the company launched.<sup><a href="https://www.bloomberg.com/opinion/articles/2026-06-03/google-gemini-ai-search-shift-is-freaking-out-the-online-ad-world" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[4]</a></sup> The redesigned search bar integrates AI Overviews and &quot;conversational discovery ads&quot; built inside AI-generated answers, so advertisers reach users who may never click through to a third-party website. On the model side, Gemini 3.5 Flash reached general availability as Google&apos;s most capable model for agentic and coding tasks, with Gemini 3.5 Pro in testing for next month.<sup><a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[5]</a></sup>
+          </p>
+          <p>
+            The implications for publishers are severe. When the answer appears inside the search result, the incentive to visit the source disappears. Google frames this as a better user experience. Its ad-revenue model depends on proving it is also a better one for businesses. That tension is not yet resolved.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">Nvidia Enters the $200 Billion PC Chip Market</h2>
+          <p>
+            Nvidia unveiled the RTX Spark on June 1, a laptop chip combining a Blackwell RTX GPU with 6,144 CUDA cores and a 20-core Grace CPU co-developed with MediaTek, packaged on TSMC&apos;s 3nm process.<sup><a href="https://www.cnbc.com/2026/06/02/nvidias-new-pc-chips-are-ceos-bid-to-own-every-part-of-ai-stack.html" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[6]</a></sup> Systems from ASUS, Dell, HP, Lenovo, Microsoft Surface, and MSI will ship this autumn. CEO Jensen Huang framed the move around the case that AI agents can run locally at lower cost than in the cloud, opening a $200 billion CPU market to Nvidia for the first time.<sup><a href="https://techcrunch.com/2026/06/01/nvidia-chases-200b-cpu-market-with-ai-agent-pcs-from-microsoft-dell-and-hp/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[7]</a></sup>
+          </p>
+          <p>
+            The announcement sent AMD, Intel, and Qualcomm shares lower. Nvidia&apos;s CUDA software ecosystem, already dominant in data centers, gives it an immediate software advantage that neither AMD nor Intel can replicate without years of developer effort. Whether that advantage translates to consumer PCs at scale is the open question.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">Microsoft Build 2026: Seven Models and a Push for Independence</h2>
+          <p>
+            Microsoft used Build 2026 to unveil seven self-developed AI models under the MAI brand, including MAI-Code-1-Flash for code generation and MAI-Thinking-1, its first reasoning model.<sup><a href="https://www.cnbc.com/2026/06/02/microsoft-unveils-new-ai-models-lessen-reliance-on-openai-lower-costs.html" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[8]</a></sup> The company also released the Agent Control Specification (ACS), an open-source standard that defines eight interception points across the agent lifecycle, giving developers a consistent way to govern what AI agents are permitted to do.<sup><a href="https://techcrunch.com/2026/06/02/microsoft-offers-devs-a-better-way-to-control-ai-agent-behavior/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[9]</a></sup>
+          </p>
+          <p>
+            The business logic is straightforward: Microsoft pays OpenAI for model access while competing against it in enterprise AI. Building internal model capacity reduces both cost and strategic exposure. Whether MAI models can match frontier capabilities from OpenAI or Anthropic is a separate, unanswered question.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">Claude Mythos Finds 10,000 Zero-Day Vulnerabilities in One Month</h2>
+          <p>
+            Anthropic expanded Project Glasswing to 150 new organizations across more than 15 countries on June 2, extending access to its Claude Mythos model to critical infrastructure operators in power, water, healthcare, and communications.<sup><a href="https://techcrunch.com/2026/06/02/anthropic-scales-claude-mythos-to-critical-infrastructure-in-15-countries/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[10]</a></sup> In its first month, Mythos autonomously discovered more than 10,000 high- and critical-severity zero-day vulnerabilities across major operating systems and web browsers, including a 27-year-old flaw in OpenBSD and a 16-year-old flaw in FFmpeg.<sup><a href="https://cybersecuritynews.com/anthropics-claude-mythos-preview-0-days/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[11]</a></sup> Anthropic warned of a six- to twelve-month window before adversaries can replicate the capability.
+          </p>
+          <p>
+            That warning is the correct frame. Offensive AI security tooling is not a hypothetical: any model capable of discovering 10,000 zero-days at scale will eventually reach actors with malicious intent. Whether the defensive deployment can outpace the offensive one remains an open bet Anthropic is making on behalf of everyone.
+          </p>
+
+          {/* Closing */}
+          <p>
+            This week&apos;s developments are not independent. The IPOs bring in capital that funds the next generation of compute. That compute powers models like Mythos and Gemini 3.5. Those models reshape search, security, and software development in ways that justify further investment. The cycle is self-reinforcing, and none of the major players show signs of stepping off.
+          </p>
+
+          {/* Disclaimer */}
+          <p className="text-sm text-gray-500 italic border-t border-gray-200 pt-6">
+            Disclaimer: All information in this post was collected from publicly available web sources at the time of writing. While every effort has been made to verify accuracy, readers should consult primary sources for decisions that depend on this information.
+          </p>
+
+          {/* References */}
+          <h2 className="text-2xl font-bold text-gray-900">References</h2>
+          <ol className="list-decimal pl-6 space-y-1 text-sm text-gray-500">
+            <li><a href="https://www.cnbc.com/2026/06/01/anthropic-ipo-s1-prospectus.html" target="_blank" rel="noopener noreferrer" className="hover:underline">CNBC, &quot;Anthropic confidentially files IPO prospectus with SEC,&quot; June 1, 2026.</a></li>
+            <li><a href="https://finance.yahoo.com/markets/stocks/articles/anthropic-files-confidential-1-joins-161008569.html" target="_blank" rel="noopener noreferrer" className="hover:underline">Yahoo Finance, &quot;Anthropic Files Confidential S-1: Joins $3 Trillion AI IPO Race,&quot; June 1, 2026.</a></li>
+            <li><a href="https://www.bloomberg.com/news/articles/2026-06-01/can-openai-and-anthropic-ipos-live-up-to-expectations" target="_blank" rel="noopener noreferrer" className="hover:underline">Bloomberg, &quot;Can OpenAI and Anthropic IPOs Live Up to Expectations?,&quot; June 1, 2026.</a></li>
+            <li><a href="https://www.bloomberg.com/opinion/articles/2026-06-03/google-gemini-ai-search-shift-is-freaking-out-the-online-ad-world" target="_blank" rel="noopener noreferrer" className="hover:underline">Bloomberg, &quot;Google Gemini AI Search Change Is Freaking People Out,&quot; June 3, 2026.</a></li>
+            <li><a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener noreferrer" className="hover:underline">Google, &quot;Gemini API Release Notes,&quot; June 2026.</a></li>
+            <li><a href="https://www.cnbc.com/2026/06/02/nvidias-new-pc-chips-are-ceos-bid-to-own-every-part-of-ai-stack.html" target="_blank" rel="noopener noreferrer" className="hover:underline">CNBC, &quot;Nvidia&apos;s new PC chips represent CEO Huang&apos;s bid to win at every layer of AI stack,&quot; June 2, 2026.</a></li>
+            <li><a href="https://techcrunch.com/2026/06/01/nvidia-chases-200b-cpu-market-with-ai-agent-pcs-from-microsoft-dell-and-hp/" target="_blank" rel="noopener noreferrer" className="hover:underline">TechCrunch, &quot;Nvidia chases $200B CPU market with AI agent PCs,&quot; June 1, 2026.</a></li>
+            <li><a href="https://www.cnbc.com/2026/06/02/microsoft-unveils-new-ai-models-lessen-reliance-on-openai-lower-costs.html" target="_blank" rel="noopener noreferrer" className="hover:underline">CNBC, &quot;Microsoft unveils new AI models to lessen reliance on OpenAI,&quot; June 2, 2026.</a></li>
+            <li><a href="https://techcrunch.com/2026/06/02/microsoft-offers-devs-a-better-way-to-control-ai-agent-behavior/" target="_blank" rel="noopener noreferrer" className="hover:underline">TechCrunch, &quot;Microsoft offers devs a better way to control AI agent behavior,&quot; June 2, 2026.</a></li>
+            <li><a href="https://techcrunch.com/2026/06/02/anthropic-scales-claude-mythos-to-critical-infrastructure-in-15-countries/" target="_blank" rel="noopener noreferrer" className="hover:underline">TechCrunch, &quot;Anthropic scales Claude Mythos to critical infrastructure in 15+ countries,&quot; June 2, 2026.</a></li>
+            <li><a href="https://cybersecuritynews.com/anthropics-claude-mythos-preview-0-days/" target="_blank" rel="noopener noreferrer" className="hover:underline">Cybersecurity News, &quot;Anthropic&apos;s Claude Mythos Preview Uncovers 10,000+ 0-Days,&quot; 2026.</a></li>
+          </ol>
+
+        </div>
+      ),
+    },
     "7": {
       title: "Rio de Janeiro: Essential Encounters in the Cidade Maravilhosa",
       date: "2026-05-27",

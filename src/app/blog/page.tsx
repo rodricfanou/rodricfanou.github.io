@@ -15,6 +15,14 @@ interface BlogPost {
 
 const posts: BlogPost[] = [
   {
+    id: 8,
+    title: "This Week in AI: Silicon Valley Heads to Wall Street and the Search Bar Disappears",
+    date: "2026-06-03",
+    excerpt: "Anthropic filed a confidential S-1 targeting a $1.75 trillion valuation on $47 billion in annualized revenue. Google declared the biggest shift in search in 25 years. Nvidia entered the $200 billion PC chip market, and Anthropic's Claude Mythos discovered more than 10,000 zero-day vulnerabilities across major operating systems in a single month.",
+    category: "AI",
+    readTime: "5 min",
+  },
+  {
     id: 7,
     title: "Rio de Janeiro: Twenty Essential Encounters in the Cidade Maravilhosa",
     date: "2026-05-27",
