@@ -13,7 +13,7 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
       title: "This Week in AI: Silicon Valley Heads to Wall Street and the Search Bar Disappears",
       date: "2026-06-03",
       readTime: "5 min",
-      type: "HI",
+      type: "AI+HI",
       content: (
         <div className="space-y-8 text-gray-700 text-base leading-relaxed md:text-lg text-justify">
 
@@ -95,7 +95,7 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
       title: "Cape Town: Twenty Essential Encounters in the Mother City",
       date: "2026-06-03",
       readTime: "5 min",
-      type: "HI",
+      type: "AI+HI",
       content: (
         <div className="space-y-6 text-gray-700 text-base leading-relaxed md:text-lg text-justify">
 
@@ -333,7 +333,7 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
       title: "Rio de Janeiro: Essential Encounters in the Cidade Maravilhosa",
       date: "2026-05-27",
       readTime: "5 min",
-      type: "HI",
+      type: "AI+HI",
       content: (
         <div className="space-y-6 text-gray-700 text-base leading-relaxed md:text-lg text-justify">
 
@@ -623,7 +623,7 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
       title: "Tokyo: Twenty Essential Encounters in one of the World's Greatest Cities",
       date: "2026-05-27",
       readTime: "5 min",
-      type: "HI",
+      type: "AI+HI",
       content: (
         <div className="space-y-6 text-gray-700 text-base leading-relaxed md:text-lg text-justify">
 
@@ -857,7 +857,7 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
       title: "This Week in AI: Google Goes Agentic, OpenAI Proves a Theorem, and ChatGPT Gets Ads",
       date: "2026-05-26",
       readTime: "5 min",
-      type: "HI",
+      type: "AI+HI",
       content: (
         <div className="space-y-8 text-gray-700 text-base leading-relaxed md:text-lg text-justify">
           <p>
@@ -930,7 +930,7 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
       title: "Generating AI Agents Using ChatGPT and Claude",
       date: "2026-05-04",
       readTime: "5 min",
-      type: "HI",
+      type: "AI+HI",
       content: (
         <div className="space-y-8 text-gray-700 text-base leading-relaxed md:text-lg text-justify">
           <p>
@@ -995,7 +995,7 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
       title: "Building a Daily AI News Agent with ChatGPT and Claude",
       date: "2026-05-04",
       readTime: "5 min",
-      type: "HI",
+      type: "AI+HI",
       content: (
         <div className="space-y-8 text-gray-700 text-base leading-relaxed md:text-lg text-justify">
           <p>
@@ -1095,7 +1095,7 @@ Respond as JSON only.
       title: "From Prompts to Agents: A Practical Framework for Autonomous AI",
       date: "2026-05-09",
       readTime: "5 min",
-      type: "HI",
+      type: "AI+HI",
       content: (
         <div className="space-y-8 text-gray-700 text-base leading-relaxed md:text-lg text-justify">
           <p>
@@ -1235,7 +1235,7 @@ print(result)`}</pre>
       title: "Manus AI: The General Purpose Agent That Actually Works",
       date: "2026-05-19",
       readTime: "6 min",
-      type: "HI",
+      type: "AI+HI",
       content: (
         <div className="space-y-8 text-gray-700 text-base leading-relaxed md:text-lg text-justify">
           <p>
@@ -1486,7 +1486,7 @@ print(result)`}</pre>
                 <span className={`px-2 py-0.5 rounded-full text-[11px] font-bold leading-tight ${
                   post.type === "AI+HI"
                     ? "bg-yellow-300 text-gray-900"
-                    : "bg-gray-300 text-gray-700"
+                    : "bg-green-500 text-white"
                 }`}>
                   {post.type}
                 </span>
