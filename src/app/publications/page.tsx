@@ -169,7 +169,7 @@ export default function Publications() {
           <FadeIn>
             <div className="text-center text-white">
               <h1 className="text-3xl font-extrabold mb-2 drop-shadow-lg md:text-5xl">
-                Top Publications
+                Selected Publications
               </h1>
               <p className="text-base text-white/90 drop-shadow-sm md:text-lg md:text-xl">
                 Peer-reviewed research and contributions to the scientific community.
