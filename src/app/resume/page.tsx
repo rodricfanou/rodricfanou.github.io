@@ -2,7 +2,7 @@
 
 import FadeIn from "@/components/FadeIn";
 
-export default function CV() {
+export default function Resume() {
   return (
     <main className="bg-gray-100 min-h-screen py-8 px-4 flex flex-col items-center md:py-12 md:px-8">
 
@@ -20,7 +20,7 @@ export default function CV() {
           <FadeIn>
             <div className="text-center text-white">
               <h1 className="text-3xl font-extrabold mb-3 drop-shadow-lg md:text-5xl">
-                CV
+                Resume
               </h1>
               <p className="text-base text-white/90 drop-shadow-sm md:text-lg md:text-xl max-w-2xl mx-auto">
                 Work experience, skills, and professional background.
