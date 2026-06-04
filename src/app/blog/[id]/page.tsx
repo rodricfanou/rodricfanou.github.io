@@ -170,7 +170,7 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
 
           <h2 className="text-2xl font-bold text-gray-900">6. Chapman&apos;s Peak Drive</h2>
           <p>
-            The drive south from Hout Bay hugs a sheer red cliff face for nine kilometers, completing 114 curves above the Atlantic before dropping into the fishing village of Noordhoek. It is the most dramatic piece of coastal road in South Africa and, arguably, in the world. The toll is R50 per vehicle, payable by card.<sup><a href="https://thecapetownblog.com/chapmans-peak-drive/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[7]</a></sup> The road closes in high winds and after heavy rain due to rockfall risk. Check conditions before you go. Those who prefer their feet: a free Day Pass at the tollgate provides access to the hiking trails climbing to 592 meters above the ocean.
+            The drive south from Hout Bay hugs a sheer red cliff face for nine kilometers, completing 114 curves above the Atlantic before dropping into the fishing village of Noordhoek. It is the most dramatic piece of coastal road in South Africa and, arguably, in the world. The toll is R50 per vehicle, payable by card.<sup><a href="https://thecapetownblog.com/chapmans-peak-drive/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[7]</a></sup> The road closes in high winds and after heavy rain due to rockfall risk. Check conditions before you go. For those who prefer to have a walk, a free Day Pass at the tollgate provides access to the hiking trails climbing to 592 meters above the ocean.
           </p>
 
           {/* Cape of Good Hope image */}
