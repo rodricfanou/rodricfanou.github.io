@@ -108,6 +108,17 @@ export default function Home() {
             </div>
           </div>
         </FadeIn>
+
+        <FadeIn delay={200}>
+          <div className="text-center">
+            <h2 className="text-2xl font-bold mb-3 text-gray-900 md:text-3xl">Contact Me</h2>
+            <p className="text-gray-700 text-base md:text-lg">
+              <a href="mailto:roderick@roderickfanou.com" className="text-blue-600 hover:underline font-medium">
+                roderick@roderickfanou.com
+              </a>
+            </p>
+          </div>
+        </FadeIn>
       </section>
 
     </main>
