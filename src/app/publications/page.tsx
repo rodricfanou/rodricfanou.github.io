@@ -213,7 +213,7 @@ export default function Publications() {
                 IMDEA Networks Institute &amp; Universidad Carlos III de Madrid, December 2017
               </p>
               <p className="text-gray-500 text-xs mb-4">
-                Supervisors: Dr. Pierre Francois &amp; Dr. Francisco Valera Pintor
+                Supervisors: Dr. Pierre Francois (IMDEA Networks Institute) &amp; Dr. Francisco Valera Pintor (UC3M)
               </p>
               <a
                 href="https://dspace.networks.imdea.org/handle/20.500.12761/486"
