@@ -8,133 +8,70 @@ const services = {
   en: [
     {
       icon: "🤖",
-      title: "AI & Agents Automation",
-      desc: "Build custom autonomous pipelines, multi-agent orchestrations, and LLM-powered workflows for your business.",
-    },
-    {
-      icon: "🌐",
-      title: "Computer Networks",
-      desc: "Design, optimize, and troubleshoot network infrastructure including routing, switching, and traffic management at scale.",
-    },
-    {
-      icon: "⚡",
-      title: "IT & Infrastructure Consulting",
-      desc: "Technical advisory on cloud architecture, performance optimization, system design, and IT operations.",
-    },
-    {
-      icon: "🔬",
-      title: "Research Collaboration",
-      desc: "Co-author papers, contribute to open-source, or collaborate on applied research.",
+      title: "AI Consulting",
+      desc: "Helping organizations adopt AI strategically.",
+      subs: ["AI Readiness", "AI Strategy", "AI Adoption"],
     },
     {
       icon: "🎙️",
-      title: "Public Speaking",
-      desc: "Deliver talks, keynotes, or panel discussions on Internet measurement, networking, AI, and technology.",
+      title: "Speaking",
+      desc: "Keynotes, workshops, and conferences.",
+      subs: ["AI", "Internet Infrastructure", "Future of Work", "Digital Transformation"],
     },
     {
-      icon: "🎨",
-      title: "Web Design",
-      desc: "Design and build modern, responsive websites with a focus on performance, accessibility, and bilingual support.",
+      icon: "⚙️",
+      title: "Technical Advisory",
+      desc: "Networking, Internet infrastructure, observability, and data systems.",
+      subs: ["Network Monitoring", "Internet Measurement", "Data Systems", "Observability"],
     },
     {
-      icon: "📊",
-      title: "Bookkeeping",
-      desc: "Financial record-keeping, invoicing, expense tracking, and reconciliation for small businesses and freelancers.",
-    },
-    {
-      icon: "🌍",
-      title: "Translation",
-      desc: "Professional translation between English, French, and Spanish — technical, academic, business, or any content.",
-    },
-    {
-      icon: "✍️",
-      title: "Copywriting",
-      desc: "Craft compelling copy for websites, marketing materials, and technical documentation.",
-    },
-    {
-      icon: "💻",
-      title: "Custom Software Development",
-      desc: "Build tailored software solutions, from automation scripts to full-stack web applications.",
+      icon: "📚",
+      title: "Training",
+      desc: "AI and technology workshops for teams.",
+      subs: ["AI Training", "Team Workshops", "AI Productivity Training"],
     },
   ],
   fr: [
     {
       icon: "🤖",
-      title: "IA & Automatisation d'Agents",
-      desc: "Construisez des pipelines autonomes, des orchestrations multi-agents et des workflows alimentés par LLM.",
-    },
-    {
-      icon: "🌐",
-      title: "Réseaux Informatiques",
-      desc: "Concevez, optimisez et dépannez l'infrastructure réseau : routage, commutation et gestion du trafic à grande échelle.",
-    },
-    {
-      icon: "⚡",
-      title: "Conseil IT & Infrastructure",
-      desc: "Accompagnement technique sur l'architecture cloud, l'optimisation des performances et la conception de systèmes.",
-    },
-    {
-      icon: "🔬",
-      title: "Collaboration Recherche",
-      desc: "Co-rédigez des articles, contribuez à l'open-source ou collaborez sur de la recherche appliquée.",
+      title: "Conseil en IA",
+      desc: "Aider les organisations à adopter l'IA de manière stratégique.",
+      subs: ["Préparation à l'IA", "Stratégie IA", "Adoption de l'IA"],
     },
     {
       icon: "🎙️",
-      title: "Interventions Publiques",
-      desc: "Donnez des conférences, keynotes ou panels sur la mesure Internet, le réseau, l'IA et la technologie.",
+      title: "Conférences",
+      desc: "Keynotes, ateliers et conférences.",
+      subs: ["IA", "Infrastructure Internet", "Avenir du Travail", "Transformation Numérique"],
     },
     {
-      icon: "🎨",
-      title: "Conception de Sites Web",
-      desc: "Concevez et développez des sites web modernes et réactifs axés sur la performance, l'accessibilité et le support bilingue.",
+      icon: "⚙️",
+      title: "Conseil Technique",
+      desc: "Réseaux, infrastructure Internet, observabilité et systèmes de données.",
+      subs: ["Surveillance Réseau", "Mesure Internet", "Systèmes de Données", "Observabilité"],
     },
     {
-      icon: "📊",
-      title: "Comptabilité",
-      desc: "Tenue de registres financiers, facturation, suivi des dépenses et rapprochement pour PME et freelances.",
-    },
-    {
-      icon: "🌍",
-      title: "Traduction",
-      desc: "Traduction professionnelle entre anglais, français et espagnol — technique, académique, commercial ou tout autre contenu.",
-    },
-    {
-      icon: "✍️",
-      title: "Rédaction",
-      desc: "Rédigez du contenu persuasif pour sites web, supports marketing et documentation technique.",
-    },
-    {
-      icon: "💻",
-      title: "Développement Logiciel Sur Mesure",
-      desc: "Développez des solutions logicielles sur mesure, des scripts d'automatisation aux applications web full-stack.",
+      icon: "📚",
+      title: "Formation",
+      desc: "Ateliers IA et technologie pour les équipes.",
+      subs: ["Formation IA", "Ateliers d'Équipe", "Formation Productivité IA"],
     },
   ],
 };
 
 const interests = {
   en: [
-    "AI & Agents Automation",
-    "Computer Networks",
-    "IT & Infrastructure Consulting",
-    "Research Collaboration",
-    "Public Speaking",
-    "Web Design",
-    "Bookkeeping",
-    "Translation",
-    "Copywriting",
-    "Custom Software Development",
+    "AI Consulting",
+    "Speaking",
+    "Technical Advisory",
+    "Training",
     "Other",
   ],
   fr: [
-    "IA & Automatisation d'Agents",
-    "Réseaux Informatiques",
-    "Conseil IT & Infrastructure",
-    "Collaboration Recherche",
-    "Interventions Publiques",
-    "Conception de Sites Web",
-    "Comptabilité",
-    "Rédaction",
-    "Développement Logiciel Sur Mesure",
+    "Conseil en IA",
+    "Conférences",
+    "Conseil Technique",
+    "Formation",
     "Autre",
   ],
 };
@@ -322,13 +259,20 @@ export default function Contact() {
             {tServices.map((svc) => (
               <div
                 key={svc.title}
-                className="bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-shadow duration-200 flex gap-4 items-start"
+                className="bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-shadow duration-200"
               >
-                <span className="text-2xl mt-0.5 shrink-0">{svc.icon}</span>
-                <div>
-                  <h3 className="font-semibold text-gray-900 text-sm mb-1">{svc.title}</h3>
-                  <p className="text-gray-500 text-xs leading-relaxed">{svc.desc}</p>
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-xl">{svc.icon}</span>
+                  <h3 className="font-semibold text-gray-900 text-sm">{svc.title}</h3>
                 </div>
+                <p className="text-gray-500 text-xs leading-relaxed mb-2">{svc.desc}</p>
+                <ul className="flex flex-wrap gap-1">
+                  {svc.subs.map((sub) => (
+                    <li key={sub} className="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-[11px] font-medium">
+                      {sub}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
