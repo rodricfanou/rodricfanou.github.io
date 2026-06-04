@@ -397,8 +397,8 @@ export default function Contact() {
                     <span className="text-gray-400 mt-0.5">💼</span>
                     <div>
                       <p className="font-semibold text-xs uppercase tracking-wide text-gray-400 mb-0.5">LinkedIn</p>
-                      <a href="https://linkedin.com/in/roderickfanou" target="_blank" rel="noopener noreferrer" className="hover:underline text-white/90 text-sm">
-                        linkedin.com/in/roderickfanou
+                      <a href="https://www.linkedin.com/in/roderick-fanou/" target="_blank" rel="noopener noreferrer" className="hover:underline text-white/90 text-sm">
+                        linkedin.com/in/roderick-fanou
                       </a>
                     </div>
                   </div>
