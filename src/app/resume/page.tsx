@@ -20,10 +20,10 @@ export default function Resume() {
           <FadeIn>
             <div className="text-center text-white">
               <h1 className="text-3xl font-extrabold mb-3 drop-shadow-lg md:text-5xl">
-                Resume
+                Brief Resume
               </h1>
               <p className="text-base text-white/90 drop-shadow-sm md:text-lg md:text-xl max-w-2xl mx-auto">
-                Work experience, skills, and professional background.
+                A brief overview of my work experience, skills, and professional background.
               </p>
             </div>
           </FadeIn>
