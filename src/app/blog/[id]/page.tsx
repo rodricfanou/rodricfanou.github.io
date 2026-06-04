@@ -2,17 +2,18 @@ import FadeIn from "@/components/FadeIn";
 import Link from "next/link";
 
 export async function generateStaticParams() {
-  return [{ id: "1" }, { id: "2" }, { id: "3" }, { id: "4" }, { id: "5" }, { id: "6" }, { id: "7" }, { id: "8" }];
+  return [{ id: "1" }, { id: "2" }, { id: "3" }, { id: "4" }, { id: "5" }, { id: "6" }, { id: "7" }, { id: "8" }, { id: "9" }];
 }
 
 export default async function BlogPost({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
 
-  const posts: Record<string, { title: string; date: string; readTime: string; content: React.ReactNode }> = {
+  const posts: Record<string, { title: string; date: string; readTime: string; type: "AI+HI" | "HI"; content: React.ReactNode }> = {
     "8": {
       title: "This Week in AI: Silicon Valley Heads to Wall Street and the Search Bar Disappears",
       date: "2026-06-03",
       readTime: "5 min",
+      type: "HI",
       content: (
         <div className="space-y-8 text-gray-700 text-base leading-relaxed md:text-lg text-justify">
 
@@ -90,10 +91,249 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
         </div>
       ),
     },
+    "9": {
+      title: "Cape Town: Twenty Essential Encounters in the Mother City",
+      date: "2026-06-03",
+      readTime: "5 min",
+      type: "HI",
+      content: (
+        <div className="space-y-6 text-gray-700 text-base leading-relaxed md:text-lg text-justify">
+
+          {/* Intro */}
+          <p>
+            Cape Town does not announce itself gradually. From the air, the city appears as a narrow strip of civilization wedged between two forces that care nothing for human ambition: Table Mountain, flat and enormous and always present, and the Atlantic, cold and relentless and blue in the way that only very deep water can be blue. The combination is, frankly, unfair. Most cities get either a mountain or a coast. Cape Town got both, and added vineyards, penguin colonies, and a history dense enough to make you feel ignorant by the second afternoon. What follows is a four-day account of twenty encounters that explain why this city is very difficult to leave.
+          </p>
+
+          {/* Hero image */}
+          <figure className="my-6">
+            <img
+              src="https://images.unsplash.com/photo-1770988966522-4eea7f83dbe9?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+              alt="Aerial view of Table Mountain and Cape Town coastline"
+              className="w-full rounded-2xl shadow-lg object-cover"
+              style={{ maxHeight: "480px" }}
+            />
+            <figcaption className="text-xs text-gray-400 mt-2 text-center">
+              Aerial view of Table Mountain and Cape Town coast. Photo by <strong className="text-gray-500">xandro Vandewalle</strong> on{" "}
+              <a href="https://unsplash.com/photos/aerial-view-of-table-mountain-and-cape-town-coast-2t-q7ONxb-w" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash</a>.{" "}
+              <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash License</a> (free for all uses, including commercial)
+            </figcaption>
+          </figure>
+
+          {/* DAY 1 */}
+          <h2 className="text-3xl font-bold text-gray-900 mt-10">Day 1: The Mountain and the Malay Quarter</h2>
+
+          <h2 className="text-2xl font-bold text-gray-900">1. Table Mountain Aerial Cableway</h2>
+          <p>
+            The mountain is 1,086 meters above sea level, and its summit is genuinely flat, the result of 600 million years of erosion that removed everything that was not horizontal. The Aerial Cableway rotates 360 degrees during the six-minute ascent, so every passenger gets the full panorama. Adult return tickets cost R450 online for the period July 2025 to June 2026; purchasing in advance is recommended as the cable car closes frequently on windy days.<sup><a href="https://www.tablemountain.net/plan-your-visit/ticket-prices/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[1]</a></sup> A word of caution: in the first five months of 2025 alone, there were 47 reported attacks on Table Mountain&apos;s hiking trails.<sup><a href="https://capetowndata.com/en/products/blogpost/140/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[2]</a></sup> If you prefer the hike up via Platteklip Gorge, go with a registered guide.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">2. Platteklip Gorge Trail</h2>
+          <p>
+            For those who want to earn the view: the Platteklip Gorge route is the most direct hiking path to the summit, a two- to three-hour ascent on a well-maintained trail. The trailhead is in the Table Mountain National Park, and entry to the park itself is free. The path is steep in places but never technical. At the top, the city spreads below in a way that makes the effort feel proportionate. Guided hikes are available through several registered operators; the safety recommendation from both Cape Town Tourism and local trail authorities is not to walk alone.
+          </p>
+
+          {/* Bo-Kaap image */}
+          <figure className="my-6">
+            <img
+              src="https://images.unsplash.com/photo-1663414227598-9d778b49d417?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+              alt="Colorful houses of Bo-Kaap, Cape Town"
+              className="w-full rounded-2xl shadow-lg object-cover"
+              style={{ maxHeight: "420px" }}
+            />
+            <figcaption className="text-xs text-gray-400 mt-2 text-center">
+              The colorful houses of Bo-Kaap, Wale Street. Photo by <strong className="text-gray-500">Joshua Kettle</strong> on{" "}
+              <a href="https://unsplash.com/photos/a-row-of-colorful-buildings-Zoc0u6M_73g" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash</a>.{" "}
+              <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash License</a>
+            </figcaption>
+          </figure>
+
+          <h2 className="text-2xl font-bold text-gray-900">3. Bo-Kaap Walking Tour</h2>
+          <p>
+            Bo-Kaap is a neighborhood on the slopes of Signal Hill whose history is encoded in its architecture. The houses were painted in bright colors by their owners after the abolition of slavery allowed them, for the first time, to purchase the properties they had previously only rented.<sup><a href="https://offtocapetown.com/explore-bo-kaap-culture-colorful-houses-history/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[3]</a></sup> The Auwal Mosque on Dorp Street, completed in 1794, is the oldest mosque in South Africa.<sup><a href="https://www.iziko.org.za/museums/bo-kaap-museum/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[4]</a></sup> Free daily walking tours depart at 10:00 AM from 81 Long Street. Walking these cobblestoned streets is one of the few times the word &quot;charming&quot; does not feel like an evasion.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">4. Zeitz MOCAA at the Silo District</h2>
+          <p>
+            The Zeitz Museum of Contemporary Art Africa is the largest museum in the world dedicated to contemporary African art, housed inside a historic grain silo at the V&amp;A Waterfront that British architect Thomas Heatherwick carved into 100 galleries across nine floors.<sup><a href="https://zeitzmocaa.museum/plan-your-visit/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[5]</a></sup> The building is worth the visit independent of the collection. Open Monday through Sunday, 10 AM to 6 PM; children under 18 enter free. The sixth-floor rooftop terrace offers an unobstructed view of Table Mountain across the harbor.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">5. Dinner at FYN</h2>
+          <p>
+            FYN was named Restaurant of the Year in South Africa for the second time running and sits at number 82 on the World&apos;s 50 Best extended list for 2025.<sup><a href="https://www.theworlds50best.com/discovery/Establishments/South-Africa/Cape-Town/Fyn-Restaurant.html" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[6]</a></sup> In February 2026, it became one of only four restaurants globally chosen by UNESCO to partner on a biodiversity pilot. The kaiseki-style menu features indigenous Cape ingredients interpreted with Japanese precision. Located on the fifth floor at 37 Parliament Street; dinner seatings Monday through Saturday from 6 PM. Book well in advance.
+          </p>
+
+          {/* DAY 2 */}
+          <h2 className="text-3xl font-bold text-gray-900 mt-10">Day 2: The Cape Peninsula</h2>
+
+          <h2 className="text-2xl font-bold text-gray-900">6. Chapman&apos;s Peak Drive</h2>
+          <p>
+            The drive south from Hout Bay hugs a sheer red cliff face for nine kilometers, completing 114 curves above the Atlantic before dropping into the fishing village of Noordhoek. It is the most dramatic piece of coastal road in South Africa and, arguably, in the world. The toll is R50 per vehicle, payable by card.<sup><a href="https://thecapetownblog.com/chapmans-peak-drive/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[7]</a></sup> The road closes in high winds and after heavy rain due to rockfall risk. Check conditions before you go. Those who prefer their feet: a free Day Pass at the tollgate provides access to the hiking trails climbing to 592 meters above the ocean.
+          </p>
+
+          {/* Cape of Good Hope image */}
+          <figure className="my-6">
+            <img
+              src="https://images.unsplash.com/photo-1552596160-2972cb5d9fc2?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+              alt="Cape of Good Hope, Cape Point, South Africa"
+              className="w-full rounded-2xl shadow-lg object-cover"
+              style={{ maxHeight: "420px" }}
+            />
+            <figcaption className="text-xs text-gray-400 mt-2 text-center">
+              Cape of Good Hope, Cape Point. Photo by <strong className="text-gray-500">Shashank Kumar</strong> on{" "}
+              <a href="https://unsplash.com/photos/ocean-waves-crashing-on-rock-formation-YMOvzRuBH8k" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash</a>.{" "}
+              <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash License</a>
+            </figcaption>
+          </figure>
+
+          <h2 className="text-2xl font-bold text-gray-900">7. Cape of Good Hope</h2>
+          <p>
+            The Cape of Good Hope lies within the Cape Point section of Table Mountain National Park, approximately 70 kilometers south of central Cape Town.<sup><a href="https://thetravelingtaylors.world/south-africa/cape-of-good-hope/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[8]</a></sup> Adult entry is R450 for the 2025/2026 season. The wooden &quot;Cape of Good Hope&quot; sign at the southwestern tip of the African continent is the obvious photograph, but the hour-long loop trail offers a cleaner argument for the place: fynbos, seabirds, and water that is simultaneously the Atlantic and the Indian Ocean pressing against the same rocks.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">8. Boulders Beach Penguin Colony</h2>
+          <p>
+            Boulders Beach, near Simon&apos;s Town on the False Bay side of the Cape Peninsula, is home to a protected colony of African penguins that number in the thousands. The penguins are accessible via raised wooden walkways that keep visitors from disturbing the nests. Entry is approximately R190 for international visitors; the site accepts card payment only.<sup><a href="https://www.sanparks.org/tickets/tickets.php" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[9]</a></sup> Arrive before 9 AM for the best light and the shortest queues. The African penguin is an endangered species; the colony exists here in part because the beach itself is protected.
+          </p>
+
+          {/* Penguins image */}
+          <figure className="my-6">
+            <img
+              src="https://images.unsplash.com/photo-1663500898288-e250f7054c16?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+              alt="African penguins at Boulders Beach, Cape Peninsula, South Africa"
+              className="w-full rounded-2xl shadow-lg object-cover"
+              style={{ maxHeight: "420px" }}
+            />
+            <figcaption className="text-xs text-gray-400 mt-2 text-center">
+              African penguins at Boulders Beach. Photo by <strong className="text-gray-500">Joshua Kettle</strong> on{" "}
+              <a href="https://unsplash.com/photos/a-group-of-penguins-on-a-beach-5P9cq9RjqI8" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash</a>.{" "}
+              <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash License</a>
+            </figcaption>
+          </figure>
+
+          <h2 className="text-2xl font-bold text-gray-900">9. Simon&apos;s Town and Seafood on the Waterfront</h2>
+          <p>
+            Simon&apos;s Town, the naval base village at the end of the False Bay rail line, has a main street of Victorian buildings and a harbor where Cape fur seals compete with fishing boats for space. The Just Nuisance Pub, named after the only dog ever formally enlisted in the Royal Navy, is worth a beer on the historical grounds alone. For seafood, Salty Sea Dog on Jubilee Square serves fish and chips with harbor views; it is the kind of meal that makes you feel you have earned your afternoon.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">10. Sunset at Camps Bay</h2>
+          <p>
+            Camps Bay faces west, which means the sun sets directly into the Atlantic between the peaks of the Twelve Apostles mountain range. The beach is wide and white; the strip of restaurants and bars above it fills from mid-afternoon. Café Caprice, which has operated since 1999, is the default perch for a cocktail and the light.<sup><a href="https://capetowntrip.com/camps-bay-guide/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[10]</a></sup> The water is cold enough to stop most people from swimming, but beautiful enough to make them reconsider. Bring a light layer for after the sun drops.
+          </p>
+
+          {/* DAY 3 */}
+          <h2 className="text-3xl font-bold text-gray-900 mt-10">Day 3: History, Gardens, and Wine</h2>
+
+          <h2 className="text-2xl font-bold text-gray-900">11. District Six Museum</h2>
+          <p>
+            District Six was a mixed-race, working-class neighborhood of 60,000 residents that the apartheid government bulldozed between 1968 and 1982 and declared a whites-only area. The land sat largely empty for decades. The museum, now housed in a former Methodist church, documents what was destroyed and who was displaced, using photographs, street signs, and the personal testimony of former residents, some of whom still give guided tours.<sup><a href="https://www.districtsix.co.za/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[11]</a></sup> Open Monday through Saturday, 9 AM to 4 PM. Booking via Quicket is recommended. Do not skip this.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">12. Robben Island</h2>
+          <p>
+            Nelson Mandela was imprisoned on Robben Island for 18 of his 27 years of incarceration. The island is a UNESCO World Heritage Site, accessible by ferry from the Nelson Mandela Gateway at the V&amp;A Waterfront; the crossing takes approximately 30 minutes each way.<sup><a href="https://visitrobbenisland.com/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[12]</a></sup> Tours are led in part by former political prisoners, which alters the nature of the experience in a way that no amount of written description can replicate. Tours sell out weeks in advance. Book early.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">13. Kirstenbosch National Botanical Garden</h2>
+          <p>
+            Kirstenbosch occupies 528 hectares on the eastern slopes of Table Mountain, stretching from formal gardens of fynbos and Cape flora up into protected mountain wilderness.<sup><a href="https://www.sanbi.org/event/kirstenbosch-summer-sunset-concerts-2025-26/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[13]</a></sup> It was the first botanical garden in the world to be included in a UNESCO World Heritage Site. From November through March, the Summer Sunset Concerts take place every Sunday evening: gates open at 4 PM, music begins at 5:15 PM, and adults pay R360 per ticket. Bring a blanket, cheese, and wine. Calum Scott sold out in January 2026; the broader lineup runs from local jazz to classical orchestras to desert blues.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">14. Stellenbosch Winelands</h2>
+          <p>
+            Stellenbosch is 45 minutes from Cape Town by car and produces some of the finest red wines in the Southern Hemisphere, particularly Pinotage and Cabernet Sauvignon. The town itself, known as the City of Oaks, has streets of Cape Dutch architecture that have barely changed since the 18th century. Full-day wine tour packages from central Cape Town cost approximately R2,000 per person during high season (December to July) and include transport, cellar tours, and paired tastings across multiple estates.<sup><a href="https://www.winetourscapetown.com/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[14]</a></sup> An Uber from Cape Town to Stellenbosch costs roughly R300 to R400 if you prefer to build your own itinerary.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">15. La Colombe at Silvermist Estate</h2>
+          <p>
+            La Colombe sits on the Silvermist organic wine estate in Constantia, a valley of vineyards and old oak trees fifteen minutes from the city center. It has been ranked the best restaurant in Africa in multiple consecutive years. The signature dish is the &quot;Tuna La Colombe&quot;: a tinned miniature creation that has become, over the years, a cult object in international food circles. Reservations are essential and typically require two to three weeks lead time.
+          </p>
+
+          {/* Cape Town aerial image */}
+          <figure className="my-6">
+            <img
+              src="https://images.unsplash.com/photo-1580060839134-75a5edca2e99?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+              alt="Aerial view of Cape Town with Table Mountain"
+              className="w-full rounded-2xl shadow-lg object-cover"
+              style={{ maxHeight: "420px" }}
+            />
+            <figcaption className="text-xs text-gray-400 mt-2 text-center">
+              Cape Town from the air. Photo by <strong className="text-gray-500">Tobias Reich</strong> on{" "}
+              <a href="https://unsplash.com/photos/aerial-view-of-city-near-mountain-during-daytime-1GgWbP74phY" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash</a>.{" "}
+              <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash License</a>
+            </figcaption>
+          </figure>
+
+          {/* DAY 4 */}
+          <h2 className="text-3xl font-bold text-gray-900 mt-10">Day 4: Waterfront, Music, and the City at Night</h2>
+
+          <h2 className="text-2xl font-bold text-gray-900">16. V&amp;A Waterfront</h2>
+          <p>
+            The Victoria and Alfred Waterfront is a working harbor that has been developed around its history rather than against it. The original 1860 Alfred Basin is still in use; the red brick Clock Tower from 1882 still stands at the entrance. Twenty-four million visitors pass through annually, which is either an argument for or against visiting, depending on your tolerance for crowds. The Two Oceans Aquarium here is legitimate: it houses species from both the Indian and Atlantic Oceans, including open-water pelagic sharks, and the diversity of marine life on show makes a credible case that the Cape peninsula is one of the most biologically productive coastlines on earth.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">17. Cape Town International Jazz Festival</h2>
+          <p>
+            The Cape Town International Jazz Festival takes place annually at the Cape Town International Convention Centre, typically on the last weekend of March. In 2026, the dates were March 27 and 28; the festival drew 24,000 attendees and presented a lineup spanning South African jazz, contemporary African music, and international artists.<sup><a href="https://www.capetown.travel/where-to-see-live-jazz-in-cape-town/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[15]</a></sup> It is the largest jazz event on the African continent and, by most accounts, among the most diverse. If your travel dates overlap with March, plan around it.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">18. The Silo Concerts at Zeitz MOCAA</h2>
+          <p>
+            The Silo Concerts return to the V&amp;A Waterfront&apos;s Silo District each November, presenting free live jazz in front of the Zeitz MOCAA museum with Table Mountain as the backdrop. The first concert of the 2025 season took place on November 7.<sup><a href="https://www.capetownetc.com/whats-on-single/jazz-under-the-cape-town-sky-silo-concerts/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[16]</a></sup> Free, outdoors, with a mountain behind the stage. This is the kind of thing that makes you feel a city has its priorities correct.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">19. The Piano Bar, De Waterkant</h2>
+          <p>
+            The Piano Bar in De Waterkant offers live music every night of the week, with shows beginning at 7:30 PM. The venue blends the aesthetic of Sophiatown-era African jazz with a Manhattan cocktail lounge, which sounds like a formula that should not work but in practice produces something genuinely distinctive.<sup><a href="https://insideguide.co.za/cape-town/jazz/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[17]</a></sup> The programming covers jazz, Afro-soul, and blues. For an intimate alternative, the Blue Room in the city bowl hosts live jazz Wednesday through Saturday evenings.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">20. Long Street</h2>
+          <p>
+            Long Street runs through the center of the city and concentrates, within about two kilometers, most of what Cape Town&apos;s nightlife offers: cocktail bars, rooftop terraces, live music venues, and clubs that open late and close later. The Waiting Room, a rooftop lounge above a Long Street bookshop, hosts DJs and live bands and has a reliably interesting crowd. The street is walkable until around midnight; after that, use a rideshare app rather than walking alone, particularly heading east toward the train station.
+          </p>
+
+          {/* Safety note */}
+          <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 mt-8">
+            <h2 className="text-xl font-bold text-amber-800 mb-2">A Word on Safety</h2>
+            <p className="text-amber-900 text-sm leading-relaxed">
+              Cape Town is a city of significant inequality, and the crime statistics reflect that. Tourist areas including the V&amp;A Waterfront, Atlantic Seaboard, Bo-Kaap, and Camps Bay are well-policed and generally safe during the day. After dark, use rideshare apps rather than walking unfamiliar streets, avoid displaying valuables, and do not walk the Table Mountain trails without a registered guide. The Cape Flats townships have serious gang-related violence; visit only on organized guided tours. Cape Town Tourism&apos;s TravelWise page (<a href="https://www.capetown.travel/travelwise/safety-in-cape-town/" target="_blank" rel="noopener noreferrer" className="text-amber-700 underline">capetown.travel/travelwise</a>) maintains updated safety guidance. Research the current situation before you travel.
+            </p>
+          </div>
+
+          {/* Disclaimer */}
+          <p className="text-sm text-gray-500 italic border-t border-gray-200 pt-6 mt-8">
+            Disclaimer: All information in this post was gathered from publicly available sources at the time of writing (June 2026). Prices, opening hours, and conditions change. Verify with official sources before booking. This post reflects findings from web research and personal curation; it is not a substitute for current official guidance. We are sharing findings, not providing guarantees.
+          </p>
+
+          {/* References */}
+          <h2 className="text-2xl font-bold text-gray-900">References</h2>
+          <ol className="list-decimal pl-6 space-y-1 text-sm text-gray-500">
+            <li><a href="https://www.tablemountain.net/plan-your-visit/ticket-prices/" target="_blank" rel="noopener noreferrer" className="hover:underline">Table Mountain Aerial Cableway, official ticket prices, 2025/2026.</a></li>
+            <li><a href="https://capetowndata.com/en/products/blogpost/140/" target="_blank" rel="noopener noreferrer" className="hover:underline">Cape Town Data, &quot;Crime Map and Safety Tips for Visiting Cape Town,&quot; 2025.</a></li>
+            <li><a href="https://offtocapetown.com/explore-bo-kaap-culture-colorful-houses-history/" target="_blank" rel="noopener noreferrer" className="hover:underline">Off to Cape Town, &quot;Bo-Kaap: Culture, Colorful Houses and Malay History.&quot;</a></li>
+            <li><a href="https://www.iziko.org.za/museums/bo-kaap-museum/" target="_blank" rel="noopener noreferrer" className="hover:underline">Iziko Museums, &quot;Bo-Kaap Museum.&quot;</a></li>
+            <li><a href="https://zeitzmocaa.museum/plan-your-visit/" target="_blank" rel="noopener noreferrer" className="hover:underline">Zeitz MOCAA, official visitor information, 2025/2026.</a></li>
+            <li><a href="https://www.theworlds50best.com/discovery/Establishments/South-Africa/Cape-Town/Fyn-Restaurant.html" target="_blank" rel="noopener noreferrer" className="hover:underline">World&apos;s 50 Best Discovery, FYN Restaurant.</a></li>
+            <li><a href="https://thecapetownblog.com/chapmans-peak-drive/" target="_blank" rel="noopener noreferrer" className="hover:underline">The Cape Town Blog, &quot;Chapman&apos;s Peak Drive.&quot;</a></li>
+            <li><a href="https://thetravelingtaylors.world/south-africa/cape-of-good-hope/" target="_blank" rel="noopener noreferrer" className="hover:underline">The Traveling Taylors, &quot;Cape Town Cape of Good Hope: The Ultimate 2026 Guide.&quot;</a></li>
+            <li><a href="https://www.sanparks.org/tickets/tickets.php" target="_blank" rel="noopener noreferrer" className="hover:underline">SANParks, official gate ticket prices, 2025/2026.</a></li>
+            <li><a href="https://capetowntrip.com/camps-bay-guide/" target="_blank" rel="noopener noreferrer" className="hover:underline">Cape Town Trip, &quot;Camps Bay Beach and Sunset Paradise.&quot;</a></li>
+            <li><a href="https://www.districtsix.co.za/" target="_blank" rel="noopener noreferrer" className="hover:underline">District Six Museum, official site.</a></li>
+            <li><a href="https://visitrobbenisland.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">Robben Island Museum, official visitor information.</a></li>
+            <li><a href="https://www.sanbi.org/event/kirstenbosch-summer-sunset-concerts-2025-26/" target="_blank" rel="noopener noreferrer" className="hover:underline">SANBI, &quot;Kirstenbosch Summer Sunset Concerts 2025/26.&quot;</a></li>
+            <li><a href="https://www.winetourscapetown.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">Wine Tours Cape Town, daily tours from Cape Town.</a></li>
+            <li><a href="https://www.capetown.travel/where-to-see-live-jazz-in-cape-town/" target="_blank" rel="noopener noreferrer" className="hover:underline">Cape Town Tourism, &quot;Live Jazz Venues in Cape Town.&quot;</a></li>
+            <li><a href="https://www.capetownetc.com/whats-on-single/jazz-under-the-cape-town-sky-silo-concerts/" target="_blank" rel="noopener noreferrer" className="hover:underline">Cape Town Etc, &quot;Silo Concerts 2025.&quot;</a></li>
+            <li><a href="https://insideguide.co.za/cape-town/jazz/" target="_blank" rel="noopener noreferrer" className="hover:underline">Inside Guide Cape Town, &quot;Jazz in Cape Town: Where to Hear It.&quot;</a></li>
+          </ol>
+
+        </div>
+      ),
+    },
     "7": {
       title: "Rio de Janeiro: Essential Encounters in the Cidade Maravilhosa",
       date: "2026-05-27",
       readTime: "5 min",
+      type: "HI",
       content: (
         <div className="space-y-6 text-gray-700 text-base leading-relaxed md:text-lg text-justify">
 
@@ -383,6 +623,7 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
       title: "Tokyo: Twenty Essential Encounters in one of the World's Greatest Cities",
       date: "2026-05-27",
       readTime: "5 min",
+      type: "HI",
       content: (
         <div className="space-y-6 text-gray-700 text-base leading-relaxed md:text-lg text-justify">
 
@@ -616,6 +857,7 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
       title: "This Week in AI: Google Goes Agentic, OpenAI Proves a Theorem, and ChatGPT Gets Ads",
       date: "2026-05-26",
       readTime: "5 min",
+      type: "HI",
       content: (
         <div className="space-y-8 text-gray-700 text-base leading-relaxed md:text-lg text-justify">
           <p>
@@ -688,6 +930,7 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
       title: "Generating AI Agents Using ChatGPT and Claude",
       date: "2026-05-04",
       readTime: "5 min",
+      type: "HI",
       content: (
         <div className="space-y-8 text-gray-700 text-base leading-relaxed md:text-lg text-justify">
           <p>
@@ -752,6 +995,7 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
       title: "Building a Daily AI News Agent with ChatGPT and Claude",
       date: "2026-05-04",
       readTime: "5 min",
+      type: "HI",
       content: (
         <div className="space-y-8 text-gray-700 text-base leading-relaxed md:text-lg text-justify">
           <p>
@@ -851,6 +1095,7 @@ Respond as JSON only.
       title: "From Prompts to Agents: A Practical Framework for Autonomous AI",
       date: "2026-05-09",
       readTime: "5 min",
+      type: "HI",
       content: (
         <div className="space-y-8 text-gray-700 text-base leading-relaxed md:text-lg text-justify">
           <p>
@@ -990,6 +1235,7 @@ print(result)`}</pre>
       title: "Manus AI: The General Purpose Agent That Actually Works",
       date: "2026-05-19",
       readTime: "6 min",
+      type: "HI",
       content: (
         <div className="space-y-8 text-gray-700 text-base leading-relaxed md:text-lg text-justify">
           <p>
@@ -1236,6 +1482,14 @@ print(result)`}</pre>
                 <span>{new Date(post.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</span>
                 <span>&bull;</span>
                 <span>{post.readTime} read</span>
+                <span>&bull;</span>
+                <span className={`px-2 py-0.5 rounded-full text-[11px] font-bold leading-tight ${
+                  post.type === "AI+HI"
+                    ? "bg-yellow-300 text-gray-900"
+                    : "bg-gray-300 text-gray-700"
+                }`}>
+                  {post.type}
+                </span>
               </div>
             </div>
           </FadeIn>
