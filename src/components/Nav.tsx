@@ -32,6 +32,15 @@ export default function Nav() {
               </Link>
             </span>
           ))}
+          <span className="flex items-center gap-6">
+            <span className="text-gray-300">|</span>
+            <Link
+              href="/contact"
+              className="text-red-600 hover:text-red-800 font-medium transition-colors"
+            >
+              Contact
+            </Link>
+          </span>
           <button
             onClick={() => setLang(lang === "en" ? "fr" : "en")}
             aria-label={lang === "en" ? "Switch to French" : "Switch to English"}
@@ -50,6 +59,12 @@ export default function Nav() {
               {t.nav[link.labelKey]}
             </Link>
           ))}
+          <Link
+            href="/contact"
+            className="text-sm text-red-600 hover:text-red-800 font-medium transition-colors"
+          >
+            Contact
+          </Link>
           <button
             onClick={() => setLang(lang === "en" ? "fr" : "en")}
             aria-label={lang === "en" ? "Switch to French" : "Switch to English"}
