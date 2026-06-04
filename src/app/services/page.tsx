@@ -11,15 +11,6 @@ const serviceCategories = [
       { name: "AI Readiness", desc: "Assess your organization's data, infrastructure, and team readiness for AI adoption." },
       { name: "AI Strategy", desc: "Develop a roadmap aligned with your business goals — from opportunity identification to deployment." },
       { name: "AI Adoption", desc: "Guide your teams through the transition: tooling, workflows, change management, and governance." },
-      { name: "AI Training", desc: "Hands-on training programs tailored to your team's skill level and use cases." },
-    ],
-  },
-  {
-    title: "Executive AI Briefings",
-    icon: "🎯",
-    items: [
-      { name: "Team Workshops", desc: "Collaborative sessions to align technical and non-technical teams on AI strategy and execution." },
-      { name: "AI Productivity Training", desc: "Practical training on leveraging AI tools to improve daily workflows and decision-making." },
     ],
   },
   {
@@ -40,6 +31,15 @@ const serviceCategories = [
       { name: "Internet Measurement", desc: "Custom measurement studies: topology, performance, routing, and CDN analysis." },
       { name: "Data Systems", desc: "Architecture, pipeline design, and real-time analytics for data-intensive applications." },
       { name: "Observability", desc: "Build observability strategies — metrics, logs, traces — for distributed systems." },
+    ],
+  },
+  {
+    title: "Training",
+    icon: "📚",
+    items: [
+      { name: "AI Training", desc: "Hands-on training programs tailored to your team's skill level and use cases." },
+      { name: "Team Workshops", desc: "Collaborative sessions to align technical and non-technical teams on AI strategy and execution." },
+      { name: "AI Productivity Training", desc: "Practical training on leveraging AI tools to improve daily workflows and decision-making." },
     ],
   },
 ];
@@ -65,7 +65,7 @@ export default function Services() {
                 Services
               </h1>
               <p className="text-base text-white/90 drop-shadow-sm md:text-lg md:text-xl max-w-2xl mx-auto">
-                AI consulting, technical advisory, executive briefings, and speaking — helping organizations navigate technology and infrastructure at scale.
+                AI consulting, speaking, technical advisory, and training — helping organizations navigate technology and infrastructure at scale.
               </p>
             </div>
           </FadeIn>
