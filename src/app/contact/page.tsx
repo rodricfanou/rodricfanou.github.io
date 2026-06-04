@@ -144,14 +144,14 @@ const portfolio = {
     {
       title: "Summit Global Property",
       url: "https://summitglobalproperty.com/",
-      desc: "A website for a property management firm.",
+      desc: "A website for a property management firm with a modern design.",
     },
   ],
   fr: [
     {
       title: "Summit Global Property",
       url: "https://summitglobalproperty.com/",
-      desc: "Un site web pour une société de gestion immobilière.",
+      desc: "Un site web pour une société de gestion immobilière au design moderne.",
     },
   ],
 };
