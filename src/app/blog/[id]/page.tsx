@@ -103,6 +103,9 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
           <p>
             Cape Town does not announce itself gradually. From the air, the city appears as a narrow strip of civilization wedged between two forces that care nothing for human ambition: Table Mountain, flat and enormous and always present, and the Atlantic, cold and relentless and blue in the way that only very deep water can be blue. The combination is, frankly, unfair. Most cities get either a mountain or a coast. Cape Town got both, and added vineyards, penguin colonies, and a history dense enough to make you feel ignorant by the second afternoon. What follows is a four-day account of twenty encounters that explain why this city is very difficult to leave.
           </p>
+          <p className="text-sm text-gray-500 italic">
+            Why &ldquo;the Mother City&rdquo;? Cape Town earned the name because it was the first European settlement in South Africa, established by the Dutch in 1652 &mdash; the &ldquo;mother&rdquo; from which the rest of the country grew. The term is believed to have been coined in the 1930s.
+          </p>
 
           {/* Hero image */}
           <figure className="my-6">
