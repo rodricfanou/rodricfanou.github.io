@@ -235,7 +235,7 @@ export default function Publications() {
                 IMDEA Networks Institute &amp; Universidad Carlos III de Madrid, September 2014
               </p>
               <p className="text-gray-500 text-xs mb-4">
-                Tutors: Albert Banchs (UC3M) &amp; Pierre Francois (IMDEA Networks Institute)
+                Tutors: Dr. Albert Banchs (UC3M) &amp; Dr. Pierre Francois (IMDEA Networks Institute)
               </p>
               <a
                 href="https://dspace.networks.imdea.org/handle/20.500.12761/1461"
