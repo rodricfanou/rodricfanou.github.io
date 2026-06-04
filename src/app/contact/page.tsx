@@ -133,10 +133,26 @@ const interests = {
     "Interventions Publiques",
     "Conception de Sites Web",
     "Comptabilité",
-    "Traduction",
     "Rédaction",
     "Développement Logiciel Sur Mesure",
     "Autre",
+  ],
+};
+
+const portfolio = {
+  en: [
+    {
+      title: "Summit Global Property",
+      url: "https://summitglobalproperty.com/",
+      desc: "A bilingual real estate platform showcasing luxury properties worldwide with a modern, responsive design.",
+    },
+  ],
+  fr: [
+    {
+      title: "Summit Global Property",
+      url: "https://summitglobalproperty.com/",
+      desc: "Une plateforme immobilière bilingue présentant des propriétés de luxe dans le monde entier avec un design moderne et réactif.",
+    },
   ],
 };
 
@@ -269,6 +285,7 @@ export default function Contact() {
   const langKey = lang as "en" | "fr";
   const tServices = services[langKey];
   const tInterests = interests[langKey];
+  const tPortfolio = portfolio[langKey];
 
   return (
     <main className="bg-gray-100 min-h-screen py-8 px-4 flex flex-col items-center md:py-12 md:px-8">
@@ -313,6 +330,29 @@ export default function Contact() {
                   <p className="text-gray-500 text-xs leading-relaxed">{svc.desc}</p>
                 </div>
               </div>
+            ))}
+          </div>
+        </FadeIn>
+      </section>
+
+      {/* Portfolio */}
+      <section className="relative w-full max-w-5xl mt-8 rounded-2xl shadow-lg px-6 py-10 md:mt-10 md:rounded-3xl md:px-16 md:py-12 bg-gray-200">
+        <FadeIn>
+          <h2 className="text-xl font-bold text-gray-900 mb-6">
+            {isFr ? "Portfolio" : "Portfolio"}
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {tPortfolio.map((item) => (
+              <a
+                key={item.title}
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-shadow duration-200"
+              >
+                <h3 className="font-semibold text-gray-900 text-sm mb-1">{item.title}</h3>
+                <p className="text-gray-500 text-xs leading-relaxed">{item.desc}</p>
+              </a>
             ))}
           </div>
         </FadeIn>
