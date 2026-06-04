@@ -202,28 +202,52 @@ export default function Publications() {
       {/* Thesis */}
       <section className="relative w-full max-w-5xl mt-8 rounded-2xl shadow-lg px-6 py-12 md:mt-10 md:rounded-3xl md:px-16 md:py-16 bg-gray-200 transition-shadow duration-300 hover:shadow-xl">
         <h2 className="text-xl font-bold mb-6 text-gray-900 md:text-2xl md:text-3xl">Thesis</h2>
-        <FadeIn>
-          <article className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 p-5 md:rounded-2xl md:p-6">
-            <h3 className="text-lg font-bold text-gray-900 mb-1 md:text-xl">
-              Methods for revealing and reshaping the African Internet ecosystem as a case study for developing regions: From isolated networks to a connected continent
-            </h3>
-            <p className="text-gray-600 text-sm mb-2">R. Fanou</p>
-            <p className="text-gray-700 text-sm mb-3">
-              IMDEA Networks Institute &amp; Universidad Carlos III de Madrid, December 2017
-            </p>
-            <p className="text-gray-500 text-xs mb-4">
-              Supervisors: Dr. Pierre Francois &amp; Dr. Francisco Valera Pintor
-            </p>
-            <a
-              href="https://dspace.networks.imdea.org/handle/20.500.12761/486"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-4 py-2 bg-gray-800 text-white rounded-lg text-sm font-medium hover:bg-gray-900 transition-colors"
-            >
-              View Thesis &rarr;
-            </a>
-          </article>
-        </FadeIn>
+        <div className="space-y-4">
+          <FadeIn>
+            <article className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 p-5 md:rounded-2xl md:p-6">
+              <h3 className="text-lg font-bold text-gray-900 mb-1 md:text-xl">
+                Methods for revealing and reshaping the African Internet ecosystem as a case study for developing regions: From isolated networks to a connected continent
+              </h3>
+              <p className="text-gray-600 text-sm mb-2">R. Fanou</p>
+              <p className="text-gray-700 text-sm mb-3">
+                IMDEA Networks Institute &amp; Universidad Carlos III de Madrid, December 2017
+              </p>
+              <p className="text-gray-500 text-xs mb-4">
+                Supervisors: Dr. Pierre Francois &amp; Dr. Francisco Valera Pintor
+              </p>
+              <a
+                href="https://dspace.networks.imdea.org/handle/20.500.12761/486"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-4 py-2 bg-gray-800 text-white rounded-lg text-sm font-medium hover:bg-gray-900 transition-colors"
+              >
+                PhD Thesis &rarr;
+              </a>
+            </article>
+          </FadeIn>
+          <FadeIn>
+            <article className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 p-5 md:rounded-2xl md:p-6">
+              <h3 className="text-lg font-bold text-gray-900 mb-1 md:text-xl">
+                On the State of Interdomain Routing in Africa
+              </h3>
+              <p className="text-gray-600 text-sm mb-2">R. Fanou</p>
+              <p className="text-gray-700 text-sm mb-3">
+                IMDEA Networks Institute &amp; Universidad Carlos III de Madrid, September 2014
+              </p>
+              <p className="text-gray-500 text-xs mb-4">
+                Tutors: Albert Banchs (UC3M) &amp; Pierre Francois (IMDEA Networks Institute)
+              </p>
+              <a
+                href="https://dspace.networks.imdea.org/handle/20.500.12761/1461"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-4 py-2 bg-gray-800 text-white rounded-lg text-sm font-medium hover:bg-gray-900 transition-colors"
+              >
+                MSc Thesis &rarr;
+              </a>
+            </article>
+          </FadeIn>
+        </div>
       </section>
 
       {/* References */}
