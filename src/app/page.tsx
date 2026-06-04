@@ -87,6 +87,30 @@ export default function Home() {
 
         <FadeIn delay={100}>
           <div>
+            <h2 className="text-2xl font-bold mb-6 text-gray-900 md:text-3xl md:text-4xl">Work With Me</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-shadow duration-200">
+                <h3 className="font-semibold text-gray-900 text-base mb-1">AI Consulting</h3>
+                <p className="text-gray-500 text-sm leading-relaxed">Helping organizations adopt AI strategically.</p>
+              </div>
+              <div className="bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-shadow duration-200">
+                <h3 className="font-semibold text-gray-900 text-base mb-1">Speaking</h3>
+                <p className="text-gray-500 text-sm leading-relaxed">Keynotes, workshops, and conferences.</p>
+              </div>
+              <div className="bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-shadow duration-200">
+                <h3 className="font-semibold text-gray-900 text-base mb-1">Technical Advisory</h3>
+                <p className="text-gray-500 text-sm leading-relaxed">Networking, Internet infrastructure, observability, and data systems.</p>
+              </div>
+              <div className="bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-shadow duration-200">
+                <h3 className="font-semibold text-gray-900 text-base mb-1">Training</h3>
+                <p className="text-gray-500 text-sm leading-relaxed">AI and technology workshops for teams.</p>
+              </div>
+            </div>
+          </div>
+        </FadeIn>
+
+        <FadeIn delay={200}>
+          <div>
             <h2 className="text-2xl font-bold mb-6 text-gray-900 md:text-3xl md:text-4xl">Work Experience</h2>
             <div className="space-y-8 border-l-2 border-gray-300 ml-3 pl-6">
               <div>
@@ -123,7 +147,7 @@ export default function Home() {
           </div>
         </FadeIn>
 
-        <FadeIn delay={200}>
+        <FadeIn delay={300}>
           <div>
             <h2 className="text-2xl font-bold mb-4 text-gray-900 md:text-3xl md:text-4xl">Skills</h2>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
