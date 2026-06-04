@@ -38,7 +38,7 @@ export default function Home() {
                 Roderick Fanou
               </h1>
               <p className="text-base text-white/90 drop-shadow-sm md:text-lg md:text-xl font-medium">
-                Internet Scientist &bull; AI Strategist &bull; Senior Systems Engineer
+                AI Strategist &amp; Consultant &bull; Internet Scientist &bull; Senior Systems Engineer
               </p>
               <p className="text-sm text-white/80 drop-shadow-sm mt-2 max-w-xl md:text-base">
                 Helping organizations understand, build, measure, and optimize complex systems through AI, data, networking, and Internet-scale infrastructure.
