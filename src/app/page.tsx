@@ -89,12 +89,12 @@ export default function Home() {
           <div>
             <h2 className="text-2xl font-bold mb-6 text-gray-900 md:text-3xl md:text-4xl">Work Experience</h2>
             <div className="space-y-8 border-l-2 border-gray-300 ml-3 pl-6">
-              {/* <div>
-                <h3 className="text-xl font-bold text-gray-900">Consultant</h3>
-                <p className="text-blue-600 font-medium">Self employed</p>
+              <div>
+                <h3 className="text-xl font-bold text-gray-900">CEO and Founder</h3>
+                <p className="text-blue-600 font-medium">Novaris Nexus Tech</p>
                 <p className="text-gray-500 text-sm">2026 - Present</p>
-                <p className="text-gray-700 mt-2">Providing expert consulting on computer networks architecture, Internet measurements, systems design, and AI.</p>
-              </div> */}
+                <p className="text-gray-700 mt-2">Building AI-powered solutions and consulting services at the intersection of AI, networking, and infrastructure.</p>
+              </div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900">Systems Engineer</h3>
                 <p className="text-blue-600 font-medium">Cloudflare, Inc - US</p>
