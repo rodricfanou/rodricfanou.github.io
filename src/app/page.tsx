@@ -1,6 +1,7 @@
 "use client";
 
 import FadeIn from "@/components/FadeIn";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -32,13 +33,36 @@ export default function Home() {
 
           {/* Name, tagline */}
           <FadeIn>
-            <div className="text-center text-white">
+            <div className="text-center text-white md:text-left">
               <h1 className="text-3xl font-extrabold mb-2 drop-shadow-lg md:text-5xl">
                 Roderick Fanou
               </h1>
-              <p className="text-base text-white/90 drop-shadow-sm md:text-lg md:text-xl">
-                Building at the intersection of computer networks, data, and AI — sharing projects and experiences along the way.
+              <p className="text-base text-white/90 drop-shadow-sm md:text-lg md:text-xl font-medium">
+                Internet Scientist &bull; AI Strategist &bull; Senior Systems Engineer
               </p>
+              <p className="text-sm text-white/80 drop-shadow-sm mt-2 max-w-xl md:text-base">
+                Helping organizations understand, build, measure, and optimize complex systems through AI, data, networking, and Internet-scale infrastructure.
+              </p>
+              <div className="flex flex-wrap gap-3 justify-center md:justify-start mt-6">
+                <Link
+                  href="/contact"
+                  className="px-5 py-2.5 bg-white text-gray-900 rounded-lg text-sm font-semibold hover:bg-gray-100 transition-colors shadow-md"
+                >
+                  Work With Me
+                </Link>
+                <Link
+                  href="/contact"
+                  className="px-5 py-2.5 bg-white/20 text-white rounded-lg text-sm font-semibold hover:bg-white/30 transition-colors shadow-md border border-white/40"
+                >
+                  Speaking &amp; Workshops
+                </Link>
+                <Link
+                  href="/blog"
+                  className="px-5 py-2.5 bg-white/20 text-white rounded-lg text-sm font-semibold hover:bg-white/30 transition-colors shadow-md border border-white/40"
+                >
+                  View Projects
+                </Link>
+              </div>
             </div>
           </FadeIn>
         </div>
