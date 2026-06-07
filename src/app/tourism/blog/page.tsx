@@ -16,53 +16,35 @@ interface BlogPost {
 
 const posts: BlogPost[] = [
   {
-    id: 5,
-    title: "This Week in AI: Google Goes Agentic, OpenAI Proves a Theorem, and ChatGPT Gets Ads",
-    date: "2026-05-26",
-    excerpt: "An OpenAI reasoning model disproved an 80-year-old conjecture in discrete geometry. Google turned I/O into an agentic product launch with Gemini Spark and Gemini 3.5 Flash. OpenAI expanded its ad platform globally while Anthropic disclosed a model too dangerous to release — and targeted a $900 billion valuation.",
-    category: "AI",
+    id: 9,
+    title: "Cape Town: Twenty Essential Encounters in the Mother City",
+    date: "2026-06-03",
+    excerpt: "From Table Mountain at dawn and Bo-Kaap's painted houses to African penguins at Boulders Beach, the UNESCO-listed Robben Island, and live jazz every night in De Waterkant: an honest four-day account of twenty encounters that explain why Cape Town is one of the most dramatically beautiful cities on earth.",
+    category: "Tourism",
     readTime: "5 min",
     type: "AI+HI",
   },
   {
-    id: 4,
-    title: "Manus AI: The General Purpose Agent That Actually Works",
-    date: "2026-05-19",
-    excerpt: "Hands-on breakdown of Manus AI — what it is, how it works, and why it represents a real shift from chatbots to autonomous work agents.",
-    category: "AI",
-    readTime: "6 min",
-    type: "AI+HI",
-  },
-  {
-    id: 3,
-    title: "From Prompts to Agents: A Practical Framework for Autonomous AI",
-    date: "2026-05-09",
-    excerpt: "A step-by-step guide to building production-ready AI agents — from simple prompt chaining to tool use, memory, and multi-agent orchestration with guardrails.",
-    category: "AI",
+    id: 7,
+    title: "Rio de Janeiro: Essential Encounters in the Cidade Maravilhosa",
+    date: "2026-05-27",
+    excerpt: "From the hike through Tijuca rainforest to Christ the Redeemer at dawn, Arpoador's applauding crowds at sunset, live samba in Lapa until 4 AM, and Michelin-starred counters in Botafogo: an honest account of twenty encounters that explain why Rio de Janeiro is one of the most dramatically beautiful cities on earth.",
+    category: "Tourism",
     readTime: "5 min",
     type: "AI+HI",
   },
   {
-    id: 1,
-    title: "Generating AI Agents Using ChatGPT and Claude",
-    date: "2026-05-04",
-    excerpt: "How I combine ChatGPT and Claude to build autonomous agents that plan, reason, and execute multi-step tasks. A practical guide to dual-model orchestration.",
-    category: "AI",
-    readTime: "5 min",
-    type: "AI+HI",
-  },
-  {
-    id: 2,
-    title: "Building a Daily AI News Agent with ChatGPT and Claude",
-    date: "2026-05-04",
-    excerpt: "A deep dive into my three-stage pipeline for automated AI news curation: scraping, filtering with GPT-4o-mini, and deep analysis with Claude Sonnet 4.",
-    category: "AI",
+    id: 6,
+    title: "Tokyo: Twenty Essential Encounters in one of the World's Greatest Cities",
+    date: "2026-05-27",
+    excerpt: "From the organized bedlam of Shibuya Crossing at midnight to pre-dawn sushi at Tsukiji and jazz until 5 AM in Golden Gai — an honest account of twenty experiences that explain why Tokyo ruins you for every other city.",
+    category: "Tourism",
     readTime: "5 min",
     type: "AI+HI",
   },
 ];
 
-export default function Blog() {
+export default function TourismBlog() {
   const [filter, setFilter] = useState<string>("All");
   const categories = ["All", ...Array.from(new Set(posts.map((p) => p.category)))];
   const filteredPosts = filter === "All" ? posts : posts.filter((p) => p.category === filter);
@@ -85,10 +67,10 @@ export default function Blog() {
           <FadeIn>
             <div className="text-center text-white">
               <h1 className="text-3xl font-extrabold mb-2 drop-shadow-lg md:text-5xl">
-                Blog
+                Tourism Blog
               </h1>
               <p className="text-base text-white/90 drop-shadow-sm md:text-lg md:text-xl">
-                Thoughts, tutorials, and things I&apos;ve learned along the way.
+                Travel stories, city guides, and things I&apos;ve discovered on the road.
               </p>
             </div>
           </FadeIn>
@@ -131,7 +113,7 @@ export default function Blog() {
           {filteredPosts.map((post, i) => (
             <FadeIn key={post.id} delay={i * 100}>
               <article className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col md:rounded-2xl">
-                <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center relative">
+                <div className="h-48 bg-gradient-to-br from-emerald-400 to-cyan-500 flex items-center justify-center relative">
                   <span className="text-white text-4xl font-bold opacity-30">{post.category}</span>
                   <span className={`absolute top-3 right-3 px-2 py-0.5 rounded-full text-[11px] font-bold leading-tight shadow-md ${
                     post.type === "AI+HI"
@@ -149,7 +131,7 @@ export default function Blog() {
                   <h2 className="text-xl font-bold text-gray-900 mb-2">{post.title}</h2>
                   <p className="text-gray-600 text-sm leading-relaxed flex-1">{post.excerpt}</p>
                   <Link
-                    href={`/blog/${post.id}`}
+                    href={`/tourism/blog/${post.id}`}
                     className="mt-4 inline-block text-gray-700 hover:text-gray-900 font-medium text-sm"
                   >
                     Read more &rarr;
@@ -159,16 +141,12 @@ export default function Blog() {
             </FadeIn>
           ))}
         </div>
-      </section>
 
-      {/* Tourism link */}
-      <section className="relative w-full max-w-5xl mt-8 rounded-2xl shadow-lg px-6 py-10 md:mt-10 md:rounded-3xl md:px-16 md:py-12 bg-gray-200 text-center">
-        <p className="text-gray-700 text-sm md:text-base">
-          ✈️ Also check out my travel guides &rarr;
-          <Link href="/tourism/blog" className="text-gray-900 font-semibold hover:underline ml-1">
-            Tourism Blog
+        <div className="mt-8 text-center">
+          <Link href="/blog" className="inline-block text-gray-600 hover:text-gray-900 font-medium text-sm underline">
+            &larr; Back to AI &amp; Tech Blog
           </Link>
-        </p>
+        </div>
       </section>
 
     </main>
