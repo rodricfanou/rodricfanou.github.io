@@ -16,6 +16,15 @@ interface BlogPost {
 
 const posts: BlogPost[] = [
   {
+    id: 6,
+    title: "This Week in AI: Anthropic Files for IPO, Nvidia Targets the AI PC, and Claude Rewrites Itself",
+    date: "2026-06-08",
+    excerpt: "Anthropic filed its IPO prospectus while simultaneously calling for an industry-wide AI slowdown - a combination that drew immediate skepticism. Nvidia entered the $200 billion PC chip market with RTX Spark. Microsoft shipped seven proprietary models to cut its OpenAI dependency, and OpenAI replaced its default ChatGPT model with GPT-5.5 Instant.",
+    category: "AI",
+    readTime: "5 min",
+    type: "AI+HI",
+  },
+  {
     id: 5,
     title: "This Week in AI: Google Goes Agentic, OpenAI Proves a Theorem, and ChatGPT Gets Ads",
     date: "2026-05-26",

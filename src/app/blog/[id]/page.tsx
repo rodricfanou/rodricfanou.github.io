@@ -2,13 +2,93 @@ import FadeIn from "@/components/FadeIn";
 import Link from "next/link";
 
 export async function generateStaticParams() {
-  return [{ id: "1" }, { id: "2" }, { id: "3" }, { id: "4" }, { id: "5" }, { id: "8" }];
+  return [{ id: "1" }, { id: "2" }, { id: "3" }, { id: "4" }, { id: "5" }, { id: "6" }, { id: "8" }];
 }
 
 export default async function BlogPost({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
 
   const posts: Record<string, { title: string; date: string; readTime: string; type: "AI+HI" | "HI"; content: React.ReactNode }> = {
+    "6": {
+      title: "This Week in AI: Anthropic Files for IPO, Nvidia Targets the AI PC, and Claude Rewrites Itself",
+      date: "2026-06-08",
+      readTime: "5 min",
+      type: "AI+HI",
+      content: (
+        <div className="space-y-8 text-gray-700 text-base leading-relaxed md:text-lg text-justify">
+
+          {/* Opening */}
+          <p>
+            The week that began June 2, 2026, produced more strategic movement in artificial intelligence than most months in prior years. Anthropic filed for an IPO and simultaneously called for an industry-wide slowdown. Nvidia entered the personal computer chip market for the first time. Microsoft shipped seven proprietary AI models to cut its reliance on OpenAI. OpenAI promoted a new default model and shipped a memory system it called &quot;dreaming.&quot; Google made Gemini 3.5 Flash generally available as the backbone of its agentic strategy. None of these stories is independent of the others.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">Anthropic Files for IPO While Calling for an AI Pause</h2>
+          <p>
+            Anthropic confidentially filed its S-1 with the SEC on June 1, reporting annualized revenue of $47 billion and targeting a valuation near $965 billion.<sup><a href="https://www.washingtonpost.com/technology/2026/06/01/anthropic-maker-claude-files-with-sec-go-public-an-ipo/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[1]</a></sup> Four days later, Anthropic researchers Marina Favaro and Jack Clark published &quot;When AI Builds Itself,&quot; arguing the world should have the option to slow or pause frontier AI development. Their core observation: Claude now authors more than 80% of the code merged into Anthropic&apos;s codebase, up from less than 10% in February 2025, and the typical engineer merges roughly 8 times as much code per day as in 2024.<sup><a href="https://fortune.com/2026/06/05/anthropic-ai-pause-development-recursive-self-improvement/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[2]</a></sup>
+          </p>
+          <p>
+            The timing drew immediate skepticism. A company preparing to raise tens of billions from public markets is not a neutral party in an argument for industry restraint. The counterargument writes itself: advocating for a pause that smaller, less-capitalized competitors would find harder to survive is also a competitive strategy. Whether the underlying concern about recursive self-improvement deserves serious attention - and the technical evidence suggests it does - does not change the strategic incentive that shaped its publication date.<sup><a href="https://www.wionews.com/india-news/pause-button-has-no-cords-claude-speaks-against-anthropic-s-ai-pause-calls-as-pre-ipo-cosplay-1780663384141" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[3]</a></sup>
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">Nvidia Bets on the $200 Billion AI PC Market</h2>
+          <p>
+            At Computex in Taipei on June 1, Nvidia CEO Jensen Huang unveiled the RTX Spark, a superchip combining a Blackwell GPU with 6,144 CUDA cores and up to 20 Arm CPU cores, built on TSMC&apos;s 3-nanometer process with 128 gigabytes of unified LPDDR5X memory.<sup><a href="https://www.tomshardware.com/laptops/nvidia-unveils-rtx-spark-superchip-at-computex-2026-new-platform-promises-to-turn-windows-into-an-agentic-ai-os-with-arm-cpu-blackwell-gpu-and-128gb-unified-memory" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[4]</a></sup> Systems from ASUS, Dell, HP, Lenovo, Microsoft Surface, and MSI will ship this autumn. RTX Spark can run 120-billion-parameter models with up to 1 million tokens of context entirely on-device.<sup><a href="https://nvidianews.nvidia.com/news/nvidia-microsoft-windows-pcs-agents-rtx-spark" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[5]</a></sup>
+          </p>
+          <p>
+            Huang made the strategic rationale explicit: AI agents running locally cost less than agents running in the cloud, and Nvidia intends to own that workload. The move targets a $200 billion CPU market from which Nvidia has historically been absent.<sup><a href="https://techcrunch.com/2026/06/01/nvidia-chases-200b-cpu-market-with-ai-agent-pcs-from-microsoft-dell-and-hp/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[6]</a></sup> AMD, Intel, and Qualcomm shares fell on the announcement. Nvidia&apos;s CUDA software ecosystem, dominant in data centers, provides a software advantage competitors cannot replicate quickly. Whether premium AI PCs find a mass market before cloud agent costs fall enough to undercut the local-compute pitch is the open question this launch leaves unanswered.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">Microsoft Builds Its Own Models at Build 2026</h2>
+          <p>
+            At Build 2026 in San Francisco on June 2 and 3, Microsoft unveiled seven models under the MAI brand, spanning reasoning, coding, image generation, voice, and transcription.<sup><a href="https://www.cnbc.com/2026/06/02/microsoft-unveils-new-ai-models-lessen-reliance-on-openai-lower-costs.html" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[7]</a></sup> MAI-Code-1-Flash generates application code from natural-language descriptions. MAI-Thinking-1, the company&apos;s first reasoning model, is a 35-billion active parameter mixture-of-experts architecture with a 256,000-token context window. Microsoft also positioned Windows as a runtime for AI agents, with the Aion 1.0 Plan enabling local reasoning and tool-calling across AMD, Intel, and Qualcomm processors.<sup><a href="https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[8]</a></sup>
+          </p>
+          <p>
+            The business logic is straightforward: Microsoft pays OpenAI for model access while competing against it in enterprise AI. Internal model capacity reduces both cost and strategic exposure. The MAI models are not positioned to top frontier benchmarks from OpenAI or Anthropic, but enterprise deployment does not require it. For workflow automation tasks - document processing, code completion, data extraction - models that are fast, cheap, and tightly integrated with Microsoft&apos;s toolchain may outperform larger frontier models on the metric that actually matters: total cost per task completed.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">OpenAI Ships &quot;Dreaming&quot; Memory and a New Default Model</h2>
+          <p>
+            OpenAI launched GPT-5.5 Instant as the new default ChatGPT model, replacing GPT-5.3 Instant, with sharper accuracy, more concise answers, and stronger multimodal reasoning for all users.<sup><a href="https://releasebot.io/updates/openai/chatgpt" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[9]</a></sup> The more consequential update was &quot;dreaming&quot;: a memory system that automatically updates stored user information over time, revising entries like &quot;You&apos;re traveling to Singapore in July&quot; to &quot;You went to Singapore in July 2026&quot; once the event passes.<sup><a href="https://openai.com/index/chatgpt-memory-dreaming/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[10]</a></sup> The system is rolling out to Plus and Pro users in the US first.
+          </p>
+          <p>
+            A persistent memory system that learns without explicit user prompts raises a structural question: who audits what the model believes about you? OpenAI provides a reviewable summary page, but most users will not use it. A model that misremembers your preferences, commitments, or past decisions is not a neutral assistant. OpenAI also released GPT-Rosalind for life sciences, delivering a 31% reduction in tokens for genomics analysis while improving accuracy on its GeneBench evaluation - a signal that task-specific model tuning remains productive even as general models improve.<sup><a href="https://openai.com/news/product-releases/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[11]</a></sup>
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">Google Makes Gemini 3.5 Flash Generally Available</h2>
+          <p>
+            Google released gemini-3.5-flash as the generally available version of its most capable model for agentic and coding tasks this week.<sup><a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[12]</a></sup> Flash is optimized for sustained performance on multi-step workflows, building on the Gemini 3.5 generation Google introduced at I/O in May. With the model now stable and broadly available through the Gemini API, developers can build production-grade agentic applications on a predictable foundation. Google&apos;s broader bet is that search distribution advantage plus the Gemini Spark personal agent will keep it competitive in the assistant layer against Claude and ChatGPT. Whether Gemini 3.5 Flash matches its competitors on independent agentic benchmarks is not yet settled by external evaluation.
+          </p>
+
+          {/* Closing */}
+          <p>
+            The IPO filings from Anthropic will move hundreds of billions into the AI sector when they close. That capital funds the next generation of compute, which powers the next generation of models, which justifies further investment. Nvidia&apos;s RTX Spark is the first sign this cycle is reaching consumer hardware. Whether the economic returns justify the infrastructure investment - for any of these companies - remains a question public market investors will answer within months. The pause Anthropic proposed this week will not arrive before the answer does.
+          </p>
+
+          {/* Disclaimer */}
+          <p className="text-sm text-gray-500 italic border-t border-gray-200 pt-6">
+            Disclaimer: All information in this post was collected from publicly available web sources at the time of writing. While every effort has been made to verify accuracy, readers should consult primary sources for decisions that depend on this information.
+          </p>
+
+          {/* References */}
+          <h2 className="text-2xl font-bold text-gray-900">References</h2>
+          <ol className="list-decimal pl-6 space-y-1 text-sm text-gray-500">
+            <li><a href="https://www.washingtonpost.com/technology/2026/06/01/anthropic-maker-claude-files-with-sec-go-public-an-ipo/" target="_blank" rel="noopener noreferrer" className="hover:underline">Washington Post, &quot;Anthropic, maker of Claude, files with the SEC to go public in an IPO,&quot; June 1, 2026.</a></li>
+            <li><a href="https://fortune.com/2026/06/05/anthropic-ai-pause-development-recursive-self-improvement/" target="_blank" rel="noopener noreferrer" className="hover:underline">Fortune, &quot;Anthropic warns AI could soon build itself without human involvement,&quot; June 5, 2026.</a></li>
+            <li><a href="https://www.wionews.com/india-news/pause-button-has-no-cords-claude-speaks-against-anthropic-s-ai-pause-calls-as-pre-ipo-cosplay-1780663384141" target="_blank" rel="noopener noreferrer" className="hover:underline">WION News, &quot;Pause button has no cords: Claude speaks against Anthropic&apos;s AI pause calls,&quot; 2026.</a></li>
+            <li><a href="https://www.tomshardware.com/laptops/nvidia-unveils-rtx-spark-superchip-at-computex-2026-new-platform-promises-to-turn-windows-into-an-agentic-ai-os-with-arm-cpu-blackwell-gpu-and-128gb-unified-memory" target="_blank" rel="noopener noreferrer" className="hover:underline">Tom&apos;s Hardware, &quot;Nvidia unveils RTX Spark Superchip at Computex 2026,&quot; June 1, 2026.</a></li>
+            <li><a href="https://nvidianews.nvidia.com/news/nvidia-microsoft-windows-pcs-agents-rtx-spark" target="_blank" rel="noopener noreferrer" className="hover:underline">Nvidia Newsroom, &quot;NVIDIA and Microsoft Reinvent Windows PCs for the Age of Personal AI,&quot; June 2026.</a></li>
+            <li><a href="https://techcrunch.com/2026/06/01/nvidia-chases-200b-cpu-market-with-ai-agent-pcs-from-microsoft-dell-and-hp/" target="_blank" rel="noopener noreferrer" className="hover:underline">TechCrunch, &quot;Nvidia chases $200B CPU market with AI agent PCs from Microsoft, Dell, and HP,&quot; June 1, 2026.</a></li>
+            <li><a href="https://www.cnbc.com/2026/06/02/microsoft-unveils-new-ai-models-lessen-reliance-on-openai-lower-costs.html" target="_blank" rel="noopener noreferrer" className="hover:underline">CNBC, &quot;Microsoft unveils new AI models to lessen reliance on OpenAI and lower costs for developers,&quot; June 2, 2026.</a></li>
+            <li><a href="https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/" target="_blank" rel="noopener noreferrer" className="hover:underline">Microsoft Blog, &quot;Microsoft Build 2026: Be yourself at work,&quot; June 2, 2026.</a></li>
+            <li><a href="https://releasebot.io/updates/openai/chatgpt" target="_blank" rel="noopener noreferrer" className="hover:underline">Releasebot, &quot;ChatGPT Updates by OpenAI - June 2026,&quot; June 2026.</a></li>
+            <li><a href="https://openai.com/index/chatgpt-memory-dreaming/" target="_blank" rel="noopener noreferrer" className="hover:underline">OpenAI, &quot;Dreaming: Better memory for a more helpful ChatGPT,&quot; June 2026.</a></li>
+            <li><a href="https://openai.com/news/product-releases/" target="_blank" rel="noopener noreferrer" className="hover:underline">OpenAI, &quot;Product News,&quot; openai.com, June 2026.</a></li>
+            <li><a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener noreferrer" className="hover:underline">Google, &quot;Gemini API Release Notes,&quot; ai.google.dev, June 2026.</a></li>
+          </ol>
+
+        </div>
+      ),
+    },
     "8": {
       title: "This Week in AI: Silicon Valley Heads to Wall Street and the Search Bar Disappears",
       date: "2026-06-03",
