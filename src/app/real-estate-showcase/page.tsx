@@ -190,18 +190,18 @@ function LeadForm({ isFr }: { isFr: boolean }) {
 }
 
 const listings = [
-  { address: "742 Evergreen Terrace", type: "Single Family", price: "$849,000", beds: 4, baths: 2, sqft: 2100, desc: "Charming family home with modern updates and a spacious backyard." },
-  { address: "100 Main St #505", type: "Condo", price: "$425,000", beds: 2, baths: 1, sqft: 950, desc: "Bright corner unit with city views and rooftop access." },
-  { address: "15 Maple Drive", type: "Single Family", price: "$1,200,000", beds: 5, baths: 3, sqft: 3200, desc: "Executive home in sought-after school district with gourmet kitchen." },
-  { address: "88 Ocean Ave", type: "Townhouse", price: "$675,000", beds: 3, baths: 2, sqft: 1650, desc: "Steps from the beach with private patio and updated bathrooms." },
-  { address: "200 Park Blvd", type: "Condo", price: "$310,000", beds: 1, baths: 1, sqft: 680, desc: "Affordable starter unit near transit and downtown dining." },
-  { address: "12 Elm Street", type: "Single Family", price: "$950,000", beds: 4, baths: 3, sqft: 2500, desc: "Recently renovated colonial with hardwood floors and finished basement." },
-  { address: "7 Sunset Ridge", type: "Single Family", price: "$1,550,000", beds: 5, baths: 4, sqft: 4100, desc: "Stunning hillside estate with panoramic views and pool." },
-  { address: "42 Oak Lane", type: "Townhouse", price: "$525,000", beds: 3, baths: 2, sqft: 1400, desc: "End-unit townhouse with attached garage and private yard." },
-  { address: "300 River Rd #12", type: "Condo", price: "$375,000", beds: 2, baths: 2, sqft: 1050, desc: "Ground-floor condo with patio overlooking the river." },
-  { address: "9 Highland Ave", type: "Multi-Family", price: "$1,100,000", beds: 6, baths: 4, sqft: 3600, desc: "Turnkey duplex with two separate units and strong rental income." },
-  { address: "22 Lakeview Dr", type: "Single Family", price: "$1,350,000", beds: 4, baths: 3, sqft: 2800, desc: "Lakefront property with private dock, updated kitchen, and spacious deck." },
-  { address: "55 Cedar Ct", type: "Condo", price: "$489,000", beds: 2, baths: 2, sqft: 1150, desc: "Top-floor condo with vaulted ceilings, fireplace, and mountain views." },
+  { address: "742 Evergreen Terrace", type: "Single Family", beds: 4, baths: 2, sqft: 2100, features: "Updated kitchen · Large backyard · New roof 2023" },
+  { address: "100 Main St #505", type: "Condo", beds: 2, baths: 1, sqft: 950, features: "City views · Rooftop access · In-unit laundry" },
+  { address: "15 Maple Drive", type: "Single Family", beds: 5, baths: 3, sqft: 3200, features: "Gourmet kitchen · Finished basement · 3-car garage" },
+  { address: "88 Ocean Ave", type: "Townhouse", beds: 3, baths: 2, sqft: 1650, features: "Steps to beach · Private patio · Updated bathrooms" },
+  { address: "200 Park Blvd", type: "Condo", beds: 1, baths: 1, sqft: 680, features: "Walk to transit · Downtown dining · Gym on-site" },
+  { address: "12 Elm Street", type: "Single Family", beds: 4, baths: 3, sqft: 2500, features: "Hardwood floors · Finished basement · Renovated 2024" },
+  { address: "7 Sunset Ridge", type: "Single Family", beds: 5, baths: 4, sqft: 4100, features: "Panoramic views · Saltwater pool · Wine cellar" },
+  { address: "42 Oak Lane", type: "Townhouse", beds: 3, baths: 2, sqft: 1400, features: "Attached garage · Private yard · New HVAC" },
+  { address: "300 River Rd #12", type: "Condo", beds: 2, baths: 2, sqft: 1050, features: "River views · Ground-floor patio · Reserved parking" },
+  { address: "9 Highland Ave", type: "Multi-Family", beds: 6, baths: 4, sqft: 3600, features: "Two units · Separate meters · Strong rental history" },
+  { address: "22 Lakeview Dr", type: "Single Family", beds: 4, baths: 3, sqft: 2800, features: "Private dock · Updated kitchen · Spacious deck" },
+  { address: "55 Cedar Ct", type: "Condo", beds: 2, baths: 2, sqft: 1150, features: "Vaulted ceilings · Fireplace · Mountain views" },
 ];
 
 export default function RealEstateShowcase() {
@@ -284,31 +284,43 @@ export default function RealEstateShowcase() {
                 key={item.address}
                 className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-gray-100"
               >
-                <div className="h-40 bg-gray-300 flex items-center justify-center text-gray-500 text-xs">
-                  {isFr ? "Image de la propriété" : "Property image"}
-                </div>
-                <div className="p-5">
-                  <div className="flex items-start justify-between mb-2">
-                    <h3 className="font-bold text-gray-900 text-sm leading-tight flex-1 pr-2">
-                      {item.address}
-                    </h3>
-                    <span className="text-[11px] font-semibold text-blue-700 bg-blue-50 px-2 py-0.5 rounded-full shrink-0">
-                      {item.type}
-                    </span>
+                <div className="p-4">
+                  <a
+                    href={`https://www.zillow.com/homes/${encodeURIComponent(item.address)}_rb/`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-bold text-sm text-blue-700 hover:text-blue-900 hover:underline leading-tight block"
+                  >
+                    {item.address} <span className="text-[10px] font-normal text-gray-400">↗</span>
+                  </a>
+                  <div className="grid grid-cols-2 gap-3 mt-3">
+                    {/* Before */}
+                    <div>
+                      <p className="text-[10px] font-semibold text-gray-400 uppercase mb-1">Before</p>
+                      <div className="text-[11px] text-gray-600 leading-relaxed">
+                        {item.beds}bd · {item.baths}ba · {item.sqft.toLocaleString()}sqft
+                      </div>
+                      <div className="text-[10px] text-gray-500 leading-relaxed mt-0.5">
+                        {item.features}
+                      </div>
+                    </div>
+                    {/* After */}
+                    <div>
+                      <p className="text-[10px] font-semibold text-green-600 uppercase mb-1">After</p>
+                      <div className="flex flex-wrap gap-x-1 gap-y-0.5">
+                        {["MLS","IG","FB","Remarks","Open House","Email","Luxury","FTHB","Investor"].map((label) => (
+                          <span key={label} className="text-[10px] bg-green-50 text-green-700 px-1.5 py-0.5 rounded">
+                            {label}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
                   </div>
-                  <p className="text-lg font-extrabold text-green-700 mb-2">
-                    {item.price}
-                  </p>
-                  <div className="flex items-center gap-3 text-xs text-gray-500 mb-3">
-                    <span>{item.beds} {isFr ? "ch" : "beds"}</span>
-                    <span className="text-gray-300">|</span>
-                    <span>{item.baths} {isFr ? "sdb" : "baths"}</span>
-                    <span className="text-gray-300">|</span>
-                    <span>{item.sqft.toLocaleString()} sqft</span>
+                  <div className="mt-3 pt-2 border-t border-gray-100 text-[10px] text-gray-500 text-center">
+                    {isFr
+                      ? "1 annonce → 7 actifs marketing."
+                      : "1 listing → 7 marketing assets. That's value."}
                   </div>
-                  <p className="text-gray-500 text-xs leading-relaxed">
-                    {item.desc}
-                  </p>
                 </div>
               </div>
             ))}
