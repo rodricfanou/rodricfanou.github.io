@@ -263,6 +263,9 @@ export default function RealEstateShowcase() {
                     ))}
                   </ul>
                 </div>
+
+                <hr className="border-gray-700 my-4" />
+
                 <div className="aspect-video w-full rounded-xl overflow-hidden shadow-md bg-gray-700 mb-6">
                   <iframe
                     width="100%"
@@ -274,6 +277,8 @@ export default function RealEstateShowcase() {
                     className="w-full h-full"
                   />
                 </div>
+
+                <hr className="border-gray-700 my-4" />
 
                 <h2 className="text-lg font-bold mb-1">
                   {isFr ? "Un Apport → Plusieurs Sorties" : "One Input → Multiple Outputs"}
