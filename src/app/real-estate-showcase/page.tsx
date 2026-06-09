@@ -353,6 +353,9 @@ export default function RealEstateShowcase() {
                     ))}
                   </ul>
                 </div>
+                <h3 className="text-sm font-bold text-white mb-3">
+                  {isFr ? "Formulaire Détails de la Propriété" : "Property Details Form"}
+                </h3>
                 <LeadForm isFr={isFr} />
               </div>
             </div>
