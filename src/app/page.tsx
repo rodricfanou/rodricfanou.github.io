@@ -68,6 +68,78 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Work With Me — full-width prominent section */}
+      <section className="relative w-full max-w-5xl mt-8 rounded-2xl shadow-lg px-6 py-12 md:mt-10 md:rounded-3xl md:px-16 md:py-16 bg-white border border-gray-200 transition-shadow duration-300 hover:shadow-xl">
+        <FadeIn>
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-extrabold mb-3 text-gray-900 md:text-4xl">Work With Me</h2>
+            <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto">
+              Helping organizations leverage AI, data, and Internet-scale systems to improve performance, decision-making, and innovation.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="bg-gray-50 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-100">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-xl">🤖</span>
+                <h3 className="font-semibold text-gray-900 text-sm">AI Consulting</h3>
+              </div>
+              <p className="text-gray-500 text-xs leading-relaxed mb-2">Helping organizations adopt AI strategically.</p>
+              <ul className="flex flex-wrap gap-1">
+                <li className="px-2 py-0.5 bg-white text-gray-600 rounded text-[11px] font-medium border border-gray-200">AI Readiness</li>
+                <li className="px-2 py-0.5 bg-white text-gray-600 rounded text-[11px] font-medium border border-gray-200">AI Strategy</li>
+                <li className="px-2 py-0.5 bg-white text-gray-600 rounded text-[11px] font-medium border border-gray-200">AI Adoption</li>
+              </ul>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-100">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-xl">🎙️</span>
+                <h3 className="font-semibold text-gray-900 text-sm">Speaking</h3>
+              </div>
+              <p className="text-gray-500 text-xs leading-relaxed mb-2">Keynotes, workshops, and conferences.</p>
+              <ul className="flex flex-wrap gap-1">
+                <li className="px-2 py-0.5 bg-white text-gray-600 rounded text-[11px] font-medium border border-gray-200">AI</li>
+                <li className="px-2 py-0.5 bg-white text-gray-600 rounded text-[11px] font-medium border border-gray-200">Internet Infrastructure</li>
+                <li className="px-2 py-0.5 bg-white text-gray-600 rounded text-[11px] font-medium border border-gray-200">Future of Work</li>
+                <li className="px-2 py-0.5 bg-white text-gray-600 rounded text-[11px] font-medium border border-gray-200">Digital Transformation</li>
+              </ul>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-100">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-xl">⚙️</span>
+                <h3 className="font-semibold text-gray-900 text-sm">Technical Advisory</h3>
+              </div>
+              <p className="text-gray-500 text-xs leading-relaxed mb-2">Networking, Internet infrastructure, observability, and data systems.</p>
+              <ul className="flex flex-wrap gap-1">
+                <li className="px-2 py-0.5 bg-white text-gray-600 rounded text-[11px] font-medium border border-gray-200">Network Monitoring</li>
+                <li className="px-2 py-0.5 bg-white text-gray-600 rounded text-[11px] font-medium border border-gray-200">Internet Measurement</li>
+                <li className="px-2 py-0.5 bg-white text-gray-600 rounded text-[11px] font-medium border border-gray-200">Data Systems</li>
+                <li className="px-2 py-0.5 bg-white text-gray-600 rounded text-[11px] font-medium border border-gray-200">Observability</li>
+              </ul>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-100">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-xl">📚</span>
+                <h3 className="font-semibold text-gray-900 text-sm">Training</h3>
+              </div>
+              <p className="text-gray-500 text-xs leading-relaxed mb-2">AI and technology workshops for teams.</p>
+              <ul className="flex flex-wrap gap-1">
+                <li className="px-2 py-0.5 bg-white text-gray-600 rounded text-[11px] font-medium border border-gray-200">AI Training</li>
+                <li className="px-2 py-0.5 bg-white text-gray-600 rounded text-[11px] font-medium border border-gray-200">Team Workshops</li>
+                <li className="px-2 py-0.5 bg-white text-gray-600 rounded text-[11px] font-medium border border-gray-200">AI Productivity Training</li>
+              </ul>
+            </div>
+          </div>
+          <div className="text-center mt-8">
+            <Link
+              href="/contact"
+              className="inline-block px-8 py-3 bg-gray-800 hover:bg-gray-900 text-white font-semibold rounded-lg text-sm transition-colors shadow-md"
+            >
+              Let's Work Together
+            </Link>
+          </div>
+        </FadeIn>
+      </section>
+
       {/* Bottom Box */}
       <section className="relative w-full max-w-5xl mt-8 rounded-2xl shadow-lg px-6 py-12 space-y-12 md:mt-10 md:rounded-3xl md:px-16 md:py-16 md:space-y-16 bg-gray-200 transition-shadow duration-300 hover:shadow-xl">
 
@@ -85,64 +157,6 @@ Today, my interests span Internet architecture, computer networks, AI, automatio
         </FadeIn>
 
         <FadeIn delay={100}>
-          <div>
-            <h2 className="text-2xl font-bold mb-6 text-gray-900 md:text-3xl md:text-4xl">Work With Me</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-shadow duration-200">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xl">🤖</span>
-                  <h3 className="font-semibold text-gray-900 text-sm">AI Consulting</h3>
-                </div>
-                <p className="text-gray-500 text-xs leading-relaxed mb-2">Helping organizations adopt AI strategically.</p>
-                <ul className="flex flex-wrap gap-1">
-                  <li className="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-[11px] font-medium">AI Readiness</li>
-                  <li className="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-[11px] font-medium">AI Strategy</li>
-                  <li className="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-[11px] font-medium">AI Adoption</li>
-                </ul>
-              </div>
-              <div className="bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-shadow duration-200">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xl">🎙️</span>
-                  <h3 className="font-semibold text-gray-900 text-sm">Speaking</h3>
-                </div>
-                <p className="text-gray-500 text-xs leading-relaxed mb-2">Keynotes, workshops, and conferences.</p>
-                <ul className="flex flex-wrap gap-1">
-                  <li className="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-[11px] font-medium">AI</li>
-                  <li className="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-[11px] font-medium">Internet Infrastructure</li>
-                  <li className="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-[11px] font-medium">Future of Work</li>
-                  <li className="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-[11px] font-medium">Digital Transformation</li>
-                </ul>
-              </div>
-              <div className="bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-shadow duration-200">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xl">⚙️</span>
-                  <h3 className="font-semibold text-gray-900 text-sm">Technical Advisory</h3>
-                </div>
-                <p className="text-gray-500 text-xs leading-relaxed mb-2">Networking, Internet infrastructure, observability, and data systems.</p>
-                <ul className="flex flex-wrap gap-1">
-                  <li className="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-[11px] font-medium">Network Monitoring</li>
-                  <li className="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-[11px] font-medium">Internet Measurement</li>
-                  <li className="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-[11px] font-medium">Data Systems</li>
-                  <li className="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-[11px] font-medium">Observability</li>
-                </ul>
-              </div>
-              <div className="bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-shadow duration-200">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xl">📚</span>
-                  <h3 className="font-semibold text-gray-900 text-sm">Training</h3>
-                </div>
-                <p className="text-gray-500 text-xs leading-relaxed mb-2">AI and technology workshops for teams.</p>
-                <ul className="flex flex-wrap gap-1">
-                  <li className="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-[11px] font-medium">AI Training</li>
-                  <li className="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-[11px] font-medium">Team Workshops</li>
-                  <li className="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-[11px] font-medium">AI Productivity Training</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </FadeIn>
-
-        <FadeIn delay={200}>
           <div>
             <h2 className="text-2xl font-bold mb-4 text-gray-900 md:text-3xl md:text-4xl">Common Reasons People Reach Out</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2">
