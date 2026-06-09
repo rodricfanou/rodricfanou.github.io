@@ -9,27 +9,31 @@ const services = {
   en: [
     {
       icon: "🤖",
-      title: "AI Consulting",
-      desc: "Helping organizations adopt AI strategically.",
-      subs: ["AI Readiness", "AI Strategy", "AI Adoption"],
+      title: "AI Strategy & Adoption",
+      desc: "Identify practical opportunities to use AI, improve productivity, and build an actionable roadmap for implementation.",
+      idealFor: ["Business leaders", "Technology teams", "Growing organizations"],
+      outcome: "Clear AI strategy with measurable business value.",
     },
     {
       icon: "🎙️",
-      title: "Speaking",
-      desc: "Keynotes, workshops, and conferences.",
-      subs: ["AI", "Internet Infrastructure", "Future of Work", "Digital Transformation"],
+      title: "AI Workshops & Executive Briefings",
+      desc: "Interactive sessions that help teams understand AI, automation, and emerging technologies without the hype.",
+      idealFor: ["Leadership teams", "Professional organizations", "Conferences", "Associations"],
+      outcome: "Greater AI literacy, alignment, and confidence.",
     },
     {
       icon: "⚙️",
       title: "Technical Advisory",
-      desc: "Networking, Internet infrastructure, observability, and data systems.",
-      subs: ["Network Monitoring", "Internet Measurement", "Data Systems", "Observability"],
+      desc: "Guidance on networking, observability, Internet infrastructure, measurement systems, and large-scale data platforms.",
+      idealFor: ["Technology companies", "Research organizations", "Infrastructure teams"],
+      outcome: "Better visibility, reliability, and system performance.",
     },
     {
-      icon: "📚",
-      title: "Training",
-      desc: "AI and technology workshops for teams.",
-      subs: ["AI Training", "Team Workshops", "AI Productivity Training"],
+      icon: "🎤",
+      title: "Speaking & Thought Leadership",
+      desc: "Keynotes, workshops, and presentations on AI, digital infrastructure, the future of technology, and data-driven decision-making.",
+      idealFor: ["Conferences", "Universities", "Industry events", "Executive retreats"],
+      outcome: "Engaging, actionable insights tailored to your audience.",
     },
   ],
   fr: [
@@ -37,25 +41,29 @@ const services = {
       icon: "🤖",
       title: "Conseil en IA",
       desc: "Aider les organisations à adopter l'IA de manière stratégique.",
-      subs: ["Préparation à l'IA", "Stratégie IA", "Adoption de l'IA"],
+      idealFor: ["Business leaders", "Technology teams", "Growing organizations"],
+      outcome: "Clear AI strategy with measurable business value.",
     },
     {
       icon: "🎙️",
       title: "Conférences",
       desc: "Keynotes, ateliers et conférences.",
-      subs: ["IA", "Infrastructure Internet", "Avenir du Travail", "Transformation Numérique"],
+      idealFor: ["Leadership teams", "Professional organizations", "Conferences", "Associations"],
+      outcome: "Greater AI literacy, alignment, and confidence.",
     },
     {
       icon: "⚙️",
       title: "Conseil Technique",
       desc: "Réseaux, infrastructure Internet, observabilité et systèmes de données.",
-      subs: ["Surveillance Réseau", "Mesure Internet", "Systèmes de Données", "Observabilité"],
+      idealFor: ["Technology companies", "Research organizations", "Infrastructure teams"],
+      outcome: "Better visibility, reliability, and system performance.",
     },
     {
-      icon: "📚",
-      title: "Formation",
-      desc: "Ateliers IA et technologie pour les équipes.",
-      subs: ["Formation IA", "Ateliers d'Équipe", "Formation Productivité IA"],
+      icon: "🎤",
+      title: "Speaking & Thought Leadership",
+      desc: "Keynotes, workshops, and presentations on AI, digital infrastructure, the future of technology, and data-driven decision-making.",
+      idealFor: ["Conferences", "Universities", "Industry events", "Executive retreats"],
+      outcome: "Engaging, actionable insights tailored to your audience.",
     },
   ],
 };
@@ -278,6 +286,12 @@ export default function Contact() {
       {/* Services Grid */}
       <section className="w-full max-w-5xl mt-8 md:mt-10">
         <FadeIn>
+          <div className="text-center mb-6">
+            <h2 className="text-xl font-bold text-gray-900 md:text-2xl">Work With Me</h2>
+            <p className="text-gray-500 text-sm mt-1 max-w-2xl mx-auto">
+              Helping organizations leverage AI, data, and Internet-scale systems to improve performance, decision-making, and innovation.
+            </p>
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {tServices.map((svc) => (
               <div
@@ -288,14 +302,15 @@ export default function Contact() {
                   <span className="text-xl">{svc.icon}</span>
                   <h3 className="font-semibold text-gray-900 text-sm">{svc.title}</h3>
                 </div>
-                <p className="text-gray-500 text-xs leading-relaxed mb-2">{svc.desc}</p>
-                <ul className="flex flex-wrap gap-1">
-                  {svc.subs.map((sub) => (
-                    <li key={sub} className="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-[11px] font-medium">
-                      {sub}
-                    </li>
-                  ))}
-                </ul>
+                <p className="text-gray-500 text-xs leading-relaxed mb-3">{svc.desc}</p>
+                <p className="text-[11px] font-semibold text-gray-400 uppercase tracking-wide mb-1">
+                  {isFr ? "Idéal pour :" : "Ideal for:"}
+                </p>
+                <p className="text-xs text-gray-600 mb-3">{svc.idealFor.join(" • ")}</p>
+                <p className="text-[11px] font-semibold text-gray-400 uppercase tracking-wide mb-0.5">
+                  {isFr ? "Résultat :" : "Outcome:"}
+                </p>
+                <p className="text-xs text-green-700 font-medium">{svc.outcome}</p>
               </div>
             ))}
           </div>

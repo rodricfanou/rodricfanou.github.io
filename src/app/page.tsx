@@ -78,55 +78,57 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="bg-gray-50 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-100">
+            <div className="bg-gray-50 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-100 flex flex-col">
               <div className="flex items-center gap-2 mb-2">
                 <span className="text-xl">🤖</span>
-                <h3 className="font-semibold text-gray-900 text-sm">AI Consulting</h3>
+                <h3 className="font-semibold text-gray-900 text-sm">AI Strategy &amp; Adoption</h3>
               </div>
-              <p className="text-gray-500 text-xs leading-relaxed mb-2">Helping organizations adopt AI strategically.</p>
-              <ul className="flex flex-wrap gap-1">
-                <li className="px-2 py-0.5 bg-white text-gray-600 rounded text-[11px] font-medium border border-gray-200">AI Readiness</li>
-                <li className="px-2 py-0.5 bg-white text-gray-600 rounded text-[11px] font-medium border border-gray-200">AI Strategy</li>
-                <li className="px-2 py-0.5 bg-white text-gray-600 rounded text-[11px] font-medium border border-gray-200">AI Adoption</li>
-              </ul>
+              <p className="text-gray-500 text-xs leading-relaxed mb-3">Identify practical opportunities to use AI, improve productivity, and build an actionable roadmap for implementation.</p>
+              <div className="mt-auto">
+                <p className="text-[11px] font-semibold text-gray-400 uppercase tracking-wide mb-1">Ideal for:</p>
+                <p className="text-xs text-gray-600 mb-3">Business leaders &bull; Technology teams &bull; Growing organizations</p>
+                <p className="text-[11px] font-semibold text-gray-400 uppercase tracking-wide mb-0.5">Outcome:</p>
+                <p className="text-xs text-green-700 font-medium">Clear AI strategy with measurable business value.</p>
+              </div>
             </div>
-            <div className="bg-gray-50 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-100">
+            <div className="bg-gray-50 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-100 flex flex-col">
               <div className="flex items-center gap-2 mb-2">
                 <span className="text-xl">🎙️</span>
-                <h3 className="font-semibold text-gray-900 text-sm">Speaking</h3>
+                <h3 className="font-semibold text-gray-900 text-sm">AI Workshops &amp; Executive Briefings</h3>
               </div>
-              <p className="text-gray-500 text-xs leading-relaxed mb-2">Keynotes, workshops, and conferences.</p>
-              <ul className="flex flex-wrap gap-1">
-                <li className="px-2 py-0.5 bg-white text-gray-600 rounded text-[11px] font-medium border border-gray-200">AI</li>
-                <li className="px-2 py-0.5 bg-white text-gray-600 rounded text-[11px] font-medium border border-gray-200">Internet Infrastructure</li>
-                <li className="px-2 py-0.5 bg-white text-gray-600 rounded text-[11px] font-medium border border-gray-200">Future of Work</li>
-                <li className="px-2 py-0.5 bg-white text-gray-600 rounded text-[11px] font-medium border border-gray-200">Digital Transformation</li>
-              </ul>
+              <p className="text-gray-500 text-xs leading-relaxed mb-3">Interactive sessions that help teams understand AI, automation, and emerging technologies without the hype.</p>
+              <div className="mt-auto">
+                <p className="text-[11px] font-semibold text-gray-400 uppercase tracking-wide mb-1">Ideal for:</p>
+                <p className="text-xs text-gray-600 mb-3">Leadership teams &bull; Professional organizations &bull; Conferences &bull; Associations</p>
+                <p className="text-[11px] font-semibold text-gray-400 uppercase tracking-wide mb-0.5">Outcome:</p>
+                <p className="text-xs text-green-700 font-medium">Greater AI literacy, alignment, and confidence.</p>
+              </div>
             </div>
-            <div className="bg-gray-50 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-100">
+            <div className="bg-gray-50 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-100 flex flex-col">
               <div className="flex items-center gap-2 mb-2">
                 <span className="text-xl">⚙️</span>
                 <h3 className="font-semibold text-gray-900 text-sm">Technical Advisory</h3>
               </div>
-              <p className="text-gray-500 text-xs leading-relaxed mb-2">Networking, Internet infrastructure, observability, and data systems.</p>
-              <ul className="flex flex-wrap gap-1">
-                <li className="px-2 py-0.5 bg-white text-gray-600 rounded text-[11px] font-medium border border-gray-200">Network Monitoring</li>
-                <li className="px-2 py-0.5 bg-white text-gray-600 rounded text-[11px] font-medium border border-gray-200">Internet Measurement</li>
-                <li className="px-2 py-0.5 bg-white text-gray-600 rounded text-[11px] font-medium border border-gray-200">Data Systems</li>
-                <li className="px-2 py-0.5 bg-white text-gray-600 rounded text-[11px] font-medium border border-gray-200">Observability</li>
-              </ul>
-            </div>
-            <div className="bg-gray-50 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-100">
-              <div className="flex items-center gap-2 mb-2">
-                <span className="text-xl">📚</span>
-                <h3 className="font-semibold text-gray-900 text-sm">Training</h3>
+              <p className="text-gray-500 text-xs leading-relaxed mb-3">Guidance on networking, observability, Internet infrastructure, measurement systems, and large-scale data platforms.</p>
+              <div className="mt-auto">
+                <p className="text-[11px] font-semibold text-gray-400 uppercase tracking-wide mb-1">Ideal for:</p>
+                <p className="text-xs text-gray-600 mb-3">Technology companies &bull; Research organizations &bull; Infrastructure teams</p>
+                <p className="text-[11px] font-semibold text-gray-400 uppercase tracking-wide mb-0.5">Outcome:</p>
+                <p className="text-xs text-green-700 font-medium">Better visibility, reliability, and system performance.</p>
               </div>
-              <p className="text-gray-500 text-xs leading-relaxed mb-2">AI and technology workshops for teams.</p>
-              <ul className="flex flex-wrap gap-1">
-                <li className="px-2 py-0.5 bg-white text-gray-600 rounded text-[11px] font-medium border border-gray-200">AI Training</li>
-                <li className="px-2 py-0.5 bg-white text-gray-600 rounded text-[11px] font-medium border border-gray-200">Team Workshops</li>
-                <li className="px-2 py-0.5 bg-white text-gray-600 rounded text-[11px] font-medium border border-gray-200">AI Productivity Training</li>
-              </ul>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-100 flex flex-col">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-xl">🎤</span>
+                <h3 className="font-semibold text-gray-900 text-sm">Speaking &amp; Thought Leadership</h3>
+              </div>
+              <p className="text-gray-500 text-xs leading-relaxed mb-3">Keynotes, workshops, and presentations on AI, digital infrastructure, the future of technology, and data-driven decision-making.</p>
+              <div className="mt-auto">
+                <p className="text-[11px] font-semibold text-gray-400 uppercase tracking-wide mb-1">Ideal for:</p>
+                <p className="text-xs text-gray-600 mb-3">Conferences &bull; Universities &bull; Industry events &bull; Executive retreats</p>
+                <p className="text-[11px] font-semibold text-gray-400 uppercase tracking-wide mb-0.5">Outcome:</p>
+                <p className="text-xs text-green-700 font-medium">Engaging, actionable insights tailored to your audience.</p>
+              </div>
             </div>
           </div>
           <div className="text-center mt-8">
