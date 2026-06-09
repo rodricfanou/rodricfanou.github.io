@@ -353,25 +353,6 @@ export default function RealEstateShowcase() {
               </div>
               {/* Right: Form */}
               <div className="md:col-span-3 p-8 md:p-10 bg-gray-800">
-                <div className="mb-6 pb-6 border-b border-gray-700">
-                  <h3 className="text-base font-bold text-white mb-3">
-                    {isFr ? "Pourquoi les agents utilisent Real Estate Listing Pro" : "Why Realtors Use Real Estate Listing Pro"}
-                  </h3>
-                  <ul className="space-y-1.5">
-                    {[
-                      { en: "Save hours on every listing", fr: "Gagnez des heures sur chaque annonce" },
-                      { en: "Generate professional marketing content in minutes", fr: "Générez du contenu marketing professionnel en minutes" },
-                      { en: "Maintain consistent quality across every property", fr: "Maintenez une qualité cohérente pour chaque propriété" },
-                      { en: "Create social media content faster", fr: "Créez du contenu pour les réseaux sociaux plus rapidement" },
-                      { en: "Spend more time selling and less time writing", fr: "Passez plus de temps à vendre et moins à écrire" },
-                    ].map((item) => (
-                      <li key={item.en} className="flex items-start gap-2 text-sm text-gray-300">
-                        <span className="text-green-400 mt-0.5 shrink-0">✔</span>
-                        {isFr ? item.fr : item.en}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
                 <h3 className="text-sm font-bold text-white mb-3">
                   {isFr ? "Formulaire Détails de la Propriété" : "Property Details Form"}
                 </h3>
