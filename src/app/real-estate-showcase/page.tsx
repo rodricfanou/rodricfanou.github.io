@@ -200,6 +200,8 @@ const listings = [
   { address: "42 Oak Lane", type: "Townhouse", price: "$525,000", beds: 3, baths: 2, sqft: 1400, desc: "End-unit townhouse with attached garage and private yard." },
   { address: "300 River Rd #12", type: "Condo", price: "$375,000", beds: 2, baths: 2, sqft: 1050, desc: "Ground-floor condo with patio overlooking the river." },
   { address: "9 Highland Ave", type: "Multi-Family", price: "$1,100,000", beds: 6, baths: 4, sqft: 3600, desc: "Turnkey duplex with two separate units and strong rental income." },
+  { address: "22 Lakeview Dr", type: "Single Family", price: "$1,350,000", beds: 4, baths: 3, sqft: 2800, desc: "Lakefront property with private dock, updated kitchen, and spacious deck." },
+  { address: "55 Cedar Ct", type: "Condo", price: "$489,000", beds: 2, baths: 2, sqft: 1150, desc: "Top-floor condo with vaulted ceilings, fireplace, and mountain views." },
 ];
 
 export default function RealEstateShowcase() {
@@ -226,8 +228,8 @@ export default function RealEstateShowcase() {
               </h1>
               <p className="text-base text-white/90 drop-shadow-sm md:text-lg md:text-xl max-w-3xl mx-auto">
                 {isFr
-                  ? "10 annonces immobilières professionnelles générées avec l'IA. Regardez la vidéo pour voir comment elles ont été créées."
-                  : "10 professional real estate listings generated with AI. Watch the demo video to see how they were created."}
+                  ? "12 annonces immobilières professionnelles générées avec l'IA. Regardez la vidéo pour voir comment elles ont été créées."
+                  : "12 professional real estate listings generated with AI. Watch the demo video to see how they were created."}
               </p>
             </div>
           </FadeIn>
@@ -274,9 +276,9 @@ export default function RealEstateShowcase() {
       <section className="w-full max-w-6xl mt-8 md:mt-10">
         <FadeIn>
           <h2 className="text-xl font-bold text-gray-900 mb-6">
-            {isFr ? "10 Annonces Exemples" : "10 Sample Listings"}
+            {isFr ? "12 Annonces Exemples" : "12 Sample Listings"}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {listings.map((item) => (
               <div
                 key={item.address}
