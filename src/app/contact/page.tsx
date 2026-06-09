@@ -80,48 +80,38 @@ const interests = {
 const featured = {
   en: [
     {
-      icon: "🚚",
-      title: "AI Strategy for Global Logistics",
-      tag: "AI Consulting",
-      result: "30% cost reduction",
-      desc: "Designed a predictive AI system optimizing routing and inventory across 12 warehouses, cutting costs by 30%.",
+      icon: "🏠",
+      title: "Summit Global Property",
+      tag: "Web Development",
+      result: "Modern web presence",
+      desc: "A responsive, SEO-optimized website for a property management firm with property listings and an inquiry system.",
+      url: "https://summitglobalproperty.com/",
     },
     {
-      icon: "🌐",
-      title: "Network Infrastructure Overhaul",
-      tag: "Networking",
-      result: "99.99% uptime",
-      desc: "Redesigned core network for a regional ISP with redundant peering and real-time monitoring.",
-    },
-    {
-      icon: "📊",
-      title: "AI-Powered Analytics Dashboard",
-      tag: "Data & AI",
-      result: "60% faster response",
-      desc: "Real-time analytics platform processing 10M+ events daily with ML-powered anomaly detection.",
+      icon: "🏘️",
+      title: "Real Estate AI Showcase",
+      tag: "AI Automation",
+      result: "10 sample listings",
+      desc: "See how AI generates professional real estate listings — 10 samples created with AI, with a demo video showing the process.",
+      url: "/real-estate-showcase",
     },
   ],
   fr: [
     {
-      icon: "🚚",
-      title: "Stratégie IA pour la Logistique",
-      tag: "Conseil en IA",
-      result: "30% de réduction des coûts",
-      desc: "Système d'IA prédictive optimisant le routage et les stocks dans 12 entrepôts.",
+      icon: "🏠",
+      title: "Summit Global Property",
+      tag: "Développement Web",
+      result: "Présence web moderne",
+      desc: "Site web responsive et optimisé SEO pour une société de gestion immobilière avec listes de propriétés.",
+      url: "https://summitglobalproperty.com/",
     },
     {
-      icon: "🌐",
-      title: "Refonte d'Infrastructure Réseau",
-      tag: "Réseaux",
-      result: "99.99% disponibilité",
-      desc: "Refonte du réseau d'un FAI avec peering redondant et surveillance temps réel.",
-    },
-    {
-      icon: "📊",
-      title: "Tableau de Bord Analytique par IA",
-      tag: "Données & IA",
-      result: "60% réponse plus rapide",
-      desc: "Plateforme traitant 10M+ événements/jour avec détection d'anomalies par ML.",
+      icon: "🏘️",
+      title: "Réalisations Immobilières IA",
+      tag: "Automatisation IA",
+      result: "10 annonces exemples",
+      desc: "Découvrez comment l'IA génère des annonces immobilières professionnelles — 10 exemples avec vidéo de démonstration.",
+      url: "/real-estate-showcase",
     },
   ],
 };
@@ -326,25 +316,33 @@ export default function Contact() {
               {isFr ? "Voir tout →" : "View all →"}
             </Link>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {tFeatured.map((item) => (
-              <div
-                key={item.title}
-                className="block bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-shadow duration-200"
-              >
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xl">{item.icon}</span>
-                  <span className="text-[11px] font-semibold text-blue-700 bg-blue-50 px-2 py-0.5 rounded-full">
-                    {item.tag}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {tFeatured.map((item) => {
+              const isExternal = item.url.startsWith("http");
+              const Card = isExternal ? "a" : Link;
+              const cardProps = isExternal
+                ? { href: item.url, target: "_blank", rel: "noopener noreferrer" }
+                : { href: item.url };
+              return (
+                <Card
+                  key={item.title}
+                  {...cardProps}
+                  className="block bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-shadow duration-200"
+                >
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-xl">{item.icon}</span>
+                    <span className="text-[11px] font-semibold text-blue-700 bg-blue-50 px-2 py-0.5 rounded-full">
+                      {item.tag}
+                    </span>
+                  </div>
+                  <h3 className="font-semibold text-gray-900 text-sm mb-1">{item.title}</h3>
+                  <p className="text-gray-500 text-xs leading-relaxed mb-3">{item.desc}</p>
+                  <span className="text-xs font-semibold text-green-700 bg-green-50 px-2 py-0.5 rounded-full">
+                    {item.result}
                   </span>
-                </div>
-                <h3 className="font-semibold text-gray-900 text-sm mb-1">{item.title}</h3>
-                <p className="text-gray-500 text-xs leading-relaxed mb-3">{item.desc}</p>
-                <span className="text-xs font-semibold text-green-700 bg-green-50 px-2 py-0.5 rounded-full">
-                  {item.result}
-                </span>
-              </div>
-            ))}
+                </Card>
+              );
+            })}
           </div>
         </FadeIn>
       </section>
