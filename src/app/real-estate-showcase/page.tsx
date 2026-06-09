@@ -353,9 +353,31 @@ export default function RealEstateShowcase() {
               </div>
               {/* Right: Form */}
               <div className="md:col-span-3 p-8 md:p-10 bg-gray-800">
-                <h3 className="text-sm font-bold text-white mb-3">
+                <h3 className="text-sm font-bold text-white mb-2">
                   {isFr ? "Formulaire Détails de la Propriété" : "Property Details Form"}
                 </h3>
+                <p className="text-xs text-gray-400 mb-1">
+                  {isFr
+                    ? "Essayez-le sur votre prochaine annonce"
+                    : "Try It On Your Next Listing"}
+                </p>
+                <p className="text-xs text-gray-500 mb-3">
+                  {isFr
+                    ? "Envoyez-nous les détails de votre propriété et nous générerons un package marketing professionnel."
+                    : "Send us your property details and we'll generate a professional listing marketing package for you."}
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {[
+                    { en: "MLS Description", fr: "Description MLS" },
+                    { en: "Social Media Content", fr: "Contenu Réseaux Sociaux" },
+                    { en: "Agent Remarks", fr: "Remarques Agent" },
+                    { en: "Property Highlights", fr: "Points Forts" },
+                  ].map((item) => (
+                    <span key={item.en} className="text-[11px] bg-green-900/30 text-green-300 px-2 py-0.5 rounded-full border border-green-700/40">
+                      ✅ {isFr ? item.fr : item.en}
+                    </span>
+                  ))}
+                </div>
                 <LeadForm isFr={isFr} />
               </div>
             </div>
