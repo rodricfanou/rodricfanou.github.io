@@ -1,6 +1,7 @@
 "use client";
 
 import { useForm, ValidationError } from "@formspree/react";
+import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
 import { useLanguage } from "@/components/LanguageProvider";
 
@@ -76,19 +77,51 @@ const interests = {
   ],
 };
 
-const portfolio = {
+const featured = {
   en: [
     {
-      title: "Summit Global Property",
-      url: "https://summitglobalproperty.com/",
-      desc: "A website for a property management firm with a modern design.",
+      icon: "🚚",
+      title: "AI Strategy for Global Logistics",
+      tag: "AI Consulting",
+      result: "30% cost reduction",
+      desc: "Designed a predictive AI system optimizing routing and inventory across 12 warehouses, cutting costs by 30%.",
+    },
+    {
+      icon: "🌐",
+      title: "Network Infrastructure Overhaul",
+      tag: "Networking",
+      result: "99.99% uptime",
+      desc: "Redesigned core network for a regional ISP with redundant peering and real-time monitoring.",
+    },
+    {
+      icon: "📊",
+      title: "AI-Powered Analytics Dashboard",
+      tag: "Data & AI",
+      result: "60% faster response",
+      desc: "Real-time analytics platform processing 10M+ events daily with ML-powered anomaly detection.",
     },
   ],
   fr: [
     {
-      title: "Summit Global Property",
-      url: "https://summitglobalproperty.com/",
-      desc: "Un site web pour une société de gestion immobilière au design moderne.",
+      icon: "🚚",
+      title: "Stratégie IA pour la Logistique",
+      tag: "Conseil en IA",
+      result: "30% de réduction des coûts",
+      desc: "Système d'IA prédictive optimisant le routage et les stocks dans 12 entrepôts.",
+    },
+    {
+      icon: "🌐",
+      title: "Refonte d'Infrastructure Réseau",
+      tag: "Réseaux",
+      result: "99.99% disponibilité",
+      desc: "Refonte du réseau d'un FAI avec peering redondant et surveillance temps réel.",
+    },
+    {
+      icon: "📊",
+      title: "Tableau de Bord Analytique par IA",
+      tag: "Données & IA",
+      result: "60% réponse plus rapide",
+      desc: "Plateforme traitant 10M+ événements/jour avec détection d'anomalies par ML.",
     },
   ],
 };
@@ -222,7 +255,7 @@ export default function Contact() {
   const langKey = lang as "en" | "fr";
   const tServices = services[langKey];
   const tInterests = interests[langKey];
-  const tPortfolio = portfolio[langKey];
+  const tFeatured = featured[langKey];
 
   return (
     <main className="bg-gray-100 min-h-screen py-8 px-4 flex flex-col items-center md:py-12 md:px-8">
@@ -279,24 +312,38 @@ export default function Contact() {
         </FadeIn>
       </section>
 
-      {/* Portfolio */}
+      {/* Featured Case Studies */}
       <section className="relative w-full max-w-5xl mt-8 rounded-2xl shadow-lg px-6 py-10 md:mt-10 md:rounded-3xl md:px-16 md:py-12 bg-gray-200">
         <FadeIn>
-          <h2 className="text-xl font-bold text-gray-900 mb-6">
-            {isFr ? "Portfolio" : "Portfolio"}
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {tPortfolio.map((item) => (
-              <a
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-xl font-bold text-gray-900">
+              {isFr ? "Études de Cas" : "Featured Case Studies"}
+            </h2>
+            <Link
+              href="/showcase"
+              className="text-sm font-semibold text-blue-700 hover:text-blue-900 transition-colors"
+            >
+              {isFr ? "Voir tout →" : "View all →"}
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {tFeatured.map((item) => (
+              <div
                 key={item.title}
-                href={item.url}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="block bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-shadow duration-200"
               >
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-xl">{item.icon}</span>
+                  <span className="text-[11px] font-semibold text-blue-700 bg-blue-50 px-2 py-0.5 rounded-full">
+                    {item.tag}
+                  </span>
+                </div>
                 <h3 className="font-semibold text-gray-900 text-sm mb-1">{item.title}</h3>
-                <p className="text-gray-500 text-xs leading-relaxed">{item.desc}</p>
-              </a>
+                <p className="text-gray-500 text-xs leading-relaxed mb-3">{item.desc}</p>
+                <span className="text-xs font-semibold text-green-700 bg-green-50 px-2 py-0.5 rounded-full">
+                  {item.result}
+                </span>
+              </div>
             ))}
           </div>
         </FadeIn>

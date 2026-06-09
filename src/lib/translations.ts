@@ -7,6 +7,7 @@ export const translations = {
       publications: "Publications",
       blog: "Blog",
       contact: "Services",
+      showcase: "Showcase",
     },
     footer: {
       quickLinks: "Quick Links",
@@ -15,6 +16,7 @@ export const translations = {
       home: "Home",
       publications: "Publications",
       blog: "Blog",
+      showcase: "Showcase",
       email: "Email:",
       linkedIn: "LinkedIn",
       googleScholar: "Google Scholar",
@@ -29,6 +31,7 @@ export const translations = {
       publications: "Publications",
       blog: "Blog",
       contact: "Contact",
+      showcase: "Réalisations",
     },
     footer: {
       quickLinks: "Liens Rapides",
@@ -37,6 +40,7 @@ export const translations = {
       home: "Accueil",
       publications: "Publications",
       blog: "Blog",
+      showcase: "Réalisations",
       email: "Email :",
       linkedIn: "LinkedIn",
       googleScholar: "Google Scholar",

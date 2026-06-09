@@ -24,6 +24,7 @@ export default function Footer() {
             <Link href="/" className="block text-gray-300 hover:text-white transition-colors">{t.footer.home}</Link>
             <Link href="/publications" className="block text-gray-300 hover:text-white transition-colors">{t.footer.publications}</Link>
             <Link href="/blog" className="block text-gray-300 hover:text-white transition-colors">{t.footer.blog}</Link>
+            <Link href="/showcase" className="block text-gray-300 hover:text-white transition-colors">{t.footer.showcase}</Link>
             <Link href="/contact" className="block text-gray-300 hover:text-white transition-colors">{t.nav?.contact ?? "Contact"}</Link>
           </div>
         </div>
