@@ -3,6 +3,7 @@
 import FadeIn from "@/components/FadeIn";
 import { useLanguage } from "@/components/LanguageProvider";
 import Link from "next/link";
+import { useForm, ValidationError } from "@formspree/react";
 
 const listings = [
   {
@@ -106,6 +107,81 @@ const listings = [
     image: null,
   },
 ];
+
+function LeadForm({ isFr }: { isFr: boolean }) {
+  const [state, handleSubmit] = useForm("REPLACE_WITH_YOUR_FORM_ID");
+
+  if (state.succeeded) {
+    return (
+      <div className="text-center py-8">
+        <div className="text-5xl mb-4">🎉</div>
+        <h3 className="text-2xl font-bold text-gray-900 mb-2">
+          {isFr ? "Merci !" : "You're all set!"}
+        </h3>
+        <p className="text-gray-600 text-sm">
+          {isFr
+            ? "Nous vous contacterons sous peu avec votre premier package d'annonces."
+            : "We'll be in touch shortly with your first listing package."}
+        </p>
+      </div>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-4" noValidate>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label htmlFor="name" className="block text-xs font-semibold text-gray-400 uppercase mb-1">
+            {isFr ? "Nom" : "Name"}
+          </label>
+          <input id="name" type="text" name="name" required maxLength={100}
+            placeholder={isFr ? "Votre nom" : "Your name"}
+            className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-white text-sm focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition placeholder:text-gray-400" />
+          <ValidationError prefix="Name" field="name" errors={state.errors} />
+        </div>
+        <div>
+          <label htmlFor="email" className="block text-xs font-semibold text-gray-400 uppercase mb-1">Email</label>
+          <input id="email" type="email" name="email" required maxLength={150}
+            placeholder="your@email.com"
+            className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-white text-sm focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition placeholder:text-gray-400" />
+          <ValidationError prefix="Email" field="email" errors={state.errors} />
+        </div>
+      </div>
+      <div>
+        <label htmlFor="brokerage" className="block text-xs font-semibold text-gray-400 uppercase mb-1">
+          {isFr ? "Agence" : "Brokerage"}
+        </label>
+        <input id="brokerage" type="text" name="brokerage" required maxLength={100}
+          placeholder={isFr ? "Nom de votre agence" : "Your brokerage name"}
+          className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-white text-sm focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition placeholder:text-gray-400" />
+        <ValidationError prefix="Brokerage" field="brokerage" errors={state.errors} />
+      </div>
+      <div>
+        <label htmlFor="address" className="block text-xs font-semibold text-gray-400 uppercase mb-1">
+          {isFr ? "Adresse de la propriété" : "Listing Address"}
+        </label>
+        <textarea id="address" name="address" required rows={2} maxLength={300}
+          placeholder={isFr ? "Adresse de la propriété à générer" : "Property address you'd like generated"}
+          className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-white text-sm focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition resize-none placeholder:text-gray-400" />
+        <ValidationError prefix="Address" field="address" errors={state.errors} />
+      </div>
+      <p className="text-sm text-gray-300 font-semibold text-center">
+        {isFr
+          ? "Nous générerons votre premier package d'annonces gratuitement."
+          : "We'll generate your first listing package for free."}
+      </p>
+      <button type="submit" disabled={state.submitting}
+        className="w-full py-3 bg-white hover:bg-gray-100 disabled:bg-gray-400 text-gray-900 font-bold rounded-lg text-sm transition-colors flex items-center justify-center gap-2">
+        {state.submitting ? (
+          <>
+            <span className="w-4 h-4 border-2 border-gray-400 border-t-gray-900 rounded-full animate-spin" />
+            {isFr ? "Envoi en cours..." : "Sending..."}
+          </>
+        ) : (isFr ? "Obtenir mon package gratuit" : "Get My Free Package")}
+      </button>
+    </form>
+  );
+}
 
 export default function RealEstateShowcase() {
   const { lang } = useLanguage();
@@ -226,23 +302,26 @@ export default function RealEstateShowcase() {
         </section>
       </div>
 
-      {/* CTA */}
-      <section className="relative w-full max-w-6xl mt-8 rounded-2xl shadow-lg px-6 py-10 md:mt-10 md:rounded-3xl md:px-16 md:py-14 bg-gray-800 text-white text-center">
+      {/* Lead Capture */}
+      <section className="w-full max-w-6xl mt-8 md:mt-10">
         <FadeIn>
-          <h2 className="text-2xl font-bold mb-3">
-            {isFr ? "Intéressé par l'IA Immobilière ?" : "Interested in AI for Real Estate?"}
-          </h2>
-          <p className="text-white/80 text-sm md:text-base max-w-2xl mx-auto mb-6">
-            {isFr
-              ? "Je peux vous aider à générer des annonces professionnelles pour vos propriétés grâce à l'IA. Contactez-moi pour une démonstration."
-              : "I can help you generate professional listings for your properties using AI. Reach out for a demo."}
-          </p>
-          <Link
-            href="/contact"
-            className="inline-block px-8 py-3 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors text-sm"
-          >
-            {isFr ? "Me Contacter" : "Get in Touch"}
-          </Link>
+          <div className="bg-gray-800 rounded-2xl shadow-lg overflow-hidden">
+            <div className="grid md:grid-cols-5 gap-0">
+              <div className="md:col-span-2 p-8 md:p-10 text-white flex flex-col justify-center bg-gray-900">
+                <h2 className="text-xl font-bold mb-3">
+                  {isFr ? "Générez votre première annonce" : "Get Your First Listing"}
+                </h2>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  {isFr
+                    ? "Laissez-nous générer un package d'annonces professionnel pour votre propriété — sans frais, sans engagement."
+                    : "Let us generate a professional listing package for your property — free, no strings attached."}
+                </p>
+              </div>
+              <div className="md:col-span-3 p-8 md:p-10 bg-gray-800">
+                <LeadForm isFr={isFr} />
+              </div>
+            </div>
+          </div>
         </FadeIn>
       </section>
     </main>
