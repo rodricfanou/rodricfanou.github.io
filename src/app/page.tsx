@@ -86,58 +86,57 @@ Today, my interests span Internet architecture, computer networks, AI, automatio
 
         <FadeIn delay={100}>
           <div>
-            <h2 className="text-2xl font-bold mb-2 text-gray-900 md:text-3xl md:text-4xl">Work With Me</h2>
-            <p className="text-gray-600 text-base md:text-lg mb-8 max-w-3xl">
-              Helping organizations leverage AI, data, and Internet-scale systems to improve performance, decision-making, and innovation.
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-200 border border-gray-100 flex flex-col">
-                <h3 className="font-bold text-gray-900 text-base mb-2">AI Strategy &amp; Adoption</h3>
-                <p className="text-gray-500 text-sm leading-relaxed mb-4">
-                  Identify practical opportunities to use AI, improve productivity, and build an actionable roadmap for implementation.
-                </p>
-                <div className="mt-auto">
-                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-1">Ideal for:</p>
-                  <p className="text-xs text-gray-600 mb-3">Business leaders &bull; Technology teams &bull; Growing organizations</p>
-                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-1">Outcome:</p>
-                  <p className="text-xs text-green-700 font-medium">Clear AI strategy with measurable business value.</p>
+            <h2 className="text-2xl font-bold mb-6 text-gray-900 md:text-3xl md:text-4xl">Work With Me</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-shadow duration-200">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-xl">🤖</span>
+                  <h3 className="font-semibold text-gray-900 text-sm">AI Consulting</h3>
                 </div>
+                <p className="text-gray-500 text-xs leading-relaxed mb-2">Helping organizations adopt AI strategically.</p>
+                <ul className="flex flex-wrap gap-1">
+                  <li className="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-[11px] font-medium">AI Readiness</li>
+                  <li className="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-[11px] font-medium">AI Strategy</li>
+                  <li className="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-[11px] font-medium">AI Adoption</li>
+                </ul>
               </div>
-              <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-200 border border-gray-100 flex flex-col">
-                <h3 className="font-bold text-gray-900 text-base mb-2">AI Workshops &amp; Executive Briefings</h3>
-                <p className="text-gray-500 text-sm leading-relaxed mb-4">
-                  Interactive sessions that help teams understand AI, automation, and emerging technologies without the hype.
-                </p>
-                <div className="mt-auto">
-                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-1">Ideal for:</p>
-                  <p className="text-xs text-gray-600 mb-3">Leadership teams &bull; Professional organizations &bull; Conferences &bull; Associations</p>
-                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-1">Outcome:</p>
-                  <p className="text-xs text-green-700 font-medium">Greater AI literacy, alignment, and confidence.</p>
+              <div className="bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-shadow duration-200">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-xl">🎙️</span>
+                  <h3 className="font-semibold text-gray-900 text-sm">Speaking</h3>
                 </div>
+                <p className="text-gray-500 text-xs leading-relaxed mb-2">Keynotes, workshops, and conferences.</p>
+                <ul className="flex flex-wrap gap-1">
+                  <li className="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-[11px] font-medium">AI</li>
+                  <li className="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-[11px] font-medium">Internet Infrastructure</li>
+                  <li className="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-[11px] font-medium">Future of Work</li>
+                  <li className="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-[11px] font-medium">Digital Transformation</li>
+                </ul>
               </div>
-              <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-200 border border-gray-100 flex flex-col">
-                <h3 className="font-bold text-gray-900 text-base mb-2">Technical Advisory</h3>
-                <p className="text-gray-500 text-sm leading-relaxed mb-4">
-                  Guidance on networking, observability, Internet infrastructure, measurement systems, and large-scale data platforms.
-                </p>
-                <div className="mt-auto">
-                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-1">Ideal for:</p>
-                  <p className="text-xs text-gray-600 mb-3">Technology companies &bull; Research organizations &bull; Infrastructure teams</p>
-                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-1">Outcome:</p>
-                  <p className="text-xs text-green-700 font-medium">Better visibility, reliability, and system performance.</p>
+              <div className="bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-shadow duration-200">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-xl">⚙️</span>
+                  <h3 className="font-semibold text-gray-900 text-sm">Technical Advisory</h3>
                 </div>
+                <p className="text-gray-500 text-xs leading-relaxed mb-2">Networking, Internet infrastructure, observability, and data systems.</p>
+                <ul className="flex flex-wrap gap-1">
+                  <li className="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-[11px] font-medium">Network Monitoring</li>
+                  <li className="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-[11px] font-medium">Internet Measurement</li>
+                  <li className="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-[11px] font-medium">Data Systems</li>
+                  <li className="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-[11px] font-medium">Observability</li>
+                </ul>
               </div>
-              <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-200 border border-gray-100 flex flex-col">
-                <h3 className="font-bold text-gray-900 text-base mb-2">Speaking &amp; Thought Leadership</h3>
-                <p className="text-gray-500 text-sm leading-relaxed mb-4">
-                  Keynotes, workshops, and presentations on AI, digital infrastructure, the future of technology, and data-driven decision-making.
-                </p>
-                <div className="mt-auto">
-                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-1">Ideal for:</p>
-                  <p className="text-xs text-gray-600 mb-3">Conferences &bull; Universities &bull; Industry events &bull; Executive retreats</p>
-                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-1">Outcome:</p>
-                  <p className="text-xs text-green-700 font-medium">Engaging, actionable insights tailored to your audience.</p>
+              <div className="bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-shadow duration-200">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-xl">📚</span>
+                  <h3 className="font-semibold text-gray-900 text-sm">Training</h3>
                 </div>
+                <p className="text-gray-500 text-xs leading-relaxed mb-2">AI and technology workshops for teams.</p>
+                <ul className="flex flex-wrap gap-1">
+                  <li className="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-[11px] font-medium">AI Training</li>
+                  <li className="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-[11px] font-medium">Team Workshops</li>
+                  <li className="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-[11px] font-medium">AI Productivity Training</li>
+                </ul>
               </div>
             </div>
           </div>
