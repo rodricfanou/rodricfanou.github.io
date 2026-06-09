@@ -144,6 +144,27 @@ Today, my interests span Internet architecture, computer networks, AI, automatio
         </FadeIn>
 
         <FadeIn delay={200}>
+          <div>
+            <h2 className="text-2xl font-bold mb-4 text-gray-900 md:text-3xl md:text-4xl">Common Reasons People Reach Out</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2">
+              {[
+                "Exploring AI adoption",
+                "Looking for an AI keynote speaker",
+                "Planning an AI workshop",
+                "Improving team productivity",
+                "Evaluating automation opportunities",
+                "Seeking technical expertise in networking and Internet infrastructure",
+              ].map((reason) => (
+                <div key={reason} className="flex items-center gap-3 text-gray-700 text-base md:text-lg">
+                  <span className="text-green-600 text-lg shrink-0">✔</span>
+                  <span>{reason}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </FadeIn>
+
+        <FadeIn delay={300}>
           <div className="text-center">
             <h2 className="text-2xl font-bold mb-3 text-gray-900 md:text-3xl">Contact Me</h2>
             <p className="text-gray-700 text-base md:text-lg">
