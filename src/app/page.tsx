@@ -41,7 +41,7 @@ export default function Home() {
                 Building at the Intersection of AI, Networks, and Digital Infrastructure
               </p>
               <p className="text-sm text-white/80 drop-shadow-sm mt-2 max-w-xl md:text-base">
-                Internet Scientist, Senior Systems Engineer, and Technology Strategist helping organizations understand, measure, and optimize complex systems through AI, data, and Internet-scale infrastructure.
+                Internet Scientist, Sr. Software Engineer, and Technology Strategist helping organizations understand, measure, and optimize complex systems through AI, data, and Internet-scale infrastructure.
               </p>
               <div className="flex flex-wrap gap-3 justify-center md:justify-start mt-6">
                 <Link
