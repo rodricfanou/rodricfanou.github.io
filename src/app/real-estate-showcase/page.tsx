@@ -222,11 +222,6 @@ export default function RealEstateShowcase() {
                   ? "Transformez une Propriété en un Package Marketing Complet en Minutes"
                   : "Turn One Property Into a Complete Marketing Package in Minutes"}
               </h1>
-              <p className="text-base text-white/90 drop-shadow-sm md:text-lg md:text-xl max-w-4xl mx-auto">
-                {isFr
-                  ? "Découvrez six exemples concrets montrant comment les détails d'une propriété peuvent être transformés en descriptions MLS professionnelles, contenus pour réseaux sociaux, remarques d'agent et actifs marketing en quelques minutes."
-                  : "Explore six real-world examples showcasing how property details can be transformed into professional MLS descriptions, social media content, agent remarks, and marketing assets in minutes."}
-              </p>
               <p className="text-sm text-white/70 mt-3 max-w-2xl mx-auto">
                 {isFr
                   ? "Conçu pour les agents, équipes et courtiers occupés qui souhaitent gagner du temps, commercialiser les annonces plus rapidement et maintenir un marketing professionnel et cohérent pour chaque propriété."
