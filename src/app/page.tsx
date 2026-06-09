@@ -74,13 +74,12 @@ export default function Home() {
         <FadeIn>
           <div>
             <h2 className="text-2xl font-bold mb-4 text-gray-900 md:text-3xl md:text-4xl">About Me</h2>
-            <p data-justify className="text-gray-700 text-base md:text-lg leading-relaxed">
-              I am passionate about the Internet architecture, computer networks, and AI. With a background as an Internet Scientist specialized in Network Measurements, monitoring, big data analysis, and real-time storage, I transitioned to the tech industry as a Systems engineer a few years back. 
+            <p data-justify className="text-gray-700 text-base md:text-lg leading-relaxed whitespace-pre-line">
+              {`I am passionate about the Internet, artificial intelligence, and the systems that power our digital world. With a background as an Internet Scientist specializing in network measurement, monitoring, large-scale data analysis, and real-time systems, I have spent my career exploring how complex networks operate, evolve, and impact society.
 
-              I have developed extensive experience and a robust technical foundation in designing and implementing systems focused on network monitoring and Internet traffic management. 
-              
-              I enjoy contributing to innovative projects, exploring new technologies, measuring the Internet, and sharing knowledge through code, blog posts, tutorials, and scientific papers.
+Over the years, I transitioned from research into the technology industry, where I have built and operated systems focused on network observability, Internet traffic management, and large-scale infrastructure. This unique combination of research and industry experience allows me to bridge deep technical expertise with practical business outcomes.
 
+Today, my interests span Internet architecture, computer networks, AI, automation, data-driven decision making, and the future of digital infrastructure. I enjoy building innovative solutions, exploring emerging technologies, sharing knowledge through writing, speaking, code, tutorials, and scientific publications, and helping organizations navigate an increasingly connected and AI-driven world.`}
             </p>
           </div>
         </FadeIn>
