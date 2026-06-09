@@ -46,8 +46,8 @@ function LeadForm({ isFr }: { isFr: boolean }) {
         </h3>
         <p className="text-gray-300 text-sm">
           {isFr
-            ? "Nous vous contacterons sous peu avec votre premier package d'annonces."
-            : "We'll be in touch shortly with your first listing package."}
+            ? "Nous vous contacterons sous peu avec votre package d'annonces."
+            : "We'll be in touch shortly with your listing package."}
         </p>
       </div>
     );
@@ -172,8 +172,8 @@ function LeadForm({ isFr }: { isFr: boolean }) {
 
       <p className="text-sm text-gray-300 font-semibold text-center">
         {isFr
-          ? "Nous générerons votre premier package d'annonces gratuitement."
-          : "We'll generate your first listing package for free."}
+          ? "Un apport. Plusieurs sorties. Gratuit."
+          : "One input. Multiple outputs. Free."}
       </p>
 
       <button type="submit" disabled={submitting}
@@ -218,17 +218,17 @@ export default function RealEstateShowcase() {
           <FadeIn>
             <div className="text-center text-white">
               <h1 className="text-3xl font-extrabold mb-3 drop-shadow-lg md:text-5xl">
-                {isFr ? "Annonces Immobilières Générées par IA" : "AI-Generated Real Estate Listings"}
+                {isFr ? "Un Apport → Plusieurs Sorties" : "One Input → Multiple Outputs"}
               </h1>
               <p className="text-base text-white/90 drop-shadow-sm md:text-lg md:text-xl max-w-3xl mx-auto">
                 {isFr
-                  ? "6 annonces immobilières professionnelles générées avec l'IA. Regardez la vidéo pour voir comment elles ont été créées."
-                  : "6 professional real estate listings generated with AI. Watch the demo video to see how they were created."}
+                  ? "Remplissez une seule fois. Obtenez MLS, réseaux sociaux, emails, flyers et plus — générés par IA."
+                  : "Fill in once. Get MLS, social posts, emails, flyers, and more — all AI-generated from a single input."}
               </p>
               <p className="text-sm text-white/70 mt-3 max-w-2xl mx-auto">
                 {isFr
-                  ? "Parfait pour les agents, équipes et courtiers occupés qui souhaitent créer plus rapidement du contenu marketing professionnel pour leurs annonces."
-                  : "Perfect for busy agents, teams, and brokerages looking to create professional listing marketing content faster."}
+                  ? "Pas juste de l'écriture IA. De l'automatisation de flux de travail. Parfait pour les agents, équipes et courtiers occupés."
+                  : "Not just AI writing. Workflow automation. Perfect for busy agents, teams, and brokerages."}
               </p>
             </div>
           </FadeIn>
@@ -254,13 +254,31 @@ export default function RealEstateShowcase() {
                   />
                 </div>
                 <h2 className="text-xl font-bold mb-3">
-                  {isFr ? "Générez vos annonces IA" : "Generate Your AI Listing Package"}
+                  {isFr ? "Un Apport → Plusieurs Sorties" : "One Input → Multiple Outputs"}
                 </h2>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  {isFr
-                    ? "Remplissez les détails ci-dessous et nous générerons gratuitement un package complet : MLS, Zillow, Instagram, Facebook, Email, Flyer, Tagline et Text Blast."
-                    : "Fill in the details below and we'll generate a full package for free: MLS, Zillow, Instagram, Facebook, Email, Flyer, Tagline, and Text Blast."}
-                </p>
+                <div className="text-xs text-gray-300 space-y-1 mb-4 font-mono">
+                  <div className="bg-gray-800 rounded px-3 py-2 text-center text-gray-200 text-sm font-semibold">
+                    {isFr ? "Détails de la Propriété" : "Property Details"}
+                  </div>
+                  <div className="text-center text-gray-500 text-lg">↓</div>
+                  <div className="bg-gray-800 rounded px-3 py-2 text-center text-gray-200 text-sm font-semibold border border-gray-600">
+                    Real Estate Listing Pro
+                  </div>
+                  <div className="text-center text-gray-500 text-lg">↓</div>
+                  <div className="flex flex-wrap justify-center gap-1.5">
+                    {[
+                      { en: "MLS Description", fr: "Description MLS" },
+                      { en: "Instagram Post", fr: "Publication Instagram" },
+                      { en: "Facebook Post", fr: "Publication Facebook" },
+                      { en: "Agent Remarks", fr: "Remarques Agent" },
+                      { en: "Property Highlights", fr: "Points Forts" },
+                    ].map((item) => (
+                      <span key={item.en} className="bg-green-900/50 text-green-300 px-2 py-1 rounded text-[10px] font-medium">
+                        {isFr ? item.fr : item.en}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
               {/* Right: Form */}
               <div className="md:col-span-3 p-8 md:p-10 bg-gray-800">
@@ -317,8 +335,8 @@ export default function RealEstateShowcase() {
                   </div>
                   <div className="mt-3 pt-2 border-t border-gray-100 text-[10px] text-gray-500 text-center">
                     {isFr
-                      ? "1 annonce → 7 actifs marketing."
-                      : "1 listing → 7 marketing assets. That's value."}
+                      ? "1 apport → 7+ sorties"
+                      : "1 Input → 7+ Outputs"}
                   </div>
                 </div>
               </div>
