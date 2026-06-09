@@ -244,6 +244,25 @@ export default function RealEstateShowcase() {
             <div className="grid md:grid-cols-5 gap-0">
               {/* Left: Video + Workflow */}
               <div className="md:col-span-2 p-8 md:p-10 text-white flex flex-col justify-center bg-gray-900">
+                <div className="mb-4">
+                  <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">
+                    {isFr ? "Pourquoi les agents utilisent Real Estate Listing Pro" : "Why Realtors Use Real Estate Listing Pro"}
+                  </h3>
+                  <ul className="space-y-0.5">
+                    {[
+                      { en: "Save hours on every listing", fr: "Gagnez des heures sur chaque annonce" },
+                      { en: "Generate professional marketing content in minutes", fr: "Générez du contenu marketing professionnel en minutes" },
+                      { en: "Maintain consistent quality across every property", fr: "Maintenez une qualité cohérente pour chaque propriété" },
+                      { en: "Create social media content faster", fr: "Créez du contenu pour les réseaux sociaux plus rapidement" },
+                      { en: "Spend more time selling and less time writing", fr: "Passez plus de temps à vendre et moins à écrire" },
+                    ].map((item) => (
+                      <li key={item.en} className="flex items-start gap-1.5 text-xs text-gray-300">
+                        <span className="text-green-400 shrink-0">✔</span>
+                        {isFr ? item.fr : item.en}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
                 <div className="aspect-video w-full rounded-xl overflow-hidden shadow-md bg-gray-700 mb-6">
                   <iframe
                     width="100%"
