@@ -218,17 +218,19 @@ export default function RealEstateShowcase() {
           <FadeIn>
             <div className="text-center text-white">
               <h1 className="text-3xl font-extrabold mb-3 drop-shadow-lg md:text-5xl">
-                {isFr ? "Un Apport → Plusieurs Sorties" : "One Input → Multiple Outputs"}
-              </h1>
-              <p className="text-base text-white/90 drop-shadow-sm md:text-lg md:text-xl max-w-3xl mx-auto">
                 {isFr
-                  ? "Remplissez une seule fois. Obtenez MLS, réseaux sociaux, emails, flyers et plus — générés par IA."
-                  : "Fill in once. Get MLS, social posts, emails, flyers, and more — all AI-generated from a single input."}
+                  ? "Transformez une Propriété en un Package Marketing Complet en Minutes"
+                  : "Turn One Property Into a Complete Marketing Package in Minutes"}
+              </h1>
+              <p className="text-base text-white/90 drop-shadow-sm md:text-lg md:text-xl max-w-4xl mx-auto">
+                {isFr
+                  ? "Découvrez six exemples concrets montrant comment les détails d'une propriété peuvent être transformés en descriptions MLS professionnelles, contenus pour réseaux sociaux, remarques d'agent et actifs marketing en quelques minutes."
+                  : "Explore six real-world examples showcasing how property details can be transformed into professional MLS descriptions, social media content, agent remarks, and marketing assets in minutes."}
               </p>
               <p className="text-sm text-white/70 mt-3 max-w-2xl mx-auto">
                 {isFr
-                  ? "Pas juste de l'écriture IA. De l'automatisation de flux de travail. Parfait pour les agents, équipes et courtiers occupés."
-                  : "Not just AI writing. Workflow automation. Perfect for busy agents, teams, and brokerages."}
+                  ? "Conçu pour les agents, équipes et courtiers occupés qui souhaitent gagner du temps, commercialiser les annonces plus rapidement et maintenir un marketing professionnel et cohérent pour chaque propriété."
+                  : "Built for busy Realtors, teams, and brokerages looking to save time, market listings faster, and maintain consistent, professional marketing across every property."}
               </p>
             </div>
           </FadeIn>
