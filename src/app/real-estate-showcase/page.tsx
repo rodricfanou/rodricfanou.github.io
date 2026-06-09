@@ -266,13 +266,16 @@ export default function RealEstateShowcase() {
                 </p>
 
                 <div className="space-y-0">
+                  <p className="text-[10px] font-semibold text-gray-500 uppercase tracking-wide mb-2 text-center">
+                    {isFr ? "Flux de Travail" : "Workflow"}
+                  </p>
                   {/* Input box */}
                   <div className="bg-gray-800 border border-dashed border-gray-600 rounded-lg px-4 py-3 text-center">
                     <p className="text-xs font-semibold text-gray-300 uppercase tracking-wide">
                       {isFr ? "Détails de la Propriété" : "Property Details"}
                     </p>
                     <p className="text-[10px] text-gray-500 mt-0.5">
-                      adresse, prix, chambres, caractéristiques…
+                      {isFr ? "adresse, prix, chambres, caractéristiques…" : "address, price, beds, features…"}
                     </p>
                   </div>
 
