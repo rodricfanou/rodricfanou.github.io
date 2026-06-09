@@ -55,48 +55,128 @@ function LeadForm({ isFr }: { isFr: boolean }) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4" noValidate>
+    <form onSubmit={handleSubmit} className="space-y-5" noValidate>
       <input type="text" name="_gotcha" style={{ display: "none" }} />
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div>
-          <label htmlFor="name" className="block text-xs font-semibold text-gray-400 uppercase mb-1">
-            {isFr ? "Nom" : "Name"}
-          </label>
-          <input id="name" type="text" name="name" required maxLength={100}
-            placeholder={isFr ? "Votre nom" : "Your name"}
-            className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-white text-sm focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition placeholder:text-gray-400" />
-        </div>
-        <div>
-          <label htmlFor="email" className="block text-xs font-semibold text-gray-400 uppercase mb-1">Email</label>
-          <input id="email" type="email" name="email" required maxLength={150}
-            placeholder="your@email.com"
-            className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-white text-sm focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition placeholder:text-gray-400" />
-        </div>
-      </div>
+
+      {/* Agent Info */}
       <div>
-        <label htmlFor="brokerage" className="block text-xs font-semibold text-gray-400 uppercase mb-1">
-          {isFr ? "Agence" : "Brokerage"}
-        </label>
-        <input id="brokerage" type="text" name="brokerage" required maxLength={100}
-          placeholder={isFr ? "Nom de votre agence" : "Your brokerage name"}
-          className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-white text-sm focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition placeholder:text-gray-400" />
+        <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">Your Information</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <input type="text" name="agent_name" required maxLength={100} placeholder="Your name"
+            className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-white text-sm focus:outline-none focus:ring-2 focus:ring-white transition placeholder:text-gray-400" />
+          <input type="email" name="agent_email" required maxLength={150} placeholder="Your email"
+            className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-white text-sm focus:outline-none focus:ring-2 focus:ring-white transition placeholder:text-gray-400" />
+        </div>
+        <input type="text" name="agent_phone" maxLength={30} placeholder="Phone (optional)"
+          className="mt-3 w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-white text-sm focus:outline-none focus:ring-2 focus:ring-white transition placeholder:text-gray-400" />
       </div>
+
+      {/* Section 1 — Property Basics */}
       <div>
-        <label htmlFor="address" className="block text-xs font-semibold text-gray-400 uppercase mb-1">
-          {isFr ? "Adresse de la propriété" : "Listing Address"}
-        </label>
-        <textarea id="address" name="address" required rows={2} maxLength={300}
-          placeholder={isFr ? "Adresse de la propriété à générer" : "Property address you'd like generated"}
-          className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-white text-sm focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition resize-none placeholder:text-gray-400" />
+        <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">Property Basics</p>
+        <div className="space-y-3">
+          <input type="text" name="property_address" required maxLength={200} placeholder="Property address"
+            className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-white text-sm focus:outline-none focus:ring-2 focus:ring-white transition placeholder:text-gray-400" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <select name="property_type" required
+              className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-white text-sm focus:outline-none focus:ring-2 focus:ring-white transition">
+              <option value="">Property type</option>
+              <option value="single-family">Single-family</option>
+              <option value="condo">Condo</option>
+              <option value="townhome">Townhome</option>
+              <option value="acreage">Acreage / Land</option>
+              <option value="luxury-estate">Luxury Estate</option>
+              <option value="multi-family">Multi-family</option>
+              <option value="commercial">Commercial</option>
+              <option value="other">Other</option>
+            </select>
+            <select name="transaction_type" required
+              className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-white text-sm focus:outline-none focus:ring-2 focus:ring-white transition">
+              <option value="">Sale / Rent / New Construction</option>
+              <option value="sale">For Sale</option>
+              <option value="rent">For Rent</option>
+              <option value="new-construction">New Construction</option>
+            </select>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <input type="text" name="price" required maxLength={30} placeholder="Price"
+              className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-white text-sm focus:outline-none focus:ring-2 focus:ring-white transition placeholder:text-gray-400" />
+            <input type="number" name="beds" required min={0} max={99} placeholder="Beds"
+              className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-white text-sm focus:outline-none focus:ring-2 focus:ring-white transition placeholder:text-gray-400" />
+            <input type="number" name="baths" required min={0} max={99} step="0.5" placeholder="Baths"
+              className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-white text-sm focus:outline-none focus:ring-2 focus:ring-white transition placeholder:text-gray-400" />
+            <input type="number" name="sqft" required min={0} placeholder="Sq Ft"
+              className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-white text-sm focus:outline-none focus:ring-2 focus:ring-white transition placeholder:text-gray-400" />
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <input type="text" name="year_built" maxLength={4} placeholder="Year built (optional)"
+              className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-white text-sm focus:outline-none focus:ring-2 focus:ring-white transition placeholder:text-gray-400" />
+            <input type="text" name="lot_size" maxLength={50} placeholder="Lot size (optional)"
+              className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-white text-sm focus:outline-none focus:ring-2 focus:ring-white transition placeholder:text-gray-400" />
+            <input type="text" name="garage" maxLength={100} placeholder="Garage details (optional)"
+              className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-white text-sm focus:outline-none focus:ring-2 focus:ring-white transition placeholder:text-gray-400" />
+          </div>
+        </div>
       </div>
+
+      {/* Section 2 — Distinguishing Details */}
+      <div>
+        <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">What Makes It Special</p>
+        <div className="space-y-3">
+          <textarea name="top_features" required rows={3} maxLength={1000}
+            placeholder="Top 3–5 standout features (what makes this property different)"
+            className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-white text-sm focus:outline-none focus:ring-2 focus:ring-white transition resize-none placeholder:text-gray-400" />
+          <textarea name="updates" rows={2} maxLength={1000}
+            placeholder="Major updates with years (roof, HVAC, kitchen remodel, etc. — optional)"
+            className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-white text-sm focus:outline-none focus:ring-2 focus:ring-white transition resize-none placeholder:text-gray-400" />
+          <textarea name="outdoor_highlights" rows={2} maxLength={1000}
+            placeholder="Lot / outdoor highlights (pool, views, waterfront, patio, acreage, etc. — optional)"
+            className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-white text-sm focus:outline-none focus:ring-2 focus:ring-white transition resize-none placeholder:text-gray-400" />
+        </div>
+      </div>
+
+      {/* Section 3 — Location */}
+      <div>
+        <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">Location</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <input type="text" name="neighborhood" maxLength={200} placeholder="Neighborhood / subdivision (optional)"
+            className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-white text-sm focus:outline-none focus:ring-2 focus:ring-white transition placeholder:text-gray-400" />
+          <input type="text" name="school_district" maxLength={200} placeholder="School district (optional)"
+            className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-white text-sm focus:outline-none focus:ring-2 focus:ring-white transition placeholder:text-gray-400" />
+        </div>
+      </div>
+
+      {/* Section 4 — The Story */}
+      <div>
+        <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">The Story &amp; Tone</p>
+        <div className="space-y-3">
+          <textarea name="compelling_feature" rows={2} maxLength={500}
+            placeholder="The single most compelling feature of this property (optional)"
+            className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-white text-sm focus:outline-none focus:ring-2 focus:ring-white transition resize-none placeholder:text-gray-400" />
+          <textarea name="seller_story" rows={3} maxLength={1500}
+            placeholder="Seller story or emotional hook — why is this home special to them? (optional)"
+            className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-white text-sm focus:outline-none focus:ring-2 focus:ring-white transition resize-none placeholder:text-gray-400" />
+          <select name="tone" required
+            className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-white text-sm focus:outline-none focus:ring-2 focus:ring-white transition">
+            <option value="">Desired tone</option>
+            <option value="warm-lifestyle">Warm &amp; Lifestyle</option>
+            <option value="luxury-elevated">Luxury &amp; Elevated</option>
+            <option value="modern-architectural">Modern &amp; Architectural</option>
+            <option value="investment-focused">Investment-Focused</option>
+          </select>
+        </div>
+      </div>
+
       {error && (
         <p className="text-red-400 text-xs text-center">{error}</p>
       )}
+
       <p className="text-sm text-gray-300 font-semibold text-center">
         {isFr
           ? "Nous générerons votre premier package d'annonces gratuitement."
           : "We'll generate your first listing package for free."}
       </p>
+
       <button type="submit" disabled={submitting}
         className="w-full py-3 bg-white hover:bg-gray-100 disabled:bg-gray-400 text-gray-900 font-bold rounded-lg text-sm transition-colors flex items-center justify-center gap-2">
         {submitting ? (
@@ -110,61 +190,18 @@ function LeadForm({ isFr }: { isFr: boolean }) {
   );
 }
 
-  return (
-    <form onSubmit={handleSubmit} className="space-y-4" noValidate>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div>
-          <label htmlFor="name" className="block text-xs font-semibold text-gray-400 uppercase mb-1">
-            {isFr ? "Nom" : "Name"}
-          </label>
-          <input id="name" type="text" name="name" required maxLength={100}
-            placeholder={isFr ? "Votre nom" : "Your name"}
-            className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-white text-sm focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition placeholder:text-gray-400" />
-          <ValidationError prefix="Name" field="name" errors={state.errors} />
-        </div>
-        <div>
-          <label htmlFor="email" className="block text-xs font-semibold text-gray-400 uppercase mb-1">Email</label>
-          <input id="email" type="email" name="email" required maxLength={150}
-            placeholder="your@email.com"
-            className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-white text-sm focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition placeholder:text-gray-400" />
-          <ValidationError prefix="Email" field="email" errors={state.errors} />
-        </div>
-      </div>
-      <div>
-        <label htmlFor="brokerage" className="block text-xs font-semibold text-gray-400 uppercase mb-1">
-          {isFr ? "Agence" : "Brokerage"}
-        </label>
-        <input id="brokerage" type="text" name="brokerage" required maxLength={100}
-          placeholder={isFr ? "Nom de votre agence" : "Your brokerage name"}
-          className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-white text-sm focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition placeholder:text-gray-400" />
-        <ValidationError prefix="Brokerage" field="brokerage" errors={state.errors} />
-      </div>
-      <div>
-        <label htmlFor="address" className="block text-xs font-semibold text-gray-400 uppercase mb-1">
-          {isFr ? "Adresse de la propriété" : "Listing Address"}
-        </label>
-        <textarea id="address" name="address" required rows={2} maxLength={300}
-          placeholder={isFr ? "Adresse de la propriété à générer" : "Property address you'd like generated"}
-          className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-white text-sm focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition resize-none placeholder:text-gray-400" />
-        <ValidationError prefix="Address" field="address" errors={state.errors} />
-      </div>
-      <p className="text-sm text-gray-300 font-semibold text-center">
-        {isFr
-          ? "Nous générerons votre premier package d'annonces gratuitement."
-          : "We'll generate your first listing package for free."}
-      </p>
-      <button type="submit" disabled={state.submitting}
-        className="w-full py-3 bg-white hover:bg-gray-100 disabled:bg-gray-400 text-gray-900 font-bold rounded-lg text-sm transition-colors flex items-center justify-center gap-2">
-        {state.submitting ? (
-          <>
-            <span className="w-4 h-4 border-2 border-gray-400 border-t-gray-900 rounded-full animate-spin" />
-            {isFr ? "Envoi en cours..." : "Sending..."}
-          </>
-        ) : (isFr ? "Obtenir mon package gratuit" : "Get My Free Package")}
-      </button>
-    </form>
-  );
-}
+const listings = [
+  { address: "742 Evergreen Terrace", type: "Single Family", price: "$849,000", beds: 4, baths: 2, sqft: 2100, desc: "Charming family home with modern updates and a spacious backyard." },
+  { address: "100 Main St #505", type: "Condo", price: "$425,000", beds: 2, baths: 1, sqft: 950, desc: "Bright corner unit with city views and rooftop access." },
+  { address: "15 Maple Drive", type: "Single Family", price: "$1,200,000", beds: 5, baths: 3, sqft: 3200, desc: "Executive home in sought-after school district with gourmet kitchen." },
+  { address: "88 Ocean Ave", type: "Townhouse", price: "$675,000", beds: 3, baths: 2, sqft: 1650, desc: "Steps from the beach with private patio and updated bathrooms." },
+  { address: "200 Park Blvd", type: "Condo", price: "$310,000", beds: 1, baths: 1, sqft: 680, desc: "Affordable starter unit near transit and downtown dining." },
+  { address: "12 Elm Street", type: "Single Family", price: "$950,000", beds: 4, baths: 3, sqft: 2500, desc: "Recently renovated colonial with hardwood floors and finished basement." },
+  { address: "7 Sunset Ridge", type: "Single Family", price: "$1,550,000", beds: 5, baths: 4, sqft: 4100, desc: "Stunning hillside estate with panoramic views and pool." },
+  { address: "42 Oak Lane", type: "Townhouse", price: "$525,000", beds: 3, baths: 2, sqft: 1400, desc: "End-unit townhouse with attached garage and private yard." },
+  { address: "300 River Rd #12", type: "Condo", price: "$375,000", beds: 2, baths: 2, sqft: 1050, desc: "Ground-floor condo with patio overlooking the river." },
+  { address: "9 Highland Ave", type: "Multi-Family", price: "$1,100,000", beds: 6, baths: 4, sqft: 3600, desc: "Turnkey duplex with two separate units and strong rental income." },
+];
 
 export default function RealEstateShowcase() {
   const { lang } = useLanguage();
@@ -292,12 +329,12 @@ export default function RealEstateShowcase() {
             <div className="grid md:grid-cols-5 gap-0">
               <div className="md:col-span-2 p-8 md:p-10 text-white flex flex-col justify-center bg-gray-900">
                 <h2 className="text-xl font-bold mb-3">
-                  {isFr ? "Générez votre première annonce" : "Get Your First Listing"}
+                  {isFr ? "Générez vos annonces IA" : "Generate Your AI Listing Package"}
                 </h2>
                 <p className="text-gray-300 text-sm leading-relaxed">
                   {isFr
-                    ? "Laissez-nous générer un package d'annonces professionnel pour votre propriété — sans frais, sans engagement."
-                    : "Let us generate a professional listing package for your property — free, no strings attached."}
+                    ? "Remplissez les détails ci-dessous et nous générerons gratuitement un package complet : MLS, Zillow, Instagram, Facebook, Email, Flyer, Tagline et Text Blast."
+                    : "Fill in the details below and we'll generate a full package for free: MLS, Zillow, Instagram, Facebook, Email, Flyer, Tagline, and Text Blast."}
                 </p>
               </div>
               <div className="md:col-span-3 p-8 md:p-10 bg-gray-800">
