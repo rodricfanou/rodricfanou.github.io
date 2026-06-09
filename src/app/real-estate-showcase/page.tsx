@@ -242,9 +242,9 @@ export default function RealEstateShowcase() {
         <FadeIn>
           <div className="bg-gray-800 rounded-2xl shadow-lg overflow-hidden">
             <div className="grid md:grid-cols-5 gap-0">
-              {/* Left: Video + description */}
+              {/* Left: Video + Workflow */}
               <div className="md:col-span-2 p-8 md:p-10 text-white flex flex-col justify-center bg-gray-900">
-                <div className="aspect-video w-full rounded-xl overflow-hidden shadow-md bg-gray-700 mb-4">
+                <div className="aspect-video w-full rounded-xl overflow-hidden shadow-md bg-gray-700 mb-6">
                   <iframe
                     width="100%"
                     height="100%"
@@ -255,32 +255,79 @@ export default function RealEstateShowcase() {
                     className="w-full h-full"
                   />
                 </div>
-                <h2 className="text-xl font-bold mb-3">
+
+                <h2 className="text-lg font-bold mb-1">
                   {isFr ? "Un Apport → Plusieurs Sorties" : "One Input → Multiple Outputs"}
                 </h2>
-                <div className="text-xs text-gray-300 space-y-1 mb-4 font-mono">
-                  <div className="bg-gray-800 rounded px-3 py-2 text-center text-gray-200 text-sm font-semibold">
-                    {isFr ? "Détails de la Propriété" : "Property Details"}
+                <p className="text-xs text-gray-400 mb-4">
+                  {isFr
+                    ? "Entrez les détails une seule fois. Obtenez tout ce dont vous avez besoin."
+                    : "Enter details once. Get everything you need."}
+                </p>
+
+                <div className="space-y-0">
+                  {/* Input box */}
+                  <div className="bg-gray-800 border border-dashed border-gray-600 rounded-lg px-4 py-3 text-center">
+                    <p className="text-xs font-semibold text-gray-300 uppercase tracking-wide">
+                      {isFr ? "Détails de la Propriété" : "Property Details"}
+                    </p>
+                    <p className="text-[10px] text-gray-500 mt-0.5">
+                      adresse, prix, chambres, caractéristiques…
+                    </p>
                   </div>
-                  <div className="text-center text-gray-500 text-lg">↓</div>
-                  <div className="bg-gray-800 rounded px-3 py-2 text-center text-gray-200 text-sm font-semibold border border-gray-600">
-                    Real Estate Listing Pro
+
+                  {/* Arrow */}
+                  <div className="flex justify-center py-1.5">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-gray-500">
+                      <path d="M12 5v14m0 0-5-5m5 5 5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
                   </div>
-                  <div className="text-center text-gray-500 text-lg">↓</div>
-                  <div className="flex flex-wrap justify-center gap-1.5">
-                    {[
-                      { en: "MLS Description", fr: "Description MLS" },
-                      { en: "Instagram Post", fr: "Publication Instagram" },
-                      { en: "Facebook Post", fr: "Publication Facebook" },
-                      { en: "Agent Remarks", fr: "Remarques Agent" },
-                      { en: "Property Highlights", fr: "Points Forts" },
-                    ].map((item) => (
-                      <span key={item.en} className="bg-green-900/50 text-green-300 px-2 py-1 rounded text-[10px] font-medium">
-                        {isFr ? item.fr : item.en}
-                      </span>
-                    ))}
+
+                  {/* Processor box */}
+                  <div className="bg-gray-700 border border-gray-500 rounded-lg px-4 py-3 text-center shadow-md">
+                    <div className="flex items-center justify-center gap-2">
+                      <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+                      <p className="text-sm font-bold text-white">Real Estate Listing Pro</p>
+                    </div>
+                    <p className="text-[10px] text-gray-400 mt-0.5">
+                      AI-powered marketing engine
+                    </p>
+                  </div>
+
+                  {/* Arrow */}
+                  <div className="flex justify-center py-1.5">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-gray-500">
+                      <path d="M12 5v14m0 0-5-5m5 5 5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
+
+                  {/* Outputs grid */}
+                  <div className="bg-gray-800/50 rounded-lg p-3">
+                    <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-wide mb-2 text-center">
+                      {isFr ? "Actifs Marketing Générés" : "Marketing Assets Generated"}
+                    </p>
+                    <div className="grid grid-cols-2 gap-1.5">
+                      {[
+                        { en: "MLS Description", fr: "Description MLS" },
+                        { en: "Instagram Post", fr: "Publication Instagram" },
+                        { en: "Facebook Post", fr: "Publication Facebook" },
+                        { en: "Agent Remarks", fr: "Remarques Agent" },
+                        { en: "Property Highlights", fr: "Points Forts" },
+                        { en: "Email Blast", fr: "Campagne Email" },
+                      ].map((item) => (
+                        <div key={item.en} className="bg-green-900/30 border border-green-700/40 rounded px-2 py-1.5 text-center">
+                          <p className="text-[10px] font-medium text-green-300">{isFr ? item.fr : item.en}</p>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
+
+                <p className="text-[10px] text-gray-500 text-center mt-3">
+                  {isFr
+                    ? "1 apport → 6+ actifs. Pas juste de l'écriture IA — de l'automatisation."
+                    : "1 input → 6+ assets. Not just AI writing — workflow automation."}
+                </p>
               </div>
               {/* Right: Form */}
               <div className="md:col-span-3 p-8 md:p-10 bg-gray-800">
