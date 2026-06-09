@@ -193,15 +193,9 @@ const listings = [
   { address: "742 Evergreen Terrace", type: "Single Family", beds: 4, baths: 2, sqft: 2100, features: "Updated kitchen · Large backyard · New roof 2023" },
   { address: "100 Main St #505", type: "Condo", beds: 2, baths: 1, sqft: 950, features: "City views · Rooftop access · In-unit laundry" },
   { address: "15 Maple Drive", type: "Single Family", beds: 5, baths: 3, sqft: 3200, features: "Gourmet kitchen · Finished basement · 3-car garage" },
-  { address: "88 Ocean Ave", type: "Townhouse", beds: 3, baths: 2, sqft: 1650, features: "Steps to beach · Private patio · Updated bathrooms" },
-  { address: "200 Park Blvd", type: "Condo", beds: 1, baths: 1, sqft: 680, features: "Walk to transit · Downtown dining · Gym on-site" },
-  { address: "12 Elm Street", type: "Single Family", beds: 4, baths: 3, sqft: 2500, features: "Hardwood floors · Finished basement · Renovated 2024" },
   { address: "7 Sunset Ridge", type: "Single Family", beds: 5, baths: 4, sqft: 4100, features: "Panoramic views · Saltwater pool · Wine cellar" },
-  { address: "42 Oak Lane", type: "Townhouse", beds: 3, baths: 2, sqft: 1400, features: "Attached garage · Private yard · New HVAC" },
-  { address: "300 River Rd #12", type: "Condo", beds: 2, baths: 2, sqft: 1050, features: "River views · Ground-floor patio · Reserved parking" },
-  { address: "9 Highland Ave", type: "Multi-Family", beds: 6, baths: 4, sqft: 3600, features: "Two units · Separate meters · Strong rental history" },
   { address: "22 Lakeview Dr", type: "Single Family", beds: 4, baths: 3, sqft: 2800, features: "Private dock · Updated kitchen · Spacious deck" },
-  { address: "55 Cedar Ct", type: "Condo", beds: 2, baths: 2, sqft: 1150, features: "Vaulted ceilings · Fireplace · Mountain views" },
+  { address: "88 Ocean Ave", type: "Townhouse", beds: 3, baths: 2, sqft: 1650, features: "Steps to beach · Private patio · Updated bathrooms" },
 ];
 
 export default function RealEstateShowcase() {
@@ -228,8 +222,13 @@ export default function RealEstateShowcase() {
               </h1>
               <p className="text-base text-white/90 drop-shadow-sm md:text-lg md:text-xl max-w-3xl mx-auto">
                 {isFr
-                  ? "12 annonces immobilières professionnelles générées avec l'IA. Regardez la vidéo pour voir comment elles ont été créées."
-                  : "12 professional real estate listings generated with AI. Watch the demo video to see how they were created."}
+                  ? "6 annonces immobilières professionnelles générées avec l'IA. Regardez la vidéo pour voir comment elles ont été créées."
+                  : "6 professional real estate listings generated with AI. Watch the demo video to see how they were created."}
+              </p>
+              <p className="text-sm text-white/70 mt-3 max-w-2xl mx-auto">
+                {isFr
+                  ? "Parfait pour les agents, équipes et courtiers occupés qui souhaitent créer plus rapidement du contenu marketing professionnel pour leurs annonces."
+                  : "Perfect for busy agents, teams, and brokerages looking to create professional listing marketing content faster."}
               </p>
             </div>
           </FadeIn>
@@ -276,7 +275,7 @@ export default function RealEstateShowcase() {
       <section className="w-full max-w-6xl mt-8 md:mt-10">
         <FadeIn>
           <h2 className="text-xl font-bold text-gray-900 mb-6">
-            {isFr ? "12 Annonces Exemples" : "12 Sample Listings"}
+            {isFr ? "6 Annonces Exemples" : "6 Sample Listings"}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {listings.map((item) => (
