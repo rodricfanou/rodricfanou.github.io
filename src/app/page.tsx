@@ -165,13 +165,33 @@ Today, my interests span Internet architecture, computer networks, AI, automatio
         </FadeIn>
 
         <FadeIn delay={300}>
-          <div className="text-center">
-            <h2 className="text-2xl font-bold mb-3 text-gray-900 md:text-3xl">Contact Me</h2>
-            <p className="text-gray-700 text-base md:text-lg">
-              <a href="mailto:roderick@roderickfanou.com" className="text-blue-600 hover:underline font-medium">
-                roderick@roderickfanou.com
-              </a>
+          <div className="text-center max-w-2xl mx-auto">
+            <h2 className="text-2xl font-bold mb-4 text-gray-900 md:text-3xl">Let's Talk</h2>
+            <p className="text-gray-600 text-base md:text-lg mb-8 leading-relaxed">
+              Whether you're exploring AI, planning a workshop, seeking a speaker, or tackling a complex technical challenge, I'd be happy to learn more about your goals and discuss how I can help.
             </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link
+                href="/contact"
+                className="px-6 py-3 bg-gray-800 hover:bg-gray-900 text-white font-semibold rounded-lg text-sm transition-colors shadow-md"
+              >
+                Schedule a Conversation
+              </Link>
+              <a
+                href="mailto:roderick@roderickfanou.com"
+                className="px-6 py-3 border-2 border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white font-semibold rounded-lg text-sm transition-colors"
+              >
+                Send an Email
+              </a>
+              <a
+                href="https://www.linkedin.com/in/roderick-fanou/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 border-2 border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white font-semibold rounded-lg text-sm transition-colors"
+              >
+                Connect on LinkedIn
+              </a>
+            </div>
           </div>
         </FadeIn>
       </section>
