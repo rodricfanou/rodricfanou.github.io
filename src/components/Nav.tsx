@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useLanguage } from "@/components/LanguageProvider";
 import { translations } from "@/lib/translations";
+import { useState } from "react";
 
 const rightLinks = [
   { href: "/publications", labelKey: "publications" as const },
@@ -14,6 +15,7 @@ const rightLinks = [
 export default function Nav() {
   const { lang, setLang } = useLanguage();
   const t = translations[lang];
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
@@ -50,31 +52,45 @@ export default function Nav() {
             {lang === "en" ? "FR" : "EN"}
           </button>
         </div>
-        <div className="flex md:hidden items-center gap-4">
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="md:hidden flex flex-col items-center justify-center w-8 h-8 gap-1.5 text-gray-600 hover:text-gray-900 transition-colors"
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+        >
+          <span className={`block w-6 h-0.5 bg-current transition-transform duration-200 ${menuOpen ? "rotate-45 translate-y-[6px]" : ""}`} />
+          <span className={`block w-6 h-0.5 bg-current transition-opacity duration-200 ${menuOpen ? "opacity-0" : ""}`} />
+          <span className={`block w-6 h-0.5 bg-current transition-transform duration-200 ${menuOpen ? "-rotate-45 -translate-y-[6px]" : ""}`} />
+        </button>
+      </div>
+      {menuOpen && (
+        <div className="md:hidden border-t border-gray-200 bg-white px-4 py-4 space-y-3">
           {rightLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm text-gray-600 hover:text-blue-600 font-medium transition-colors"
+              onClick={() => setMenuOpen(false)}
+              className="block text-sm text-gray-600 hover:text-blue-600 font-medium transition-colors"
             >
               {t.nav[link.labelKey]}
             </Link>
           ))}
           <Link
             href="/contact"
-            className="text-sm text-red-600 hover:text-red-800 font-medium transition-colors"
+            onClick={() => setMenuOpen(false)}
+            className="block text-sm text-red-600 hover:text-red-800 font-medium transition-colors"
           >
             Contact
           </Link>
-          <button
-            onClick={() => setLang(lang === "en" ? "fr" : "en")}
-            aria-label={lang === "en" ? "Switch to French" : "Switch to English"}
-            className="px-2 py-1 text-xs font-medium text-gray-600 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
-          >
-            {lang === "en" ? "FR" : "EN"}
-          </button>
+          <div className="pt-2 border-t border-gray-100">
+            <button
+              onClick={() => { setLang(lang === "en" ? "fr" : "en"); setMenuOpen(false); }}
+              className="px-3 py-1 text-sm font-medium text-gray-600 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
+            >
+              {lang === "en" ? "FR" : "EN"}
+            </button>
+          </div>
         </div>
-      </div>
+      )}
     </nav>
   );
 }
