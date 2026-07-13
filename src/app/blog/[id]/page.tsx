@@ -2,13 +2,96 @@ import FadeIn from "@/components/FadeIn";
 import Link from "next/link";
 
 export async function generateStaticParams() {
-  return [{ id: "1" }, { id: "2" }, { id: "3" }, { id: "4" }, { id: "5" }, { id: "6" }, { id: "8" }];
+  return [{ id: "1" }, { id: "2" }, { id: "3" }, { id: "4" }, { id: "5" }, { id: "6" }, { id: "7" }, { id: "8" }];
 }
 
 export default async function BlogPost({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
 
   const posts: Record<string, { title: string; date: string; readTime: string; type: "AI+HI" | "HI"; content: React.ReactNode }> = {
+    "7": {
+      title: "This Week in AI: The Price War for Coding Agents Gets Real",
+      date: "2026-07-13",
+      readTime: "5 min",
+      type: "AI+HI",
+      content: (
+        <div className="space-y-8 text-gray-700 text-base leading-relaxed md:text-lg text-justify">
+
+          {/* Opening */}
+          <p>
+            This was not a week of headline capabilities. It was a week the AI industry argued, loudly, about what capability should cost and who gets to own it. xAI cut the price of a frontier-class coding model by roughly 80%. Microsoft quietly pulled OpenAI and Anthropic out of its own apps to save money. Meta launched a rival agent model the same week its stock posted its best run in over two years. Underneath these stories sits one tension: the model layer is commoditizing faster than vendors admit, while dealmaking, who buys, sells, or gets ordered to unwind a company, now matters as much as any benchmark. Add a Chinese regulator forcing Meta to give up a $2 billion acquisition, and the most consequential AI news this week happened in boardrooms, not research labs.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">Grok 4.5 Undercuts Anthropic&apos;s Opus on Price, Not Performance</h2>
+          <p>
+            xAI released Grok 4.5 on July 8, its first model trained specifically for coding and agentic work, following its acquisition of Cursor.<sup><a href="https://techcrunch.com/2026/07/08/spacexai-releases-grok-4-5-which-elon-describes-as-an-opus-class-model/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[1]</a></sup> Elon Musk called it &quot;roughly comparable to Opus 4.7, but much faster.&quot;<sup><a href="https://techcrunch.com/2026/07/08/spacexai-releases-grok-4-5-which-elon-describes-as-an-opus-class-model/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[1]</a></sup> The numbers back a narrower claim: on SWE-Bench Pro, Grok 4.5 scored 64.7%, edging past Opus 4.7&apos;s 64.3% but trailing Opus 4.8&apos;s 69.2%. Cost is where Grok pulls ahead. At $2 per million input tokens and $6 per million output tokens, against Opus 4.7&apos;s $5 and $25, xAI sells comparable performance at roughly a quarter of the price and, on agentic loops, a quarter of the tokens per task, if that holds up outside vendor-published tests.<sup><a href="https://devops.com/spacexais-grok-4-5-undercuts-anthropic-and-openai-on-coding-agent-pricing/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[2]</a></sup>
+          </p>
+          <p>
+            The catch is real: independent testing found Grok 4.5 trades some of that speed and savings for a higher hallucination rate than Anthropic&apos;s Opus line, so teams running unsupervised agentic loops need tighter guardrails, not just a smaller invoice.<sup><a href="https://www.techtimes.com/articles/320038/20260709/grok-45-cuts-coding-agent-cost-80-near-frontier-speed-higher-hallucinations.htm" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[3]</a></sup>
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">Tencent&apos;s Move to Reclaim Manus Shows Beijing Sets the Terms</h2>
+          <p>
+            Tencent is in talks to become the largest shareholder of Manus, the Singapore-based AI agent startup, after Chinese regulators ordered Meta to unwind its roughly $2 billion acquisition of the company.<sup><a href="https://www.bloomberg.com/news/articles/2026-07-10/tencent-in-talks-to-become-largest-holder-of-manus-ft-reports-mrectviz" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[4]</a></sup> Beijing opened a review in April into whether the deal violated Chinese investment rules. Since then, Meta has split Manus&apos;s operations internally and cut off data sharing between the firms. Tencent, alongside Manus&apos;s original backers ZhenFund and HSG, is now negotiating to buy the company back at the valuation Meta paid.<sup><a href="https://finance.yahoo.com/technology/ai/articles/tencent-talks-become-ai-start-030728722.html" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[5]</a></sup>
+          </p>
+          <p>
+            Set the companies aside. A government retroactively unwound a completed acquisition between two private firms, and the buyer complied without a public fight. That is the more important fact for anyone building an AI product with cross-border ownership, not the price tag. AI agent companies are treated as strategic assets subject to state review well after deals close, not only at signing.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">Microsoft Pulls OpenAI and Anthropic Out of Office to Cut Its AI Bill</h2>
+          <p>
+            Microsoft has started replacing OpenAI&apos;s and Anthropic&apos;s models with its own MAI models inside Excel and Outlook, according to Bloomberg.<sup><a href="https://www.bloomberg.com/news/articles/2026-07-07/microsoft-replaces-openai-anthropic-with-own-ai-in-some-apps" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[6]</a></sup> Tens of thousands of AI prompts in those apps are now served by Microsoft&apos;s own models each week, a reversal for a company that built its AI narrative on the OpenAI partnership. TechCrunch frames this as part of a broader industry shift toward cost-cutting, as inference bills for third-party models eat into the margins of AI features often bundled free into subscriptions.<sup><a href="https://techcrunch.com/2026/07/07/microsoft-joins-ai-cost-cutting-trend-by-relying-more-on-its-own-models/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[7]</a></sup>
+          </p>
+          <p>
+            The skeptical read: Microsoft still relies on OpenAI for its most demanding workloads and has not said it is ending that partnership, so this looks like selective substitution at the margins, not a full break. Users may not notice a quality difference on routine tasks; whether they notice where MAI models fall short of GPT-5.6 or Claude Sonnet 5 is the open question.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">Meta&apos;s Muse Spark 1.1 Arrives as the Market Bets on Zuckerberg&apos;s AI Strategy</h2>
+          <p>
+            Meta Superintelligence Labs released Muse Spark 1.1 on July 9, a multimodal, agentic model with a 1-million-token context window that Meta positions against GPT-5.5, Claude Opus 4.8, and Gemini 3.1 Pro.<sup><a href="https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[8]</a></sup> The model is available through the new Meta Model API, in public preview for U.S. developers, priced at $1.25 per million input tokens and $4.25 per million output tokens, undercutting most frontier competitors the same week Grok did on coding.<sup><a href="https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[8]</a></sup> The timing lines up with a sharp market reaction: Meta shares gained 15% over the week, their best stretch since early 2024, as investors grew more confident in Zuckerberg&apos;s AI spending.<sup><a href="https://www.cnbc.com/2026/07/10/meta-shares-surge-6percent-as-optimism-grows-on-it.html" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[9]</a></sup>
+          </p>
+          <p>
+            That stock move reflects investor sentiment about future potential, not independent verification that Muse Spark 1.1 matches its named competitors on real tasks. Meta&apos;s claim of parity with Opus 4.8 and GPT-5.5 comes from Meta, tested on Meta&apos;s chosen evaluations, worth remembering whenever a lab claims to have matched the frontier.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">OpenAI Ships GPT-5.6 in Three Sizes as the Field Converges on Cheaper and Faster</h2>
+          <p>
+            OpenAI broadly released GPT-5.6 on July 9, after staggering the rollout at the request of the U.S. government.<sup><a href="https://www.axios.com/2026/07/09/ai-openai-gpt-release" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[10]</a></sup><sup><a href="https://www.bloomberg.com/news/articles/2026-07-08/openai-to-roll-out-top-ai-model-globally-after-limited-preview" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[11]</a></sup> The model ships in three variants: Sol, the most capable; Luna, built for speed; and Terra, a middle option for everyday work. Sam Altman told CNBC that Sol is 54% more token-efficient on agentic coding tasks than its predecessor, a claim that, like Meta&apos;s and xAI&apos;s, comes from the company selling the model.<sup><a href="https://www.axios.com/2026/07/09/ai-openai-gpt-release" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[10]</a></sup>
+          </p>
+          <p>
+            Anthropic moved the same week, making Claude Sonnet 5 the default model in Claude Code at promotional pricing of $2 per million input tokens and $10 per million output tokens through August 31.<sup><a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[12]</a></sup> Across four labs in a single week, the pattern is unmistakable: everyone is racing to cut the price of agentic coding work, not just raise its ceiling. That benefits developers now, but it also means benchmark comparisons published this month will likely be stale by September, when at least one promotional price expires.
+          </p>
+
+          {/* Closing */}
+          <p>
+            The throughline this week was economics and control, not raw capability. Four labs cut prices on agentic coding models within days of each other, good news for builders and a warning that today&apos;s pricing will not hold. Beijing&apos;s intervention in the Manus deal and Microsoft&apos;s quiet substitution of its own models show that AI markets are not purely technical contests; governments and cost-conscious finance teams shape outcomes as much as researchers do. The labs would like this to read as a story about smarter models. It is at least as much a story about who can afford to sell them cheap, and who decides which companies get to own them.
+          </p>
+
+          {/* Disclaimer */}
+          <p className="text-sm text-gray-500 italic border-t border-gray-200 pt-6">
+            Disclaimer: All information in this post was collected from publicly available web sources at the time of writing. While every effort has been made to verify accuracy, readers should consult primary sources for decisions that depend on this information.
+          </p>
+
+          {/* References */}
+          <h2 className="text-2xl font-bold text-gray-900">References</h2>
+          <ol className="list-decimal pl-6 space-y-1 text-sm text-gray-500">
+            <li><a href="https://techcrunch.com/2026/07/08/spacexai-releases-grok-4-5-which-elon-describes-as-an-opus-class-model/" target="_blank" rel="noopener noreferrer" className="hover:underline">TechCrunch, &quot;SpaceXAI releases Grok 4.5, which Elon describes as an &apos;Opus-class model,&apos;&quot; July 8, 2026.</a></li>
+            <li><a href="https://devops.com/spacexais-grok-4-5-undercuts-anthropic-and-openai-on-coding-agent-pricing/" target="_blank" rel="noopener noreferrer" className="hover:underline">DevOps.com, &quot;SpaceXAI&apos;s Grok 4.5 Undercuts Anthropic and OpenAI on Coding Agent Pricing,&quot; July 2026.</a></li>
+            <li><a href="https://www.techtimes.com/articles/320038/20260709/grok-45-cuts-coding-agent-cost-80-near-frontier-speed-higher-hallucinations.htm" target="_blank" rel="noopener noreferrer" className="hover:underline">Tech Times, &quot;Grok 4.5 Cuts Coding-Agent Cost 80%: Near-Frontier Speed, Higher Hallucinations,&quot; July 9, 2026.</a></li>
+            <li><a href="https://www.bloomberg.com/news/articles/2026-07-10/tencent-in-talks-to-become-largest-holder-of-manus-ft-reports-mrectviz" target="_blank" rel="noopener noreferrer" className="hover:underline">Bloomberg, &quot;Tencent in Talks to Become Largest Holder of Manus After Meta Deal Unwound,&quot; July 10, 2026.</a></li>
+            <li><a href="https://finance.yahoo.com/technology/ai/articles/tencent-talks-become-ai-start-030728722.html" target="_blank" rel="noopener noreferrer" className="hover:underline">Yahoo Finance / Reuters, &quot;Tencent in talks to become AI startup Manus&apos; largest shareholder,&quot; July 2026.</a></li>
+            <li><a href="https://www.bloomberg.com/news/articles/2026-07-07/microsoft-replaces-openai-anthropic-with-own-ai-in-some-apps" target="_blank" rel="noopener noreferrer" className="hover:underline">Bloomberg, &quot;Microsoft Replaces OpenAI, Anthropic With Own AI in Some Apps,&quot; July 7, 2026.</a></li>
+            <li><a href="https://techcrunch.com/2026/07/07/microsoft-joins-ai-cost-cutting-trend-by-relying-more-on-its-own-models/" target="_blank" rel="noopener noreferrer" className="hover:underline">TechCrunch, &quot;Microsoft joins AI cost-cutting trend by relying more on its own models,&quot; July 7, 2026.</a></li>
+            <li><a href="https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/" target="_blank" rel="noopener noreferrer" className="hover:underline">Meta AI, &quot;Introducing Muse Spark 1.1,&quot; July 9, 2026.</a></li>
+            <li><a href="https://www.cnbc.com/2026/07/10/meta-shares-surge-6percent-as-optimism-grows-on-it.html" target="_blank" rel="noopener noreferrer" className="hover:underline">CNBC, &quot;Meta&apos;s stock has best week since early 2024 as optimism builds around AI strategy,&quot; July 10, 2026.</a></li>
+            <li><a href="https://www.axios.com/2026/07/09/ai-openai-gpt-release" target="_blank" rel="noopener noreferrer" className="hover:underline">Axios, &quot;OpenAI releases GPT-5.6 and ChatGPT Work tool,&quot; July 9, 2026.</a></li>
+            <li><a href="https://www.bloomberg.com/news/articles/2026-07-08/openai-to-roll-out-top-ai-model-globally-after-limited-preview" target="_blank" rel="noopener noreferrer" className="hover:underline">Bloomberg, &quot;OpenAI to Roll Out Top AI Model Globally After Limited Preview,&quot; July 8, 2026.</a></li>
+            <li><a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer" className="hover:underline">Anthropic, &quot;Pricing,&quot; Claude Platform Docs, 2026.</a></li>
+          </ol>
+
+        </div>
+      ),
+    },
     "6": {
       title: "This Week in AI: Anthropic Files for IPO, Nvidia Targets the AI PC, and Claude Rewrites Itself",
       date: "2026-06-08",

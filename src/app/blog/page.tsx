@@ -16,6 +16,15 @@ interface BlogPost {
 
 const posts: BlogPost[] = [
   {
+    id: 7,
+    title: "This Week in AI: The Price War for Coding Agents Gets Real",
+    date: "2026-07-13",
+    excerpt: "xAI undercut Anthropic's Opus on coding-agent pricing, Tencent moved to reclaim Manus after Beijing forced Meta to unwind a $2 billion deal, and Microsoft quietly pulled OpenAI and Anthropic out of Office to cut costs. Meta's Muse Spark 1.1 and OpenAI's GPT-5.6 rounded out a week defined more by pricing wars and geopolitics than by raw capability gains.",
+    category: "AI",
+    readTime: "5 min",
+    type: "AI+HI",
+  },
+  {
     id: 6,
     title: "This Week in AI: Anthropic Files for IPO, Nvidia Targets the AI PC, and Claude Rewrites Itself",
     date: "2026-06-08",
