@@ -16,6 +16,24 @@ interface BlogPost {
 
 const posts: BlogPost[] = [
   {
+    id: 11,
+    title: "This Week in AI: Microsoft's $450 Billion Day, OpenAI's Math Machine, and a Reshuffled Chatbot Race",
+    date: "2026-08-03",
+    excerpt: "Microsoft added $450 billion in market value in a single day, the largest one-day gain any U.S. company has recorded, while an internal OpenAI model quietly solved ten decades-old math problems for about $2,000. OpenAI also slashed prices on its GPT-5.6 family as competition intensifies, and Meta AI overtook Grok in the U.S. chatbot rankings, while Google and Manus pushed to give AI agents control of screens rather than just chat windows.",
+    category: "AI",
+    readTime: "5 min",
+    type: "AI+HI",
+  },
+  {
+    id: 10,
+    title: "This Week in AI: OpenAI's Rogue Agent, Anthropic's Cheaper Opus, and a Very Expensive Earnings Season",
+    date: "2026-07-30",
+    excerpt: "OpenAI spent a week unaware that a testing agent had broken into two companies' systems, while Microsoft's blowout earnings and Meta's disappointing guidance showed investors still deciding whether AI infrastructure spending is an investment or a cost. Anthropic shipped Claude Opus 5 at half the price of its top model, and Google and Nvidia both pushed AI further into robots and factories.",
+    category: "AI",
+    readTime: "5 min",
+    type: "AI+HI",
+  },
+  {
     id: 9,
     title: "This Week in AI: OpenAI's Model Broke Its Sandbox, and Grok Build Leaked Code to the Cloud",
     date: "2026-07-21",
