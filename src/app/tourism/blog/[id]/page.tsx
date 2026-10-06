@@ -2,13 +2,1168 @@ import FadeIn from "@/components/FadeIn";
 import Link from "next/link";
 
 export async function generateStaticParams() {
-  return [{ id: "6" }, { id: "7" }, { id: "9" }];
+  return [{ id: "6" }, { id: "7" }, { id: "9" }, { id: "11" }, { id: "13" }, { id: "15" }, { id: "17" }];
 }
 
 export default async function TourismBlogPost({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
 
   const posts: Record<string, { title: string; date: string; readTime: string; type: "AI+HI" | "HI"; content: React.ReactNode }> = {
+    "17": {
+      title: "London: Twenty Essential Encounters in the World's Third Most-Visited City",
+      date: "2026-08-05",
+      readTime: "5 min",
+      type: "AI+HI",
+      content: (
+        <div className="space-y-6 text-gray-700 text-base leading-relaxed md:text-lg text-justify">
+
+          {/* Intro */}
+          <p>
+            In &quot;On Possessing Beauty,&quot; the eighth chapter of The Art of Travel, Alain de Botton turns to John Ruskin, the Victorian critic dismayed by tourists who photographed the Alps without ever really looking. Ruskin sketched instead, because drawing forces the eye to slow down in a way a camera never demands.<sup><a href="https://www.litcharts.com/lit/the-art-of-travel/chapter-8-on-possessing-beauty" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[1]</a></sup> London may be the most photographed skyline on earth, and it is the world&apos;s third most-visited city by international arrivals, 22.7 million in 2025, behind only Bangkok and Hong Kong.<sup><a href="https://statranker.org/cities-urban-life/top-100-cities-by-international-tourist-arrivals-2026/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[2]</a></sup> What follows is four days, built from official sources, an attempt to possess a little of it rather than just photograph it. One honest note before the list: London has no hiking trails or beaches worth the name, and nothing here pretends otherwise.
+          </p>
+
+          {/* Hero image */}
+          <figure className="my-6">
+            <img
+              src="https://images.unsplash.com/photo-1533204369454-f59a7375423e?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+              alt="Tower Bridge over the River Thames, London"
+              className="w-full rounded-2xl shadow-lg object-cover"
+              style={{ maxHeight: "480px" }}
+            />
+            <figcaption className="text-xs text-gray-400 mt-2 text-center">
+              Tower Bridge over the River Thames. Photo by <strong className="text-gray-500">Shannon Tremaine</strong> on{" "}
+              <a href="https://unsplash.com/photos/tower-bridge-london-wallpaper-IWNT3MeI2rE" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash</a>.{" "}
+              <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash License</a> (free for all uses, including commercial)
+            </figcaption>
+          </figure>
+
+          {/* DAY 1 */}
+          <h2 className="text-3xl font-bold text-gray-900 mt-10">Day 1: The River and the Old City</h2>
+
+          <h2 className="text-2xl font-bold text-gray-900">1. The Tower of London and the Crown Jewels</h2>
+          <p>
+William the Conqueror began the White Tower around 1078; Anne Boleyn was executed within its walls in 1536.<sup><a href="https://en.wikipedia.org/wiki/Tower_of_London" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[3]</a></sup> Adult tickets cost £37 online and include the Crown Jewels and a Yeoman Warder tour, subject to availability; the Tower opens at 9 AM Tuesday through Saturday, 10 AM Sunday and Monday.<sup><a href="https://www.hrp.org.uk/tower-of-london/visit/tickets-and-prices/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[4]</a></sup>
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">2. Tower Bridge, on Foot</h2>
+          <p>
+Opened in 1894, Tower Bridge still raises its twin bascules for river traffic around 800 times a year.<sup><a href="https://www.towerbridge.org.uk/stories/why-does-tower-bridge-open" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[5]</a></sup> The high-level walkways between the towers now have glass floor panels, but the view from the public footway costs nothing.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">3. Borough Market</h2>
+          <p>
+The first record of a market here dates to 1014, and a royal charter followed in 1406.<sup><a href="https://boroughmarket.org.uk/our-story/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[6]</a></sup> It runs Tuesday to Saturday, 10 AM to 5 PM on weekdays and from 9 AM on Saturdays, closed Mondays.<sup><a href="https://boroughmarket.org.uk/visit-us/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[7]</a></sup> Entry is free; lunch is not.
+          </p>
+
+          {/* Borough Market image */}
+          <figure className="my-6">
+            <img
+              src="https://images.unsplash.com/photo-1662714211126-272335a71219?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+              alt="A stall front at Borough Market, London"
+              className="w-full rounded-2xl shadow-lg object-cover"
+              style={{ maxHeight: "420px" }}
+            />
+            <figcaption className="text-xs text-gray-400 mt-2 text-center">
+              Borough Market, Southwark. Photo by <strong className="text-gray-500">Bruno Martins</strong> on{" "}
+              <a href="https://unsplash.com/photos/a-store-with-a-large-display-of-items-vbNIpXzPahs" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash</a>.{" "}
+              <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash License</a>
+            </figcaption>
+          </figure>
+
+          <h2 className="text-2xl font-bold text-gray-900">4. The South Bank Walk: Tate Modern and Shakespeare&apos;s Globe</h2>
+          <p>
+Follow the river west and Shakespeare&apos;s Globe appears first, a 1997 reconstruction of the open-air playhouse built near the original site.<sup><a href="https://www.shakespearesglobe.com/visit/getting-here/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[8]</a></sup> A short walk on is Tate Modern, a former power station whose permanent collection and skyline-view terrace are both free.<sup><a href="https://www.baldhiker.com/london-south-bank-walk/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[9]</a></sup>
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">5. Sky Garden</h2>
+          <p>
+The top three floors of 20 Fenchurch Street, the &quot;Walkie Talkie,&quot; hold London&apos;s highest public garden and a free 360-degree view. Tickets are timed and released online each Monday for the following three weeks; weekend slots go within hours.<sup><a href="https://skygarden.london/booking/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[10]</a></sup>
+          </p>
+
+          {/* DAY 2 */}
+          <h2 className="text-3xl font-bold text-gray-900 mt-10">Day 2: Westminster, Bloomsbury, and the West End</h2>
+
+          <h2 className="text-2xl font-bold text-gray-900">6. Westminster Abbey</h2>
+          <p>
+Every English and British coronation since 1066 has taken place on the same patch of mosaic floor before the High Altar, the Cosmati Pavement.<sup><a href="https://www.storyhunt.io/en/articles/westminster-abbey" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[11]</a></sup> As a working church it closes to sightseers on Sundays; adult tickets run about £27 booked online, cheaper than at the door.<sup><a href="https://www.storyhunt.io/en/articles/westminster-abbey" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[11]</a></sup>
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">7. Big Ben and the Houses of Parliament</h2>
+          <p>
+The tower is officially the Elizabeth Tower, renamed in 2012; Big Ben is the 13-ton bell inside, most likely named for Sir Benjamin Hall, who oversaw Parliament&apos;s rebuilding after the 1834 fire.<sup><a href="https://en.wikipedia.org/wiki/Big_Ben" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[12]</a></sup> Palace tours need advance booking; most visitors settle, reasonably, for the view from the bridge.
+          </p>
+
+          {/* Big Ben image */}
+          <figure className="my-6">
+            <img
+              src="https://images.unsplash.com/photo-1741172485358-e560f7ca4657?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+              alt="Big Ben above Westminster Bridge, London"
+              className="w-full rounded-2xl shadow-lg object-cover"
+              style={{ maxHeight: "420px" }}
+            />
+            <figcaption className="text-xs text-gray-400 mt-2 text-center">
+              Big Ben above Westminster Bridge. Photo by <strong className="text-gray-500">Jeffrey Zhang</strong> on{" "}
+              <a href="https://unsplash.com/photos/big-ben-stands-tall-over-westminster-bridge-eP781ZU8KQA" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash</a>.{" "}
+              <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash License</a>
+            </figcaption>
+          </figure>
+
+          <h2 className="text-2xl font-bold text-gray-900">8. The British Museum and the Rosetta Stone</h2>
+          <p>
+General admission has been free since the museum opened to the public in 1759, the world&apos;s first free national public museum.<sup><a href="https://www.britishmuseum.org/about-us/british-museum-story/history" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[13]</a></sup> The Rosetta Stone sits in Room 4, its inscription of one decree in three scripts still the reason Egyptian hieroglyphs can be read at all.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">9. The Mousetrap</h2>
+          <p>
+Agatha Christie&apos;s whodunit opened in the West End in 1952, moved to St Martin&apos;s Theatre in 1974, and passed its 30,000th performance in March 2025, a Guinness World Record for the longest theatrical run in history.<sup><a href="https://en.wikipedia.org/wiki/The_Mousetrap" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[14]</a></sup> The audience is still asked, at curtain call, never to reveal the killer.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">10. The 100 Club, Since 1942</h2>
+          <p>
+Live music began at 100 Oxford Street on 24 October 1942, as the Feldman Swing Club, renamed in 1964; it has a fair claim to being the oldest independent music venue in the world.<sup><a href="https://en.wikipedia.org/wiki/100_Club" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[15]</a></sup> In September 1976 it hosted the two-day Punk Special, the Sex Pistols and the Clash among the bill.
+          </p>
+
+          {/* DAY 3 */}
+          <h2 className="text-3xl font-bold text-gray-900 mt-10">Day 3: Camden, the Heath, and Notting Hill</h2>
+
+          <h2 className="text-2xl font-bold text-gray-900">11. Camden Market and Camden Lock</h2>
+          <p>
+Stalls spread along Regent&apos;s Canal through a warren of connected markets that blur into the single name Camden Market, one of London&apos;s busiest free weekend attractions.
+          </p>
+
+          {/* Camden Market image */}
+          <figure className="my-6">
+            <img
+              src="https://images.unsplash.com/photo-1563792169197-822d0655ef3d?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+              alt="Camden Market street scene, London"
+              className="w-full rounded-2xl shadow-lg object-cover"
+              style={{ maxHeight: "420px" }}
+            />
+            <figcaption className="text-xs text-gray-400 mt-2 text-center">
+              Camden Market. Photo by <strong className="text-gray-500">Reiseuhu</strong> on{" "}
+              <a href="https://unsplash.com/photos/camden-market-jDuguQPNRc0" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash</a>.{" "}
+              <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash License</a>
+            </figcaption>
+          </figure>
+
+          <h2 className="text-2xl font-bold text-gray-900">12. Live Music at the Jazz Cafe and the Roundhouse</h2>
+          <p>
+Housed in a former Barclays bank on Parkway since 1990, the Jazz Cafe has staged early or landmark shows by Amy Winehouse, Adele, and D&apos;Angelo.<sup><a href="https://en.wikipedia.org/wiki/The_Jazz_Cafe" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[16]</a></sup> A short walk away, the Roundhouse, a Victorian engine shed from 1847, became a 1960s rock venue that hosted Pink Floyd and the Doors.<sup><a href="https://tickets9.co.uk/blog/roundhouse-camden-music-lovers-guide" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[17]</a></sup>
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">13. Hampstead Heath: Parliament Hill and the Mixed Pond</h2>
+          <p>
+Parliament Hill rises 98 meters above the city, one of London&apos;s widest skyline views, best at dawn before the kite flyers arrive.<sup><a href="https://www.cityoflondon.gov.uk/things-to-do/green-spaces/hampstead-heath" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[18]</a></sup> Below it, the Heath&apos;s Mixed Bathing Pond has operated since the 1860s and stays open to swimmers of both sexes from May to September.<sup><a href="https://hampsteadheathpondsproject.wordpress.com/2015/02/12/a-history-of-the-ponds/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[19]</a></sup>
+          </p>
+
+          {/* Hampstead Heath image */}
+          <figure className="my-6">
+            <img
+              src="https://images.unsplash.com/photo-1496320540980-6957e6d80966?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+              alt="Houses beside a pond on Hampstead Heath, London"
+              className="w-full rounded-2xl shadow-lg object-cover"
+              style={{ maxHeight: "420px" }}
+            />
+            <figcaption className="text-xs text-gray-400 mt-2 text-center">
+              Hampstead Heath. Photo by <strong className="text-gray-500">Amadeusz Misiak</strong> on{" "}
+              <a href="https://unsplash.com/photos/photo-of-brown-houses-near-body-of-water-oXQT32eAMGE" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash</a>.{" "}
+              <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash License</a>
+            </figcaption>
+          </figure>
+
+          <h2 className="text-2xl font-bold text-gray-900">14. Notting Hill and Portobello Road Market</h2>
+          <p>
+Rows of pastel-painted townhouses line the streets around Portobello Road, a market dating to 1870 that became one of the world&apos;s best-known antiques markets after dealers arrived from Islington in the late 1940s.<sup><a href="https://www.londonmuseum.org.uk/collections/london-stories/portobello-market-londons-largest-antiques-market/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[20]</a></sup> Come on a weekday for the neighborhood without the crowds.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">15. Live Jazz at Ronnie Scott&apos;s</h2>
+          <p>
+Ronnie Scott and Pete King opened their club in a Gerrard Street basement on 30 October 1959, moving to its current Frith Street address in 1965; Zoot Sims, in 1962, became the first of a long line of visiting US jazz legends to play the room.<sup><a href="https://www.ronniescotts.co.uk/about-ronnies/about-the-club" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[21]</a></sup>
+          </p>
+
+          {/* DAY 4 */}
+          <h2 className="text-3xl font-bold text-gray-900 mt-10">Day 4: Out of the City, and the Big One</h2>
+
+          <h2 className="text-2xl font-bold text-gray-900">16. Greenwich: the Royal Observatory, the Prime Meridian, and Cutty Sark</h2>
+          <p>
+Stand astride the brass line marking zero degrees longitude, the reference point for every time zone on earth, then walk downhill to the Cutty Sark, the last surviving tea clipper of its kind.<sup><a href="https://www.rmg.co.uk/plan-your-visit" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[22]</a></sup> A combined adult ticket runs roughly £18 to £22.<sup><a href="https://www.rmg.co.uk/plan-your-visit/tickets-prices" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[23]</a></sup>
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">17. Kew Gardens and the Treetop Walkway</h2>
+          <p>
+A UNESCO World Heritage Site since 2003, Kew holds more than 50,000 living plants across 326 acres; its Treetop Walkway, opened 2008, lifts visitors 18 meters into the canopy, included in the standard ticket, £20 weekdays, £22 weekends.<sup><a href="https://whc.unesco.org/document/208912" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[24]</a></sup>
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">18. Windsor Castle, by Train</h2>
+          <p>
+William the Conqueror began building Windsor around 1070; it has housed the monarchy ever since, making it the oldest continuously occupied castle in the world.<sup><a href="https://www.worldhistory.org/Windsor_Castle/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[25]</a></sup> Trains from Paddington reach Windsor in under 30 minutes; adult admission runs about £32 booked ahead.<sup><a href="https://www.theemptynestexplorers.com/blog/windsor-castle-a-complete-guide-to-planning-your-day-trip-from-london" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[26]</a></sup>
+          </p>
+
+          {/* Windsor Castle image */}
+          <figure className="my-6">
+            <img
+              src="https://images.unsplash.com/photo-1752085202143-530ecd760b77?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+              alt="Windsor Castle at the end of a long road"
+              className="w-full rounded-2xl shadow-lg object-cover"
+              style={{ maxHeight: "420px" }}
+            />
+            <figcaption className="text-xs text-gray-400 mt-2 text-center">
+              Windsor Castle. Photo by <strong className="text-gray-500">Freysteinn G. Jonsson</strong> on{" "}
+              <a href="https://unsplash.com/photos/windsor-castle-sits-at-the-end-of-a-long-road-LbZuBl58VuY" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash</a>.{" "}
+              <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash License</a>
+            </figcaption>
+          </figure>
+
+          <h2 className="text-2xl font-bold text-gray-900">19. Dinner at Core by Clare Smyth</h2>
+          <p>
+Clare Smyth became the first British woman to hold three Michelin stars at her own restaurant when Core, her Notting Hill dining room, was awarded its third star in 2021.<sup><a href="https://guide.michelin.com/us/en/greater-london/london/restaurant/core-by-clare-smyth" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[27]</a></sup> Reserve well in advance.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">20. Notting Hill Carnival</h2>
+          <p>
+Europe&apos;s largest street festival fills Notting Hill every August bank holiday weekend, drawing more than two million people to a celebration of Caribbean culture running since 1966; in 2026 it falls on 30 and 31 August.<sup><a href="https://en.wikipedia.org/wiki/Notting_Hill_Carnival" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[28]</a></sup> If your dates land there, build the trip around it instead.
+          </p>
+
+          {/* Counter-argument */}
+          <div className="mt-10 p-6 rounded-xl bg-amber-50 border border-amber-200">
+            <h2 className="text-xl font-bold text-gray-800 mb-3">The Honest Counterargument</h2>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              None of the above is visible from a river cruise. London recorded 12,938 people sleeping rough between April 2025 and March 2026, the second-highest annual total on record, while 75,600 households sat in temporary accommodation at the end of 2025.<sup><a href="https://www.crisis.org.uk/about-us/crisis-media-centre/rough-sleeping-in-the-capital-now-a-normalised-emergency-as-numbers-reach-record-highs-1/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[29]</a></sup><sup><a href="https://www.bigissue.com/news/housing/britains-homelessness-shame-cold-hard-facts/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[30]</a></sup> Rents have outpaced wages for years, and the Renters&apos; Rights Act, which ended no-fault evictions in April 2026, arrived only after the crisis was already acute. A four-day loop through the Tower, the Heath, and Notting Hill&apos;s pastel houses will not show a visitor a city working through that, and pretending otherwise would be its own kind of dishonesty.
+            </p>
+          </div>
+
+          {/* Safety */}
+          <div className="mt-6 p-6 rounded-xl bg-blue-50 border border-blue-200">
+            <h2 className="text-xl font-bold text-gray-800 mb-3">A Note on Safety</h2>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              The U.S. State Department rates the United Kingdom Level 2, &quot;Exercise Increased Caution,&quot; citing terrorism concerns rather than street crime.<sup><a href="https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/united-kingdom-travel-advisory.html" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[31]</a></sup> The more common risk is theft, not violence: the Metropolitan Police recorded roughly 71,000 stolen phones across London in 2025, crowded platforms and busy attractions the likeliest places to lose one.<sup><a href="https://news.met.police.uk/pressreleases/met-cuts-phone-theft-by-10000-offences-following-year-long-crackdown-3432888" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[32]</a></sup> Keep phones in a zipped or front pocket, and check your own government&apos;s current travel advisory before you go.
+            </p>
+          </div>
+
+          {/* Disclaimer */}
+          <div className="rounded-xl border border-gray-200 bg-gray-50 px-6 py-4 text-sm text-gray-500 leading-relaxed mt-8">
+            <strong className="text-gray-700">Disclaimer:</strong> This post shares findings from independent research using publicly available sources, current as of August 2026. Prices, hours, ticket policies, and event dates change often; verify directly with official sources before booking or building a schedule around any single date. The author has no commercial relationship with any venue listed. Security conditions can change; consult your government&apos;s official travel advisory before traveling, and look into how secure a neighborhood or venue is before you visit.
+          </div>
+
+          {/* Photo Credits */}
+          <h2 className="text-2xl font-bold text-gray-900">Photo Credits</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">
+            All photographs sourced from <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Unsplash</a> and used under the <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Unsplash License</a>, which grants free use for all purposes, commercial and non-commercial, worldwide, with no attribution legally required. We credit photographers voluntarily as a matter of practice.
+          </p>
+          <ul className="list-disc pl-6 space-y-1 text-sm text-gray-500">
+            <li>
+              <strong>Tower Bridge, London wallpaper.</strong> Photo by{" "}
+              <a href="https://unsplash.com/@shantricky" target="_blank" rel="noopener noreferrer" className="hover:underline">Shannon Tremaine</a>{" "}
+              on Unsplash.{" "}
+              <a href="https://unsplash.com/photos/tower-bridge-london-wallpaper-IWNT3MeI2rE" target="_blank" rel="noopener noreferrer" className="hover:underline">unsplash.com/photos/IWNT3MeI2rE</a>
+            </li>
+            <li>
+              <strong>A store with a large display of items (Borough Market).</strong> Photo by{" "}
+              <a href="https://unsplash.com/@brunus" target="_blank" rel="noopener noreferrer" className="hover:underline">Bruno Martins</a>{" "}
+              on Unsplash.{" "}
+              <a href="https://unsplash.com/photos/a-store-with-a-large-display-of-items-vbNIpXzPahs" target="_blank" rel="noopener noreferrer" className="hover:underline">unsplash.com/photos/vbNIpXzPahs</a>
+            </li>
+            <li>
+              <strong>Big ben stands tall over westminster bridge.</strong> Photo by{" "}
+              <a href="https://unsplash.com/@jeffreyzhang_920" target="_blank" rel="noopener noreferrer" className="hover:underline">Jeffrey Zhang</a>{" "}
+              on Unsplash.{" "}
+              <a href="https://unsplash.com/photos/big-ben-stands-tall-over-westminster-bridge-eP781ZU8KQA" target="_blank" rel="noopener noreferrer" className="hover:underline">unsplash.com/photos/eP781ZU8KQA</a>
+            </li>
+            <li>
+              <strong>Camden Market.</strong> Photo by{" "}
+              <a href="https://unsplash.com/@reiseuhu" target="_blank" rel="noopener noreferrer" className="hover:underline">Reiseuhu</a>{" "}
+              on Unsplash.{" "}
+              <a href="https://unsplash.com/photos/camden-market-jDuguQPNRc0" target="_blank" rel="noopener noreferrer" className="hover:underline">unsplash.com/photos/jDuguQPNRc0</a>
+            </li>
+            <li>
+              <strong>Photo of brown houses near body of water (Hampstead Heath).</strong> Photo by{" "}
+              <a href="https://unsplash.com/@amduz" target="_blank" rel="noopener noreferrer" className="hover:underline">Amadeusz Misiak</a>{" "}
+              on Unsplash.{" "}
+              <a href="https://unsplash.com/photos/photo-of-brown-houses-near-body-of-water-oXQT32eAMGE" target="_blank" rel="noopener noreferrer" className="hover:underline">unsplash.com/photos/oXQT32eAMGE</a>
+            </li>
+            <li>
+              <strong>Windsor castle sits at the end of a long road.</strong> Photo by{" "}
+              <a href="https://unsplash.com/@freys" target="_blank" rel="noopener noreferrer" className="hover:underline">Freysteinn G. Jonsson</a>{" "}
+              on Unsplash.{" "}
+              <a href="https://unsplash.com/photos/windsor-castle-sits-at-the-end-of-a-long-road-LbZuBl58VuY" target="_blank" rel="noopener noreferrer" className="hover:underline">unsplash.com/photos/LbZuBl58VuY</a>
+            </li>
+          </ul>
+
+          {/* Sources */}
+          <h2 className="text-2xl font-bold text-gray-900">Sources</h2>
+          <ol className="list-decimal pl-6 space-y-1 text-sm text-gray-500">
+            <li><a href="https://www.litcharts.com/lit/the-art-of-travel/chapter-8-on-possessing-beauty" target="_blank" rel="noopener noreferrer" className="hover:underline">LitCharts, &quot;The Art of Travel Chapter 8: On Possessing Beauty, Summary &amp; Analysis.&quot;</a></li>
+            <li><a href="https://statranker.org/cities-urban-life/top-100-cities-by-international-tourist-arrivals-2026/" target="_blank" rel="noopener noreferrer" className="hover:underline">StatRanker, &quot;Top 100 Cities by International Tourist Arrivals, 2026,&quot; citing Euromonitor International.</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Tower_of_London" target="_blank" rel="noopener noreferrer" className="hover:underline">Wikipedia, &quot;Tower of London.&quot;</a></li>
+            <li><a href="https://www.hrp.org.uk/tower-of-london/visit/tickets-and-prices/" target="_blank" rel="noopener noreferrer" className="hover:underline">Historic Royal Palaces, official website, &quot;Tower of London: Tickets and Prices.&quot;</a></li>
+            <li><a href="https://www.towerbridge.org.uk/stories/why-does-tower-bridge-open" target="_blank" rel="noopener noreferrer" className="hover:underline">Tower Bridge, official website, &quot;Why Does Tower Bridge Open?&quot;</a></li>
+            <li><a href="https://boroughmarket.org.uk/our-story/" target="_blank" rel="noopener noreferrer" className="hover:underline">Borough Market, official website, &quot;Our Story.&quot;</a></li>
+            <li><a href="https://boroughmarket.org.uk/visit-us/" target="_blank" rel="noopener noreferrer" className="hover:underline">Borough Market, official website, &quot;Visit Us.&quot;</a></li>
+            <li><a href="https://www.shakespearesglobe.com/visit/getting-here/" target="_blank" rel="noopener noreferrer" className="hover:underline">Shakespeare&apos;s Globe, official website, &quot;Getting Here.&quot;</a></li>
+            <li><a href="https://www.baldhiker.com/london-south-bank-walk/" target="_blank" rel="noopener noreferrer" className="hover:underline">BaldHiker, &quot;The Ultimate London South Bank Walk: A Self-Guided Tour.&quot;</a></li>
+            <li><a href="https://skygarden.london/booking/" target="_blank" rel="noopener noreferrer" className="hover:underline">Sky Garden, official website, &quot;Booking Your Visit.&quot;</a></li>
+            <li><a href="https://www.storyhunt.io/en/articles/westminster-abbey" target="_blank" rel="noopener noreferrer" className="hover:underline">Storyhunt, &quot;Westminster Abbey (2026 Guide): Tickets, Hours &amp; Hidden Secrets.&quot;</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Big_Ben" target="_blank" rel="noopener noreferrer" className="hover:underline">Wikipedia, &quot;Big Ben.&quot;</a></li>
+            <li><a href="https://www.britishmuseum.org/about-us/british-museum-story/history" target="_blank" rel="noopener noreferrer" className="hover:underline">British Museum, official website, &quot;History.&quot;</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/The_Mousetrap" target="_blank" rel="noopener noreferrer" className="hover:underline">Wikipedia, &quot;The Mousetrap.&quot;</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/100_Club" target="_blank" rel="noopener noreferrer" className="hover:underline">Wikipedia, &quot;100 Club.&quot;</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/The_Jazz_Cafe" target="_blank" rel="noopener noreferrer" className="hover:underline">Wikipedia, &quot;The Jazz Cafe.&quot;</a></li>
+            <li><a href="https://tickets9.co.uk/blog/roundhouse-camden-music-lovers-guide" target="_blank" rel="noopener noreferrer" className="hover:underline">Tickets9, &quot;The Roundhouse Camden: A Music Lover&apos;s Guide.&quot;</a></li>
+            <li><a href="https://www.cityoflondon.gov.uk/things-to-do/green-spaces/hampstead-heath" target="_blank" rel="noopener noreferrer" className="hover:underline">City of London Corporation, official website, &quot;Hampstead Heath.&quot;</a></li>
+            <li><a href="https://hampsteadheathpondsproject.wordpress.com/2015/02/12/a-history-of-the-ponds/" target="_blank" rel="noopener noreferrer" className="hover:underline">Hampstead Heath Ponds Project, &quot;A History of the Ponds.&quot;</a></li>
+            <li><a href="https://www.londonmuseum.org.uk/collections/london-stories/portobello-market-londons-largest-antiques-market/" target="_blank" rel="noopener noreferrer" className="hover:underline">London Museum, &quot;Portobello Market: London&apos;s Largest Antiques Market.&quot;</a></li>
+            <li><a href="https://www.ronniescotts.co.uk/about-ronnies/about-the-club" target="_blank" rel="noopener noreferrer" className="hover:underline">Ronnie Scott&apos;s, official website, &quot;About the Club.&quot;</a></li>
+            <li><a href="https://www.rmg.co.uk/plan-your-visit" target="_blank" rel="noopener noreferrer" className="hover:underline">Royal Museums Greenwich, official website, &quot;Plan Your Visit.&quot;</a></li>
+            <li><a href="https://www.rmg.co.uk/plan-your-visit/tickets-prices" target="_blank" rel="noopener noreferrer" className="hover:underline">Royal Museums Greenwich, official website, &quot;Tickets and Prices.&quot;</a></li>
+            <li><a href="https://whc.unesco.org/document/208912" target="_blank" rel="noopener noreferrer" className="hover:underline">UNESCO World Heritage Centre, documentation on the Royal Botanic Gardens, Kew.</a></li>
+            <li><a href="https://www.worldhistory.org/Windsor_Castle/" target="_blank" rel="noopener noreferrer" className="hover:underline">World History Encyclopedia, &quot;Windsor Castle.&quot;</a></li>
+            <li><a href="https://www.theemptynestexplorers.com/blog/windsor-castle-a-complete-guide-to-planning-your-day-trip-from-london" target="_blank" rel="noopener noreferrer" className="hover:underline">The Empty Nest Explorers, &quot;Visiting Windsor Castle in 2026: A Complete Guide.&quot;</a></li>
+            <li><a href="https://guide.michelin.com/us/en/greater-london/london/restaurant/core-by-clare-smyth" target="_blank" rel="noopener noreferrer" className="hover:underline">MICHELIN Guide, &quot;Core by Clare Smyth, London.&quot;</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Notting_Hill_Carnival" target="_blank" rel="noopener noreferrer" className="hover:underline">Wikipedia, &quot;Notting Hill Carnival.&quot;</a></li>
+            <li><a href="https://www.crisis.org.uk/about-us/crisis-media-centre/rough-sleeping-in-the-capital-now-a-normalised-emergency-as-numbers-reach-record-highs-1/" target="_blank" rel="noopener noreferrer" className="hover:underline">Crisis, &quot;Rough Sleeping in the Capital Now a &apos;Normalised Emergency&apos; as Numbers Reach Record Highs.&quot;</a></li>
+            <li><a href="https://www.bigissue.com/news/housing/britains-homelessness-shame-cold-hard-facts/" target="_blank" rel="noopener noreferrer" className="hover:underline">The Big Issue, &quot;Homelessness Facts and Statistics: The Numbers You Need to Know in 2026.&quot;</a></li>
+            <li><a href="https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/united-kingdom-travel-advisory.html" target="_blank" rel="noopener noreferrer" className="hover:underline">U.S. Department of State, &quot;United Kingdom Travel Advisory.&quot;</a></li>
+            <li><a href="https://news.met.police.uk/pressreleases/met-cuts-phone-theft-by-10000-offences-following-year-long-crackdown-3432888" target="_blank" rel="noopener noreferrer" className="hover:underline">Metropolitan Police, official press release, &quot;Met Cuts Phone Theft by 10,000 Offences Following Year-Long Crackdown.&quot;</a></li>
+          </ol>
+
+        </div>
+      ),
+    },
+    "15": {
+      title: "Bangkok: Twenty Essential Encounters in the World's Most-Visited City",
+      date: "2026-07-30",
+      readTime: "5 min",
+      type: "AI+HI",
+      content: (
+        <div className="space-y-6 text-gray-700 text-base leading-relaxed md:text-lg text-justify">
+
+          {/* Intro */}
+          <p>
+            In &quot;On Curiosity,&quot; the fourth chapter of The Art of Travel, Alain de Botton confesses to lying paralyzed in a Madrid hotel room while his guidebook insists an &quot;exciting and multifarious phenomenon&quot; is waiting just outside. He sets his own lethargy against Alexander von Humboldt, the naturalist who talked the King of Spain into funding a five-year expedition to South America in 1799 and came back having redrawn its maps, measured its magnetic fields, and chased one blunt question relentlessly: why don&apos;t the same things grow everywhere? De Botton&apos;s point is that curiosity is not a mood a place gives you; it is a chain of small questions built outward from a few large ones, and most facts do not arrive pre-attached to the question that would make them matter. Bangkok tempts a visitor to skip the questions and just collect the sights, and it has, on paper, earned the right to be treated that way: Euromonitor International counted 30.3 million international arrivals in the city in 2025, more than any other city on earth, ahead of Hong Kong, London, and Paris.<sup><a href="https://statranker.org/cities-urban-life/top-100-cities-by-international-tourist-arrivals-2025/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[1]</a></sup> By a different Euromonitor measure, its own Top 100 City Destinations Index for 2026, the leading cities are Paris, Madrid, Tokyo, Rome, and Milan, in that order; Bangkok is not among them, a reminder that &quot;most visited&quot; and &quot;best&quot; are two different questions with two different answers.<sup><a href="https://www.forbes.com/sites/laurabegleybloom/2025/12/22/the-10-best-cities-in-the-world-to-visit-in-2026-according-to-euromonitor/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[2]</a></sup> What follows is five days, built from official sources, an attempt to ask a few of Humboldt&apos;s blunt questions of a city too often treated as a layover with a market attached.
+          </p>
+
+          {/* Hero image */}
+          <figure className="my-6">
+            <img
+              src="https://images.unsplash.com/photo-1755251042986-91270ffd76f5?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+              alt="Wat Arun temple on the Chao Phraya River, Bangkok"
+              className="w-full rounded-2xl shadow-lg object-cover"
+              style={{ maxHeight: "480px" }}
+            />
+            <figcaption className="text-xs text-gray-400 mt-2 text-center">
+              Wat Arun on the Chao Phraya River. Photo by <strong className="text-gray-500">Teodor Kuduschiev</strong> on{" "}
+              <a href="https://unsplash.com/photos/wat-arun-temple-on-chao-phraya-river-bangkok-wd3tQvk0WXA" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash</a>.{" "}
+              <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash License</a> (free for all uses, including commercial)
+            </figcaption>
+          </figure>
+
+          {/* DAY 1 */}
+          <h2 className="text-3xl font-bold text-gray-900 mt-10">Day 1: The Old City and the River</h2>
+
+          <h2 className="text-2xl font-bold text-gray-900">1. The Grand Palace and Wat Phra Kaew</h2>
+          <p>
+            Thailand&apos;s official seat of government from 1782 until 1925 opens daily from 8:30 AM to 3:30 PM, and non-Thai passport holders pay 500 baht at the gate.<sup><a href="https://yourthaiguide.com/the-grand-palace-and-wat-phra-keaw/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[3]</a></sup> The dress code is enforced, not suggested: shoulders and knees covered, no leggings, no flip-flops, no torn clothing, with sarongs available to rent at the entrance if you arrive unprepared.<sup><a href="https://yourthaiguide.com/the-grand-palace-and-wat-phra-keaw/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[3]</a></sup> Inside the same walled compound stands Wat Phra Kaew, the Temple of the Emerald Buddha, Thailand&apos;s most sacred Buddhist site.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">2. Wat Pho and the Reclining Buddha</h2>
+          <p>
+            A short walk south, Wat Pho holds a gold-plated reclining Buddha 46 meters long and 15 meters high; the soles of its feet are inlaid with mother-of-pearl across 108 panels, each depicting one of the Buddha&apos;s auspicious characteristics, and a corridor of 108 bronze bowls circles the hall for coin offerings.<sup><a href="https://www.watpho.com/en/buddha/detail/204" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[4]</a></sup> Entry costs 100 baht and the grounds stay open until 7:30 PM, later than almost anything else in the old city.<sup><a href="https://yourthaiguide.com/bangkok-big-list-of-entry-fees/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[5]</a></sup>
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">3. A Traditional Thai Massage, at Its Birthplace</h2>
+          <p>
+            King Rama III founded a school of Thai medicine and massage at Wat Pho in 1832, and the temple is widely regarded as the origin point of traditional Thai massage as a formal discipline.<sup><a href="https://www.thai-aec.com/wat-pho-explained/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[6]</a></sup> The on-site massage school still offers hour-long sessions to visitors, a more grounded way to spend an afternoon than another temple courtyard.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">4. Wat Arun, Seen From the Water</h2>
+          <p>
+            The Temple of Dawn charges 40 baht and stays open from 8 AM to 6 PM.<sup><a href="https://yourthaiguide.com/bangkok-big-list-of-entry-fees/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[5]</a></sup> Its prang is encrusted with porcelain shards, a decorative technique that reportedly began because ships arriving in old Siam used broken Chinese porcelain as ballast; whether that is the whole story or a tidy legend, the effect up close, catching afternoon light, does not need the footnote.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">5. The Chao Phraya Express Boat</h2>
+          <p>
+            Public river boats have run since 1971 and remain the fastest way between the temples, Chinatown, and the riverside malls, skipping the traffic entirely.<sup><a href="https://en.wikipedia.org/wiki/Chao_Phraya_Express_Boat" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[7]</a></sup> The tourist-oriented Blue Flag line connecting Khao San Road to the Grand Palace, Wat Arun, Chinatown, and Asiatique costs 40 baht a ride or 150 baht for a day pass; the commuter Orange Flag line charges a flat 17 baht regardless of distance.<sup><a href="https://thaiest.com/thailand/bangkok/river-boats" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[8]</a></sup>
+          </p>
+
+          {/* Grand Palace image */}
+          <figure className="my-6">
+            <img
+              src="https://images.unsplash.com/photo-1728497622283-cb61c5733bf8?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+              alt="The Grand Palace, Bangkok"
+              className="w-full rounded-2xl shadow-lg object-cover"
+              style={{ maxHeight: "420px" }}
+            />
+            <figcaption className="text-xs text-gray-400 mt-2 text-center">
+              The Grand Palace, Phra Nakhon, Bangkok. Photo by <strong className="text-gray-500">Prashant</strong> on{" "}
+              <a href="https://unsplash.com/photos/a-large-building-with-a-clock-on-the-front-of-it-vPrJ8DNe8Ss" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash</a>.{" "}
+              <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash License</a>
+            </figcaption>
+          </figure>
+
+          {/* DAY 2 */}
+          <h2 className="text-3xl font-bold text-gray-900 mt-10">Day 2: Chinatown and the Markets</h2>
+
+          <h2 className="text-2xl font-bold text-gray-900">6. Yaowarat After Dark</h2>
+          <p>
+            Bangkok&apos;s Chinatown works a night shift: many stalls only open after sunset, when the street fills with high-heat woks and seafood smoke. Lim Lao Ngow, a 60-year-old fishball noodle stall, has won a Michelin Bib Gourmand award nine years running, 2018 through 2026, for fish balls made from fresh fish with no added flour.<sup><a href="https://www.eliteplusmagazine.com/Article/1035/Exploring_Bangkok%27s_Chinatown_Cuisine_Like_A_Rockstar__From_Michelin-Starred_Restaurants_To_Bib_Gourmand_Street_Food" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[9]</a></sup> A few doors down, Nai Mong Hoi Tod has held its own Bib Gourmand for its crispy oyster omelette.<sup><a href="https://thai-awesome.com/en/news/Bangkok-Michelin-Guide-8-Bib-Gourmand-Street-Food-Spots" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[10]</a></sup>
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">7. Chatuchak Weekend Market</h2>
+          <p>
+            Open Wednesday through Sunday on a staggered schedule, full Saturday and Sunday hours run 9 AM to 6 PM across more than 15,000 stalls on 35 acres, making it the largest weekend market in the world.<sup><a href="https://www.chatuchakmarket.org/opening-times/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[11]</a></sup> Go at opening; over 200,000 people pass through most weekends, and the heat and crowds both build fast after 11 AM.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">8. The Jim Thompson House</h2>
+          <p>
+            An American silk trader and former OSS officer, Jim Thompson is credited with reviving Thailand&apos;s silk industry after the Second World War; his house, six teak structures dismantled in Ayutthaya and reassembled here in 1959, opens daily from 10 AM to 5 PM with a required guided tour, for 250 baht.<sup><a href="https://jimthompsonhouse.org/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[12]</a></sup> Thompson disappeared while walking in Malaysia&apos;s Cameron Highlands on Easter Sunday 1967 and was never found, which the museum mentions without ceremony and without an answer.<sup><a href="https://jimthompsonhouse.org/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[12]</a></sup>
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">9. The Erawan Shrine</h2>
+          <p>
+            Built in 1956 to placate the spirits after a run of accidents and delays during the construction of the neighboring Erawan Hotel, the shrine to Phra Phrom, the Thai representation of Brahma, now sits wedged between shopping malls at one of Bangkok&apos;s busiest intersections, still visited daily for blessings of luck and prosperity, its resident dance troupe performing for anyone who has paid for one.<sup><a href="https://theculturetrip.com/asia/thailand/articles/a-brief-history-of-the-erawan-shrine-in-bangkok" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[13]</a></sup>
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">10. Live Music at Saxophone Pub</h2>
+          <p>
+            Steps from the Victory Monument BTS station, Saxophone Pub has booked live jazz, blues, rock, and reggae every night since 1987, with three or four acts rotating through a single evening between 7:30 PM and 1:30 AM.<sup><a href="http://www.saxophonepub.com/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[14]</a></sup> There is no cover charge; you pay only for what you eat and drink.
+          </p>
+
+          {/* Yaowarat street food image */}
+          <figure className="my-6">
+            <img
+              src="https://images.unsplash.com/photo-1750635409983-78ca6a8cf324?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+              alt="Nighttime street food vendors in Bangkok's Chinatown"
+              className="w-full rounded-2xl shadow-lg object-cover"
+              style={{ maxHeight: "420px" }}
+            />
+            <figcaption className="text-xs text-gray-400 mt-2 text-center">
+              Nighttime street food vendors, Yaowarat, Chinatown. Photo by <strong className="text-gray-500">Kaden Taylor</strong> on{" "}
+              <a href="https://unsplash.com/photos/nighttime-street-food-vendors-in-bangkok-k8dwH-poJ2c" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash</a>.{" "}
+              <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash License</a>
+            </figcaption>
+          </figure>
+
+          {/* DAY 3 */}
+          <h2 className="text-3xl font-bold text-gray-900 mt-10">Day 3: Green Escapes and the Skyline</h2>
+
+          <h2 className="text-2xl font-bold text-gray-900">11. Cycling Bang Kachao, the Green Lung</h2>
+          <p>
+            A horseshoe bend in the Chao Phraya protects Bang Kachao from commercial development by policy, leaving mangroves, elevated walkways, and canal-side communities a short ferry hop from downtown.<sup><a href="https://www.nationthailand.com/life/travel/40046090" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[15]</a></sup> Bike rental near Bang Nam Phueng Nok Pier starts around 50 baht for the day. Call this what it is, though: flat cycling through a nature reserve, not hiking, and the closest Bangkok itself comes to either.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">12. Lumpini Park and Its Monitor Lizards</h2>
+          <p>
+            Free and open from 4:30 AM to 10 PM across 57 hectares, Lumpini Park draws joggers, tai chi groups, paddleboaters, and an estimated 400 water monitor lizards, some over two meters long, that patrol the lakeside and are best watched from a respectful distance rather than approached.<sup><a href="https://theo-courant.com/en/lumpini-park-bangkok-best-tips/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[16]</a></sup><sup><a href="https://www.bangkokinsiders.com/lumphini-park-bangkok/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[17]</a></sup>
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">13. Sunset at Sky Bar</h2>
+          <p>
+            Set 247 meters up on the 64th floor of The Dome at lebua, Sky Bar has been one of the world&apos;s most recognized rooftop bars for two decades and gained a second life as the setting for The Hangover Part II, complete with its own Hangovertini on the menu.<sup><a href="https://lebua.com/restaurants/sky/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[18]</a></sup> Expect a crowd and a cover in the form of a minimum spend; the Banyan Tree&apos;s Moon Bar, on the 61st floor, is the quieter alternative when it is open, though it closed in mid-2026 for a renovation with no published reopening date at the time of writing, so confirm before you plan an evening around it.<sup><a href="https://www.banyantree.com/thailand/bangkok/dining/moon-bar" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[19]</a></sup>
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">14. Asiatique the Riverfront</h2>
+          <p>
+            Built in 2012 on the former docks of the 19th-century East Asiatic Company, Asiatique holds more than 1,500 shops along a 300-meter riverside promenade and a 60-meter Ferris wheel, the tallest in Thailand.<sup><a href="https://yourthaiguide.com/asiatique-the-riverfront-a-night-market-and-modern-mall-rolled-into-one-in-a-historic-location/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[20]</a></sup> A free shuttle boat runs from Sathorn Pier every 15 minutes between 4 PM and 11 PM, the easiest and most scenic way in.<sup><a href="https://yourthaiguide.com/asiatique-the-riverfront-a-night-market-and-modern-mall-rolled-into-one-in-a-historic-location/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[20]</a></sup>
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">15. A Muay Thai Fight Night at Rajadamnern Stadium</h2>
+          <p>
+            Opened in 1945, Rajadamnern is Thailand&apos;s oldest and most prestigious Muay Thai stadium and the only one in Bangkok with fights every night of the week, 7 to 9 bouts running 6 to 10 PM, with the strongest cards reserved for Saturdays.<sup><a href="https://muaythaistadiums.com/rajadamnern-muay-thai-stadium/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[21]</a></sup> Ringside seats run about 2,500 baht; buy online in advance directly through the stadium, since popular nights sell out and street touts mark tickets up.<sup><a href="https://rajadamnern.com/tickets/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[22]</a></sup>
+          </p>
+
+          {/* DAY 4-5 */}
+          <h2 className="text-3xl font-bold text-gray-900 mt-10">Days 4 and 5: Out of the City</h2>
+
+          <h2 className="text-2xl font-bold text-gray-900">16. Ayutthaya Historical Park</h2>
+          <p>
+            Founded around 1350 as Siam&apos;s second capital after Sukhothai, Ayutthaya grew into one of the era&apos;s largest and most cosmopolitan cities before Burmese forces destroyed it in 1767; UNESCO inscribed the 289-hectare ruin as a World Heritage Site in 1991, and its scattered prang and headless Buddhas are reachable by a roughly one-hour train from Bangkok&apos;s Central Station.<sup><a href="https://whc.unesco.org/en/list/576" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[23]</a></sup> At Wat Mahathat, a stone Buddha head has grown into the roots of a bodhi tree over the centuries, now one of the most photographed single objects in the country.<sup><a href="https://theworldtravelguy.com/ayutthaya-ruins-temples-buddha-tree-bangkok-thailand/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[24]</a></sup>
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">17. Damnoen Saduak Floating Market and Amphawa&apos;s Fireflies</h2>
+          <p>
+            About 100 kilometers southwest of the city, Damnoen Saduak is liveliest before 10 AM, when vendor boats loaded with fruit and noodle bowls crowd the canals; Amphawa, an hour closer to Bangkok, feels less staged and stays open into the evening, when tour boats drift the riverbank to watch fireflies light up the mangroves after dark.<sup><a href="https://wenthetravelbegins.com/en/floating-market-day-tour-en/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[25]</a></sup>
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">18. Koh Larn, the Nearest Beach</h2>
+          <p>
+            Ninety-eight kilometers from Bangkok and a short boat ride off Pattaya, Koh Larn is close enough for a single long day: leave at 7 AM, swim, and be back for dinner.<sup><a href="https://gowithguide.com/blog/5-day-trips-from-bangkok-5387" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[26]</a></sup> It is also, by its own local government&apos;s admission, badly over capacity: an estimated 9,000 to 10,000 visitors arrive daily against an island carrying capacity of 6,410, and more than 50,000 tonnes of accumulated waste sit without adequate treatment infrastructure.<sup><a href="https://www.bangkokpost.com/thailand/general/1479573/koh-larn-sullied-by-tourist-overload-as-waste-mounts" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[27]</a></sup> Go for the convenience, not under the illusion that this is Thailand&apos;s best beach; that title belongs to islands several hundred kilometers further south.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">19. A Michelin-Starred Dinner to Close the Trip</h2>
+          <p>
+            Bangkok carries 41 Michelin-starred restaurants in the 2026 guide, including two three-star kitchens, Sorn and Sühring.<sup><a href="https://fridaybangkok.com/en/n/michelin-star-thailand-2026" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[28]</a></sup> Gaggan, awarded one star in the same 2026 guide, runs a multi-act tasting menu built around Chef Gaggan Anand&apos;s Indian-rooted, theatrically plated cooking, served at a 14-seat counter; the set menu runs well into five figures in Thai baht, and the room is small enough that reservations should be made weeks ahead through the restaurant directly.<sup><a href="https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/gaggan-anand" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[29]</a></sup>
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">20. Loy Krathong or Songkran, Depending on the Calendar</h2>
+          <p>
+            Songkran, the Thai New Year, falls every April 13 to 15 and turns the city into a nationwide water fight.<sup><a href="https://www.umetravel.com/loy-krathong-festival/dates.html" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[30]</a></sup> Its quieter counterpart, Loy Krathong, falls on the November full moon, November 24, 2026, when thousands of candlelit baskets are set adrift on the Chao Phraya and its canals, and the riverfront fills with floats, food stalls, and fireworks.<sup><a href="https://www.umetravel.com/loy-krathong-festival/dates.html" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[30]</a></sup> Time a trip around either, if you can.
+          </p>
+
+          {/* Floating market and Ayutthaya images */}
+          <figure className="my-6">
+            <img
+              src="https://images.unsplash.com/photo-1747396108239-69277da86233?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+              alt="Floating market with vendors and customers in boats, Thailand"
+              className="w-full rounded-2xl shadow-lg object-cover"
+              style={{ maxHeight: "420px" }}
+            />
+            <figcaption className="text-xs text-gray-400 mt-2 text-center">
+              A floating market outside Bangkok. Photo by <strong className="text-gray-500">Mauro Lima</strong> on{" "}
+              <a href="https://unsplash.com/photos/floating-market-with-vendors-and-customers-in-boats-1dFwQ8MAUpo" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash</a>.{" "}
+              <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash License</a>
+            </figcaption>
+          </figure>
+
+          <figure className="my-6">
+            <img
+              src="https://images.unsplash.com/photo-1523984221268-5b6fefa96d16?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+              alt="Ruins of a Buddha statue at Ayutthaya, Thailand"
+              className="w-full rounded-2xl shadow-lg object-cover"
+              style={{ maxHeight: "420px" }}
+            />
+            <figcaption className="text-xs text-gray-400 mt-2 text-center">
+              Ruins of a Buddha, Ayutthaya. Photo by <strong className="text-gray-500">Aaron Thomas</strong> on{" "}
+              <a href="https://unsplash.com/photos/yj3VuRjDA3A" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash</a>.{" "}
+              <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash License</a>
+            </figcaption>
+          </figure>
+
+          {/* Counter-argument */}
+          <div className="mt-10 p-6 rounded-xl bg-amber-50 border border-amber-200">
+            <h2 className="text-xl font-bold text-gray-800 mb-3">The Honest Counterargument</h2>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Two things the postcard leaves out. First, the air: Bangkok&apos;s PM2.5 levels reached a 2026 peak in January, averaging 58.1 micrograms per cubic meter against a national safety standard of 37.5, with some districts recording readings near triple that threshold, driven by diesel traffic, construction dust, and agricultural smoke drifting in from the region.<sup><a href="https://www.nationthailand.com/thailand/bangkok/40061405" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[31]</a></sup> Check the air quality index before committing to a day of walking, especially between December and March. Second, the hustle: a well-documented gem-shop scam still runs daily near the Grand Palace, where a friendly stranger claims the site is closed and steers tourists by tuk-tuk to a &quot;government sale&quot; that does not exist, pressuring them into gems worth a fraction of what they paid.<sup><a href="https://yourthaiguide.com/top-10-bangkok-scams-you-should-avoid/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[32]</a></sup> Reported losses per incident have run from roughly 20,000 to 100,000 baht.<sup><a href="https://backpackthailand.com/guides/thailand-scams-guide" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[33]</a></sup> No government tourism office has ever run a gem sale. If anyone claims otherwise, walk away.
+            </p>
+          </div>
+
+          {/* Safety */}
+          <div className="mt-6 p-6 rounded-xl bg-blue-50 border border-blue-200">
+            <h2 className="text-xl font-bold text-gray-800 mb-3">A Note on Safety</h2>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              As of July 7, 2026, the U.S. State Department rates Thailand Level 1, &quot;Exercise Normal Precautions,&quot; which covers Bangkok, with two carved-out exceptions: Level 2, &quot;Exercise Increased Caution,&quot; applies to the area near the Thai-Cambodian border because of the risk of armed conflict, and to Yala, Pattani, and Narathiwat provinces in the deep south because of a long-running low-intensity insurgency; neither is anywhere near a standard Bangkok itinerary.<sup><a href="https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/thailand-travel-advisory.html" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[34]</a></sup> The less obvious risk is legal rather than criminal: Thailand&apos;s lese-majeste law, Section 112, criminalizes any insult, defamation, or perceived threat to the monarchy, carries three to fifteen years in prison per offense, applies to foreigners as much as citizens, and has been enforced over comments made on social media; the only sensible approach is to avoid discussing the Thai monarchy at all, in person or online, while you are in the country.<sup><a href="https://www.thailawonline.com/lese-majeste-in-thailand/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[35]</a></sup> None of this should keep you home. It should keep you off gem-shop tuk-tuks and off the subject of the king.
+            </p>
+          </div>
+
+          {/* Disclaimer */}
+          <div className="rounded-xl border border-gray-200 bg-gray-50 px-6 py-4 text-sm text-gray-500 leading-relaxed mt-8">
+            <strong className="text-gray-700">Disclaimer:</strong> This post shares findings from independent research using publicly available sources, current as of July 2026. Prices, hours, ticket policies, and event dates change often; verify directly with official sources before booking or building a schedule around any single date. The author has no commercial relationship with any venue listed. Security and entry conditions can change; consult your government&apos;s official travel advisory before traveling.
+          </div>
+
+          {/* Photo Credits */}
+          <h2 className="text-2xl font-bold text-gray-900">Photo Credits</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">
+            All photographs sourced from <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Unsplash</a> and used under the <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Unsplash License</a>, which grants free use for all purposes, commercial and non-commercial, worldwide, with no attribution legally required. We credit photographers voluntarily as a matter of practice.
+          </p>
+          <ul className="list-disc pl-6 space-y-1 text-sm text-gray-500">
+            <li>
+              <strong>Wat Arun on the Chao Phraya River.</strong> Photo by{" "}
+              <a href="https://unsplash.com/@teodorpk" target="_blank" rel="noopener noreferrer" className="hover:underline">Teodor Kuduschiev</a>{" "}
+              on Unsplash.{" "}
+              <a href="https://unsplash.com/photos/wat-arun-temple-on-chao-phraya-river-bangkok-wd3tQvk0WXA" target="_blank" rel="noopener noreferrer" className="hover:underline">unsplash.com/photos/wd3tQvk0WXA</a>
+            </li>
+            <li>
+              <strong>The Grand Palace, Bangkok.</strong> Photo by{" "}
+              <a href="https://unsplash.com/@prashantbrahmbhatt" target="_blank" rel="noopener noreferrer" className="hover:underline">Prashant</a>{" "}
+              on Unsplash.{" "}
+              <a href="https://unsplash.com/photos/a-large-building-with-a-clock-on-the-front-of-it-vPrJ8DNe8Ss" target="_blank" rel="noopener noreferrer" className="hover:underline">unsplash.com/photos/vPrJ8DNe8Ss</a>
+            </li>
+            <li>
+              <strong>Nighttime street food vendors, Yaowarat.</strong> Photo by{" "}
+              <a href="https://unsplash.com/@kaden_t" target="_blank" rel="noopener noreferrer" className="hover:underline">Kaden Taylor</a>{" "}
+              on Unsplash.{" "}
+              <a href="https://unsplash.com/photos/nighttime-street-food-vendors-in-bangkok-k8dwH-poJ2c" target="_blank" rel="noopener noreferrer" className="hover:underline">unsplash.com/photos/k8dwH-poJ2c</a>
+            </li>
+            <li>
+              <strong>A floating market outside Bangkok.</strong> Photo by{" "}
+              <a href="https://unsplash.com/@limamauro23" target="_blank" rel="noopener noreferrer" className="hover:underline">Mauro Lima</a>{" "}
+              on Unsplash.{" "}
+              <a href="https://unsplash.com/photos/floating-market-with-vendors-and-customers-in-boats-1dFwQ8MAUpo" target="_blank" rel="noopener noreferrer" className="hover:underline">unsplash.com/photos/1dFwQ8MAUpo</a>
+            </li>
+            <li>
+              <strong>Ruins of a Buddha, Ayutthaya.</strong> Photo by{" "}
+              <a href="https://unsplash.com/@aaronphs" target="_blank" rel="noopener noreferrer" className="hover:underline">Aaron Thomas</a>{" "}
+              on Unsplash.{" "}
+              <a href="https://unsplash.com/photos/yj3VuRjDA3A" target="_blank" rel="noopener noreferrer" className="hover:underline">unsplash.com/photos/yj3VuRjDA3A</a>
+            </li>
+          </ul>
+
+          {/* Sources */}
+          <h2 className="text-2xl font-bold text-gray-900">Sources</h2>
+          <ol className="list-decimal pl-6 space-y-1 text-sm text-gray-500">
+            <li><a href="https://statranker.org/cities-urban-life/top-100-cities-by-international-tourist-arrivals-2025/" target="_blank" rel="noopener noreferrer" className="hover:underline">StatRanker, &quot;Most Visited Cities in the World in 2025,&quot; citing Euromonitor International.</a></li>
+            <li><a href="https://www.forbes.com/sites/laurabegleybloom/2025/12/22/the-10-best-cities-in-the-world-to-visit-in-2026-according-to-euromonitor/" target="_blank" rel="noopener noreferrer" className="hover:underline">Forbes, &quot;The 10 Best Cities in the World to Visit in 2026, According to Euromonitor.&quot;</a></li>
+            <li><a href="https://yourthaiguide.com/the-grand-palace-and-wat-phra-keaw/" target="_blank" rel="noopener noreferrer" className="hover:underline">Your Thai Guide, &quot;The Grand Palace in Bangkok: Visitor Guide.&quot;</a></li>
+            <li><a href="https://www.watpho.com/en/buddha/detail/204" target="_blank" rel="noopener noreferrer" className="hover:underline">Wat Pho, official website, &quot;Phra Buddha Saiyas (Reclining Buddha).&quot;</a></li>
+            <li><a href="https://yourthaiguide.com/bangkok-big-list-of-entry-fees/" target="_blank" rel="noopener noreferrer" className="hover:underline">Your Thai Guide, &quot;Bangkok Big List of Entry Fees.&quot;</a></li>
+            <li><a href="https://www.thai-aec.com/wat-pho-explained/" target="_blank" rel="noopener noreferrer" className="hover:underline">Thai-AEC, &quot;Wat Pho Explained: Reclining Buddha Full Guide.&quot;</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Chao_Phraya_Express_Boat" target="_blank" rel="noopener noreferrer" className="hover:underline">Wikipedia, &quot;Chao Phraya Express Boat.&quot;</a></li>
+            <li><a href="https://thaiest.com/thailand/bangkok/river-boats" target="_blank" rel="noopener noreferrer" className="hover:underline">ThaiEST, &quot;Chao Phraya Express Boat Map, Route, Timetable, Fare &amp; Tips.&quot;</a></li>
+            <li><a href="https://www.eliteplusmagazine.com/Article/1035/Exploring_Bangkok%27s_Chinatown_Cuisine_Like_A_Rockstar__From_Michelin-Starred_Restaurants_To_Bib_Gourmand_Street_Food" target="_blank" rel="noopener noreferrer" className="hover:underline">Elite Plus Magazine, &quot;Exploring Bangkok&apos;s Chinatown Cuisine Like a Rockstar.&quot;</a></li>
+            <li><a href="https://thai-awesome.com/en/news/Bangkok-Michelin-Guide-8-Bib-Gourmand-Street-Food-Spots" target="_blank" rel="noopener noreferrer" className="hover:underline">Thai Awesome, &quot;Bangkok Michelin Guide: 8 Bib Gourmand Street Food Spots.&quot;</a></li>
+            <li><a href="https://www.chatuchakmarket.org/opening-times/" target="_blank" rel="noopener noreferrer" className="hover:underline">Chatuchak Market, official website, &quot;Opening Times.&quot;</a></li>
+            <li><a href="https://jimthompsonhouse.org/" target="_blank" rel="noopener noreferrer" className="hover:underline">Jim Thompson House, official website.</a></li>
+            <li><a href="https://theculturetrip.com/asia/thailand/articles/a-brief-history-of-the-erawan-shrine-in-bangkok" target="_blank" rel="noopener noreferrer" className="hover:underline">The Culture Trip, &quot;A Brief History of the Erawan Shrine in Bangkok.&quot;</a></li>
+            <li><a href="http://www.saxophonepub.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">Saxophone Pub, official website.</a></li>
+            <li><a href="https://www.nationthailand.com/life/travel/40046090" target="_blank" rel="noopener noreferrer" className="hover:underline">The Nation Thailand, &quot;Bang Kachao: A Cyclist&apos;s Haven and Nature Escape Near Bangkok.&quot;</a></li>
+            <li><a href="https://theo-courant.com/en/lumpini-park-bangkok-best-tips/" target="_blank" rel="noopener noreferrer" className="hover:underline">Th&eacute;o Courant, &quot;Lumpini Park Bangkok: Best Tips.&quot;</a></li>
+            <li><a href="https://www.bangkokinsiders.com/lumphini-park-bangkok/" target="_blank" rel="noopener noreferrer" className="hover:underline">Bangkok Insiders, &quot;Lumphini Park Bangkok: Monitor Lizards and Nature.&quot;</a></li>
+            <li><a href="https://lebua.com/restaurants/sky/" target="_blank" rel="noopener noreferrer" className="hover:underline">lebua, official website, &quot;Sky Bar Bangkok.&quot;</a></li>
+            <li><a href="https://www.banyantree.com/thailand/bangkok/dining/moon-bar" target="_blank" rel="noopener noreferrer" className="hover:underline">Banyan Tree Bangkok, official website, &quot;Moon Bar.&quot;</a></li>
+            <li><a href="https://yourthaiguide.com/asiatique-the-riverfront-a-night-market-and-modern-mall-rolled-into-one-in-a-historic-location/" target="_blank" rel="noopener noreferrer" className="hover:underline">Your Thai Guide, &quot;Asiatique: The Riverfront.&quot;</a></li>
+            <li><a href="https://muaythaistadiums.com/rajadamnern-muay-thai-stadium/" target="_blank" rel="noopener noreferrer" className="hover:underline">Muay Thai Stadiums, &quot;Rajadamnern Stadium 2026: Ticket Prices, Best Seats, and Schedule.&quot;</a></li>
+            <li><a href="https://rajadamnern.com/tickets/" target="_blank" rel="noopener noreferrer" className="hover:underline">Rajadamnern Stadium, official website, &quot;Tickets.&quot;</a></li>
+            <li><a href="https://whc.unesco.org/en/list/576" target="_blank" rel="noopener noreferrer" className="hover:underline">UNESCO World Heritage Centre, &quot;Historic City of Ayutthaya.&quot;</a></li>
+            <li><a href="https://theworldtravelguy.com/ayutthaya-ruins-temples-buddha-tree-bangkok-thailand/" target="_blank" rel="noopener noreferrer" className="hover:underline">The World Travel Guy, &quot;How to Visit the Ayutthaya Ruins, Temples, &amp; Buddha Tree.&quot;</a></li>
+            <li><a href="https://wenthetravelbegins.com/en/floating-market-day-tour-en/" target="_blank" rel="noopener noreferrer" className="hover:underline">Wen the Travel Begins, &quot;Thailand Floating Market Day Trip Guide.&quot;</a></li>
+            <li><a href="https://gowithguide.com/blog/5-day-trips-from-bangkok-5387" target="_blank" rel="noopener noreferrer" className="hover:underline">GoWithGuide, &quot;5 Day Trips From Bangkok.&quot;</a></li>
+            <li><a href="https://www.bangkokpost.com/thailand/general/1479573/koh-larn-sullied-by-tourist-overload-as-waste-mounts" target="_blank" rel="noopener noreferrer" className="hover:underline">Bangkok Post, &quot;Koh Larn Sullied by Tourist Overload as Waste Mounts.&quot;</a></li>
+            <li><a href="https://fridaybangkok.com/en/n/michelin-star-thailand-2026" target="_blank" rel="noopener noreferrer" className="hover:underline">Friday Bangkok, &quot;The Complete List of Michelin-Starred Restaurants in Thailand for the 2026 Edition.&quot;</a></li>
+            <li><a href="https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/gaggan-anand" target="_blank" rel="noopener noreferrer" className="hover:underline">MICHELIN Guide, &quot;Gaggan Anand, Bangkok.&quot;</a></li>
+            <li><a href="https://www.umetravel.com/loy-krathong-festival/dates.html" target="_blank" rel="noopener noreferrer" className="hover:underline">UME Travel, &quot;Loy Krathong 2026 &amp; 2027: Ultimate Guide to This Lantern Festival Thailand.&quot;</a></li>
+            <li><a href="https://www.nationthailand.com/thailand/bangkok/40061405" target="_blank" rel="noopener noreferrer" className="hover:underline">The Nation Thailand, &quot;Bangkok PM2.5: Chatuchak Highest as Pollution Levels Raise Health Concerns.&quot;</a></li>
+            <li><a href="https://yourthaiguide.com/top-10-bangkok-scams-you-should-avoid/" target="_blank" rel="noopener noreferrer" className="hover:underline">Your Thai Guide, &quot;Top 10 Bangkok Scams You Should Avoid.&quot;</a></li>
+            <li><a href="https://backpackthailand.com/guides/thailand-scams-guide" target="_blank" rel="noopener noreferrer" className="hover:underline">BackpackThailand.com, &quot;Thailand Scams: 17 Tourist Scams to Watch For.&quot;</a></li>
+            <li><a href="https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/thailand-travel-advisory.html" target="_blank" rel="noopener noreferrer" className="hover:underline">U.S. Department of State, &quot;Thailand Travel Advisory.&quot;</a></li>
+            <li><a href="https://www.thailawonline.com/lese-majeste-in-thailand/" target="_blank" rel="noopener noreferrer" className="hover:underline">ThaiLawOnline, &quot;Lese Majeste in Thailand: Section 112 Explained.&quot;</a></li>
+          </ol>
+
+        </div>
+      ),
+    },
+    "13": {
+      title: "Sydney: Twenty Essential Encounters on the Harbour City",
+      date: "2026-07-22",
+      readTime: "5 min",
+      type: "AI+HI",
+      content: (
+        <div className="space-y-6 text-gray-700 text-base leading-relaxed md:text-lg text-justify">
+
+          {/* Intro */}
+          <p>
+            In &quot;On the Exotic,&quot; the third chapter of The Art of Travel, Alain de Botton describes landing in Amsterdam and falling for an exit sign: its blunt Dutch vowels and unfamiliar typeface gave him genuine pleasure simply because they were not the sign he expected at home, the same impulse he traces in Gustave Flaubert, who preferred Egypt&apos;s disorder to the smugness of the French bourgeoisie he despised. The lesson, de Botton argues, is that the exotic rarely lives in the famous monument; it lives in the ordinary detail a place does differently. Sydney sells itself on two monuments, a shell-roofed opera house and a steel bridge, and both earn the postcard. But the city Flaubert might have noticed is the one where commuters catch a ferry to work the way other cities catch a bus, where thongs (flip-flops, to everyone else) count as acceptable pub footwear, and where the Opera House stands on land its traditional owners, the Gadigal, call Tubowgule.<sup><a href="https://www.sydneyoperahouse.com/tours/sydney-opera-house-tour" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[1]</a></sup> Sydney is not, by raw international arrivals, among the ten most-visited cities on earth: Bangkok, Hong Kong, and London all draw more foreign trips in a given year.<sup><a href="https://statranker.org/cities-urban-life/top-100-cities-by-international-tourist-arrivals-2025/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[2]</a></sup> But Sydney was named Australia&apos;s best city in a 2026 global liveability ranking, and New South Wales logged 4.1 million international visitors in the year to December 2025, who spent $15 billion during 105.9 million nights in the state.<sup><a href="https://www.timeout.com/sydney/news/sydney-is-officially-the-best-city-in-australia-according-to-the-2026-worlds-best-cities-111125" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[3]</a></sup><sup><a href="https://www.destinationnsw.com.au/insights/international-statistics" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[4]</a></sup> What follows is four days built from official sources, an attempt to earn both the postcard and the ferry commute.
+          </p>
+
+          {/* Hero image */}
+          <figure className="my-6">
+            <img
+              src="https://images.unsplash.com/photo-1744367624689-6bf2ef09ea28?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+              alt="Sydney Harbour Bridge and Opera House in view"
+              className="w-full rounded-2xl shadow-lg object-cover"
+              style={{ maxHeight: "480px" }}
+            />
+            <figcaption className="text-xs text-gray-400 mt-2 text-center">
+              Sydney Harbour Bridge and the Opera House. Photo by <strong className="text-gray-500">Fabio Cagni</strong> on{" "}
+              <a href="https://unsplash.com/photos/sydney-harbour-bridge-and-opera-house-in-view-8SS6VX_mGqE" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash</a>.{" "}
+              <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash License</a> (free for all uses, including commercial)
+            </figcaption>
+          </figure>
+
+          {/* DAY 1 */}
+          <h2 className="text-3xl font-bold text-gray-900 mt-10">Day 1: Circular Quay and the Harbour</h2>
+
+          <h2 className="text-2xl font-bold text-gray-900">1. The Sydney Opera House Tour</h2>
+          <p>
+            The one-hour guided tour covers roughly 2.5 kilometers on foot and around 300 stairs, with no lift and few chances to sit, so schedule it before a big lunch rather than after one. Danish architect Jorn Utzon won the 1957 design competition, then resigned in 1966 over cost disputes and never saw the building finished; it opened in 1973 and UNESCO listed it as a World Heritage Site in 2007, calling it &quot;one of the indisputable masterpieces of human creativity.&quot;<sup><a href="https://www.sydneyoperahouse.com/tours/sydney-opera-house-tour" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[1]</a></sup><sup><a href="https://whc.unesco.org/en/list/166/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[5]</a></sup> Adult tickets run in the high 40s in Australian dollars; book online rather than at the door.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">2. The Harbour Bridge: Climb It, or Just Look at It</h2>
+          <p>
+            BridgeClimb&apos;s Summit route runs three hours and 1,332 steps, priced dynamically by date and time but generally landing somewhere between AUD 350 and over 400 per adult.<sup><a href="https://www.bridgeclimb.com/experiences/summit" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[6]</a></sup><sup><a href="https://sydneyharborbridge.org/bridgeclimb/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[7]</a></sup> The cheaper alternative sits inside the bridge&apos;s southeast pylon: the Pylon Lookout and Museum charges under $25 for a 360-degree view, open daily from 10 AM.<sup><a href="https://www.sydney.com/node/213197" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[8]</a></sup> Either way, walk the free pedestrian path across the bridge at least once; it costs nothing and the view does not care how you arrived.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">3. Royal Botanic Garden and Mrs Macquarie&apos;s Chair</h2>
+          <p>
+            Convicts carved the sandstone bench at Mrs Macquarie&apos;s Point in 1810 for the governor&apos;s wife, who is said to have sat there watching for ships from England; the Gadigal name for the point is Yurong.<sup><a href="https://en.wikipedia.org/wiki/Mrs_Macquarie%27s_Chair" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[9]</a></sup> The Royal Botanic Garden around it is free and open from sunrise, and it delivers the cleanest photograph of the Opera House and the Bridge together, particularly before the tour groups arrive.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">4. The Rocks</h2>
+          <p>
+            Sydney&apos;s oldest urban quarter sits directly beneath the bridge&apos;s southern pylon, on the shoreline where the First Fleet came ashore at Sydney Cove on 26 January 1788.<sup><a href="https://www.sbs.com.au/language/english/en/podcast-episode/what-does-january-26-mean-to-indigenous-australians/3yqegzbws" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[10]</a></sup> Weekend markets fill the lanes with local food and crafts, and the sandstone streets behind them reward an aimless hour regardless of what you buy.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">5. Dinner at Bennelong</h2>
+          <p>
+            Inside the Opera House&apos;s smaller shells, Bennelong serves chef Peter Gilmore&apos;s modern Australian menu under a sail-shaped ceiling and has held a place on the World&apos;s 50 Best extended list.<sup><a href="https://www.theworlds50best.com/discovery/Establishments/Australia/Sydney/Bennelong.html" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[11]</a></sup> Gilmore&apos;s other restaurant, Quay, closed for good on 14 February 2026 after 23 consecutive years atop Australia&apos;s chef-hat rankings, so Bennelong is now the place to taste his cooking.<sup><a href="https://www.timeout.com/sydney/news/after-37-years-sydneys-famous-harbourfront-restaurant-quay-is-closing-121825" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[12]</a></sup> Reserve well ahead.
+          </p>
+
+          {/* Harbour Bridge ferry image */}
+          <figure className="my-6">
+            <img
+              src="https://images.unsplash.com/photo-1766323107197-0c92790c0236?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+              alt="Sydney Harbour Bridge with a ferry and city skyline"
+              className="w-full rounded-2xl shadow-lg object-cover"
+              style={{ maxHeight: "420px" }}
+            />
+            <figcaption className="text-xs text-gray-400 mt-2 text-center">
+              Sydney Harbour Bridge with a ferry and the city skyline. Photo by <strong className="text-gray-500">You Le</strong> on{" "}
+              <a href="https://unsplash.com/photos/sydney-harbour-bridge-with-ferry-and-city-skyline-uiq66FBF4M0" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash</a>.{" "}
+              <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash License</a>
+            </figcaption>
+          </figure>
+
+          {/* DAY 2 */}
+          <h2 className="text-3xl font-bold text-gray-900 mt-10">Day 2: The Eastern Beaches, on Foot</h2>
+
+          <h2 className="text-2xl font-bold text-gray-900">6. Bondi Beach and the Icebergs Pool</h2>
+          <p>
+            Bondi needs no introduction, which is exactly the risk de Botton warns about: expect a place too hard in advance and it can disappoint on arrival. The ocean pool at its southern end is the better test. Carved into the rocks in 1929 by a group of winter swimmers looking for a reason to keep training through the cold months, the Bondi Icebergs Swimming Club still requires new members to swim on three of every four Sundays for five years to earn lifetime status.<sup><a href="https://en.wikipedia.org/wiki/Bondi_Icebergs_Club" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[13]</a></sup>
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">7. The Bondi to Coogee Coastal Walk</h2>
+          <p>
+            Six kilometers of clifftop path, graded easy to moderate, running from Bondi through Tamarama, Bronte, Clovelly, and Gordons Bay into Coogee in two to three hours.<sup><a href="https://www.nsw.gov.au/visiting-and-exploring-nsw/locations-and-attractions/bondi-to-coogee-coastal-walk" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[14]</a></sup> It is one of the few walks in a major world city where the ocean stays in view for nearly the entire distance.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">8. Tamarama and Bronte</h2>
+          <p>
+            Tamarama is small, steep-sided, and known locally as &quot;Glamarama&quot;; Bronte has a proper park behind it and an ocean pool of its own, quieter than Bondi&apos;s and just as cold. Both are worth a stop rather than a walk-through.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">9. Coogee Beach and Wylie&apos;s Baths</h2>
+          <p>
+            Coogee closes the walk with a wider, calmer bay than anything earlier on the route, better suited to an actual swim than a photograph. Wylie&apos;s Baths, a tidal pool cut into the headland south of the beach, opened in 1907 and hosted some of Australia&apos;s first mixed-gender swimming competitions.<sup><a href="https://en.wikipedia.org/wiki/Wylie%27s_Baths" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[15]</a></sup>
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">10. Live Jazz at Mary&apos;s Underground</h2>
+          <p>
+            Formerly known as The Basement, this Circular Quay venue has booked live music since 1972 and has hosted Dizzy Gillespie, Herbie Hancock, and Australian jazz singer Vince Jones over the decades; it now programs jazz alongside rock, electronic, and folk most nights of the week.<sup><a href="https://wanderlog.com/place/details/8752390/basement-sydney" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[16]</a></sup>
+          </p>
+
+          {/* Bondi Beach image */}
+          <figure className="my-6">
+            <img
+              src="https://images.unsplash.com/photo-1506563613713-f88697472a45?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+              alt="Aerial view of Bondi Beach, Sydney"
+              className="w-full rounded-2xl shadow-lg object-cover"
+              style={{ maxHeight: "420px" }}
+            />
+            <figcaption className="text-xs text-gray-400 mt-2 text-center">
+              Aerial view of Bondi Beach. Photo by <strong className="text-gray-500">Road Trip with Raj</strong> on{" "}
+              <a href="https://unsplash.com/photos/aerial-view-of-body-of-water-Q-lzt8Uz4Eo" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash</a>.{" "}
+              <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash License</a>
+            </figcaption>
+          </figure>
+
+          {/* DAY 3 */}
+          <h2 className="text-3xl font-bold text-gray-900 mt-10">Day 3: Harbour Wildlife, Art, and the Fish Market</h2>
+
+          <h2 className="text-2xl font-bold text-gray-900">11. The Sydney Fish Market</h2>
+          <p>
+            The market relocated in January 2026 from its century-old Pyrmont site to a new building on Blackwattle Bay in Glebe, now the largest fish market in the Southern Hemisphere, with more than 40 specialty retailers, 19 seafood wholesalers, and roughly 55 tons of seafood moving through its working auction floor each day.<sup><a href="https://www.nationaltrust.org.au/blog/a-history-of-the-sydney-fish-market/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[17]</a></sup><sup><a href="https://crumbwire.com/news/the-largest-fish-market-in-the-southern-hemisphere-is-officially-open-sydney/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[18]</a></sup>
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">12. Taronga Zoo, by Ferry</h2>
+          <p>
+            The F2 ferry leaves Circular Quay&apos;s Wharf 4 roughly every 30 minutes and reaches Taronga Wharf in about 12 minutes, a shorter and more scenic commute than most Sydneysiders get to work.<sup><a href="https://www.captaincook.com.au/ferry/taronga-zoo-ferry/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[19]</a></sup> The zoo&apos;s hillside gives one of the better harbour views in the city, animals aside.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">13. Barangaroo Reserve</h2>
+          <p>
+            A container terminal until the early 2010s, Barangaroo Reserve reopened in 2015 as a headland rebuilt from more than 10,000 sandstone blocks, most quarried on site, shaped to match an 1836 shoreline recovered from historical maps and paintings.<sup><a href="https://www.infrastructure.nsw.gov.au/news/barangaroo-reserve-turns-10/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[20]</a></sup> Underneath it, the Cutaway hosts exhibitions and events in one of the largest indoor spaces of its kind in the country.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">14. The Art Gallery of New South Wales</h2>
+          <p>
+            Free general admission covers both buildings: Naala Nura, the original 1897 building, and Naala Badu, the new North Building that opened in 2022 as the centerpiece of the Sydney Modern project and now holds the Yiribana Gallery of Aboriginal and Torres Strait Islander art.<sup><a href="https://www.artgallery.nsw.gov.au/visit/plan-your-visit/campus/north-building/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[21]</a></sup> Open until 10 PM on Wednesdays.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">15. Manly, by Ferry</h2>
+          <p>
+            The Manly service has run since 1855, making it one of the oldest continuously operating ferry routes in the world.<sup><a href="https://www.mynrma.com.au/about/centenary/the-history-of-manly-fast-ferry" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[22]</a></sup> The Corso connects the wharf to ocean-facing Manly Beach in a five-minute walk, and Shelly Beach around the headland offers the calmest snorkeling water on this side of the harbour.
+          </p>
+
+          {/* Blue Mountains image */}
+          <figure className="my-6">
+            <img
+              src="https://images.unsplash.com/photo-1668250264823-110a6c9a17d6?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+              alt="Three Sisters rock formation in the Blue Mountains, Katoomba"
+              className="w-full rounded-2xl shadow-lg object-cover"
+              style={{ maxHeight: "420px" }}
+            />
+            <figcaption className="text-xs text-gray-400 mt-2 text-center">
+              The Three Sisters, Blue Mountains National Park. Photo by <strong className="text-gray-500">Stephen Tafra</strong> on{" "}
+              <a href="https://unsplash.com/photos/a-rocky-cliff-with-a-valley-below-with-blue-mountains-in-the-background-SL3YUkoS-Fs" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash</a>.{" "}
+              <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash License</a>
+            </figcaption>
+          </figure>
+
+          {/* DAY 4 */}
+          <h2 className="text-3xl font-bold text-gray-900 mt-10">Day 4: Out of the Harbour</h2>
+
+          <h2 className="text-2xl font-bold text-gray-900">16. The Blue Mountains and the Three Sisters</h2>
+          <p>
+            Ninety kilometers west, reachable by a roughly two-hour train from Central Station on the Blue Mountains Line for as little as $8 on weekends, Katoomba delivers the closest thing to genuine wilderness available as a Sydney day trip.<sup><a href="https://sydneyexpert.com/blue-mountains-from-sydney/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[23]</a></sup> The Three Sisters walk from Echo Point is an easy 0.8 kilometers return, but the surrounding national park holds serious multi-hour bushwalks for anyone willing to go further than the lookout.<sup><a href="https://www.nationalparks.nsw.gov.au/things-to-do/walking-tracks/three-sisters-walk" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[24]</a></sup> The air is noticeably cooler than the platform you left in Sydney, and the valley below often sits under the pale blue haze of evaporating eucalyptus oil, which is where the range gets its name.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">17. Django Bar, Marrickville</h2>
+          <p>
+            Downstairs from Camelot Lounge at 103 Railway Parade, Django Bar runs an intimate program of jazz, world music, and blues most nights, the kind of room where the band ends up closer to you than the bar.<sup><a href="https://www.camelotlounge.com/djangobar" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[25]</a></sup>
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">18. The Enmore Theatre</h2>
+          <p>
+            Built in 1908 as a theatre for silent films with a live orchestra, the Enmore is one of only two Art Deco theatres left in Sydney and the only one still in its original condition after a 1936 renovation.<sup><a href="https://dictionaryofsydney.org/blog/enmore_theatre_sydneys_longest_running_live_entertainment_venue" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[26]</a></sup> It has run live music and comedy since the 1980s and remains, for many Australian acts, the venue that means you have made it.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">19. Vivid Sydney</h2>
+          <p>
+            If your dates land between late May and mid-June, Vivid Sydney turns the harbour into a free, 6.5-kilometer light walk of more than 40 installations running from Circular Quay to Darling Harbour, 6 to 11 PM nightly; more than 80 percent of the full festival program, including the entire Light Walk, costs nothing.<sup><a href="https://www.vividsydney.com/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[27]</a></sup>
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">20. New Year&apos;s Eve on the Harbour</h2>
+          <p>
+            Sydney is reliably the first major city to broadcast its New Year&apos;s Eve fireworks to the rest of the world, and the midnight show, launched from barges, the Bridge, and the Opera House roofline, is watched by an estimated one billion people globally, more than any other fireworks display on earth.<sup><a href="https://en.wikipedia.org/wiki/Sydney_New_Year%27s_Eve" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[28]</a></sup> Arrive at a public vantage point on the foreshore by early afternoon if you want a view without paying for one.
+          </p>
+
+          {/* Counter-argument */}
+          <div className="mt-10 p-6 rounded-xl bg-amber-50 border border-amber-200">
+            <h2 className="text-xl font-bold text-gray-800 mb-3">The Honest Counterargument</h2>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Sydney&apos;s harbour view is not evenly distributed. The city&apos;s median house price sat close to $1.76 million in early 2026, among the least affordable housing markets in the world relative to local wages, and the 2026 Statewide Street Count recorded 2,308 people sleeping rough across New South Wales, a five percent rise and the highest figure in years, even as more than 28,000 households sit on the social housing waiting list.<sup><a href="https://www.timeout.com/sydney/news/sydney-house-prices-jumped-again-in-2025-pushing-the-median-to-1-76-million-022326" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[29]</a></sup><sup><a href="https://cityhub.com.au/homelessness-numbers-decrease-in-inner-sydney-but-increase-across-nsw/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[30]</a></sup> None of that is visible from Mrs Macquarie&apos;s Chair. Nor is the argument, made loudest every 26 January, that Australia Day marks not a founding but an invasion: the date commemorates the 1788 landing of the First Fleet at Sydney Cove, and Aboriginal and Torres Strait Islander people have marked it as a day of mourning since 1938, a protest that has only grown louder in recent years.<sup><a href="https://www.sbs.com.au/language/english/en/podcast-episode/what-does-january-26-mean-to-indigenous-australians/3yqegzbws" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[10]</a></sup> A four-day loop through the Opera House, the beaches, and the Blue Mountains will not show you a city working through that history, and pretending otherwise would be its own kind of dishonesty.
+            </p>
+          </div>
+
+          {/* Safety */}
+          <div className="mt-6 p-6 rounded-xl bg-blue-50 border border-blue-200">
+            <h2 className="text-xl font-bold text-gray-800 mb-3">A Note on Safety</h2>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              The U.S. State Department rates Australia Level 1, &quot;Exercise Normal Precautions,&quot; its lowest advisory tier, and violent crime aimed at tourists is rare.<sup><a href="https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/australia-travel-advisory.html" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[31]</a></sup> The real risks in Sydney are environmental rather than criminal: rip currents cause an average of 26 drowning deaths a year nationally, and Surf Life Saving Australia&apos;s clearest finding is that almost all beach drownings happen outside the red and yellow patrol flags, so swim between them and nowhere else.<sup><a href="https://sls.com.au/surf-life-saving-australia-launches-new-summer-safety-campaign-give-an-f-about-the-flags/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[32]</a></sup> Bushfire season runs roughly October to February and can affect air quality even in the city; the UK Foreign Office flags it as a seasonal hazard worth checking before you travel, alongside routine caution around sharks, snakes, and strong sun.<sup><a href="https://www.gov.uk/foreign-travel-advice/australia" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[33]</a></sup> None of this should keep you home. It should keep you between the flags.
+            </p>
+          </div>
+
+          {/* Disclaimer */}
+          <div className="rounded-xl border border-gray-200 bg-gray-50 px-6 py-4 text-sm text-gray-500 leading-relaxed mt-8">
+            <strong className="text-gray-700">Disclaimer:</strong> This post shares findings from independent research using publicly available sources, current as of July 2026. Prices, hours, ticket policies, and event dates change often; verify directly with official sources before booking or building a schedule around any single date. The author has no commercial relationship with any venue listed. Security and entry conditions can change; consult your government&apos;s official travel advisory before traveling.
+          </div>
+
+          {/* Photo Credits */}
+          <h2 className="text-2xl font-bold text-gray-900">Photo Credits</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">
+            All photographs sourced from <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Unsplash</a> and used under the <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Unsplash License</a>, which grants free use for all purposes, commercial and non-commercial, worldwide, with no attribution legally required. We credit photographers voluntarily as a matter of practice.
+          </p>
+          <ul className="list-disc pl-6 space-y-1 text-sm text-gray-500">
+            <li>
+              <strong>Sydney Harbour Bridge and Opera House in view.</strong> Photo by{" "}
+              <a href="https://unsplash.com/@triqeo" target="_blank" rel="noopener noreferrer" className="hover:underline">Fabio Cagni</a>{" "}
+              on Unsplash.{" "}
+              <a href="https://unsplash.com/photos/sydney-harbour-bridge-and-opera-house-in-view-8SS6VX_mGqE" target="_blank" rel="noopener noreferrer" className="hover:underline">unsplash.com/photos/8SS6VX_mGqE</a>
+            </li>
+            <li>
+              <strong>Sydney Harbour Bridge with a ferry and city skyline.</strong> Photo by{" "}
+              <a href="https://unsplash.com/@le_y0u" target="_blank" rel="noopener noreferrer" className="hover:underline">You Le</a>{" "}
+              on Unsplash.{" "}
+              <a href="https://unsplash.com/photos/sydney-harbour-bridge-with-ferry-and-city-skyline-uiq66FBF4M0" target="_blank" rel="noopener noreferrer" className="hover:underline">unsplash.com/photos/uiq66FBF4M0</a>
+            </li>
+            <li>
+              <strong>Aerial view of Bondi Beach.</strong> Photo by{" "}
+              <a href="https://unsplash.com/@roadtripwithraj" target="_blank" rel="noopener noreferrer" className="hover:underline">Road Trip with Raj</a>{" "}
+              on Unsplash.{" "}
+              <a href="https://unsplash.com/photos/aerial-view-of-body-of-water-Q-lzt8Uz4Eo" target="_blank" rel="noopener noreferrer" className="hover:underline">unsplash.com/photos/Q-lzt8Uz4Eo</a>
+            </li>
+            <li>
+              <strong>The Three Sisters, Blue Mountains National Park.</strong> Photo by{" "}
+              <a href="https://unsplash.com/@stafra" target="_blank" rel="noopener noreferrer" className="hover:underline">Stephen Tafra</a>{" "}
+              on Unsplash.{" "}
+              <a href="https://unsplash.com/photos/a-rocky-cliff-with-a-valley-below-with-blue-mountains-in-the-background-SL3YUkoS-Fs" target="_blank" rel="noopener noreferrer" className="hover:underline">unsplash.com/photos/SL3YUkoS-Fs</a>
+            </li>
+          </ul>
+
+          {/* Sources */}
+          <h2 className="text-2xl font-bold text-gray-900">Sources</h2>
+          <ol className="list-decimal pl-6 space-y-1 text-sm text-gray-500">
+            <li><a href="https://www.sydneyoperahouse.com/tours/sydney-opera-house-tour" target="_blank" rel="noopener noreferrer" className="hover:underline">Sydney Opera House, official website, &quot;Sydney Opera House Tour.&quot;</a></li>
+            <li><a href="https://statranker.org/cities-urban-life/top-100-cities-by-international-tourist-arrivals-2025/" target="_blank" rel="noopener noreferrer" className="hover:underline">StatRanker, &quot;Most Visited Cities in the World in 2025,&quot; citing Euromonitor International.</a></li>
+            <li><a href="https://www.timeout.com/sydney/news/sydney-is-officially-the-best-city-in-australia-according-to-the-2026-worlds-best-cities-111125" target="_blank" rel="noopener noreferrer" className="hover:underline">Time Out Sydney, &quot;Sydney Is Officially the Best City in Australia According to the 2026 World&apos;s Best Cities.&quot;</a></li>
+            <li><a href="https://www.destinationnsw.com.au/insights/international-statistics" target="_blank" rel="noopener noreferrer" className="hover:underline">Destination NSW, &quot;International Statistics.&quot;</a></li>
+            <li><a href="https://whc.unesco.org/en/list/166/" target="_blank" rel="noopener noreferrer" className="hover:underline">UNESCO World Heritage Centre, &quot;Sydney Opera House.&quot;</a></li>
+            <li><a href="https://www.bridgeclimb.com/experiences/summit" target="_blank" rel="noopener noreferrer" className="hover:underline">BridgeClimb, official website, &quot;Summit Climb.&quot;</a></li>
+            <li><a href="https://sydneyharborbridge.org/bridgeclimb/" target="_blank" rel="noopener noreferrer" className="hover:underline">Sydney Harbor Bridge, &quot;BridgeClimb Sydney: Tickets, Costs &amp; What to Expect.&quot;</a></li>
+            <li><a href="https://www.sydney.com/node/213197" target="_blank" rel="noopener noreferrer" className="hover:underline">Sydney.com, official travel guide, &quot;Sydney Harbour Bridge Pylon Lookout.&quot;</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Mrs_Macquarie%27s_Chair" target="_blank" rel="noopener noreferrer" className="hover:underline">Wikipedia, &quot;Mrs Macquarie&apos;s Chair.&quot;</a></li>
+            <li><a href="https://www.sbs.com.au/language/english/en/podcast-episode/what-does-january-26-mean-to-indigenous-australians/3yqegzbws" target="_blank" rel="noopener noreferrer" className="hover:underline">SBS, &quot;What Does January 26 Mean to Indigenous Australians?&quot;</a></li>
+            <li><a href="https://www.theworlds50best.com/discovery/Establishments/Australia/Sydney/Bennelong.html" target="_blank" rel="noopener noreferrer" className="hover:underline">The World&apos;s 50 Best Discovery, &quot;Bennelong.&quot;</a></li>
+            <li><a href="https://www.timeout.com/sydney/news/after-37-years-sydneys-famous-harbourfront-restaurant-quay-is-closing-121825" target="_blank" rel="noopener noreferrer" className="hover:underline">Time Out Sydney, &quot;After 37 Years, Sydney&apos;s Famous Harbourfront Restaurant Quay Is Closing.&quot;</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Bondi_Icebergs_Club" target="_blank" rel="noopener noreferrer" className="hover:underline">Wikipedia, &quot;Bondi Icebergs Club.&quot;</a></li>
+            <li><a href="https://www.nsw.gov.au/visiting-and-exploring-nsw/locations-and-attractions/bondi-to-coogee-coastal-walk" target="_blank" rel="noopener noreferrer" className="hover:underline">NSW Government, &quot;Bondi to Coogee Coastal Walk.&quot;</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Wylie%27s_Baths" target="_blank" rel="noopener noreferrer" className="hover:underline">Wikipedia, &quot;Wylie&apos;s Baths.&quot;</a></li>
+            <li><a href="https://wanderlog.com/place/details/8752390/basement-sydney" target="_blank" rel="noopener noreferrer" className="hover:underline">Wanderlog, &quot;Basement Sydney (Mary&apos;s Underground).&quot;</a></li>
+            <li><a href="https://www.nationaltrust.org.au/blog/a-history-of-the-sydney-fish-market/" target="_blank" rel="noopener noreferrer" className="hover:underline">National Trust of Australia, &quot;A History of the Sydney Fish Market.&quot;</a></li>
+            <li><a href="https://crumbwire.com/news/the-largest-fish-market-in-the-southern-hemisphere-is-officially-open-sydney/" target="_blank" rel="noopener noreferrer" className="hover:underline">Crumb Wire, &quot;The Largest Fish Market in the Southern Hemisphere Is Officially Open: Sydney.&quot;</a></li>
+            <li><a href="https://www.captaincook.com.au/ferry/taronga-zoo-ferry/" target="_blank" rel="noopener noreferrer" className="hover:underline">Captain Cook Cruises Sydney, &quot;Ferry to Taronga Zoo.&quot;</a></li>
+            <li><a href="https://www.infrastructure.nsw.gov.au/news/barangaroo-reserve-turns-10/" target="_blank" rel="noopener noreferrer" className="hover:underline">Infrastructure NSW, &quot;Barangaroo Reserve Turns 10: A Decade of Transformation on Sydney&apos;s Harbour.&quot;</a></li>
+            <li><a href="https://www.artgallery.nsw.gov.au/visit/plan-your-visit/campus/north-building/" target="_blank" rel="noopener noreferrer" className="hover:underline">Art Gallery of New South Wales, official website, &quot;Naala Badu, North Building.&quot;</a></li>
+            <li><a href="https://www.mynrma.com.au/about/centenary/the-history-of-manly-fast-ferry" target="_blank" rel="noopener noreferrer" className="hover:underline">My NRMA, &quot;The History of Manly Fast Ferry.&quot;</a></li>
+            <li><a href="https://sydneyexpert.com/blue-mountains-from-sydney/" target="_blank" rel="noopener noreferrer" className="hover:underline">Sydney Expert, &quot;Blue Mountains from Sydney: Complete Guide.&quot;</a></li>
+            <li><a href="https://www.nationalparks.nsw.gov.au/things-to-do/walking-tracks/three-sisters-walk" target="_blank" rel="noopener noreferrer" className="hover:underline">NSW National Parks and Wildlife Service, &quot;Three Sisters Walk.&quot;</a></li>
+            <li><a href="https://www.camelotlounge.com/djangobar" target="_blank" rel="noopener noreferrer" className="hover:underline">Camelot Lounge, official website, &quot;Django Bar.&quot;</a></li>
+            <li><a href="https://dictionaryofsydney.org/blog/enmore_theatre_sydneys_longest_running_live_entertainment_venue" target="_blank" rel="noopener noreferrer" className="hover:underline">Dictionary of Sydney, &quot;Enmore Theatre: Sydney&apos;s Longest Running Live Entertainment Venue.&quot;</a></li>
+            <li><a href="https://www.vividsydney.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">Vivid Sydney, official website, vividsydney.com.</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Sydney_New_Year%27s_Eve" target="_blank" rel="noopener noreferrer" className="hover:underline">Wikipedia, &quot;Sydney New Year&apos;s Eve.&quot;</a></li>
+            <li><a href="https://www.timeout.com/sydney/news/sydney-house-prices-jumped-again-in-2025-pushing-the-median-to-1-76-million-022326" target="_blank" rel="noopener noreferrer" className="hover:underline">Time Out Sydney, &quot;Sydney House Prices Jumped Again in 2025, Pushing the Median to $1.76 Million.&quot;</a></li>
+            <li><a href="https://cityhub.com.au/homelessness-numbers-decrease-in-inner-sydney-but-increase-across-nsw/" target="_blank" rel="noopener noreferrer" className="hover:underline">City Hub, &quot;Homelessness Numbers Decrease in Inner Sydney But Increase Across NSW.&quot;</a></li>
+            <li><a href="https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/australia-travel-advisory.html" target="_blank" rel="noopener noreferrer" className="hover:underline">U.S. Department of State, &quot;Australia Travel Advisory.&quot;</a></li>
+            <li><a href="https://sls.com.au/surf-life-saving-australia-launches-new-summer-safety-campaign-give-an-f-about-the-flags/" target="_blank" rel="noopener noreferrer" className="hover:underline">Surf Life Saving Australia, &quot;Surf Life Saving Australia Launches New Summer Safety Campaign.&quot;</a></li>
+            <li><a href="https://www.gov.uk/foreign-travel-advice/australia" target="_blank" rel="noopener noreferrer" className="hover:underline">UK Government, Foreign, Commonwealth &amp; Development Office, &quot;Australia Travel Advice.&quot;</a></li>
+          </ol>
+
+        </div>
+      ),
+    },
+    "11": {
+      title: "New York City: Twenty Essential Encounters in the City You Already Know",
+      date: "2026-07-15",
+      readTime: "5 min",
+      type: "AI+HI",
+      content: (
+        <div className="space-y-6 text-gray-700 text-base leading-relaxed md:text-lg text-justify">
+
+          {/* Intro */}
+          <p>
+            In &quot;On Anticipation,&quot; the opening chapter of The Art of Travel, Alain de Botton retells the story of Joris-Karl Huysmans&apos;s novel &Agrave; Rebours, whose hero packs for London, stops at an English tavern in Paris on the way to the station, and is so satisfied by the fog outside and the Dickens on the table that he cancels the trip and goes home, certain the real city could only disappoint the one already built in his head. New York sets the same trap for almost everyone, since most visitors have already walked its streets a thousand times before landing, in the opening shots of a hundred films. It is not, by raw numbers, the world&apos;s most visited city: Bangkok, London, and Istanbul all draw more international arrivals in a given year. But New York ranked sixth in Euromonitor&apos;s 2025 Top 100 City Destinations Index, the only American city in the top ten, and logged 65 million total visitors in 2025, generating $84.7 billion in economic impact.<sup><a href="https://www.cnn.com/2025/12/04/travel/euromonitor-international-top-city-destinations-2025" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[1]</a></sup><sup><a href="https://www.business.nyctourism.com/press-media/press-releases/NYC-Tourism-Annual-Report-March-2026" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[2]</a></sup> What follows is four days, drawn from official sources, that try to earn the skyline rather than assume it.
+          </p>
+
+          {/* Hero image */}
+          <figure className="my-6">
+            <img
+              src="https://images.unsplash.com/photo-1543052616-36435c0d87fe?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+              alt="Aerial photo of the New York City skyline during daytime"
+              className="w-full rounded-2xl shadow-lg object-cover"
+              style={{ maxHeight: "480px" }}
+            />
+            <figcaption className="text-xs text-gray-400 mt-2 text-center">
+              An aerial view of the New York City skyline. Photo by <strong className="text-gray-500">Chris Barbalis</strong> on{" "}
+              <a href="https://unsplash.com/photos/aerial-photo-of-new-york-city-during-daytime-88Xn77JOKRQ" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash</a>.{" "}
+              <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash License</a> (free for all uses, including commercial)
+            </figcaption>
+          </figure>
+
+          {/* DAY 1 */}
+          <h2 className="text-3xl font-bold text-gray-900 mt-10">Day 1: The Skyline, Honestly</h2>
+
+          <h2 className="text-2xl font-bold text-gray-900">1. The Empire State Building at Opening Hour</h2>
+          <p>
+            Tickets to the 86th-floor deck start at $44, with a $79 combo for both observatories; the building opens as early as 9 AM and stays open until 10 or 11 PM, 365 days a year.<sup><a href="https://www.esbnyc.com/visit/hours-of-operation" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[3]</a></sup> Arrive at opening, before the tour buses, and the ride up feels almost private.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">2. Top of the Rock at Sunset</h2>
+          <p>
+            Tickets start around $36 for the 70th-floor deck at Rockefeller Center, whose real advantage is architectural: it lets you look at the Empire State Building instead of standing on it.<sup><a href="https://www.rockefellercenter.com/tickets/top-of-the-rock-observation-deck" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[4]</a></sup> Go for sunset, and stay twenty minutes past it.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">3. MoMA, Free on Friday Evenings</h2>
+          <p>
+            General admission is $30, but New York State residents can reserve free entry every Friday from 5:30 to 8:30 PM.<sup><a href="https://www.moma.org/visit/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[5]</a></sup> Van Gogh&apos;s The Starry Night, fifth floor, draws the only line in the building worth waiting in.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">4. Katz&apos;s Delicatessen</h2>
+          <p>
+            Open since 1888 under an earlier name and known as Katz&apos;s since 1910, the deli still hand-carves pastrami to order and expects a cash tip for the counterman before you sit down.<sup><a href="https://katzsdelicatessen.com/our-story" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[6]</a></sup> The table marked for the 1989 diner scene in When Harry Met Sally is mostly useful for knowing which one to skip.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">5. A Broadway Show, the Honest Way</h2>
+          <p>
+            Full-price orchestra seats can run past $200. The TKTS booth in Times Square sells same-day tickets at 20 to 50 percent off, cash or card, no website; digital lotteries through Telecharge and Broadway Direct offer $40 to $60 seats, with winners notified by email that afternoon.<sup><a href="https://seatplan.com/new-york/news/how-does-broadway-lottery-work/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[7]</a></sup> Either way, you will not know your seat until you have already committed.
+          </p>
+
+          {/* Times Square image */}
+          <figure className="my-6">
+            <img
+              src="https://images.unsplash.com/photo-1479660095429-2cf4e1360472?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+              alt="Time-lapse photography of crowds in Times Square at night"
+              className="w-full rounded-2xl shadow-lg object-cover"
+              style={{ maxHeight: "420px" }}
+            />
+            <figcaption className="text-xs text-gray-400 mt-2 text-center">
+              Times Square after dark. Photo by <strong className="text-gray-500">Joe Yates</strong> on{" "}
+              <a href="https://unsplash.com/photos/time-lapse-photography-of-crowd-of-people-on-new-york-time-square-during-night-time-Cc4sToR2Oc0" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash</a>.{" "}
+              <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash License</a>
+            </figcaption>
+          </figure>
+
+          {/* DAY 2 */}
+          <h2 className="text-3xl font-bold text-gray-900 mt-10">Day 2: The Harbor and the Bridge</h2>
+
+          <h2 className="text-2xl font-bold text-gray-900">6. The 9/11 Memorial and Museum</h2>
+          <p>
+            The outdoor memorial, twin reflecting pools set in the towers&apos; footprints, is free, 8 AM to 8 PM daily. Museum admission runs about $29, waived for area residents the first Sunday of each month and released free, first-come, every Monday at 7 AM online.<sup><a href="https://www.911memorial.org/visit/visit-museum-1" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[8]</a></sup> Visit the memorial regardless of whether you can get into the museum.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">7. Statue of Liberty and Ellis Island</h2>
+          <p>
+            The only official ferry, Statue City Cruises, charges $25.50 round-trip for adults and covers both islands and their museums.<sup><a href="https://www.nps.gov/stli/planyourvisit/fees.htm" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[9]</a></sup> Crown access tickets cost thirty cents more and sell out three to four months ahead, so decide before you land whether the climb matters to you.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">8. Brooklyn Bridge at Golden Hour</h2>
+          <p>
+            Engineer John Roebling built the pedestrian promenade above the roadway on purpose, calling it &quot;of incalculable value&quot; to a crowded commercial city; the bridge opened in 1883, and over 4,000 pedestrians still cross its wooden boardwalk on an average day.<sup><a href="https://www.nyc.gov/html/dot/html/infrastructure/brooklyn-bridge.shtml" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[10]</a></sup> Walk it toward Brooklyn, so the skyline is at your back on the way over and in front of you on the way home.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">9. DUMBO and the View Back</h2>
+          <p>
+            Stand on Washington Street between Front and Water, and the Manhattan Bridge frames the Empire State Building closely enough that it looks staged. It works in every weather, which is the entire reason everyone photographs the same spot.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">10. Smorgasburg</h2>
+          <p>
+            Now in its sixteenth season, the country&apos;s largest open-air food market runs Saturdays in Williamsburg and Sundays in Prospect Park, 11 AM to 6 PM, free to enter, through October, with roughly seventy vendors drawn largely from the city&apos;s immigrant kitchens.<sup><a href="https://www.timeout.com/newyork/restaurants/smorgasburg-guide" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[11]</a></sup> Skip breakfast beforehand; that is the entire strategy.
+          </p>
+
+          {/* Brooklyn Bridge image */}
+          <figure className="my-6">
+            <img
+              src="https://images.unsplash.com/photo-1760024764489-91e40002c82a?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+              alt="Brooklyn Bridge and the Manhattan skyline at sunset"
+              className="w-full rounded-2xl shadow-lg object-cover"
+              style={{ maxHeight: "420px" }}
+            />
+            <figcaption className="text-xs text-gray-400 mt-2 text-center">
+              The Brooklyn Bridge and the Manhattan skyline at sunset. Photo by <strong className="text-gray-500">M&aacute;rcio P&ecirc;go</strong> on{" "}
+              <a href="https://unsplash.com/photos/brooklyn-bridge-and-manhattan-skyline-at-sunset-x9n2XTzW4hQ" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash</a>.{" "}
+              <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Unsplash License</a>
+            </figcaption>
+          </figure>
+
+          {/* DAY 3 */}
+          <h2 className="text-3xl font-bold text-gray-900 mt-10">Day 3: The Park, the Museums, and the Village After Dark</h2>
+
+          <h2 className="text-2xl font-bold text-gray-900">11. Central Park, Away from the Postcard</h2>
+          <p>
+            Frederick Law Olmsted and Calvert Vaux won the 1858 design competition with their Greensward Plan for what became an 843-acre park now drawing roughly 42 million visits a year.<sup><a href="https://en.wikipedia.org/wiki/Central_Park" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[12]</a></sup> Skip the horse carriages at the southern entrance and walk instead to the Ramble or Bethesda Terrace, where the crowds thin noticeably.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">12. SummerStage, Free in Central Park</h2>
+          <p>
+            Now marking its 40th anniversary season, SummerStage stages more than sixty free concerts between June and September at Rumsey Playfield and a dozen neighborhood parks across the five boroughs.<sup><a href="https://variety.com/2026/music/news/central-park-summerstage-2026-concert-schedule-1236732282/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[13]</a></sup> No ticket required, just a blanket and low expectations of a good sightline.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">13. The Metropolitan Museum of Art</h2>
+          <p>
+            Standard admission is $30; pay-what-you-wish pricing is now restricted to New York State residents, who must show a New York address to buy it online.<sup><a href="https://www.metmuseum.org/plan-your-visit" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[14]</a></sup> The Temple of Dendur, an actual Egyptian temple reassembled under glass in the Sackler Wing, is the one thing in the building that reliably stops people mid-sentence.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">14. The High Line and Chelsea Market</h2>
+          <p>
+            Free and open from 7 AM, the High Line is a 1930s freight rail line turned mile-and-a-half elevated garden, running south to Chelsea Market, a former Nabisco factory complex where the Oreo was invented in 1912.<sup><a href="https://www.thehighline.org/visit/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[15]</a></sup><sup><a href="https://en.wikipedia.org/wiki/Chelsea_Market" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[16]</a></sup> Walk one, eat in the other, in either order.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">15. Jazz in Greenwich Village</h2>
+          <p>
+            The Village Vanguard, opened in 1935, is the city&apos;s oldest operating jazz club and still books its narrow, wedge-shaped basement seven nights a week.<sup><a href="https://en.wikipedia.org/wiki/Village_Vanguard" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[17]</a></sup> The Blue Note, three blocks away since 1981, offers a louder, dinner-and-a-show version of the same tradition.<sup><a href="https://en.wikipedia.org/wiki/Blue_Note_Jazz_Club" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[18]</a></sup> Pick the Vanguard to listen, the Blue Note to also eat.
+          </p>
+
+          {/* DAY 4 */}
+          <h2 className="text-3xl font-bold text-gray-900 mt-10">Day 4: Out of the Five Boroughs</h2>
+
+          <h2 className="text-2xl font-bold text-gray-900">16. Bear Mountain, an Hour Up the Hudson</h2>
+          <p>
+            Metro-North&apos;s Hudson Line runs from Grand Central to Bear Mountain Bridge station in about eighty minutes on weekends, and roughly 2.5 miles of the Appalachian Trail cut directly through the park.<sup><a href="https://www.myharriman.com/getting-harriman-train-new-york-east-side/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[19]</a></sup> It is the fastest reminder that the Hudson Valley exists at all when you are standing in Midtown.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">17. Rockaway Beach</h2>
+          <p>
+            Reachable by the A train, Rockaway holds the city&apos;s only two legally surfable beaches, Beach 87 to 91 and Beach 67 to 69, open dawn to dusk with no lifeguards on the surf-only sections.<sup><a href="https://www.nycgovparks.org/parks/rockaway-beach-and-boardwalk/facilities/beaches" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[20]</a></sup> It is a real beach, with real waves, forty minutes from Manhattan.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">18. Coney Island</h2>
+          <p>
+            Nathan Handwerker undercut his former employer&apos;s ten-cent hot dog with a nickel one in 1916; the stand he opened still anchors the boardwalk beside the Wonder Wheel and a public beach that gets loud and crowded, exactly as intended.<sup><a href="https://en.wikipedia.org/wiki/Nathan%27s_Famous" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[21]</a></sup> Go on a weekday for the beach without the parking-lot feeling.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">19. Governors Island</h2>
+          <p>
+            A former military base just off Manhattan&apos;s southern tip, car-free and reachable only by ferry, free on weekends before 11 AM and $5 round-trip otherwise.<sup><a href="https://www.govisland.com/plan-your-visit/ferry" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[22]</a></sup> The harbor view from its northern point, the Statue of Liberty on one side and the skyline on the other, is free no matter when you go.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900">20. NYC Restaurant Week, Summer 2026</h2>
+          <p>
+            Reservations opened July 14 for the program running July 20 through August 16, with an optional extension to Labor Day: more than 600 restaurants across 70 neighborhoods offering prix-fixe lunch or dinner at $30, $45, or $60.<sup><a href="https://www.nyctourism.com/restaurant-week/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[23]</a></sup> It is the least romantic way to plan a trip around food, and also the most efficient.
+          </p>
+
+          {/* Counter-argument */}
+          <div className="mt-10 p-6 rounded-xl bg-amber-50 border border-amber-200">
+            <h2 className="text-xl font-bold text-gray-800 mb-3">The Honest Counterargument</h2>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              New York&apos;s postcard depends on not looking too closely at its edges. On any given night in 2026, roughly 100,000 people slept in the city&apos;s homeless shelters, and almost 5,000 more slept on the street or in the subway, the highest street count since the annual survey began in 2005; more than 30,000 children were among those in shelters, and one in eight New York City schoolchildren experienced homelessness at some point during the 2024-2025 school year.<sup><a href="https://www.coalitionforthehomeless.org/state-of-the-homeless-2026/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[24]</a></sup><sup><a href="https://www.nyc.gov/assets/dhs/downloads/pdf/hope/hope-2026-results.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[25]</a></sup> None of that appears in DUMBO or Chelsea Market, both of which sit among the most expensive real estate in the country. International visitation to the city, meanwhile, fell 3.2 percent in 2025, with Canadian visits down 19 percent, part of a broader 5.5 percent national decline that several governments have tied publicly to stricter U.S. entry enforcement rather than to New York itself.<sup><a href="https://www.business.nyctourism.com/press-media/press-releases/NYC-Tourism-Annual-Report-March-2026" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[2]</a></sup><sup><a href="https://fortune.com/2026/04/17/international-tourism-to-us-fell-last-year-world-cup-worries/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[26]</a></sup> A long weekend in Midtown and Brooklyn will not tell you what the rest of the city looks like, and pretending otherwise would be the bigger dishonesty.
+            </p>
+          </div>
+
+          {/* Safety */}
+          <div className="mt-6 p-6 rounded-xl bg-blue-50 border border-blue-200">
+            <h2 className="text-xl font-bold text-gray-800 mb-3">A Note on Safety</h2>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Subway crime fell to near a 16-year low in 2026 after two consecutive record years, though NYPD data show transit robberies specifically rose 15 percent year to date even as roughly 3,000 officers patrol 472 stations.<sup><a href="https://www.governor.ny.gov/news/safer-subways-governor-hochul-announces-subway-crime-track-reach-lowest-levels-generation-2025" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[27]</a></sup><sup><a href="https://abc7ny.com/post/nypd-crime-statistics-show-transit-felonies-assaults-are-down-robberies-patrols-increase/18886821/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[28]</a></sup> Most tourist-directed incidents are pickpocketing and phone theft in crowds, Times Square and packed subway cars chief among them, not violent crime; Midtown, the Upper West and East Sides, Chelsea, and Lower Manhattan are heavily policed and where most visitors stay without incident. The less obvious risk in 2026 is bureaucratic rather than criminal: the United Kingdom, Ireland, Germany, Denmark, Finland, the Netherlands, Canada, and Australia have all updated travel guidance for the United States since early 2025, warning that travelers can face detention over visa or entry-document issues.<sup><a href="https://www.npr.org/2025/03/22/nx-s1-5336792/european-countries-canada-travel-warnings-us" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[29]</a></sup> Confirm your entry requirements (ESTA or visa status) before flying, and check your own government&apos;s current advisory rather than assuming last year&apos;s rules still apply.<sup><a href="https://www.gov.uk/foreign-travel-advice/usa" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-xs">[30]</a></sup>
+            </p>
+          </div>
+
+          {/* Disclaimer */}
+          <div className="rounded-xl border border-gray-200 bg-gray-50 px-6 py-4 text-sm text-gray-500 leading-relaxed mt-8">
+            <strong className="text-gray-700">Disclaimer:</strong> This post shares findings from independent research using publicly available sources, current as of July 2026. Prices, hours, ticket policies, and event dates change often; verify directly with official sources before booking or building a schedule around any single date. The author has no commercial relationship with any venue listed. Security and entry conditions can change; consult your government&apos;s official travel advisory before traveling.
+          </div>
+
+          {/* Photo Credits */}
+          <h2 className="text-2xl font-bold text-gray-900">Photo Credits</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">
+            All photographs sourced from <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Unsplash</a> and used under the <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Unsplash License</a>, which grants free use for all purposes, commercial and non-commercial, worldwide, with no attribution legally required. We credit photographers voluntarily as a matter of practice.
+          </p>
+          <ul className="list-disc pl-6 space-y-1 text-sm text-gray-500">
+            <li>
+              <strong>Aerial photo of the New York City skyline.</strong> Photo by{" "}
+              <a href="https://unsplash.com/@cbarbalis" target="_blank" rel="noopener noreferrer" className="hover:underline">Chris Barbalis</a>{" "}
+              on Unsplash.{" "}
+              <a href="https://unsplash.com/photos/aerial-photo-of-new-york-city-during-daytime-88Xn77JOKRQ" target="_blank" rel="noopener noreferrer" className="hover:underline">unsplash.com/photos/88Xn77JOKRQ</a>
+            </li>
+            <li>
+              <strong>Times Square at night.</strong> Photo by{" "}
+              <a href="https://unsplash.com/@josephyates_" target="_blank" rel="noopener noreferrer" className="hover:underline">Joe Yates</a>{" "}
+              on Unsplash.{" "}
+              <a href="https://unsplash.com/photos/time-lapse-photography-of-crowd-of-people-on-new-york-time-square-during-night-time-Cc4sToR2Oc0" target="_blank" rel="noopener noreferrer" className="hover:underline">unsplash.com/photos/Cc4sToR2Oc0</a>
+            </li>
+            <li>
+              <strong>Brooklyn Bridge and the Manhattan skyline at sunset.</strong> Photo by{" "}
+              <a href="https://unsplash.com/@marciopego" target="_blank" rel="noopener noreferrer" className="hover:underline">M&aacute;rcio P&ecirc;go</a>{" "}
+              on Unsplash.{" "}
+              <a href="https://unsplash.com/photos/brooklyn-bridge-and-manhattan-skyline-at-sunset-x9n2XTzW4hQ" target="_blank" rel="noopener noreferrer" className="hover:underline">unsplash.com/photos/x9n2XTzW4hQ</a>
+            </li>
+          </ul>
+
+          {/* Sources */}
+          <h2 className="text-2xl font-bold text-gray-900">Sources</h2>
+          <ol className="list-decimal pl-6 space-y-1 text-sm text-gray-500">
+            <li><a href="https://www.cnn.com/2025/12/04/travel/euromonitor-international-top-city-destinations-2025" target="_blank" rel="noopener noreferrer" className="hover:underline">CNN, &quot;World&apos;s Top 100 Cities Revealed, Los Angeles and Orlando Climb the Rankings,&quot; citing Euromonitor International&apos;s Top 100 City Destinations Index 2025.</a></li>
+            <li><a href="https://www.business.nyctourism.com/press-media/press-releases/NYC-Tourism-Annual-Report-March-2026" target="_blank" rel="noopener noreferrer" className="hover:underline">New York City Tourism + Conventions, 2025 Annual Visitation Report, March 2026.</a></li>
+            <li><a href="https://www.esbnyc.com/visit/hours-of-operation" target="_blank" rel="noopener noreferrer" className="hover:underline">Empire State Building, official website, &quot;Hours of Operation,&quot; 2026.</a></li>
+            <li><a href="https://www.rockefellercenter.com/tickets/top-of-the-rock-observation-deck" target="_blank" rel="noopener noreferrer" className="hover:underline">Rockefeller Center, official website, &quot;Top of the Rock Observation Deck Tickets.&quot;</a></li>
+            <li><a href="https://www.moma.org/visit/" target="_blank" rel="noopener noreferrer" className="hover:underline">The Museum of Modern Art, official website, &quot;Locations and Hours.&quot;</a></li>
+            <li><a href="https://katzsdelicatessen.com/our-story" target="_blank" rel="noopener noreferrer" className="hover:underline">Katz&apos;s Delicatessen, official website, &quot;Our Story.&quot;</a></li>
+            <li><a href="https://seatplan.com/new-york/news/how-does-broadway-lottery-work/" target="_blank" rel="noopener noreferrer" className="hover:underline">SeatPlan, &quot;How Does the Broadway Lottery Work? How to Enter and Win.&quot;</a></li>
+            <li><a href="https://www.911memorial.org/visit/visit-museum-1" target="_blank" rel="noopener noreferrer" className="hover:underline">National September 11 Memorial &amp; Museum, official website, &quot;Visit the Museum.&quot;</a></li>
+            <li><a href="https://www.nps.gov/stli/planyourvisit/fees.htm" target="_blank" rel="noopener noreferrer" className="hover:underline">U.S. National Park Service, &quot;Fees &amp; Passes, Statue of Liberty National Monument.&quot;</a></li>
+            <li><a href="https://www.nyc.gov/html/dot/html/infrastructure/brooklyn-bridge.shtml" target="_blank" rel="noopener noreferrer" className="hover:underline">NYC Department of Transportation, &quot;Brooklyn Bridge.&quot;</a></li>
+            <li><a href="https://www.timeout.com/newyork/restaurants/smorgasburg-guide" target="_blank" rel="noopener noreferrer" className="hover:underline">Time Out New York, &quot;Your Guide to Smorgasburg 2026.&quot;</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Central_Park" target="_blank" rel="noopener noreferrer" className="hover:underline">Wikipedia, &quot;Central Park.&quot;</a></li>
+            <li><a href="https://variety.com/2026/music/news/central-park-summerstage-2026-concert-schedule-1236732282/" target="_blank" rel="noopener noreferrer" className="hover:underline">Variety, &quot;New York&apos;s Central Park SummerStage Announces 2026 Concert Schedule.&quot;</a></li>
+            <li><a href="https://www.metmuseum.org/plan-your-visit" target="_blank" rel="noopener noreferrer" className="hover:underline">The Metropolitan Museum of Art, official website, &quot;Plan Your Visit.&quot;</a></li>
+            <li><a href="https://www.thehighline.org/visit/" target="_blank" rel="noopener noreferrer" className="hover:underline">The High Line, official website, &quot;Visitor Info.&quot;</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Chelsea_Market" target="_blank" rel="noopener noreferrer" className="hover:underline">Wikipedia, &quot;Chelsea Market.&quot;</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Village_Vanguard" target="_blank" rel="noopener noreferrer" className="hover:underline">Wikipedia, &quot;Village Vanguard.&quot;</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Blue_Note_Jazz_Club" target="_blank" rel="noopener noreferrer" className="hover:underline">Wikipedia, &quot;Blue Note Jazz Club.&quot;</a></li>
+            <li><a href="https://www.myharriman.com/getting-harriman-train-new-york-east-side/" target="_blank" rel="noopener noreferrer" className="hover:underline">My Harriman, &quot;Getting to Harriman by Train from New York: The East Side.&quot;</a></li>
+            <li><a href="https://www.nycgovparks.org/parks/rockaway-beach-and-boardwalk/facilities/beaches" target="_blank" rel="noopener noreferrer" className="hover:underline">NYC Parks, official website, &quot;Rockaway Beach and Boardwalk, Beaches.&quot;</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Nathan%27s_Famous" target="_blank" rel="noopener noreferrer" className="hover:underline">Wikipedia, &quot;Nathan&apos;s Famous.&quot;</a></li>
+            <li><a href="https://www.govisland.com/plan-your-visit/ferry" target="_blank" rel="noopener noreferrer" className="hover:underline">Governors Island, official website, &quot;Ferry.&quot;</a></li>
+            <li><a href="https://www.nyctourism.com/restaurant-week/" target="_blank" rel="noopener noreferrer" className="hover:underline">NYC Tourism + Conventions, &quot;NYC Restaurant Week: Summer 2026.&quot;</a></li>
+            <li><a href="https://www.coalitionforthehomeless.org/state-of-the-homeless-2026/" target="_blank" rel="noopener noreferrer" className="hover:underline">Coalition for the Homeless, &quot;State of the Homeless 2026.&quot;</a></li>
+            <li><a href="https://www.nyc.gov/assets/dhs/downloads/pdf/hope/hope-2026-results.pdf" target="_blank" rel="noopener noreferrer" className="hover:underline">NYC Department of Social Services, &quot;HOPE 2026 Survey Results.&quot;</a></li>
+            <li><a href="https://fortune.com/2026/04/17/international-tourism-to-us-fell-last-year-world-cup-worries/" target="_blank" rel="noopener noreferrer" className="hover:underline">Fortune, &quot;Tourism Had a Record-Breaking 2025 Everywhere but the U.S.&quot;</a></li>
+            <li><a href="https://www.governor.ny.gov/news/safer-subways-governor-hochul-announces-subway-crime-track-reach-lowest-levels-generation-2025" target="_blank" rel="noopener noreferrer" className="hover:underline">Office of Governor Kathy Hochul, &quot;Safer Subways: Subway Crime on Track to Reach Lowest Levels in a Generation.&quot;</a></li>
+            <li><a href="https://abc7ny.com/post/nypd-crime-statistics-show-transit-felonies-assaults-are-down-robberies-patrols-increase/18886821/" target="_blank" rel="noopener noreferrer" className="hover:underline">ABC7 New York, &quot;NYPD Crime Statistics Show Transit Felonies and Assaults Are Down, Robberies Are Up as Patrols Increase.&quot;</a></li>
+            <li><a href="https://www.npr.org/2025/03/22/nx-s1-5336792/european-countries-canada-travel-warnings-us" target="_blank" rel="noopener noreferrer" className="hover:underline">NPR, &quot;Some European Countries and Canada Issue Advisories for Travelers to the U.S.&quot;</a></li>
+            <li><a href="https://www.gov.uk/foreign-travel-advice/usa" target="_blank" rel="noopener noreferrer" className="hover:underline">UK Government, Foreign, Commonwealth &amp; Development Office, &quot;USA Travel Advice.&quot;</a></li>
+          </ol>
+
+        </div>
+      ),
+    },
     "9": {
       title: "Cape Town: Twenty Essential Encounters in the Mother City",
       date: "2026-06-03",
@@ -260,7 +1415,7 @@ export default async function TourismBlogPost({ params }: { params: Promise<{ id
 
           {/* Intro */}
           <p>
-            Rio de Janeiro does not ease you in. The city arrives all at once: mountains erupting from the Atlantic, a statue arms-wide above a green canopy, beaches so broad they function as public squares, and a sound that is neither music nor noise but a third thing Cariocas call "alegria". What follows is an honest account of twenty encounters, arranged for a four days visit.
+            Rio de Janeiro does not ease you in. The city arrives all at once: mountains erupting from the Atlantic, a statue arms-wide above a green canopy, beaches so broad they function as public squares, and a sound that is neither music nor noise but a third thing Cariocas call &quot;alegria&quot;. What follows is an honest account of twenty encounters, arranged for a four days visit.
           </p>
 
           {/* Hero image */}

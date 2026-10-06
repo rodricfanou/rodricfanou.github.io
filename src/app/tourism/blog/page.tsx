@@ -16,6 +16,42 @@ interface BlogPost {
 
 const posts: BlogPost[] = [
   {
+    id: 17,
+    title: "London: Twenty Essential Encounters in the World's Third Most-Visited City",
+    date: "2026-08-05",
+    excerpt: "From the Crown Jewels at the Tower and a free 360-degree view from the Sky Garden to jazz at Ronnie Scott's since 1959, a dawn swim on Hampstead Heath, the world's longest-running play, and an honest look at the 12,938 people sleeping rough across the city: four days of twenty encounters in the world's third most-visited city, built around John Ruskin's case for looking rather than just photographing.",
+    category: "Tourism",
+    readTime: "5 min",
+    type: "AI+HI",
+  },
+  {
+    id: 15,
+    title: "Bangkok: Twenty Essential Encounters in the World's Most-Visited City",
+    date: "2026-07-30",
+    excerpt: "From the Reclining Buddha's 108 mother-of-pearl auspicious marks at Wat Pho and a nine-time Michelin Bib Gourmand fishball stall in Yaowarat to a fight night at Rajadamnern Stadium since 1945, sunset at Sky Bar 247 meters up, and an honest look at the PM2.5 haze and the overcrowded beach at Koh Larn: five days of twenty encounters in the city that draws more international visitors than any other on earth.",
+    category: "Tourism",
+    readTime: "5 min",
+    type: "AI+HI",
+  },
+  {
+    id: 13,
+    title: "Sydney: Twenty Essential Encounters on the Harbour City",
+    date: "2026-07-22",
+    excerpt: "From a guided walk through the Opera House's 300 stairs and a dawn swim at the 1929 Bondi Icebergs pool to jazz at Mary's Underground since 1972, a real Blue Mountains bushwalk, and an honest look at the $1.76 million median house price behind the harbour views: four days of twenty encounters that ask what the postcard leaves out.",
+    category: "Tourism",
+    readTime: "5 min",
+    type: "AI+HI",
+  },
+  {
+    id: 11,
+    title: "New York City: Twenty Essential Encounters in the City You Already Know",
+    date: "2026-07-15",
+    excerpt: "From opening hour at the Empire State Building and jazz at the Village Vanguard since 1935 to Smorgasburg's seventy vendors, a legal surf break at Rockaway, and an honest look at the shelter numbers behind the skyline: a four-day account of twenty encounters that ask whether the real New York can still surprise a city that has already starred in a hundred films.",
+    category: "Tourism",
+    readTime: "5 min",
+    type: "AI+HI",
+  },
+  {
     id: 9,
     title: "Cape Town: Twenty Essential Encounters in the Mother City",
     date: "2026-06-03",
