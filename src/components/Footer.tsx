@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useLanguage } from "@/components/LanguageProvider";
 import { translations } from "@/lib/translations";
+import { BLOG_ENABLED } from "@/lib/site-config";
 
 export default function Footer() {
   const { lang } = useLanguage();
@@ -23,7 +24,9 @@ export default function Footer() {
           <div className="space-y-2">
             <Link href="/" className="block text-gray-300 hover:text-white transition-colors">{t.footer.home}</Link>
             <Link href="/publications" className="block text-gray-300 hover:text-white transition-colors">{t.footer.publications}</Link>
-            <Link href="/blog" className="block text-gray-300 hover:text-white transition-colors">{t.footer.blog}</Link>
+            {BLOG_ENABLED && (
+              <Link href="/blog" className="block text-gray-300 hover:text-white transition-colors">{t.footer.blog}</Link>
+            )}
             <Link href="/showcase" className="block text-gray-300 hover:text-white transition-colors">{t.footer.showcase}</Link>
             <Link href="/contact" className="block text-gray-300 hover:text-white transition-colors">{t.nav?.contact ?? "Contact"}</Link>
           </div>

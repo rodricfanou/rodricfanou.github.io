@@ -2,6 +2,7 @@
 
 import FadeIn from "@/components/FadeIn";
 import Link from "next/link";
+import { BLOG_ENABLED } from "@/lib/site-config";
 
 export default function Home() {
   return (
@@ -56,12 +57,14 @@ export default function Home() {
                 >
                   Speaking &amp; Workshops
                 </Link>
-                <Link
-                  href="/blog"
-                  className="px-5 py-2.5 bg-white/20 text-white rounded-lg text-sm font-semibold hover:bg-white/30 transition-colors shadow-md border border-white/40"
-                >
-                  View Projects
-                </Link>
+                {BLOG_ENABLED && (
+                  <Link
+                    href="/blog"
+                    className="px-5 py-2.5 bg-white/20 text-white rounded-lg text-sm font-semibold hover:bg-white/30 transition-colors shadow-md border border-white/40"
+                  >
+                    View Projects
+                  </Link>
+                )}
               </div>
             </div>
           </FadeIn>

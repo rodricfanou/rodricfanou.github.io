@@ -3,11 +3,12 @@
 import Link from "next/link";
 import { useLanguage } from "@/components/LanguageProvider";
 import { translations } from "@/lib/translations";
+import { BLOG_ENABLED } from "@/lib/site-config";
 import { useState } from "react";
 
 const rightLinks = [
   { href: "/publications", labelKey: "publications" as const },
-  { href: "/blog", labelKey: "blog" as const },
+  ...(BLOG_ENABLED ? [{ href: "/blog", labelKey: "blog" as const }] : []),
   { href: "/services", labelKey: "contact" as const },
   { href: "/showcase", labelKey: "showcase" as const },
 ];
