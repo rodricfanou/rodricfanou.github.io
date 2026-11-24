@@ -1,3 +1,5 @@
+// BLOG DISABLED: kept outside src/app so /blog/[id] is no longer a route.
+// Restore: git mv to src/app/blog/[id]/page.tsx, then set BLOG_ENABLED = true in src/lib/site-config.ts.
 import FadeIn from "@/components/FadeIn";
 import Link from "next/link";
 

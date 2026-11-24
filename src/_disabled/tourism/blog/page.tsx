@@ -1,3 +1,5 @@
+// BLOG DISABLED: kept outside src/app so /tourism/blog is no longer a route.
+// Restore: git mv to src/app/tourism/blog/page.tsx, then set BLOG_ENABLED = true in src/lib/site-config.ts.
 "use client";
 
 import { useState } from "react";
